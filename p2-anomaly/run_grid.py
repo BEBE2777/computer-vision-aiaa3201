@@ -15,9 +15,17 @@ import os
 import sys
 import time
 
+# Small k-NN searches (1k queries against a 5k-45k patch bank) are dominated by thread
+# synchronisation, not arithmetic: measured 462 ms with 12 OpenMP threads vs 87 ms with one,
+# a 5x speed-up, and the freed cores are better spent on a second category. Must be set
+# before faiss is imported.
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+    os.environ.setdefault(_v, "1")
+
 import cv2
 import faiss
 import numpy as np
+import torch
 from scipy.ndimage import gaussian_filter
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
@@ -73,6 +81,7 @@ def run(args):
         print("exists, skipping:", out_path)
         return
 
+    torch.set_num_threads(1)
     device = "cuda" if args.gpu else "cpu"
     model = LayerDINOv2(args.model, device, args.resolution, layers)
 
@@ -150,19 +159,12 @@ def run(args):
 
         C.jdump(summary, out_path)
 
-    final = {"config": vars(args), "layers": list(layers),
-             "runtime_s": time.time() - t_start}
-    for metric in ("image_auroc", "pixel_auroc"):
-        final[metric] = {}
-        for shot_key, per_cat in summary[metric].items():
-            row = {}
-            for cat in cats:
-                vals = list(per_cat.get(cat, {}).values())
-                row[cat] = float(np.mean(vals)) if vals else float("nan")
-                row[cat + "_std"] = float(np.std(vals)) if vals else float("nan")
-            row["MEAN"] = C.mean_over_categories({c: row[c] for c in cats})
-            row["MEAN_std"] = float(np.mean([row[c + "_std"] for c in cats]))
-            final[metric][shot_key] = row
+    final = C.summarize(summary, cats)
+    final["seed_values"] = {m: summary[m] for m in ("image_auroc", "pixel_auroc")}
+    final["threshold"] = summary["threshold"]
+    final["config"] = vars(args)
+    final["layers"] = list(layers)
+    final["runtime_s"] = time.time() - t_start
     C.jdump(final, os.path.join(args.out, f"{args.name}_final.json"))
 
     print(f"\n=== {args.name} ===")

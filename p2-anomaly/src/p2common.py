@@ -142,6 +142,43 @@ def mean_over_categories(d):
     return float(np.mean(vals)) if vals else float("nan")
 
 
+def summarize(summary, cats=VISA_6, metrics=("image_auroc", "pixel_auroc")):
+    """Turn per-(shot, category, seed) values into report rows.
+
+    Input shape: ``summary[metric]["<shot>-shot"][category]["<seed>"] = value``.
+
+    Output row per shot::
+
+        {"candle": mean over seeds, "candle_std": std over seeds, ..., "MEAN": ..., "MEAN_std": ..., "n_seeds": k}
+
+    ``MEAN_std`` is the seed-to-seed spread of the six-category average, i.e. the per-seed
+    class mean is formed first and the standard deviation is taken over seeds. That is what
+    "mean +- std over seeds" means for a class average; averaging the per-category spreads
+    instead would understate it whenever categories disagree.
+    """
+    final = {}
+    for metric in metrics:
+        final[metric] = {}
+        for shot_key, per_cat in summary[metric].items():
+            row = {}
+            seeds = sorted({s for c in per_cat for s in per_cat[c]})
+            for cat in cats:
+                vals = [v for v in per_cat.get(cat, {}).values() if v == v]
+                row[cat] = float(np.mean(vals)) if vals else float("nan")
+                row[cat + "_std"] = float(np.std(vals)) if vals else float("nan")
+            per_seed_class = []
+            for s in seeds:
+                v = [per_cat[c][s] for c in cats
+                     if c in per_cat and s in per_cat[c] and per_cat[c][s] == per_cat[c][s]]
+                if v:
+                    per_seed_class.append(float(np.mean(v)))
+            row["MEAN"] = mean_over_categories({c: row[c] for c in cats})
+            row["MEAN_std"] = float(np.std(per_seed_class)) if len(per_seed_class) > 1 else 0.0
+            row["n_seeds"] = len(per_seed_class)
+            final[metric][shot_key] = row
+    return final
+
+
 # ---------------------------------------------------------------- misc
 def jdump(obj, path):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)

@@ -27,8 +27,8 @@ from skimage.metrics import structural_similarity
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 from p2common import (EVAL_SIZE, VISA_6, image_auroc, jdump, load_mask, load_rgb,
-                      mean_over_categories, percentile_threshold, pooled_pixel_auroc,
-                      prep_square, ref_pool, shot_refs, test_items, top1p_mean)
+                      percentile_threshold, pooled_pixel_auroc,
+                      prep_square, ref_pool, shot_refs, summarize, test_items, top1p_mean)
 
 
 def ecc_warp_to_anchor(anchor_gray, img_gray):
@@ -52,6 +52,43 @@ def apply_warp(img, warp):
 
 def gray01(img):
     return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY).astype(np.float32) / 255.0
+
+
+def fg_box(img, margin=0.03):
+    """Bounding box of the object, estimated from its distance to the border intensity.
+
+    The naive template baseline fails mostly because the object sits at a different position
+    and scale in every shot (VisA is photographed, not fixtured). Cropping the object and
+    rescaling it to a fixed size removes both, leaving the difference operator to do its job.
+    Returns None when the estimate is implausible, so the caller falls back to the full frame.
+    """
+    g = cv2.GaussianBlur(cv2.cvtColor(img, cv2.COLOR_RGB2GRAY), (5, 5), 0).astype(np.float32)
+    border = np.concatenate([g[:8, :].ravel(), g[-8:, :].ravel(),
+                             g[:, :8].ravel(), g[:, -8:].ravel()])
+    dev = np.abs(g - float(np.median(border)))
+    thr = max(12.0, float(dev.mean() + dev.std()))
+    m = (dev > thr).astype(np.uint8)
+    m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((9, 9), np.uint8))
+    m = cv2.morphologyEx(m, cv2.MORPH_OPEN, np.ones((7, 7), np.uint8))
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(m, 8)
+    if n < 2:
+        return None
+    k = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
+    x, y, w, h = (stats[k, cv2.CC_STAT_LEFT], stats[k, cv2.CC_STAT_TOP],
+                  stats[k, cv2.CC_STAT_WIDTH], stats[k, cv2.CC_STAT_HEIGHT])
+    if w < 24 or h < 24 or w * h > 0.95 * img.shape[0] * img.shape[1]:
+        return None
+    mx, my = int(margin * w), int(margin * h)
+    return (max(0, x - mx), max(0, y - my),
+            min(img.shape[1], x + w + mx), min(img.shape[0], y + h + my))
+
+
+def apply_box(arr, box, size=EVAL_SIZE, nearest=False):
+    """Crop `arr` to `box` and resize to `size` x `size` (bilinear for RGB, nearest for masks)."""
+    x0, y0, x1, y1 = box
+    c = arr[y0:y1, x0:x1]
+    interp = cv2.INTER_NEAREST if nearest else cv2.INTER_LINEAR
+    return cv2.resize(c, (size, size), interpolation=interp)
 
 
 def diff_map(ref_rgb, img_rgb, use_grad=False):
@@ -91,7 +128,7 @@ def score_one(img, refs, anchor_gray, align, use_grad):
 
 def run(args):
     root = args.data_root
-    out_root = os.path.join(args.out, f"align={args.align}" + ("_grad" if args.use_grad else ""))
+    out_root = os.path.join(args.out, f"align={args.align}" + ("_crop" if args.crop else "") + ("_grad" if args.use_grad else ""))
     os.makedirs(out_root, exist_ok=True)
 
     cats = args.categories or VISA_6
@@ -109,7 +146,13 @@ def run(args):
                 t0 = time.time()
                 ref_names = shot_refs(pool, shot, seed)
                 ref_dir = os.path.join(root, cat, "train", "good")
-                refs = [prep_square(load_rgb(os.path.join(ref_dir, n))) for n in ref_names]
+                refs = []
+                for n in ref_names:
+                    im = prep_square(load_rgb(os.path.join(ref_dir, n)))
+                    if args.crop:
+                        b = fg_box(im)
+                        im = apply_box(im, b) if b else im
+                    refs.append(im)
 
                 anchor_gray = gray01(refs[0])
                 if do_align:
@@ -117,20 +160,32 @@ def run(args):
                     refs = [refs[0]] + [apply_warp(r, w) for r, w in zip(refs[1:], warps)]
 
                 # calibration scores -> OK/NG threshold (demo only, never used for AUROC)
-                calib_scores = [top1p_mean(score_one(prep_square(load_rgb(p)), refs,
-                                                     anchor_gray, do_align, args.use_grad))
-                                for p in calib_paths]
+                calib_prepped = []
+                for p in calib_paths:
+                    im = prep_square(load_rgb(p))
+                    if args.crop:
+                        b = fg_box(im)
+                        im = apply_box(im, b) if b else im
+                    calib_prepped.append(im)
+                calib_scores = [top1p_mean(score_one(im, refs, anchor_gray, do_align, args.use_grad))
+                                for im in calib_prepped]
                 thr = percentile_threshold(calib_scores, 95.0)
 
                 items = test_items(root, cat)
                 scores, labels, maps, masks = [], [], [], []
                 for label, img_path, mask_path in items:
-                    s_map = score_one(prep_square(load_rgb(img_path)), refs,
-                                      anchor_gray, do_align, args.use_grad)
+                    im = prep_square(load_rgb(img_path))
+                    mk = load_mask(mask_path, EVAL_SIZE)
+                    if args.crop:
+                        b = fg_box(im)
+                        if b:
+                            im = apply_box(im, b)
+                            mk = apply_box(mk, b, nearest=True)
+                    s_map = score_one(im, refs, anchor_gray, do_align, args.use_grad)
                     scores.append(top1p_mean(s_map))
                     labels.append(label)
                     maps.append(s_map.astype(np.float32))
-                    masks.append(load_mask(mask_path, EVAL_SIZE))
+                    masks.append(mk)
 
                 au_img = image_auroc(scores, labels)
                 au_px = pooled_pixel_auroc(maps, masks)
@@ -158,17 +213,7 @@ def run(args):
 
                 jdump(summary, os.path.join(out_root, "summary.json"))
 
-    final = {}
-    for metric in ("image_auroc", "pixel_auroc"):
-        final[metric] = {}
-        for shot_key, per_cat in summary[metric].items():
-            row = {}
-            for cat in cats:
-                vals = [v for v in per_cat.get(cat, {}).values() if v == v]
-                row[cat] = float(np.mean(vals)) if vals else float("nan")
-                row[cat + "_std"] = float(np.std(vals)) if vals else float("nan")
-            row["MEAN"] = mean_over_categories({c: row[c] for c in cats})
-            final[metric][shot_key] = row
+    final = summarize(summary, cats)
     jdump(final, os.path.join(out_root, "results.json"))
 
     print("\n=== Part 1 template baseline ===")
@@ -190,6 +235,8 @@ def parse_args():
     p.add_argument("--calib_exclude", type=int, default=20)
     p.add_argument("--align", choices=["none", "ecc"], default="none")
     p.add_argument("--use_grad", action="store_true")
+    p.add_argument("--crop", action="store_true",
+                   help="normalise object scale/position by cropping to a foreground box")
     p.add_argument("--save_maps_shot", type=int, default=4)
     p.add_argument("--save_maps_seed", type=int, default=0)
     return p.parse_args()

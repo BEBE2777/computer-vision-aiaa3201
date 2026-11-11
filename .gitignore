@@ -23,9 +23,13 @@ VisA/
 *.ckpt
 *.safetensors
 
-# ---- 运行产物 ----
+# ---- 运行产物：只收轻量指标/表格/图，不收大文件 ----
 p2-anomaly/results/**
-!p2-anomaly/results/.gitkeep
+!p2-anomaly/results/**
+!p2-anomaly/results/**/
+p2-anomaly/results/**/*.npy
+p2-anomaly/results/**/*.tiff
+p2-anomaly/results/**/*.tif
 *.log
 
 # ---- 本地工作区元数据 ----

@@ -1,0 +1,35 @@
+{
+    "candle": {
+        "classification_AUROC": 0.9063,
+        "classification_AP": 0.9206702418581012,
+        "classification_F1": 0.8421052631578948
+    },
+    "capsules": {
+        "classification_AUROC": 0.9856666666666666,
+        "classification_AP": 0.9915415448001974,
+        "classification_F1": 0.9500000000000001
+    },
+    "cashew": {
+        "classification_AUROC": 0.9352000000000001,
+        "classification_AP": 0.9693012581196416,
+        "classification_F1": 0.9128205128205129
+    },
+    "chewinggum": {
+        "classification_AUROC": 0.9865999999999999,
+        "classification_AP": 0.9938728256301979,
+        "classification_F1": 0.9702970297029702
+    },
+    "fryum": {
+        "classification_AUROC": 0.9609999999999999,
+        "classification_AP": 0.9834497828432514,
+        "classification_F1": 0.9489795918367346
+    },
+    "pipe_fryum": {
+        "classification_AUROC": 0.9074,
+        "classification_AP": 0.949469128897053,
+        "classification_F1": 0.8928571428571428
+    },
+    "mean_classification_au_roc": 0.9470277777777777,
+    "mean_classification_ap": 0.9680507970247404,
+    "mean_classification_f1": 0.9195099233958759
+}

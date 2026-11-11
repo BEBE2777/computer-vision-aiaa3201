@@ -1,0 +1,46 @@
+{
+  "n": {
+    "candle": 200,
+    "capsules": 160,
+    "cashew": 150,
+    "chewinggum": 150,
+    "fryum": 150,
+    "pipe_fryum": 150
+  },
+  "image_auroc": {
+    "1-shot": {
+      "candle": 0.9036000000000001,
+      "candle_std": 0.0,
+      "capsules": 0.9878333333333333,
+      "capsules_std": 0.0,
+      "cashew": 0.929,
+      "cashew_std": 0.0,
+      "chewinggum": 0.9825999999999999,
+      "chewinggum_std": 0.0,
+      "fryum": 0.9451999999999999,
+      "fryum_std": 0.0,
+      "pipe_fryum": 0.9288,
+      "pipe_fryum_std": 0.0,
+      "MEAN": 0.9461722222222222,
+      "MEAN_std": 0.0
+    }
+  },
+  "pixel_auroc": {
+    "1-shot": {
+      "candle": 0.985731924088696,
+      "candle_std": 0.0,
+      "capsules": 0.9548184245018004,
+      "capsules_std": 0.0,
+      "cashew": 0.9887121321666311,
+      "cashew_std": 0.0,
+      "chewinggum": 0.9957098116531009,
+      "chewinggum_std": 0.0,
+      "fryum": 0.9657921080787599,
+      "fryum_std": 0.0,
+      "pipe_fryum": 0.9906633686489601,
+      "pipe_fryum_std": 0.0,
+      "MEAN": 0.9802379615229914,
+      "MEAN_std": 0.0
+    }
+  }
+}

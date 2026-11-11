@@ -1,0 +1,39 @@
+{
+  "shot": 2,
+  "seed": 0,
+  "run_dir": "/tmp/slv176/results_VisA/dinov2_vits14_448/2-shot_preprocess=agnostic_xcheck",
+  "mean_image_auroc": 0.9470277777777777,
+  "mean_pixel_auroc": 0.9823103257512242,
+  "per_category": {
+    "candle": {
+      "n": 200,
+      "image_auroc": 0.9063,
+      "pixel_auroc": 0.9868392675287081
+    },
+    "capsules": {
+      "n": 160,
+      "image_auroc": 0.9856666666666666,
+      "pixel_auroc": 0.9588981552564114
+    },
+    "cashew": {
+      "n": 150,
+      "image_auroc": 0.9352000000000001,
+      "pixel_auroc": 0.9912612054303788
+    },
+    "chewinggum": {
+      "n": 150,
+      "image_auroc": 0.9865999999999999,
+      "pixel_auroc": 0.9957795119985136
+    },
+    "fryum": {
+      "n": 150,
+      "image_auroc": 0.9609999999999999,
+      "pixel_auroc": 0.9695834972358828
+    },
+    "pipe_fryum": {
+      "n": 150,
+      "image_auroc": 0.9074,
+      "pixel_auroc": 0.9915003170574511
+    }
+  }
+}

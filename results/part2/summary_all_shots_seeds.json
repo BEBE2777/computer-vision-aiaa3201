@@ -1,0 +1,591 @@
+{
+  "dataset": "VisA (1cls split), six categories: candle, capsules, cashew, chewinggum, fryum, pipe_fryum",
+  "method": "official AnomalyDINO fork, dinov2_vits14 (frozen), resolution 448, preprocess agnostic",
+  "settings": {
+    "calib_exclude": 20,
+    "faiss_on_cpu": true,
+    "warmup_iters": 3,
+    "eval_clf": true,
+    "eval_segm": false,
+    "k_neighbors": 1,
+    "knn_metric": "L2_normalized"
+  },
+  "test_images_per_cell": 960,
+  "reference_selection": "deterministic slice pool[seed*n:(seed+1)*n] after removing the first 20 sorted normal train files; verified identical to the dumped refs/*.json",
+  "part3": "NOT run. No cached-grid / fusion numbers are included here.",
+  "eval_segm": "not used anywhere (official segmentation eval needs ~11 GB RAM and was avoided)",
+  "pixel_auroc_source": "eval_maps.py / eval_perseed.py protocol: patch-distance map -> 448 bilinear -> gaussian sigma 4; image score = mean of top 1% of the raw map",
+  "note_on_location": "/tmp/slv176 is owned by slv176 and not writable by qzheng610, so the new runs were written under /tmp/qzheng610_p2 with tag calib20r2. Existing seed-0 results were only read.",
+  "cells": {
+    "1-0": {
+      "shot": 1,
+      "seed": 0,
+      "status": "pre-existing seed-0 result",
+      "run_dir": "/tmp/slv176/results_VisA/dinov2_vits14_448/1-shot_preprocess=agnostic_calib20",
+      "image_auroc_pct": 94.6172,
+      "pixel_auroc_pct": 98.0238,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 90.36,
+          "pixel_auroc_pct": 98.5732
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 98.7833,
+          "pixel_auroc_pct": 95.4818
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 92.9,
+          "pixel_auroc_pct": 98.8712
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.26,
+          "pixel_auroc_pct": 99.571
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 94.52,
+          "pixel_auroc_pct": 96.5792
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 92.88,
+          "pixel_auroc_pct": 99.0663
+        }
+      }
+    },
+    "1-1": {
+      "shot": 1,
+      "seed": 1,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/1-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 93.5756,
+      "pixel_auroc_pct": 98.0696,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 86.72,
+          "pixel_auroc_pct": 98.5033
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 97.5333,
+          "pixel_auroc_pct": 95.7628
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 93.98,
+          "pixel_auroc_pct": 99.0435
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 99.08,
+          "pixel_auroc_pct": 99.5413
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 95.08,
+          "pixel_auroc_pct": 96.526
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 89.06,
+          "pixel_auroc_pct": 99.0407
+        }
+      }
+    },
+    "1-2": {
+      "shot": 1,
+      "seed": 2,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/1-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 95.6311,
+      "pixel_auroc_pct": 98.1497,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 92.96,
+          "pixel_auroc_pct": 98.4561
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 96.7667,
+          "pixel_auroc_pct": 95.9744
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 93.84,
+          "pixel_auroc_pct": 98.9928
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.16,
+          "pixel_auroc_pct": 99.5356
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 97.58,
+          "pixel_auroc_pct": 96.815
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 94.48,
+          "pixel_auroc_pct": 99.1244
+        }
+      }
+    },
+    "2-0": {
+      "shot": 2,
+      "seed": 0,
+      "status": "pre-existing seed-0 result",
+      "run_dir": "/tmp/slv176/results_VisA/dinov2_vits14_448/2-shot_preprocess=agnostic_xcheck",
+      "image_auroc_pct": 94.7028,
+      "pixel_auroc_pct": 98.231,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 90.63,
+          "pixel_auroc_pct": 98.6839
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 98.5667,
+          "pixel_auroc_pct": 95.8898
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 93.52,
+          "pixel_auroc_pct": 99.1261
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.66,
+          "pixel_auroc_pct": 99.578
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 96.1,
+          "pixel_auroc_pct": 96.9583
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 90.74,
+          "pixel_auroc_pct": 99.15
+        }
+      }
+    },
+    "2-1": {
+      "shot": 2,
+      "seed": 1,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/2-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 95.8172,
+      "pixel_auroc_pct": 98.2961,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 92.96,
+          "pixel_auroc_pct": 98.6152
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 97.3833,
+          "pixel_auroc_pct": 96.0799
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 93.2,
+          "pixel_auroc_pct": 99.246
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.3,
+          "pixel_auroc_pct": 99.5592
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 97.96,
+          "pixel_auroc_pct": 97.1352
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 95.1,
+          "pixel_auroc_pct": 99.1408
+        }
+      }
+    },
+    "2-2": {
+      "shot": 2,
+      "seed": 2,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/2-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 95.4561,
+      "pixel_auroc_pct": 98.1338,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 92.16,
+          "pixel_auroc_pct": 98.6547
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 97.3167,
+          "pixel_auroc_pct": 95.7014
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 93.54,
+          "pixel_auroc_pct": 99.3423
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.76,
+          "pixel_auroc_pct": 99.5294
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 96.98,
+          "pixel_auroc_pct": 96.7075
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 93.98,
+          "pixel_auroc_pct": 98.8674
+        }
+      }
+    },
+    "4-0": {
+      "shot": 4,
+      "seed": 0,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/4-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 95.8361,
+      "pixel_auroc_pct": 98.3982,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 91.64,
+          "pixel_auroc_pct": 98.7552
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 97.8167,
+          "pixel_auroc_pct": 96.1931
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 94.86,
+          "pixel_auroc_pct": 99.2837
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.84,
+          "pixel_auroc_pct": 99.5851
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 97.0,
+          "pixel_auroc_pct": 97.3486
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 94.86,
+          "pixel_auroc_pct": 99.2237
+        }
+      }
+    },
+    "4-1": {
+      "shot": 4,
+      "seed": 1,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/4-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 95.9017,
+      "pixel_auroc_pct": 98.3227,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 93.66,
+          "pixel_auroc_pct": 98.7362
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 97.45,
+          "pixel_auroc_pct": 96.0945
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 92.5,
+          "pixel_auroc_pct": 99.404
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.82,
+          "pixel_auroc_pct": 99.5687
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 96.68,
+          "pixel_auroc_pct": 96.9602
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 96.3,
+          "pixel_auroc_pct": 99.1728
+        }
+      }
+    },
+    "4-2": {
+      "shot": 4,
+      "seed": 2,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/4-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 96.7178,
+      "pixel_auroc_pct": 98.371,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 93.09,
+          "pixel_auroc_pct": 98.7223
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 98.9167,
+          "pixel_auroc_pct": 96.2613
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 92.56,
+          "pixel_auroc_pct": 99.3082
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 99.2,
+          "pixel_auroc_pct": 99.5647
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 98.56,
+          "pixel_auroc_pct": 97.2364
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 97.98,
+          "pixel_auroc_pct": 99.1334
+        }
+      }
+    },
+    "8-0": {
+      "shot": 8,
+      "seed": 0,
+      "status": "pre-existing seed-0 result",
+      "run_dir": "/tmp/slv176/results_VisA/dinov2_vits14_448/8-shot_preprocess=agnostic_xcheck",
+      "image_auroc_pct": 96.2206,
+      "pixel_auroc_pct": 98.4651,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 93.1,
+          "pixel_auroc_pct": 98.836
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 97.3833,
+          "pixel_auroc_pct": 96.2622
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 94.98,
+          "pixel_auroc_pct": 99.412
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.88,
+          "pixel_auroc_pct": 99.5905
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 96.92,
+          "pixel_auroc_pct": 97.4351
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 96.06,
+          "pixel_auroc_pct": 99.2546
+        }
+      }
+    },
+    "8-1": {
+      "shot": 8,
+      "seed": 1,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/8-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 97.4217,
+      "pixel_auroc_pct": 98.4838,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 93.79,
+          "pixel_auroc_pct": 98.78
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 99.1,
+          "pixel_auroc_pct": 96.4636
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 95.12,
+          "pixel_auroc_pct": 99.3969
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 99.2,
+          "pixel_auroc_pct": 99.5868
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 98.52,
+          "pixel_auroc_pct": 97.4619
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 98.8,
+          "pixel_auroc_pct": 99.2136
+        }
+      }
+    },
+    "8-2": {
+      "shot": 8,
+      "seed": 2,
+      "status": "new run (this session)",
+      "run_dir": "/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/8-shot_preprocess=agnostic_calib20r2",
+      "image_auroc_pct": 96.205,
+      "pixel_auroc_pct": 98.4561,
+      "per_category": {
+        "candle": {
+          "n": 200,
+          "image_auroc_pct": 93.53,
+          "pixel_auroc_pct": 98.6526
+        },
+        "capsules": {
+          "n": 160,
+          "image_auroc_pct": 97.9,
+          "pixel_auroc_pct": 96.4397
+        },
+        "cashew": {
+          "n": 150,
+          "image_auroc_pct": 93.76,
+          "pixel_auroc_pct": 99.4293
+        },
+        "chewinggum": {
+          "n": 150,
+          "image_auroc_pct": 98.54,
+          "pixel_auroc_pct": 99.5304
+        },
+        "fryum": {
+          "n": 150,
+          "image_auroc_pct": 98.88,
+          "pixel_auroc_pct": 97.4461
+        },
+        "pipe_fryum": {
+          "n": 150,
+          "image_auroc_pct": 94.62,
+          "pixel_auroc_pct": 99.2386
+        }
+      }
+    }
+  },
+  "per_shot_mean_std": {
+    "1-shot": {
+      "image_auroc": {
+        "per_seed": [
+          94.6172,
+          93.5756,
+          95.6311
+        ],
+        "mean": 94.608,
+        "std": 0.8392,
+        "n_seeds": 3
+      },
+      "pixel_auroc": {
+        "per_seed": [
+          98.0238,
+          98.0696,
+          98.1497
+        ],
+        "mean": 98.081,
+        "std": 0.052,
+        "n_seeds": 3
+      }
+    },
+    "2-shot": {
+      "image_auroc": {
+        "per_seed": [
+          94.7028,
+          95.8172,
+          95.4561
+        ],
+        "mean": 95.3254,
+        "std": 0.4642,
+        "n_seeds": 3
+      },
+      "pixel_auroc": {
+        "per_seed": [
+          98.231,
+          98.2961,
+          98.1338
+        ],
+        "mean": 98.2203,
+        "std": 0.0667,
+        "n_seeds": 3
+      }
+    },
+    "4-shot": {
+      "image_auroc": {
+        "per_seed": [
+          95.8361,
+          95.9017,
+          96.7178
+        ],
+        "mean": 96.1519,
+        "std": 0.4011,
+        "n_seeds": 3
+      },
+      "pixel_auroc": {
+        "per_seed": [
+          98.3982,
+          98.3227,
+          98.371
+        ],
+        "mean": 98.364,
+        "std": 0.0312,
+        "n_seeds": 3
+      }
+    },
+    "8-shot": {
+      "image_auroc": {
+        "per_seed": [
+          96.2206,
+          97.4217,
+          96.205
+        ],
+        "mean": 96.6158,
+        "std": 0.5699,
+        "n_seeds": 3
+      },
+      "pixel_auroc": {
+        "per_seed": [
+          98.4651,
+          98.4838,
+          98.4561
+        ],
+        "mean": 98.4683,
+        "std": 0.0115,
+        "n_seeds": 3
+      }
+    }
+  }
+}

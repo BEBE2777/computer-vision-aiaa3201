@@ -1,0 +1,38 @@
+{
+  "object": "capsules",
+  "shot": 8,
+  "seed": 1,
+  "calib_exclude": 20,
+  "calibration_files": [
+    "000.JPG",
+    "001.JPG",
+    "002.JPG",
+    "003.JPG",
+    "004.JPG",
+    "005.JPG",
+    "006.JPG",
+    "007.JPG",
+    "008.JPG",
+    "009.JPG",
+    "010.JPG",
+    "012.JPG",
+    "014.JPG",
+    "015.JPG",
+    "017.JPG",
+    "018.JPG",
+    "019.JPG",
+    "020.JPG",
+    "021.JPG",
+    "022.JPG"
+  ],
+  "reference_files": [
+    "034.JPG",
+    "035.JPG",
+    "036.JPG",
+    "037.JPG",
+    "038.JPG",
+    "039.JPG",
+    "040.JPG",
+    "041.JPG"
+  ]
+}

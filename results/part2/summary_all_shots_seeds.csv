@@ -1,0 +1,13 @@
+shots,seed,status,image_auroc,pixel_auroc,run_dir
+1,0,existing-seed0,94.62,98.02,/tmp/slv176/results_VisA/dinov2_vits14_448/1-shot_preprocess=agnostic_calib20
+1,1,new,93.58,98.07,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/1-shot_preprocess=agnostic_calib20r2
+1,2,new,95.63,98.15,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/1-shot_preprocess=agnostic_calib20r2
+2,0,existing-seed0,94.70,98.23,/tmp/slv176/results_VisA/dinov2_vits14_448/2-shot_preprocess=agnostic_xcheck
+2,1,new,95.82,98.30,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/2-shot_preprocess=agnostic_calib20r2
+2,2,new,95.46,98.13,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/2-shot_preprocess=agnostic_calib20r2
+4,0,new,95.84,98.40,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/4-shot_preprocess=agnostic_calib20r2
+4,1,new,95.90,98.32,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/4-shot_preprocess=agnostic_calib20r2
+4,2,new,96.72,98.37,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/4-shot_preprocess=agnostic_calib20r2
+8,0,existing-seed0,96.22,98.47,/tmp/slv176/results_VisA/dinov2_vits14_448/8-shot_preprocess=agnostic_xcheck
+8,1,new,97.42,98.48,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/8-shot_preprocess=agnostic_calib20r2
+8,2,new,96.21,98.46,/tmp/qzheng610_p2/results_VisA/dinov2_vits14_448/8-shot_preprocess=agnostic_calib20r2

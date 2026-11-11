@@ -1,0 +1,21 @@
+calib_exclude: 20
+data_root: /tmp/slv176/data/VisA_pytorch/1cls
+dataset: VisA
+device: cuda:0
+eval_clf: true
+eval_segm: true
+faiss_on_cpu: true
+just_seed: 0
+k_neighbors: 1
+knn_metric: L2_normalized
+mask_ref_images: false
+model_name: dinov2_vits14
+num_seeds: 1
+preprocess: agnostic
+refs_dump: true
+resolution: 448
+save_examples: false
+shots:
+- 1
+tag: calib20
+warmup_iters: 3

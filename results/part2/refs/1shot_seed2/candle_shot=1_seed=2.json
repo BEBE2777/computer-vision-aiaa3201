@@ -1,0 +1,31 @@
+{
+  "object": "candle",
+  "shot": 1,
+  "seed": 2,
+  "calib_exclude": 20,
+  "calibration_files": [
+    "0000.JPG",
+    "0001.JPG",
+    "0002.JPG",
+    "0003.JPG",
+    "0004.JPG",
+    "0005.JPG",
+    "0006.JPG",
+    "0007.JPG",
+    "0008.JPG",
+    "0009.JPG",
+    "0010.JPG",
+    "0012.JPG",
+    "0014.JPG",
+    "0015.JPG",
+    "0017.JPG",
+    "0018.JPG",
+    "0019.JPG",
+    "0020.JPG",
+    "0021.JPG",
+    "0022.JPG"
+  ],
+  "reference_files": [
+    "0028.JPG"
+  ]
+}

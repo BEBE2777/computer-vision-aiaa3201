@@ -1,0 +1,34 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- 虚拟环境 ----
+.venv/
+venv/
+env/
+
+# ---- 第三方代码（自行 clone，见 README）----
+p2-anomaly/third_party/
+
+# ---- 数据与权重（体积大，不入库）----
+data/
+datasets/
+VisA/
+*.tar
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# ---- 运行产物 ----
+p2-anomaly/results/**
+!p2-anomaly/results/.gitkeep
+*.log
+
+# ---- 系统垃圾 ----
+.DS_Store
+Thumbs.db
+desktop.ini

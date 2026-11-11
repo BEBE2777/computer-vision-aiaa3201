@@ -28,6 +28,9 @@ p2-anomaly/results/**
 !p2-anomaly/results/.gitkeep
 *.log
 
+# ---- 本地工作区元数据 ----
+.workbuddy/
+
 # ---- 系统垃圾 ----
 .DS_Store
 Thumbs.db

@@ -73,6 +73,27 @@ def load_part1(variant_dir, cats=VISA_6):
     return out
 
 
+def load_grid(path, cats=VISA_6):
+    """{shot: {cat: {"image": (m,s), "pixel": (m,s)}}} from run_grid.py's *_final.json"""
+    if not os.path.isfile(path):
+        return {}
+    raw = json.load(open(path))
+    out = {}
+    for metric, key in (("image_auroc", "image"), ("pixel_auroc", "pixel")):
+        for sk, row in raw.get(metric, {}).items():
+            shot = int(re.match(r"(\d+)-shot", sk).group(1))
+            out.setdefault(shot, {})
+            for c in cats:
+                out[shot].setdefault(c, {})[key] = (row.get(c, float("nan")),
+                                                    row.get(c + "_std", 0.0))
+    # make sure both keys exist for every (shot, cat)
+    for shot in out:
+        for c in out[shot]:
+            out[shot][c].setdefault("image", (float("nan"),) * 2)
+            out[shot][c].setdefault("pixel", (float("nan"),) * 2)
+    return out
+
+
 def category_mean(per_cat, cats, key):
     vals = [per_cat[c][key][0] for c in cats if per_cat[c][key][0] == per_cat[c][key][0]]
     return float(np.mean(vals)) if vals else float("nan")
@@ -121,6 +142,8 @@ def main():
     ap.add_argument("--root", default=".")
     ap.add_argument("--part2", default="calib20", help="tag of the Part 2 run")
     ap.add_argument("--part1", default="align=none", help="variant dir under results/part1_template")
+    ap.add_argument("--grid", nargs="*", default=[],
+                    help="extra runs as name=path/to/grid_final.json")
     ap.add_argument("--extra", nargs="*", default=[],
                     help="extra runs as name=tag (official-style) e.g. ours_layers=layers")
     ap.add_argument("--out", default="results/tables")
@@ -142,6 +165,12 @@ def main():
     for spec in args.extra:
         name, tag = spec.split("=", 1)
         d = load_official(base, tag, cats, shots)
+        if d:
+            runs[name] = d
+
+    for spec in args.grid:
+        name, path = spec.split("=", 1)
+        d = load_grid(path, cats)
         if d:
             runs[name] = d
 

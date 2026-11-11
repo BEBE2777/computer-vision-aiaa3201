@@ -30,7 +30,7 @@ nohup "$VENV/bin/python" run_anomalydino.py \
   --shots 1 2 4 8 \
   --num_seeds 3 \
   --calib_exclude 20 \
-  --eval_segm --eval_clf \
+  --eval_clf --no-eval_segm \
   --faiss_on_cpu \
   --warmup_iters 5 \
   --tag "$TAG" "$@" > "$LOG" 2>&1 < /dev/null &

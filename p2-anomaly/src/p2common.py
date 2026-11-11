@@ -117,12 +117,24 @@ def image_auroc(anomaly_scores, labels):
 
 
 def pooled_pixel_auroc(maps, masks):
-    from sklearn.metrics import roc_auc_score
-    y = np.concatenate([m.ravel() for m in masks]).astype(np.uint8)
-    s = np.concatenate([m.ravel().astype(np.float32) for m in maps])
-    if y.max() == 0:
+    """Exact pooled pixel AUROC without sklearn.
+
+    sklearn's roc_auc_score needs ~59 s for 100 images of 448x448 (20 M pooled samples) because
+    it sorts the full score vector with a big constant factor. This computes the same quantity
+    from the rank sum of the positives against the sorted negative scores, which is exact and
+    ~30x faster (sort only the negatives, then two searchsorted calls).
+    """
+    scores = np.concatenate([m.ravel() for m in maps]).astype(np.float32)
+    labels = np.concatenate([m.ravel() for m in masks]).astype(bool)
+    n_pos = int(labels.sum())
+    n_neg = labels.size - n_pos
+    if n_pos == 0 or n_neg == 0:
         return float("nan")
-    return float(roc_auc_score(y, s))
+    neg = np.sort(scores[~labels])
+    pos = scores[labels]
+    lt = np.searchsorted(neg, pos, side="left")
+    eq = np.searchsorted(neg, pos, side="right") - lt
+    return float(np.mean((lt + 0.5 * eq) / n_neg))
 
 
 def mean_over_categories(d):

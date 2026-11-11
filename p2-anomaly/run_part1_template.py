@@ -65,11 +65,18 @@ def diff_map(ref_rgb, img_rgb, use_grad=False):
         ki = np.stack(np.gradient(gi), 0)
         d_grad = np.abs(ki - kr).mean(0) * 2.0
         d = d + 0.5 * np.clip(d_grad, 0.0, 1.0)
-    return d / d.max() if d.max() > 0 else d
+    # NOTE: deliberately NO per-image normalisation here -- the absolute magnitude of the
+    # difference is what an image-level score must reflect, and rescaling each test image
+    # separately is exactly what the project PDF forbids when computing AUROC.
+    return d
 
 
 def score_one(img, refs, anchor_gray, align, use_grad):
-    """Score a single image against a set of prepared references."""
+    """Score a single image against a set of prepared references.
+
+    `align` must be a bool -- passing the CLI string ("none"/"ecc") used to be truthy for
+    both values, which silently enabled alignment in the "none" setting.
+    """
     if align:
         warp = ecc_warp_to_anchor(anchor_gray, gray01(img))
         img = apply_warp(img, warp)
@@ -98,19 +105,20 @@ def run(args):
 
         for shot in args.shots:
             for seed in args.seeds:
+                do_align = (args.align == "ecc")
                 t0 = time.time()
                 ref_names = shot_refs(pool, shot, seed)
                 ref_dir = os.path.join(root, cat, "train", "good")
                 refs = [prep_square(load_rgb(os.path.join(ref_dir, n))) for n in ref_names]
 
                 anchor_gray = gray01(refs[0])
-                if args.align:
+                if do_align:
                     warps = [ecc_warp_to_anchor(anchor_gray, gray01(r)) for r in refs[1:]]
                     refs = [refs[0]] + [apply_warp(r, w) for r, w in zip(refs[1:], warps)]
 
                 # calibration scores -> OK/NG threshold (demo only, never used for AUROC)
                 calib_scores = [top1p_mean(score_one(prep_square(load_rgb(p)), refs,
-                                                     anchor_gray, args.align, args.use_grad))
+                                                     anchor_gray, do_align, args.use_grad))
                                 for p in calib_paths]
                 thr = percentile_threshold(calib_scores, 95.0)
 
@@ -118,7 +126,7 @@ def run(args):
                 scores, labels, maps, masks = [], [], [], []
                 for label, img_path, mask_path in items:
                     s_map = score_one(prep_square(load_rgb(img_path)), refs,
-                                      anchor_gray, args.align, args.use_grad)
+                                      anchor_gray, do_align, args.use_grad)
                     scores.append(top1p_mean(s_map))
                     labels.append(label)
                     maps.append(s_map.astype(np.float32))

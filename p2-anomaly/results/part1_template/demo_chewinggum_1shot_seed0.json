@@ -1,0 +1,58 @@
+{
+  "category": "chewinggum",
+  "shot": 1,
+  "seed": 0,
+  "method": "Part 1 template-difference baseline (align=none, no fg-crop, no gradient term)",
+  "score_rule": "mean of top 1% values in the Gaussian-smoothed (sigma=4) 0.5*|dI| + 0.5*(1-SSIM) difference map vs the closest reference",
+  "threshold_rule": "95th percentile over 20 held-out normal calibration images",
+  "threshold": 0.879422,
+  "reference_files": [
+    "023.JPG"
+  ],
+  "calibration_files": [
+    "000.JPG",
+    "001.JPG",
+    "002.JPG",
+    "003.JPG",
+    "004.JPG",
+    "005.JPG",
+    "007.JPG",
+    "008.JPG",
+    "009.JPG",
+    "010.JPG",
+    "011.JPG",
+    "014.JPG",
+    "015.JPG",
+    "016.JPG",
+    "017.JPG",
+    "018.JPG",
+    "019.JPG",
+    "020.JPG",
+    "021.JPG",
+    "022.JPG"
+  ],
+  "preprocessing": "shorter edge resized to 448 px, centre-cropped to 448x448",
+  "self_check": {
+    "recomputed_image_auroc_full_test_split": 0.4728,
+    "committed_image_auroc": 0.4728,
+    "committed_threshold": 0.879421529173851
+  },
+  "samples": [
+    {
+      "filename": "chewinggum/test/good/213.JPG",
+      "ground_truth": "normal",
+      "score": 0.78002,
+      "prediction": "OK",
+      "input_image": "results/figs/part1_okng_demo_chewinggum_1shot_seed0/normal_input.jpg",
+      "heatmap": "results/figs/part1_okng_demo_chewinggum_1shot_seed0/normal_heatmap.png"
+    },
+    {
+      "filename": "chewinggum/test/bad/092.JPG",
+      "ground_truth": "defective",
+      "score": 0.943442,
+      "prediction": "NG",
+      "input_image": "results/figs/part1_okng_demo_chewinggum_1shot_seed0/defective_input.jpg",
+      "heatmap": "results/figs/part1_okng_demo_chewinggum_1shot_seed0/defective_heatmap.png"
+    }
+  ]
+}

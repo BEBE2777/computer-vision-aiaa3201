@@ -13,10 +13,10 @@ Self-checks before exporting:
   * recomputed image AUROC over the full test split must match the stored
     image_auroc value (1e-6 tolerance).
 
-Then it picks one normal and one defective test image WITHOUT using labels to
-influence the threshold (labels are only used to report ground truth and to
-check whether the chosen pair happens to be predicted correctly; any error is
-kept and reported honestly).
+Then it exports one normal and one defective test image chosen by a DETERMINISTIC
+rule that does not look at anomaly scores at all: the first normal and the first
+defective item in test_items order (filename-sorted within each ground-truth
+group). Any misjudgment of these fixed samples is kept and reported honestly.
 """
 import argparse
 import json
@@ -106,12 +106,11 @@ def main():
         assert abs(au - args.expected_auroc) < 1e-6, \
             f"AUROC drift: {au} vs {args.expected_auroc}"
 
-    # pick pair: lowest-scoring normal, highest-scoring defective (labels only used here,
-    # for choosing what to SHOW; the threshold itself never saw any test label)
-    n_idx = [i for i, l in enumerate(labels) if l == 0]
-    d_idx = [i for i, l in enumerate(labels) if l == 1]
-    ni = min(n_idx, key=lambda i: scores[i])
-    di = max(d_idx, key=lambda i: scores[i])
+    # deterministic, score-independent selection: first normal and first defective
+    # item in test_items order (filename-sorted within each ground-truth group).
+    # Labels are used ONLY to identify the two groups, never to compare scores.
+    ni = next(i for i, l in enumerate(labels) if l == 0)
+    di = next(i for i, l in enumerate(labels) if l == 1)
     print("chosen normal:", names_all[ni], scores[ni])
     print("chosen defective:", names_all[di], scores[di])
 
@@ -191,6 +190,9 @@ def main():
         "score_rule": "mean of top 1% values in the Gaussian-smoothed (sigma=4) "
                       "0.5*|dI| + 0.5*(1-SSIM) difference map vs the closest reference",
         "threshold_rule": "95th percentile over 20 held-out normal calibration images",
+        "sample_selection_rule": "first normal and first defective test item in "
+                                 "deterministic filename order; selected independently "
+                                 "of anomaly score",
         "threshold": round(thr, 6),
         "reference_files": ref_names,
         "calibration_files": calib_names,

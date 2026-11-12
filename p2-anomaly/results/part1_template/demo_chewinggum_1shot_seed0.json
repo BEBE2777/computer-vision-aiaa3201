@@ -5,6 +5,7 @@
   "method": "Part 1 template-difference baseline (align=none, no fg-crop, no gradient term)",
   "score_rule": "mean of top 1% values in the Gaussian-smoothed (sigma=4) 0.5*|dI| + 0.5*(1-SSIM) difference map vs the closest reference",
   "threshold_rule": "95th percentile over 20 held-out normal calibration images",
+  "sample_selection_rule": "first normal and first defective test item in deterministic filename order; selected independently of anomaly score",
   "threshold": 0.879422,
   "reference_files": [
     "023.JPG"
@@ -39,18 +40,18 @@
   },
   "samples": [
     {
-      "filename": "chewinggum/test/good/213.JPG",
+      "filename": "chewinggum/test/good/006.JPG",
       "ground_truth": "normal",
-      "score": 0.78002,
+      "score": 0.831698,
       "prediction": "OK",
       "input_image": "results/figs/part1_okng_demo_chewinggum_1shot_seed0/normal_input.jpg",
       "heatmap": "results/figs/part1_okng_demo_chewinggum_1shot_seed0/normal_heatmap.png"
     },
     {
-      "filename": "chewinggum/test/bad/092.JPG",
+      "filename": "chewinggum/test/bad/000.JPG",
       "ground_truth": "defective",
-      "score": 0.943442,
-      "prediction": "NG",
+      "score": 0.864918,
+      "prediction": "OK",
       "input_image": "results/figs/part1_okng_demo_chewinggum_1shot_seed0/defective_input.jpg",
       "heatmap": "results/figs/part1_okng_demo_chewinggum_1shot_seed0/defective_heatmap.png"
     }

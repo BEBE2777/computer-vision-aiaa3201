@@ -152,13 +152,15 @@ runner 按 reference_1…reference_n、QUERY 逐图标注并确认顺序；不�
 
 九、Part 3 两人责任和时间安排
 
-成员 A：官方/缓存 parity、数据与 refs、视觉 adapter/kNN/maps、统一 evaluator、逐图 join/归一化/α 曲线、视觉错例、定量表与复现。
+采用独立分支，减少相互等待：
 
-成员 B：Qwen/GPT 模型获取与多图推理、固定 prompt/JSON/失败恢复/缓存、语义全网格、ROI prompt 与按需调用、语义错例和成本表。
+- **A：视觉分支。**主责 Part 2 官方轻量结果核查/备份、评分协议收尾和权威基线表；Part 3 做 CLIP 空间特征/kNN、与官方 DINO 的共同协议对比、视觉热图与错例；报告负责 Method、视觉实验结果和传统视觉相关工作。
+- **B：多模态分支。**Part 3 独立做 Qwen 多模态参考式检查，不依赖 A 的 ROI 输出；保存逐图结构化分数、失败、成本和案例；报告负责多模态 Related Work、Qwen 实验/定性结果；检查 brief 引用覆盖并负责 Demo 或 project page、最终 ZIP。
+- **共同。**冻结相同的评测范围和输出 schema；实验完成后视时间做分数融合（共同加项，不阻塞各自实验）；共同完成 Abstract/Introduction、Conclusion、终审和 Canvas 提交。B 核查 A 的备份文件覆盖，A 解包复核 B 的 ZIP。
 
-共同负责：冻结协议、先导范围与开发隔离、跨骨干融合、每日 15 分钟交接、相互复核、结论与报告。A 供 ROI 坐标，B 做复查；B 供语义预测，A 做融合。不要把一个人仅安排成 PPT 制作。
+两条实验必须尽可能使用相同类别、shot、seed、测试覆盖和指标。先各自跑 1-shot/seed0 六类 smoke test，冻结设置后扩展到共同的 4 shot × 3 seed 网格。若 Qwen 资源/预算不足，双方共同缩小确认性网格；CLIP 用相同网格，额外结果单列探索，不直接排名。每人独立保存配置、逐图预测、指标、图和失败记录，只交付统一文件格式，减少中途耦合。
 
-按约 10 个工作日：D1–2 接口与 parity/VLM smoke；D3–4 先导并冻结方案；D5–7 全网格及离线融合；D8–9 一项关键探索与错误分析；D10 图表、复现和报告。当前没给实际截止日期，这是工作量建议。共享 GPU 先核查再排串行作业，代码和分析可同时进行。运行后立即备份轻量结果，防止 `/tmp` 丢失。
+按约 10 个工作日：D1–2 两条线分别做 smoke test、B 同时完成文献清单；D3–4 冻结各自设置与共同评测范围；D5–7 独立运行共同网格；D8–9 各自完成错例分析，之后再决定是否融合；D10 合并表格与报告。实际截止日未提供，以 Canvas 日期为准。共享 GPU 先核查再排串行时段，避免同时启动 GPU 作业；轻量结果运行后及时备份。
 
 十、Part 3 实施要求与交付
 
@@ -182,13 +184,13 @@ runner 按 reference_1…reference_n、QUERY 逐图标注并确认顺序；不�
 
 必交项按此顺序收尾：
 
-1. **服务器结果备份（A 主责，B 复核）：**核实 GPU 服务器 `/tmp` 中补跑结果，把轻量的 `metrics_seed*.json`、`eval448_*.json`、`refs/`、配置等备份到 `p2-anomaly/results/` 并 commit。不要提交数据集、模型权重、临时大 maps 或日志。
-2. **重新生成权威表格（A 主责，B 审数字）：**先对齐评分协议，再从归档结果生成 `tables.md`、metric JSON/CSV 和定性图；报告只能引用这套最终表格。说明口径、缺失项和差异来源。
+1. **服务器结果备份（A 主责，B 复核覆盖）：**核实 GPU 服务器 `/tmp` 中补跑结果，把轻量的 `metrics_seed*.json`、`eval448_*.json`、`refs/`、配置等备份到 `p2-anomaly/results/` 并 commit。不要提交数据集、模型权重、临时大 maps 或日志。
+2. **重新生成权威表格（A 主责，B 按 checklist 复核）：**先对齐评分协议，再从归档结果生成 `tables.md`、metric JSON/CSV 和定性图；报告只能引用这套最终表格。说明口径、缺失项和差异来源。
 3. **Related Work essay 与文献表（A/B 分写，共同整合）：**A 写局部视觉与异常检测；B 写多模态与视觉语言；共同写融合。逐条覆盖 brief 引用列表全部论文并核对来源。英文 essay 按课程要求；未给字数时约 1500–2500 词，附中文提纲。文献数字不能与本项目协议不同的结果直接排名。
-4. **英文项目报告（A 主笔 Method/Experiments，B 主笔 Related Work/案例/限制，共同审阅）：**章节固定为 Abstract & Introduction、Related Work、Method、Experiments（定量表与定性图）、Conclusion（总结、局限、未来工作）。Abstract 末尾必须写 GitHub 仓库链接。引用必须覆盖 brief 指定列表；所有数字与重出表格一致；不得把 Part 3 计划写成已完成结果。
+4. **英文项目报告（近似一人一半）：**A 主笔 Method、视觉 Experiments 和传统视觉相关工作；B 主笔多模态 Related Work、Qwen Experiments、定性案例与成本。两人共同写 Abstract & Introduction、Conclusion 并互审。章节固定为 Abstract & Introduction、Related Work、Method、Experiments、Conclusion。Abstract 末尾必须写 GitHub 仓库链接。引用必须覆盖 brief 指定列表；所有数字与重出表格一致；不得把 Part 3 计划写成已完成结果。
 5. **最终 ZIP 与 Canvas 提交（B 打包，A 复核）：**ZIP 包含最终报告和 GitHub 链接/仓库说明；解包检查文件完整、PDF 可读、链接有效、无密钥或数据集。提交至 Canvas，并保存提交回执。截止日为 12 月 11 日，按课程页面确认年份及时区。
 
-可选项：Demo 视频或 project page 至少完成一个（建议 B 主责，A 提供图表/热图）。Demo 建议 1–2 分钟，展示图片输入、异常热力图、OK/NG 和典型误判；project page 包含标题、简介、GitHub 链接、结果表、热图及可选视频。中期视频用途不同，不能代替此项。arXiv/preprint 暂不安排，按当前建议跳过，不视为缺少必交物。
+可选项：Demo 视频或 project page 至少完成一个（B 主责，A 提供最终视觉图表素材）。Demo 建议 1–2 分钟，展示图片输入、异常热力图、OK/NG 和典型误判；project page 包含标题、简介、GitHub 链接、结果表、热图及可选视频。中期视频用途不同，不能代替此项。arXiv/preprint 暂不安排，按当前建议跳过，不视为缺少必交物。
 
 收尾依赖顺序：服务器结果备份 → 评分协议对齐并重出表格 → Part 3 实验及 essay 收口 → 英文报告定稿 → Demo 视频/项目页 → 最终 ZIP 解包检查 → Canvas 提交并核实回执。两人每天更新交付清单；Canvas 回执取得前，不得将最终提交标记完成。
 

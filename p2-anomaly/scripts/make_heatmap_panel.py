@@ -78,20 +78,23 @@ def main():
                       or (mb[k][1]["score"] > db["threshold"][cat]) != bool(mb[k][1]["label"])]
         keys = sorted(both_wrong, key=lambda k: -abs(ma[k][1]["score"] - da["threshold"][cat]))
         for k in keys[:args.per_cat]:
-            rows.append((cat, k))
+            rows.append(k)          # k is already a (category, "split/stem") tuple
     if not rows:
         print("no shared case maps -- run dump_scores.py with --maps on both backbones")
         return
 
     fig, axes = plt.subplots(len(rows), 4, figsize=(8.2, 2.05 * len(rows)), squeeze=False)
+    # resolve image paths from the dump's own rel paths (VisA uses .JPG, not .jpg)
+    rel_of = {}
+    for d in (da, db):
+        for cat, rec in d["categories"].items():
+            for rel in rec["paths"]:
+                parts = rel.replace("\\", "/").split("/")
+                stem = os.path.splitext(parts[-1])[0]
+                rel_of[(cat, f"{parts[-2]}/{stem}")] = rel
     for r, (cat, key) in enumerate(rows):
         split, stem = key.split("/")
-        img_path = os.path.join(args.root, cat, "test", split, stem + ".jpg")
-        if not os.path.isfile(img_path):
-            for ext in (".png", ".bmp", ".jpeg"):
-                if os.path.isfile(os.path.join(args.root, cat, "test", split, stem + ext)):
-                    img_path = os.path.join(args.root, cat, "test", split, stem + ext)
-                    break
+        img_path = os.path.join(args.root, rel_of[(cat, key)])
         img = cv2.resize(C.load_rgb(img_path), (C.EVAL_SIZE, C.EVAL_SIZE),
                          interpolation=cv2.INTER_AREA)
         gt = C.load_mask(os.path.join(args.root, cat, "ground_truth", "bad", stem + ".png"),
@@ -100,9 +103,10 @@ def main():
                   (np.stack([gt * 255] * 3, -1).astype(np.uint8), "ground truth")]
         for d, m, name, thr in ((da, ma, args.a_name, da["threshold"][cat]),
                                 (db, mb, args.b_name, db["threshold"][cat])):
-            s = m[key][1]["score"]
+            smap, info = m[(cat, key)]
+            s = info["score"]
             verdict = "TP" if s > thr else "FP" if split == "good" else "FN"
-            cm = cv2.applyColorMap((norm(d) * 255).astype(np.uint8), cv2.COLORMAP_JET)[:, :, ::-1]
+            cm = cv2.applyColorMap((norm(smap) * 255).astype(np.uint8), cv2.COLORMAP_JET)[:, :, ::-1]
             panels.append((cm, f"{name}\nscore {s:.3f} (thr {thr:.3f}) {verdict}"))
         for c, (im, title) in enumerate(panels):
             ax = axes[r, c]

@@ -1,8 +1,7 @@
 # Method — visual branch (draft, Part 3 / E1)
 
-> Status: prose is final; the two result tables marked `TODO` are filled from
-> `results/part3/e1_full.md` once the E1 grid finishes. Report language is English, so this
-> draft is English.
+> Status: numbers filled from the completed E1 grid (`p2-anomaly/results/part3/e1_full.md`).
+> Report language is English, so this draft is English.
 
 ## 1. Setup and evaluation protocol
 
@@ -134,18 +133,40 @@ map), and the metric code. The Part 2 official line uses the same scoring rule b
 implementation, its PCA foreground mask and its own preprocessing; it is the reference point, not
 a controlled arm. Part 1 is reported for completeness.
 
-TODO: table — image/pixel AUROC (mean ± std over 3 seeds) per shot for Part 1, Part 2 official,
-DINOv2@448 no-mask, CLIP@448 block 9.
+Image-level AUROC (%), mean ± std over three seeds:
 
-TODO: table — per-category image AUROC at 1-shot for the two controlled arms.
+| Method | 1-shot | 2-shot | 4-shot | 8-shot |
+|---|---|---|---|---|
+| Template difference (Part 1) | 52.00 ± 1.13 | 54.08 ± 3.38 | 55.36 ± 3.22 | 57.96 ± 0.47 |
+| AnomalyDINO (Part 2, official, masked) | **94.61 ± 0.84** | **95.33 ± 0.46** | **96.15 ± 0.40** | **96.62 ± 0.57** |
+| DINOv2 @448, no mask (E1 control) | 93.34 ± 0.72 | 94.16 ± 0.27 | 94.92 ± 0.49 | 95.37 ± 0.72 |
+| CLIP @448 block 9, no mask (Part 3) | 87.70 ± 1.24 | 89.22 ± 0.29 | 89.27 ± 0.38 | 89.48 ± 0.23 |
+
+Pixel-level AUROC follows the same ordering: 98.08–98.47 (official), 97.06–98.16 (DINOv2
+control), 94.44–95.46 (CLIP); Part 1 is 65.06–66.14. Per-shot per-category tables are in
+`p2-anomaly/results/part3/tables.md`, the narrative read-out in `e1_full.md`.
+
+Per-category image AUROC at 1-shot for the two controlled arms:
+
+| category | DINOv2 @448 no-mask | CLIP @448 block 9 | Δ |
+|---|---|---|---|
+| candle | 89.51 ± 2.52 | 84.77 ± 5.17 | −4.7 |
+| capsules | 94.32 ± 1.26 | 79.18 ± 2.47 | −15.1 |
+| cashew | 93.09 ± 1.75 | 88.87 ± 3.78 | −4.2 |
+| chewinggum | 98.35 ± 0.50 | 95.75 ± 1.18 | −2.6 |
+| fryum | 93.27 ± 1.12 | 82.93 ± 6.26 | −10.3 |
+| pipe_fryum | 91.48 ± 1.78 | 94.67 ± 0.80 | **+3.2** |
 
 ## 5. Qualitative analysis
 
 Tables cannot say which images a method gets wrong, so the two controlled arms are also compared
 image by image. Every test image receives a verdict from its own backbone's calibration
 threshold, and the two verdicts are crossed into a 2×2 table (both right / only DINOv2 right /
-only CLIP right / both wrong; `results/part3/error_taxonomy.csv`). The heatmap panel in
-`results/part3/figs/heatmap_panel.png` shows, for the same test images, the ground-truth mask and
+only CLIP right / both wrong; `p2-anomaly/results/part3/error_cases.csv`). At 1-shot the
+crossing is 607 both right (63.2%) / 193 only DINOv2 (20.1%) / 58 only CLIP (6.0%) / 102 both
+wrong (10.6%), so CLIP is right on 58 images where DINOv2 is wrong — complementarity that the
+fusion experiments build on. The heatmap panel in
+`p2-anomaly/results/part3/figs/heatmap_panel.png` shows, for the same test images, the ground-truth mask and
 both score maps, so a disagreement can be read as a difference in where the two encoders place
 their nearest-neighbour distances rather than as an aggregate number.
 

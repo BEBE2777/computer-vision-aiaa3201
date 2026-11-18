@@ -57,14 +57,20 @@ def cache_path(cache_root, cat, name, n_views, layers):
     return os.path.join(cache_root, tag, cat, f"{name}__v{n_views}.npz")
 
 
-def cache_path_backbone(cache_root, backbone, cat, name, n_views, layers):
-    """Backbone-scoped cache path: DINO and CLIP features must never share keys."""
-    tag = f"{backbone}_L" + "-".join(str(l) for l in layers)
+def cache_path_backbone(cache_root, backbone, cat, name, n_views, layers, resolution,
+                        prep="std"):
+    """Backbone-scoped cache path: DINO and CLIP features must never share keys.
+
+    Resolution MUST be part of the key: the same image at 224 and 448 produces
+    different patch grids, so a resolution-agnostic key silently reuses 448
+    features for a 224 run (the E1 resolution control would be meaningless).
+    """
+    tag = f"{backbone}{resolution}_{prep}_L" + "-".join(str(l) for l in layers)
     return os.path.join(cache_root, tag, cat, f"{name}__v{n_views}.npz")
 
 
 def get_features(model, cache_root, cat, path, name, n_views, layers, mask_query=True,
-                 backbone="dinov2", use_mask=True):
+                 backbone="dinov2", use_mask=True, resolution=448, prep="std"):
     """Feature tensors from the npz cache; masks are recomputed on reload.
 
     The npz stores full-grid features per (view, layer); the mask protocol is NOT part
@@ -82,7 +88,8 @@ def get_features(model, cache_root, cat, path, name, n_views, layers, mask_query
     See results/part2_official/parity_report.md for the parity analysis behind this.
     """
     effective_mask = mask_query and use_mask
-    cp = cache_path_backbone(cache_root, backbone, cat, name, n_views, layers)
+    cp = cache_path_backbone(cache_root, backbone, cat, name, n_views, layers, resolution,
+                             prep)
     if os.path.isfile(cp):
         z = np.load(cp, allow_pickle=True)
         feats = [f.astype(np.float32) for f in z["feats"]]
@@ -138,9 +145,12 @@ def run(args):
     if args.backbone == "clip":
         model = LayerCLIP(args.model, device, args.resolution, layers,
                           pos_embedding_mode=args.pos_embedding_mode,
-                          download_root=args.clip_download_root)
+                          download_root=args.clip_download_root,
+                          resize_mode=args.clip_resize_mode)
+        prep = args.clip_resize_mode
     else:
         model = LayerDINOv2(args.model, device, args.resolution, layers)
+        prep = "std"
 
     summary = {"image_auroc": {}, "pixel_auroc": {}, "threshold": {}, "meta": vars(args)}
     t_start = time.time()
@@ -159,14 +169,17 @@ def run(args):
             ref_cache[n] = get_features(model, args.cache, cat, os.path.join(ref_dir, n),
                                         cache_key(os.path.join(ref_dir, n)), 8, layers,
                                         mask_query=False, backbone=args.backbone,
-                                        use_mask=args.use_mask)
+                                        use_mask=args.use_mask,
+                                        resolution=args.resolution, prep=prep)
         test_cache = [get_features(model, args.cache, cat, p,
                                    cache_key(p), 1, layers, backbone=args.backbone,
-                                   use_mask=args.use_mask)
+                                   use_mask=args.use_mask,
+                                   resolution=args.resolution, prep=prep)
                       for _, p, _ in items]
         calib_cache = [get_features(model, args.cache, cat, os.path.join(ref_dir, n),
                                     cache_key(os.path.join(ref_dir, n)), 1, layers,
-                                    backbone=args.backbone, use_mask=args.use_mask)
+                                    backbone=args.backbone, use_mask=args.use_mask,
+                                    resolution=args.resolution, prep=prep)
                        for n in calib_names]
 
         for shot in args.shots:
@@ -253,6 +266,11 @@ def parse_args():
     p.add_argument("--pos_embedding_mode", default="interp", choices=["native", "interp"],
                    help="CLIP positional embedding for non-native resolution")
     p.add_argument("--clip_download_root", default="/data/disk1/home/slv176/models/clip")
+    p.add_argument("--clip_resize_mode", default="short_edge_crop",
+                   choices=["short_edge_crop", "squash", "short_edge"],
+                   help="CLIP preprocessing: official short-edge+centre-crop, squash the "
+                        "whole image to a square, or short_edge (DINOv2-wrapper style: "
+                        "full frame, rectangular grid) -- the controlled E1 setting")
     p.add_argument("--no_mask", dest="use_mask", action="store_false",
                    help="disable PCA foreground masks (controlled E1 comparison; "
                         "forced semantics: refs and queries all-patch)")

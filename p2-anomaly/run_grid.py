@@ -30,26 +30,66 @@ from scipy.ndimage import gaussian_filter
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 import p2common as C
-from ad_core import (LayerDINOv2, build_bank, extract_image, fuse_distances,
-                     make_index, mean_top1p, patch_distances)
+from ad_core import (LayerDINOv2, build_bank, deterministic_background_mask,
+                     extract_image, fuse_distances, make_index, mean_top1p,
+                     patch_distances)
 
 
 # ---------------------------------------------------------------- feature cache
+def cache_key(path):
+    """Cache key for an image file.
+
+    IMPORTANT: basenames alone are NOT unique in VisA -- e.g. capsules has 8
+    basenames shared between test/good and test/bad, and ~90 train names shared
+    with test/bad. A basename-only key made bad test images silently reuse the
+    features of the same-named good image (score collapse -> up to 5 image-AUROC
+    points on capsules) and let calibration images reuse test-bad features.
+    Namespace by the parent directory instead. See
+    results/part2_official/parity_report.md.
+    """
+    sub = os.path.basename(os.path.dirname(os.path.abspath(path)))
+    return f"{sub}_{os.path.basename(path)}"
+
+
 def cache_path(cache_root, cat, name, n_views, layers):
     tag = "L" + "-".join(str(l) for l in layers)
     return os.path.join(cache_root, tag, cat, f"{name}__v{n_views}.npz")
 
 
-def get_features(model, cache_root, cat, path, name, n_views, layers):
+def get_features(model, cache_root, cat, path, name, n_views, layers, mask_query=True):
+    """Feature tensors from the npz cache; masks are recomputed on reload.
+
+    The npz stores full-grid features per (view, layer); the mask protocol is NOT part
+    of the cache key, so on reload the masks are always rebuilt with the current
+    protocol instead of trusting the stale ones stored next to the features:
+
+    - mask_query=False (reference images): all patches enter the bank, matching the
+      official `mask_ref_images=False` behaviour.
+    - mask_query=True (test / calibration queries): deterministic PCA foreground mask
+      (fixed random_state) -- the official agnostic preprocessing, made process-stable.
+
+    See results/part2_official/parity_report.md for the parity analysis behind this.
+    """
     cp = cache_path(cache_root, cat, name, n_views, layers)
     if os.path.isfile(cp):
         z = np.load(cp, allow_pickle=True)
         feats = [f.astype(np.float32) for f in z["feats"]]
-        return feats, tuple(z["grid"]), [m.astype(bool) for m in z["masks"]]
-    feats, grid, masks = extract_image(model, path, rotations=n_views)
+        grid = tuple(int(x) for x in z["grid"])
+        if not mask_query:
+            masks = [np.ones(f[-1].shape[0], dtype=bool) for f in feats]
+        else:
+            # mask is estimated on the last block, as in extract_image
+            masks = [deterministic_background_mask(f[-1], grid) for f in feats]
+        return feats, grid, masks
+    feats, grid, masks = extract_image(model, path, rotations=n_views,
+                                       mask_query=mask_query)
     os.makedirs(os.path.dirname(cp), exist_ok=True)
-    np.savez_compressed(cp,
-                        feats=np.stack(feats).astype(np.float16),
+    # NOTE: features are stored in float32. A float16 cache is lossy for SCORING:
+    # query-side rounding shifts patch features by up to ~8e-3, which flips the
+    # nearest-neighbour members of the top-1% on knife-edge images and moved
+    # capsules 1-shot image AUROC by ~5 points (0.9878 -> 0.9385) in the parity
+    # probe. See results/part2_official/parity_report.md.
+    np.savez_compressed(cp, feats=np.stack(feats).astype(np.float32),
                         masks=np.stack(masks), grid=np.array(grid))
     return feats, grid, masks
 
@@ -100,10 +140,13 @@ def run(args):
         ref_cache = {}
         for n in ref_names:
             ref_cache[n] = get_features(model, args.cache, cat, os.path.join(ref_dir, n),
-                                        n, 8, layers)
-        test_cache = [get_features(model, args.cache, cat, p, os.path.basename(p), 1, layers)
+                                        cache_key(os.path.join(ref_dir, n)), 8, layers,
+                                        mask_query=False)
+        test_cache = [get_features(model, args.cache, cat, p,
+                                   cache_key(p), 1, layers)
                       for _, p, _ in items]
-        calib_cache = [get_features(model, args.cache, cat, os.path.join(ref_dir, n), n, 1, layers)
+        calib_cache = [get_features(model, args.cache, cat, os.path.join(ref_dir, n),
+                                    cache_key(os.path.join(ref_dir, n)), 1, layers)
                        for n in calib_names]
 
         for shot in args.shots:

@@ -60,8 +60,41 @@ class LayerDINOv2(DINOv2Wrapper):
         return self.extract_layers(image_tensor)[-1]
 
 
-def extract_image(model, path_or_img, rotations=1):
-    """Return (list_of_feature_arrays_per_layer_per_rotation, grid_size, mask_per_rotation)."""
+def deterministic_background_mask(feats, grid, threshold=10, kernel_size=3, border=0.2):
+    """PCA foreground mask with a pinned random_state.
+
+    Mirrors DINOv2Wrapper.compute_background_mask(masking_type=True) but fixes the
+    randomized-PCA seed: sklearn draws a new random projection on every call when
+    random_state is unset, which flips borderline masks between processes (up to
+    ~460/1536 patches on VisA capsules) and moves image AUROC by several points
+    when combined with a foreground-only memory bank. See
+    results/part2_official/parity_report.md.
+    """
+    from sklearn.decomposition import PCA
+    pca = PCA(n_components=1, svd_solver="randomized", random_state=0)
+    first_pc = pca.fit_transform(feats.astype(np.float32))
+    mask = first_pc > threshold
+    m = mask.reshape(grid)[int(grid[0] * border):int(grid[0] * (1 - border)),
+                           int(grid[1] * border):int(grid[1] * (1 - border))]
+    if m.sum() <= m.size * 0.35:
+        mask = -first_pc > threshold
+    mask = cv2.dilate(mask.astype(np.uint8),
+                      np.ones((kernel_size, kernel_size), np.uint8)).astype(bool)
+    mask = cv2.morphologyEx(mask.astype(np.uint8),
+                            cv2.MORPH_CLOSE,
+                            np.ones((kernel_size, kernel_size), np.uint8)).astype(bool)
+    return mask.squeeze()
+
+
+def extract_image(model, path_or_img, rotations=1, mask_query=True):
+    """Return (list_of_feature_arrays_per_layer_per_rotation, grid_size, mask_per_rotation).
+
+    mask_query reproduces the official preprocessing split: reference images enter the
+    memory bank UNMASKED (official mask_ref_images=False -> masking_type=False), while
+    test/calibration queries are PCA-masked (masking_type=True). The cached runner
+    historically masked references too, which is a systematic protocol deviation from
+    the official path.
+    """
     if isinstance(path_or_img, str):
         img = cv2.cvtColor(cv2.imread(path_or_img, cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)
     else:
@@ -72,7 +105,7 @@ def extract_image(model, path_or_img, rotations=1):
         t, grid = model.prepare_image(v)
         per_layer = model.extract_layers(t)
         f = per_layer[-1]  # background mask is estimated on the last block, as in the paper
-        mask = model.compute_background_mask(f, grid, threshold=10, masking_type=True)
+        mask = model.compute_background_mask(f, grid, threshold=10, masking_type=mask_query)
         feats.append(per_layer)
         masks.append(mask)
     return feats, grid, masks

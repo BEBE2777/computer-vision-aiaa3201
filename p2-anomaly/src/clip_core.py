@@ -100,10 +100,23 @@ class LayerCLIP:
 
     # ------------------------------------------------------------- interface
     def prepare_image(self, img_rgb):
-        """img_rgb: uint8 HxWx3 RGB numpy -> (float tensor 3xHxW, grid (h, w))."""
+        """img_rgb: uint8 HxWx3 RGB numpy -> (float tensor 3xSxS, grid (h, w)).
+
+        Follows the official CLIP preprocessing: resize the shorter edge to
+        `resolution` with bicubic interpolation (antialiased), then centre
+        crop to a square. The ViT therefore always sees a fixed grid.
+        """
         t = torch.from_numpy(img_rgb.astype(np.float32) / 255.0).permute(2, 0, 1)
-        t = self.normalize(t)
-        return t.to(self.device), self.grid
+        _, h, w = t.shape
+        scale = self.resolution / min(h, w)
+        nh, nw = max(self.resolution, round(h * scale)), max(self.resolution, round(w * scale))
+        t = torch.nn.functional.interpolate(
+            t.unsqueeze(0), size=(nh, nw), mode="bicubic",
+            align_corners=False, antialias=True).squeeze(0)
+        top = (nh - self.resolution) // 2
+        left = (nw - self.resolution) // 2
+        t = t[:, top:top + self.resolution, left:left + self.resolution]
+        return self.normalize(t).to(self.device), self.grid
 
     def extract_layers(self, image_tensor):
         """Return list of (grid_h*grid_w, width) patch-token arrays, one per layer.

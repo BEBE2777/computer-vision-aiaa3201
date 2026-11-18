@@ -1,13 +1,13 @@
-"""Verification probes for LayerCLIP (E1 interface, run BEFORE freezing protocol).
+"""Verification probes for LayerCLIP (E1 interface) — v2, decisive tests.
 
-Checks (CPU-only, safe to run while the DINO grid occupies the GPU):
   V1 shapes: 224 -> 14x14=196 tokens, 448 interp -> 28x28=784 tokens
-  V2 raster grid order: shifting the image right by one patch must shift the
-      best-matching patch features one column right (row-major order)
-  V3 native 224: patch-token mean + ln_post/proj pipeline reproduces the
-      official global embedding space (cosine of mean-patch vs encode_image)
-  V4 pos-emb interpolation: 448 global embedding stays close to 224's
-  V5 determinism: repeated extraction is bit-identical
+  V2 raster order (pre-attention, decisive): a white 16x16 block at patch
+     (row 5, col 8) must peak at conv1 activation index 5*14+8
+  V3 forward-math parity: manual CLS path (pos-emb, ln_pre, 12 blocks,
+     ln_post, @proj) must equal official encode_image bit-closely at 224
+  V4 interpolation sanity: global embedding via OUR path at 448 vs 224
+  V5 determinism: repeated extraction bit-identical
+  V6 CPU forward speed
 """
 import os
 import sys
@@ -40,38 +40,55 @@ print(f"V1 shapes: 224 -> feats {f224.shape} grid {g224}; "
 assert f224.shape == (196, 512) and f448.shape == (784, 512)
 print("V1 PASS")
 
-# ---- V2 raster order: shift image right by one patch (16 px), compare
-shifted = np.roll(img, 16, axis=1)
-ts, _ = m224.prepare_image(shifted)
-fs = m224.extract_layers(ts)[-1]
-g = 14
-ok, n = 0, 0
-for i in range(g):
-    for j in range(1, g):  # shifted-out column j=0 wraps; start at 1
-        a = fs[i * g + j]
-        d_same = np.linalg.norm(a - f224[i * g + j])
-        d_left = np.linalg.norm(a - f224[i * g + (j - 1)])
-        n += 1
-        ok += d_left < d_same
-print(f"V2 raster order: {ok}/{n} shifted patches match the LEFT neighbour "
-      f"better than the same position")
-print("V2 PASS" if ok / n > 0.8 else "V2 FAIL (grid order not row-major?)")
-
-# ---- V3 native-224 pipeline vs official encode_image
+# ---- V2 raster order via conv1 (ordering is decided here; attention never reorders)
+blk = np.zeros((224, 224, 3), dtype=np.uint8)
+blk[5 * 16:(5 + 1) * 16, 8 * 16:(8 + 1) * 16] = 255
+tb, _ = m224.prepare_image(blk)
 with torch.inference_mode():
-    glob = m224.model.encode_image(t224.unsqueeze(0)).float().numpy()[0]
-mean_patch = f224.mean(axis=0)
-cos = float(np.dot(glob, mean_patch) /
-            (np.linalg.norm(glob) * np.linalg.norm(mean_patch)))
-print(f"V3 cos(mean patch feats, official encode_image) = {cos:.4f}")
-print("V3 PASS" if cos > 0.9 else "V3 CHECK (post-processing mismatch?)")
+    act = m224.visual.conv1(tb.unsqueeze(0))          # (1, width, 14, 14)
+act = act.reshape(act.shape[1], -1).numpy()            # (width, 196) raster
+patch_act = act.mean(axis=0)
+idx = int(np.argmax(patch_act))
+expect = 5 * 14 + 8
+print(f"V2 white block at patch (5,8): argmax activation index {idx} "
+      f"(expect {expect}, row-major)")
+top5 = np.argsort(-patch_act)[:5]
+print(f"V2 top-5 indices: {sorted(top5.tolist())}")
+print("V2 PASS" if idx == expect else "V2 FAIL")
 
-# ---- V4 interpolation sanity
+# ---- V3 forward-math parity: manual CLS path vs official encode_image
 with torch.inference_mode():
-    glob448 = m448.model.encode_image(t448.unsqueeze(0)).float().numpy()[0]
-cos448 = float(np.dot(glob, glob448) /
-               (np.linalg.norm(glob) * np.linalg.norm(glob448)))
-print(f"V4 cos(global@224, global@448-interp) = {cos448:.4f}")
+    v = m224.visual
+    x = v.conv1(t224.unsqueeze(0))
+    x = x.reshape(x.shape[0], x.shape[1], -1).permute(0, 2, 1)
+    cls = v.class_embedding.to(x.dtype) + torch.zeros(1, 1, x.shape[-1], dtype=x.dtype)
+    x = torch.cat([cls, x], dim=1) + v.positional_embedding.to(x.dtype)
+    x = v.ln_pre(x).permute(1, 0, 2)
+    for blk_ in v.transformer.resblocks:
+        x = blk_(x)
+    x = x.permute(1, 0, 2)
+    cls_out = v.ln_post(x[:, 0, :]) @ v.proj
+    official = m224.model.encode_image(t224.unsqueeze(0))
+    diff = float((cls_out - official).abs().max())
+print(f"V3 manual CLS vs official encode_image: max abs diff = {diff:.3e}")
+print("V3 PASS" if diff < 1e-3 else "V3 FAIL (forward math differs)")
+
+# ---- V4 interpolation sanity: global via OUR path at 448 vs 224
+with torch.inference_mode():
+    v = m448.visual
+    x = v.conv1(t448.unsqueeze(0))
+    x = x.reshape(x.shape[0], x.shape[1], -1).permute(0, 2, 1)
+    cls = v.class_embedding.to(x.dtype) + torch.zeros(1, 1, x.shape[-1], dtype=x.dtype)
+    x = torch.cat([cls, x], dim=1) + m448._pos_emb_interp.to(x.dtype)
+    x = v.ln_pre(x).permute(1, 0, 2)
+    for blk_ in v.transformer.resblocks:
+        x = blk_(x)
+    x = x.permute(1, 0, 2)
+    g448_out = (v.ln_post(x[:, 0, :]) @ v.proj).float().numpy()[0]
+g224_out = cls_out.float().numpy()[0]
+cos448 = float(np.dot(g224_out, g448_out) /
+               (np.linalg.norm(g224_out) * np.linalg.norm(g448_out)))
+print(f"V4 cos(global@224, global@448-interp, our path) = {cos448:.4f}")
 print("V4 PASS" if cos448 > 0.85 else "V4 CHECK (interp may distort)")
 
 # ---- V5 determinism
@@ -79,7 +96,7 @@ f224b = m224.extract_layers(t224)[-1]
 print(f"V5 repeat extraction bit-equal: {np.array_equal(f224, f224b)}")
 print("V5 PASS" if np.array_equal(f224, f224b) else "V5 FAIL")
 
-# ---- V6 CPU forward speed (rough, informs feasibility if GPU is busy)
+# ---- V6 CPU forward speed
 import time
 t0 = time.time()
 _ = m448.extract_layers(t448)

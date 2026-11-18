@@ -1,0 +1,38 @@
+{
+  "object": "chewinggum",
+  "shot": 8,
+  "seed": 0,
+  "calib_exclude": 20,
+  "calibration_files": [
+    "000.JPG",
+    "001.JPG",
+    "002.JPG",
+    "003.JPG",
+    "004.JPG",
+    "005.JPG",
+    "007.JPG",
+    "008.JPG",
+    "009.JPG",
+    "010.JPG",
+    "011.JPG",
+    "014.JPG",
+    "015.JPG",
+    "016.JPG",
+    "017.JPG",
+    "018.JPG",
+    "019.JPG",
+    "020.JPG",
+    "021.JPG",
+    "022.JPG"
+  ],
+  "reference_files": [
+    "023.JPG",
+    "024.JPG",
+    "025.JPG",
+    "026.JPG",
+    "027.JPG",
+    "028.JPG",
+    "029.JPG",
+    "030.JPG"
+  ]
+}

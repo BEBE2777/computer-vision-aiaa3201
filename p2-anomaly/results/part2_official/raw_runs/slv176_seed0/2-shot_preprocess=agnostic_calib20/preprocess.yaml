@@ -1,0 +1,14 @@
+masking:
+  candle: true
+  capsules: true
+  cashew: true
+  chewinggum: true
+  fryum: true
+  pipe_fryum: true
+rotation:
+  candle: true
+  capsules: true
+  cashew: true
+  chewinggum: true
+  fryum: true
+  pipe_fryum: true

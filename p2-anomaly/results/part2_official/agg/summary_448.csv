@@ -1,0 +1,9 @@
+shot,metric,n_seeds,mean_pct,std_pct
+1,image_auroc,3,94.6080,0.8392
+1,pixel_auroc,3,98.0810,0.0520
+2,image_auroc,3,95.3254,0.4643
+2,pixel_auroc,3,98.2203,0.0667
+4,image_auroc,3,96.1519,0.4011
+4,pixel_auroc,3,98.3640,0.0312
+8,image_auroc,3,96.6157,0.5699
+8,pixel_auroc,3,98.4683,0.0115

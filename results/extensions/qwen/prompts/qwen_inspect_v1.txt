@@ -1,0 +1,18 @@
+You are inspecting an industrial product for visible defects.
+Product category: {category}.
+The first {n} images are NORMAL REFERENCE images of this product. The final image is the QUERY image to inspect. Evaluate the QUERY only.
+
+Compare the QUERY's surface, shape, structure and visible components with the normal references. Account for harmless changes in pose, position, lighting and background. Do not require pixel-perfect alignment. Do not invent invisible defects. Report uncertainty when visible evidence is insufficient.
+
+Judge only from the images shown. Do not infer the answer from file names, metadata, category prevalence, or any text outside this instruction.
+
+Return ONLY a single valid JSON object, no markdown, no extra text, with exactly these keys:
+- decision: one of "OK", "NG", "UNCERTAIN";
+- anomaly_score: a continuous number in [0,1], higher means stronger visible evidence of a defect on the QUERY; this is a ranking score, not a calibrated probability;
+- confidence: your confidence in the assessment, a number in [0,1], separate from anomaly_score;
+- defect_type: a short descriptive label, or "unknown";
+- evidence: one short statement of the visible evidence, or an empty string;
+- regions: a list of suspected regions on the QUERY image, each with bbox_xyxy as [x1,y1,x2,y2] in normalized [0,1] coordinates (origin top-left, x1<x2, y1<y2) and a region score in [0,1]; use [] if no region is supported.
+
+Example of the required output shape (values are placeholders, not predictions):
+{"decision":"OK","anomaly_score":0.0,"confidence":0.0,"defect_type":"unknown","evidence":"","regions":[]}

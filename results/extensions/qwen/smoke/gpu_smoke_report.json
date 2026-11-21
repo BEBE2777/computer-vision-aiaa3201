@@ -1,0 +1,468 @@
+{
+  "model_id": "Qwen/Qwen2-VL-2B-Instruct",
+  "device": "NVIDIA RTX A6000",
+  "dtype": "bfloat16",
+  "prompt_sha256": "596118ac764bc609c0e2885fdc09964898e26a171a20f6d4e4ac49eeb64a87af",
+  "n_records": 24,
+  "json_valid_rate": 1.0,
+  "mean_latency_ms": 4131.7333333333345,
+  "mean_peak_gpu_gb": 5.2216666666666685,
+  "records": [
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "candle",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "0552.JPG",
+      "reference_ids": [
+        "0023.JPG"
+      ],
+      "latency_ms": 9414.0,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4257,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"none\",\n  \"evidence\": \"The QUERY image is a set of four white candles arranged in a 2x2 grid on a dark background.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "candle",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "0985.JPG",
+      "reference_ids": [
+        "0023.JPG"
+      ],
+      "latency_ms": 4015.7,
+      "peak_gpu_gb": 5.22,
+      "input_tokens": 4257,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"none\",\n  \"evidence\": \"The QUERY image is identical to the normal reference images, with no visible defects.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "candle",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "053.JPG",
+      "reference_ids": [
+        "0023.JPG"
+      ],
+      "latency_ms": 3940.7,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4257,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"none\",\n  \"evidence\": \"The QUERY image is identical to the normal reference images, with no visible defects.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "candle",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "005.JPG",
+      "reference_ids": [
+        "0023.JPG"
+      ],
+      "latency_ms": 4315.5,
+      "peak_gpu_gb": 5.22,
+      "input_tokens": 4257,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"none\",\n  \"evidence\": \"All four candles appear to be identical in shape, size, and color. There are no visible defects or differences between them.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "capsules",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "178.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 5095.3,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4281,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a close-up of green capsules on a dark surface. The capsules are uniform in shape and size, with a glossy finish. There are no visible defects or anomalies in the image.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "capsules",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "320.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 4464.4,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4281,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a close-up of green capsules on a dark surface. The capsules are uniformly shaped and have a consistent color and texture.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "capsules",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "062.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 4022.3,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4281,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a close-up of green capsules on a dark surface. The capsules are uniformly shaped and have a glossy finish.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "capsules",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "051.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 3188.5,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4281,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a close-up of green capsules on a dark surface. The capsules are uniformly shaped and have a glossy finish.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "cashew",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "244.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 3103.4,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4258,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a single cashew nut on a textured surface.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "cashew",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "344.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 3462.0,
+      "peak_gpu_gb": 5.22,
+      "input_tokens": 4258,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a cashew nut on a textured surface.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "cashew",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "045.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2840.3,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4258,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a cashew nut on a textured surface.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "cashew",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "074.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2744.4,
+      "peak_gpu_gb": 5.22,
+      "input_tokens": 4258,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a single cashew nut on a textured surface.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "chewinggum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "166.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 3644.5,
+      "peak_gpu_gb": 5.22,
+      "input_tokens": 4235,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"QUERY is a rectangular block of chewing gum with a smooth surface.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "chewinggum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "369.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 3812.8,
+      "peak_gpu_gb": 5.22,
+      "input_tokens": 4235,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"QUERY is a rectangular block of chewing gum with a smooth surface and no visible defects.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "chewinggum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "017.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 3696.3,
+      "peak_gpu_gb": 5.22,
+      "input_tokens": 4235,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "NG",
+      "confidence": 0.0,
+      "raw_response": "```json\n{\n  \"decision\": \"NG\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 0.0,\n  \"defect_type\": \"defect\",\n  \"evidence\": \"There is a small, irregularly shaped defect on the chewing gum.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "chewinggum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "036.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 4073.4,
+      "peak_gpu_gb": 5.22,
+      "input_tokens": 4235,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image shows a chewing gum product with a small defect on its surface.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "fryum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "093.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 4116.4,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4282,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The image shows a circular object with a pattern of six evenly spaced arms radiating from a central hole.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "fryum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "484.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 3050.0,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4282,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The image shows a circular object with a pattern of six evenly spaced spokes radiating from a central hole.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "fryum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "012.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 5672.6,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4282,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The image shows a circular object with a pattern of six evenly spaced spokes radiating from a central hole. The object appears to be made of a light-colored material, possibly plastic or rubber, and is placed on a green surface with a textured pattern.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "fryum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "079.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 3950.6,
+      "peak_gpu_gb": 5.23,
+      "input_tokens": 4282,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The image shows a circular object with a pattern of six evenly spaced spokes radiating from a central hole.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "pipe_fryum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "213.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 3721.1,
+      "peak_gpu_gb": 5.2,
+      "input_tokens": 4168,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a normal reference image of a pipe_fryum product.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "pipe_fryum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "377.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 4274.4,
+      "peak_gpu_gb": 5.2,
+      "input_tokens": 4168,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a rectangular block with a smooth surface and uniform texture, similar to the reference image. There are no visible defects or anomalies.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "pipe_fryum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "090.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 5608.1,
+      "peak_gpu_gb": 5.2,
+      "input_tokens": 4168,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image shows three rectangular pieces of a product that resembles a pipe_fryum. The pieces are stacked on top of each other, and the surface appears to be smooth with a slight texture. The lighting and background are consistent with the normal references.\",\n  \"regions\": []\n}\n```"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "pipe_fryum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "077.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2934.9,
+      "peak_gpu_gb": 5.2,
+      "input_tokens": 4168,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"The QUERY image is a rectangular block with a smooth surface and uniform texture, without any visible defects.\",\n  \"regions\": []\n}\n```"
+    }
+  ]
+}

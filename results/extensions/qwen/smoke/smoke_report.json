@@ -1,0 +1,130 @@
+{
+  "model_id": "Qwen/Qwen2-VL-2B-Instruct",
+  "model_dir": "C:/Users/qzheng/.cache/huggingface/hub/qwen2vl2b_local",
+  "device": "cpu",
+  "dtype": "float32",
+  "prompt_sha256": "596118ac764bc609c0e2885fdc09964898e26a171a20f6d4e4ac49eeb64a87af",
+  "schema_sha256": "fedf3ad7bdab097bf590e8f8c9b9a175ad06467af62e61f48f42e73e0c3d8d54",
+  "transformers": "5.22.1",
+  "torch": "2.14.1+cpu",
+  "json_valid_rate": 1.0,
+  "mean_latency_ms": 52935.8,
+  "records": [
+    {
+      "n_ref": 4,
+      "query_kind": "synthetic_normal",
+      "latency_ms": 37297.3,
+      "status": "ok",
+      "parse_error": null,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"QUERY is identical to the normal reference images.\",\n  \"regions\": []\n}\n```",
+      "parsed": {
+        "decision": "OK",
+        "anomaly_score": 0.0,
+        "confidence": 1.0,
+        "defect_type": "unknown",
+        "evidence": "QUERY is identical to the normal reference images.",
+        "regions": []
+      },
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "reference_paths": [
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_4_0.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_4_1.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_4_2.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_4_3.png"
+      ],
+      "query_path": "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\query_good_4.png",
+      "query_sha256": "eac90907dd03e92fa83e4616cd3fd88280c7af3c7929f9b2e93ba1f41fd14cc2",
+      "input_token_count": 1692
+    },
+    {
+      "n_ref": 4,
+      "query_kind": "synthetic_defect",
+      "latency_ms": 40480.9,
+      "status": "ok",
+      "parse_error": null,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"defect\",\n  \"evidence\": \"The QUERY image shows a green circle with a black dot in the center, which is different from the normal references where the circle is green and the dot is black.\",\n  \"regions\": []\n}\n```",
+      "parsed": {
+        "decision": "OK",
+        "anomaly_score": 0.0,
+        "confidence": 1.0,
+        "defect_type": "defect",
+        "evidence": "The QUERY image shows a green circle with a black dot in the center, which is different from the normal references where the circle is green and the dot is black.",
+        "regions": []
+      },
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "reference_paths": [
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_4_0.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_4_1.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_4_2.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_4_3.png"
+      ],
+      "query_path": "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\query_bad_4.png",
+      "query_sha256": "f5b2e03c661cf2491a7c296dc3793fd28cce21494a012e6a3e641286b1a6917b",
+      "input_token_count": 1692
+    },
+    {
+      "n_ref": 8,
+      "query_kind": "synthetic_normal",
+      "latency_ms": 72333.8,
+      "status": "ok",
+      "parse_error": null,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"unknown\",\n  \"evidence\": \"QUERY is a green circle with a black border.\",\n  \"regions\": []\n}\n```",
+      "parsed": {
+        "decision": "OK",
+        "anomaly_score": 0.0,
+        "confidence": 1.0,
+        "defect_type": "unknown",
+        "evidence": "QUERY is a green circle with a black border.",
+        "regions": []
+      },
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "reference_paths": [
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_0.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_1.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_2.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_3.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_4.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_5.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_6.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_7.png"
+      ],
+      "query_path": "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\query_good_8.png",
+      "query_sha256": "eac90907dd03e92fa83e4616cd3fd88280c7af3c7929f9b2e93ba1f41fd14cc2",
+      "input_token_count": 2740
+    },
+    {
+      "n_ref": 8,
+      "query_kind": "synthetic_defect",
+      "latency_ms": 61631.2,
+      "status": "ok",
+      "parse_error": null,
+      "raw_response": "```json\n{\n  \"decision\": \"OK\",\n  \"anomaly_score\": 0.0,\n  \"confidence\": 1.0,\n  \"defect_type\": \"void\",\n  \"evidence\": \"The QUERY image shows a green circle with a black dot in the center, which is a common defect in synthetic parts.\",\n  \"regions\": []\n}\n```",
+      "parsed": {
+        "decision": "OK",
+        "anomaly_score": 0.0,
+        "confidence": 1.0,
+        "defect_type": "void",
+        "evidence": "The QUERY image shows a green circle with a black dot in the center, which is a common defect in synthetic parts.",
+        "regions": []
+      },
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "reference_paths": [
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_0.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_1.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_2.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_3.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_4.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_5.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_6.png",
+        "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\ref_8_7.png"
+      ],
+      "query_path": "C:\\Users\\qzheng\\Desktop\\computer_vision\\final_projects\\aiaa3201_repo\\results\\extensions\\qwen\\smoke\\synth\\query_bad_8.png",
+      "query_sha256": "f5b2e03c661cf2491a7c296dc3793fd28cce21494a012e6a3e641286b1a6917b",
+      "input_token_count": 2740
+    }
+  ]
+}

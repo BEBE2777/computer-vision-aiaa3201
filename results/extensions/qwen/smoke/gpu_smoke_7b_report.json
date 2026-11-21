@@ -1,0 +1,468 @@
+{
+  "model_id": "Qwen/Qwen2-VL-7B-Instruct",
+  "device": "NVIDIA RTX A6000",
+  "dtype": "bfloat16",
+  "prompt_sha256": "596118ac764bc609c0e2885fdc09964898e26a171a20f6d4e4ac49eeb64a87af",
+  "n_records": 24,
+  "json_valid_rate": 1.0,
+  "mean_latency_ms": 2692.1708333333336,
+  "mean_peak_gpu_gb": 17.66,
+  "records": [
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "candle",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "0552.JPG",
+      "reference_ids": [
+        "0023.JPG"
+      ],
+      "latency_ms": 5332.6,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4257,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":1.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "candle",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "0985.JPG",
+      "reference_ids": [
+        "0023.JPG"
+      ],
+      "latency_ms": 2810.6,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4257,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":1.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "candle",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "053.JPG",
+      "reference_ids": [
+        "0023.JPG"
+      ],
+      "latency_ms": 2197.7,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4257,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "candle",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "005.JPG",
+      "reference_ids": [
+        "0023.JPG"
+      ],
+      "latency_ms": 2763.2,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4257,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "capsules",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "178.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 2206.2,
+      "peak_gpu_gb": 17.67,
+      "input_tokens": 4281,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "capsules",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "320.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 2540.0,
+      "peak_gpu_gb": 17.67,
+      "input_tokens": 4281,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "capsules",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "062.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 2709.5,
+      "peak_gpu_gb": 17.67,
+      "input_tokens": 4281,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "capsules",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "051.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 2705.6,
+      "peak_gpu_gb": 17.67,
+      "input_tokens": 4281,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "cashew",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "244.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2460.3,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4258,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "cashew",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "344.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2449.0,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4258,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "cashew",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "045.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2616.0,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4258,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "cashew",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "074.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2546.5,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4258,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "chewinggum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "166.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 2617.6,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4235,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":1.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "chewinggum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "369.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 2710.1,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4235,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "chewinggum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "017.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 2599.0,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4235,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "chewinggum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "036.JPG",
+      "reference_ids": [
+        "023.JPG"
+      ],
+      "latency_ms": 2595.8,
+      "peak_gpu_gb": 17.66,
+      "input_tokens": 4235,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "fryum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "093.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2598.4,
+      "peak_gpu_gb": 17.67,
+      "input_tokens": 4282,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":1.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "fryum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "484.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2639.6,
+      "peak_gpu_gb": 17.67,
+      "input_tokens": 4282,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 1.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":1.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "fryum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "012.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2601.8,
+      "peak_gpu_gb": 17.67,
+      "input_tokens": 4282,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "fryum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "079.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2583.6,
+      "peak_gpu_gb": 17.67,
+      "input_tokens": 4282,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "pipe_fryum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "213.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2160.3,
+      "peak_gpu_gb": 17.64,
+      "input_tokens": 4168,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "pipe_fryum",
+      "true_label_for_eval_ONLY": "good",
+      "query_id": "377.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2565.9,
+      "peak_gpu_gb": 17.64,
+      "input_tokens": 4168,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "pipe_fryum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "090.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2716.5,
+      "peak_gpu_gb": 17.64,
+      "input_tokens": 4168,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    },
+    {
+      "shot": 1,
+      "seed": 0,
+      "category": "pipe_fryum",
+      "true_label_for_eval_ONLY": "bad",
+      "query_id": "077.JPG",
+      "reference_ids": [
+        "024.JPG"
+      ],
+      "latency_ms": 2886.3,
+      "peak_gpu_gb": 17.64,
+      "input_tokens": 4168,
+      "status": "ok",
+      "parse_error": null,
+      "anomaly_score": 0.0,
+      "decision": "OK",
+      "confidence": 0.0,
+      "raw_response": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.0,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+    }
+  ]
+}

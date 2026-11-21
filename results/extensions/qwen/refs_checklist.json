@@ -1,0 +1,24 @@
+{
+  "source": "Project_2__Few_Shot_Industrial_Visual_Anomaly_Detection.pdf, Section 4 + References",
+  "note": "All 12 references must be cited in the CVPR report. B owns the multimodal/vision-language entries (esp. [7] AnomalyCLIP, [6] DINOv2, [8] AnomalyDINO); A owns the traditional/anomaly-detection entries. [11] SPot-the-Difference and [12] Segment Anything are shared. Entries below are transcribed verbatim from the brief; author/year/title must be re-verified against original papers before final Bibliography.",
+  "coverage_check_2026_11_21": {
+    "recommended_reading_section4": "10/10 covered (refs [1]-[10])",
+    "extra_references": "2/2 covered (refs [11]-[12])",
+    "missing": [],
+    "report_table": "RELATED_WORK_TABLE.md"
+  },
+  "references": [
+    {"id": 1, "cite": "Bergmann, P., et al. MVTec AD. CVPR 2019.", "track": "A", "verified_original": false},
+    {"id": 2, "cite": "Defard, T., et al. PaDiM. ICPR Workshops 2021.", "track": "A", "verified_original": false},
+    {"id": 3, "cite": "Roth, K., et al. PatchCore / Towards Total Recall. CVPR 2022.", "track": "A", "verified_original": false},
+    {"id": 4, "cite": "Zavrtanik, V., et al. DRAEM. ICCV 2021.", "track": "A", "verified_original": false},
+    {"id": 5, "cite": "Li, C.-L., et al. CutPaste. CVPR 2021.", "track": "A", "verified_original": false},
+    {"id": 6, "cite": "Oquab, M., et al. DINOv2. TMLR 2024.", "track": "shared (B: foundation-model context)", "verified_original": false},
+    {"id": 7, "cite": "Zhou, Q., et al. AnomalyCLIP. ICLR 2024.", "track": "B", "verified_original": false},
+    {"id": 8, "cite": "Damm, S., et al. AnomalyDINO. WACV 2025.", "track": "shared (B: baseline context)", "verified_original": false},
+    {"id": 9, "cite": "Batzner, K., et al. EfficientAD. WACV 2024.", "track": "A", "verified_original": false},
+    {"id": 10, "cite": "Heckler-Kram, L., et al. MVTec AD 2. IJCV 2026.", "track": "A", "verified_original": false},
+    {"id": 11, "cite": "Zou, Y., et al. SPot-the-Difference. ECCV 2022.", "track": "shared", "verified_original": false},
+    {"id": 12, "cite": "Kirillov, A., et al. Segment Anything. ICCV 2023.", "track": "shared", "verified_original": false}
+  ]
+}

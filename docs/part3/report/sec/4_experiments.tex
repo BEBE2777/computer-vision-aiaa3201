@@ -174,49 +174,60 @@ concrete, countable complementarity that bounds any score-fusion gain from below
 motivates \S\ref{sec:exp-fusion}. \bsec{The fourth cell, ``only the VLM is right'', fills
 from E2's per-image verdicts.}
 
-\subsection{Score-level fusion of the visual pair -- machinery pilot}
+\subsection{Score-level fusion of the visual pair}
 \label{sec:exp-fusion}
 
 \begin{table}[t]
 \centering
-\caption{Fusion machinery pilot (1-shot, seed 0; \emph{not} comparable with the three-seed
-rows of Table~\ref{tab:image}). Fused $=\alpha z_{\mathrm{DINOv2}} + (1-\alpha)
-z_{\mathrm{CLIP}}$ after per-category median/MAD standardisation on the 20 calibration
-scores. $\alpha{=}1$/$\alpha{=}0$ reproduce the single branches exactly (max deviation 0.0).}
+\caption{Score fusion of the two visual arms, mean $\pm$ s.d.\ over nine (shot, seed)
+cells (shots 1/2/4 $\times$ seeds 0/1/2; 960 test images each). Fused $=\alpha
+z_{\mathrm{DINOv2}} + (1-\alpha) z_{\mathrm{CLIP}}$ after per-category median/MAD
+standardisation on the 20 calibration scores. $\alpha{=}1$/$\alpha{=}0$ reproduce the
+single branches exactly (max deviation $1.1\times10^{-16}$). The realised false-alarm rate
+is the mean over cells at the nominal 5\% threshold.}
 \label{tab:fusion}
 \small
 \begin{tabular}{lrrrrr}
 \toprule
 $\alpha$ (weight on DINOv2 $z$) & 0.00 & 0.25 & 0.50 & 0.75 & 1.00 \\
 \midrule
-image AUROC, macro (\%) & 85.97 & 91.61 & \best{93.75} & 94.05 & 93.11 \\
-realised FPR at nominal 5\% & 14.2\% & 16.9\% & 17.5\% & 13.9\% & 9.4\% \\
+image AUROC, macro (\%) & 88.73 & 93.40 & \best{94.82} & 94.88 & 94.14 \\
+\quad s.d.\ across cells & 1.12 & 0.78 & 0.59 & 0.62 & 0.88 \\
+realised FPR at nominal 5\% & 14.3\% & 15.6\% & 15.7\% & 15.2\% & 12.8\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-This subsection validates the fusion protocol before the multimodal branch lands; it must
-not be read as a main result. With the pre-registered rule of \S\ref{sec:method-fusion}, the
-fused scores on the 960 images of the 1-shot seed-0 cell give Table~\ref{tab:fusion} and
-Fig.~\ref{fig:alpha}.
+The fusion protocol of \S\ref{sec:method-fusion} is evaluated on every (shot, seed) cell
+for which both arms have per-image scores (nine cells, shots 1/2/4; shot 8 is excluded
+because both arms have plateaued there and the dumps add no information). Three readings.
 
-Two honest readings. \emph{Ranking}: at the pre-registered $\alpha = 0.5$ the fused score
-beats the better single arm by $+0.64$ points (94.05 at $\alpha = 0.75$ is the sweep's
-maximum and is reported as sensitivity only); the gain is bounded by the 58 ``only CLIP
-right'' images and is consistent with the taxonomy. \emph{Reliability}: the realised
-false-alarm rate at the nominal 5\% threshold is 9.4--17.5\% across $\alpha$, \emph{including
-the single branches} -- 20 training-normal calibration images do not cover the variation of
-the normal test images, so thresholds must be reported as achieved operating points, not
-calibrated guarantees~\cite{guo2017calibration,geifman2017selective}.
+\emph{Effect.} At the pre-registered $\alpha = 0.5$ the fused score reaches
+$94.82 \pm 0.59$ against $94.14 \pm 0.88$ for DINOv2 alone and $88.73 \pm 1.12$ for CLIP
+alone: $+0.68$ points over the better arm on average, positive in eight of nine cells
+(worst $-0.04$), and the across-cell spread shrinks from 0.88 to 0.59 points -- the gain is
+small but it is systematic, not a lucky cell. The ceiling is set by the taxonomy: 58
+``only CLIP right'' images ($6.0\%$) bound what any positive weighting of CLIP can add,
+against 193 images ($20.1\%$) where adding CLIP weight can only hurt.
+
+\emph{Sensitivity.} The curve is flat between $\alpha = 0.5$ and $0.75$ (94.82 vs 94.88,
+within one s.d.); the sweep maximum is reported as sensitivity, not as a tuned result.
+Everything below $\alpha = 0.25$ collapses towards the CLIP arm, consistent with E1.
+
+\emph{Reliability.} The realised false-alarm rate at the nominal 5\% threshold spans
+9.4--21.4\% across cells and weights (\emph{including} the single branches) -- 20
+training-normal calibration images do not cover the variation of the normal test images, so
+thresholds must be reported as achieved operating points, not calibrated
+guarantees~\cite{guo2017calibration,geifman2017selective}.
 \bsec{E3/E4 (DINOv2+Qwen, CLIP+Qwen) and E5 (cross-backbone fusion) upgrade this subsection
 to a main result.}
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.94\columnwidth]{figures/fusion_visual_pair_1shot_seed0_alpha.png}
-  \caption{Fusion sensitivity: image AUROC and realised false-alarm rate vs $\alpha$, visual
-  pair, 1-shot seed 0. The pre-registered $\alpha=0.5$ is marked; the sweep maximum at
-  $\alpha=0.75$ is reported as sensitivity only.}
+  \includegraphics[width=0.94\columnwidth]{figures/fusion_9cells_alpha.png}
+  \caption{Fusion sensitivity over nine (shot, seed) cells: six-category image AUROC
+  (mean $\pm$ s.d.) vs $\alpha$. Dotted lines are the two single arms; the pre-registered
+  $\alpha=0.5$ is not re-tuned.}
   \label{fig:alpha}
 \end{figure}
 
@@ -233,14 +244,21 @@ Per-image inference cost is measured separately at batch size 1
 (Table~\ref{tab:cost}): end-to-end latency of one test image -- decode, resize/normalise,
 upload, backbone forward, 1-NN over the reference bank, top-1\% pooling and the pixel-map
 resize -- with feature extraction \emph{included} and the one-off reference-bank construction
-amortised, plus peak CUDA memory on the same device.
+amortised, plus peak CUDA memory on the same device. Each number is the median over 540
+timed inferences (180 test images $\times$ 3 passes, 8 warm-up iterations discarded) on the
+shared RTX A6000, with faiss/BLAS given 6 CPU threads; pinned to a single thread -- the
+configuration the grid runs used for bit-exact reproducibility -- the same pipeline costs
+338--380\,ms per image, so multi-threaded deployment is what we quote.
 
 \begin{table}[t]
 \centering
-\caption{Measured per-image inference cost (batch size 1, RTX A6000, faiss/BLAS threads
-pinned to 1). Feature extraction included; reference-bank construction amortised; peak memory
-from the CUDA allocator. \tbd{a}: paste from \texttt{scripts/bench\_inference.py};
-\tbd{b}: measured by the multimodal branch's owner.}
+\caption{Measured per-image inference cost (batch size 1, RTX A6000, 6 CPU threads, median
+of 540 inferences; feature extraction included, reference-bank construction amortised; peak
+memory from the CUDA allocator). The 1-NN search over the reference bank dominates in both
+arms (${\sim}74$\,ms of the total); the encoder forward itself is 15\,ms (DINOv2) and
+17\,ms (CLIP). Part~2's official configuration additionally estimates a PCA foreground mask
+per query ($+13$\,ms) and scores roughly half as many query patches; the encoder cost is
+unchanged. \tbd{b}: measured by the multimodal branch's owner.}
 \label{tab:cost}
 \footnotesize
 \setlength{\tabcolsep}{3.0pt}
@@ -248,8 +266,8 @@ from the CUDA allocator. \tbd{a}: paste from \texttt{scripts/bench\_inference.py
 \toprule
 Encoder & Lat.\ (ms) & Mem (MiB) & Par.\ (M) \\
 \midrule
-DINOv2 ViT-S/14 @448 & \tbd{a} & \tbd{a} & 22.1 \\
-CLIP ViT-B/16 @448 L9 & \tbd{a} & \tbd{a} & 86.2 \\
+DINOv2 ViT-S/14 @448 & 148.5 & 120 & 22.1 \\
+CLIP ViT-B/16 @448, L9 & 123.4 & 655 & 86.2 \\
 Qwen-VL branch (E2) & \tbd{b} & \tbd{b} & \tbd{b} \\
 \bottomrule
 \end{tabular}
@@ -263,8 +281,10 @@ vision parameters), so E1 measures \emph{this} CLIP encoder against \emph{this} 
 encoder, not ``CLIP vs DINOv2'' in general; no patch-size-matched pair is publicly released.
 CLIP runs at a resolution and normalisation different from its pretraining setup; the bicubic
 position-table interpolation addresses this and is probe-verified but cannot be perfect. The
-fusion pilot is one cell (1-shot, seed 0) of the two \emph{visual} arms; nothing in it may be
-generalised until the per-(shot, seed) grid and the multimodal branch are in. Finally, all
+fusion result covers nine cells of the two \emph{visual} arms (shots 1/2/4); shot 8 is not
+fused and the multimodal branch is not in yet, so no cross-modal claim is made. Latency and
+memory were measured on a shared GPU with another tenant active; medians are reported, and
+single-thread figures are given for the worst case. Finally, all
 six categories are object-centric product photographs; none of these conclusions should be
 quoted for texture categories or scene-level anomalies, and MVTec AD~2's harder
 scenarios~\cite{hecklerkram2026mvtec2} indicate the easier part of the problem space is what

@@ -27,10 +27,10 @@ model weights is what a second concurrent model would have to fit into.
 
 Reproducibility notes
 ---------------------
-- OMP/MKL threads are pinned to 1 *before* faiss is imported, exactly as in
-  run_grid.py: the small k-NN searches there are synchronisation-bound (462 ms with
-  12 threads vs 87 ms with 1), so the reported latency matches the configuration
-  that produced the reported AUROC numbers.
+- CPU threads are pinned via --threads *before* faiss is imported. The grid that produced
+  the AUROC numbers ran with OMP_NUM_THREADS=1; on this node a bare-metal 1-NN over a
+  7-9k patch bank costs 163 ms at 1 thread, 132 ms at 2 and 62 ms at 6, so the thread
+  count is part of every number below and is recorded in the output.
 - The feature cache is bypassed on purpose: a cache hit would measure disk I/O.
 - Warm-up iterations run first (CUDA context, cuBLAS heuristics, allocator growth)
   and are reported separately, never folded into the mean.
@@ -106,7 +106,7 @@ def env_info(torch, device):
 def run(args):
     # Pinned before faiss is imported, exactly as in run_grid.py.
     for v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
-        os.environ.setdefault(v, "1")
+        os.environ[v] = str(args.threads)
 
     import cv2
     import faiss
@@ -114,16 +114,18 @@ def run(args):
     import torch
     from scipy.ndimage import gaussian_filter
 
+    faiss.omp_set_num_threads(args.threads)
+
     sys.path.insert(0, os.path.join(_ROOT, "src"))
     import p2common as C
-    from ad_core import (LayerDINOv2, extract_image, make_index, mean_top1p,
-                         patch_distances)
+    from ad_core import (LayerDINOv2, deterministic_background_mask, extract_image,
+                         make_index, mean_top1p, patch_distances)
     from clip_core import LayerCLIP
 
     if args.device == "cuda" and not torch.cuda.is_available():
         raise SystemExit("CUDA requested but not available on this host")
 
-    torch.set_num_threads(1)
+    torch.set_num_threads(args.threads)
     os.makedirs(args.out, exist_ok=True)
 
     def sync():
@@ -180,20 +182,32 @@ def run(args):
     bank_patches = int(bank.shape[0])
     del bank, ref_feats, ref_masks
 
-    stages = {k: [] for k in ("decode", "preprocess", "forward", "knn", "pooling",
+    stages = {k: [] for k in ("decode", "preprocess", "forward", "mask", "knn", "pooling",
                               "pixel_map", "end_to_end")}
     if args.device == "cuda":
         torch.cuda.reset_peak_memory_stats()
+
+    def query_mask(feats, grid):
+        """Foreground mask for a query image, as run_grid computes it (`use_mask=True`).
+
+        Part 2's numbers come from the official masked path, where the mask is estimated
+        on the query's own last-block tokens (randomised PCA, seed pinned in ad_core).
+        The E1 arms (--no_mask) skip it, so timing it separately keeps the comparison
+        between "detector as deployed" and "encoder as compared" explicit.
+        """
+        if not args.query_mask:
+            return np.ones(feats[-1].shape[0], dtype=bool)
+        return deterministic_background_mask(feats[-1], grid)
 
     # ---- warm-up (untimed: CUDA context, kernels, allocator growth)
     warm_ms = []
     for _, path in images[:args.warmup]:
         t0 = time.perf_counter()
         img = C.load_rgb(path)
-        tensor, _ = model.prepare_image(img)
+        tensor, grid = model.prepare_image(img)
         tensor = tensor.to(args.device, non_blocking=False)
         feats = model.extract_layers(tensor)
-        patch_distances(index, feats[-1], np.ones(feats[-1].shape[0], dtype=bool))
+        patch_distances(index, feats[-1], query_mask(feats, grid))
         sync()
         warm_ms.append((time.perf_counter() - t0) * 1e3)
 
@@ -213,22 +227,24 @@ def run(args):
             feats = model.extract_layers(tensor)
             sync()
             t3 = time.perf_counter()
-            mask = np.ones(feats[-1].shape[0], dtype=bool)
-            d = patch_distances(index, feats[-1], mask)
+            mask = query_mask(feats, grid)
             t4 = time.perf_counter()
-            mean_top1p(d)  # the scalar the detector reports, kept inside the timed path
+            d = patch_distances(index, feats[-1], mask)
             t5 = time.perf_counter()
+            mean_top1p(d)  # the scalar the detector reports, kept inside the timed path
+            t6 = time.perf_counter()
             if args.with_pixel:
                 resize_map(d.reshape(grid), C.EVAL_SIZE)
             sync()
-            t6 = time.perf_counter()
+            t7 = time.perf_counter()
             stages["decode"].append((t1 - t0) * 1e3)
             stages["preprocess"].append((t2 - t1) * 1e3)
             stages["forward"].append((t3 - t2) * 1e3)
-            stages["knn"].append((t4 - t3) * 1e3)
-            stages["pooling"].append((t5 - t4) * 1e3)
-            stages["pixel_map"].append((t6 - t5) * 1e3)
-            stages["end_to_end"].append((t6 - t0) * 1e3)
+            stages["mask"].append((t4 - t3) * 1e3)
+            stages["knn"].append((t5 - t4) * 1e3)
+            stages["pooling"].append((t6 - t5) * 1e3)
+            stages["pixel_map"].append((t7 - t6) * 1e3)
+            stages["end_to_end"].append((t7 - t0) * 1e3)
 
     peak = mib() if args.device == "cuda" else None
     patch_grid = [int(x) for x in grid]
@@ -242,7 +258,8 @@ def run(args):
             "pos_embedding_mode": args.pos_embedding_mode if args.backbone == "clip" else None,
             "ref_views": args.ref_views, "categories": cats,
             "n_per_cat": args.n_per_cat, "passes": args.passes, "warmup": args.warmup,
-            "with_pixel_map": args.with_pixel,
+            "with_pixel_map": args.with_pixel, "query_mask": args.query_mask,
+            "cpu_threads": args.threads,
             "includes_feature_extraction": True,
             "bank_built_outside_timing": True,
             "reference_grid": [int(x) for x in ref_grid],
@@ -264,14 +281,16 @@ def run(args):
     }
 
     tag = (f"{args.backbone}{args.resolution}_L{'-'.join(str(l) for l in args.layers)}"
-           + (f"_{args.clip_resize_mode}" if args.backbone == "clip" else ""))
+           + (f"_{args.clip_resize_mode}" if args.backbone == "clip" else "")
+           + ("_qmask" if args.query_mask else "")
+           + (f"_t{args.threads}" if args.threads != 1 else ""))
     path = os.path.join(args.out, f"bench_{tag}.json")
     C.jdump(result, path)
 
     e = result["stages_ms"]["end_to_end"]
     print(f"\n[{tag}] {e['n']} timed inferences, bank={bank_patches} patches, "
           f"grid={patch_grid[0]}x{patch_grid[1]}")
-    for k in ("decode", "preprocess", "forward", "knn", "pooling", "pixel_map",
+    for k in ("decode", "preprocess", "forward", "mask", "knn", "pooling", "pixel_map",
               "end_to_end"):
         s = result["stages_ms"][k]
         print(f"  {k:11s} mean={s['mean']:8.2f} ms  median={s['median']:8.2f}  "
@@ -297,9 +316,13 @@ def report(out_dir):
     def name(r):
         c = r["config"]
         model = pretty.get(c["model"], c["model"])
+        suffix = " (masked query)" if c.get("query_mask") else " (no mask)"
+        th = c.get("cpu_threads")
+        if th and th != 1:
+            suffix += f", {th} threads"
         if c["backbone"] == "clip":
-            return f"CLIP {model} @{c['resolution']}, block {c['layers'][-1]}"
-        return f"DINOv2 {model} @{c['resolution']}, block {c['layers'][-1]}"
+            return f"CLIP {model} @{c['resolution']}, block {c['layers'][-1]}{suffix}"
+        return f"DINOv2 {model} @{c['resolution']}, block {c['layers'][-1]}{suffix}"
 
     hosts = {(r["env"].get("gpu", {}).get("name"), r["env"]["torch"]) for r in rows}
     if len(hosts) > 1:
@@ -333,9 +356,11 @@ def report(out_dir):
         e2e = r["stages_ms"]["end_to_end"]["mean"]
         lines += [f"**{name(r)}**", "",
                   "| stage | mean | median | p95 | share |", "|---|---:|---:|---:|---:|"]
-        for k in ("decode", "preprocess", "forward", "knn", "pooling", "pixel_map",
+        for k in ("decode", "preprocess", "forward", "mask", "knn", "pooling", "pixel_map",
                   "end_to_end"):
             s = r["stages_ms"][k]
+            if k == "mask" and s["mean"] < 0.01:
+                continue  # --no_mask run: no mask stage to report
             lines.append(f"| {k} | {s['mean']:.2f} | {s['median']:.2f} | {s['p95']:.2f} "
                          f"| {s['mean'] / e2e * 100:.1f}% |")
         lines.append("")
@@ -378,8 +403,14 @@ def parse_args():
     p.add_argument("--ref_views", type=int, default=8,
                    help="rotations per reference image in the 1-shot bank")
     p.add_argument("--passes", type=int, default=2)
+    p.add_argument("--threads", type=int, default=1,
+                   help="CPU threads for faiss/BLAS; 1 reproduces the pinned grid config, "
+                        "6 is what a single-tenant deployment would use")
     p.add_argument("--warmup", type=int, default=8)
     p.add_argument("--with_pixel", default=True, action=argparse.BooleanOptionalAction)
+    p.add_argument("--query_mask", action="store_true",
+                   help="estimate the PCA foreground mask per query image (Part 2's "
+                        "deployed path); off by default, which is the E1 --no_mask arm")
     p.add_argument("--device", default="cuda")
     p.add_argument("--out", default="/tmp/slv176/bench")
     p.add_argument("--report", default=None,

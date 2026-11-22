@@ -24,11 +24,17 @@ fi
 
 export DINOV2_HUB_DIR=/tmp/slv176/third_party/dinov2 PYTHONUNBUFFERED=1
 
-echo "########## DINOv2 ViT-S/14 @448 L12 (no mask) ##########" >> "$LOG"
+echo "########## DINOv2 ViT-S/14 @448 L12 (no mask, E1 arm) ##########" >> "$LOG"
 $PY scripts/bench_inference.py --backbone dinov2 --model dinov2_vits14 \
     --resolution 448 --layers 12 --data_root "$DATA" --n_per_cat 30 --passes 2 \
     --out "$OUT" >> "$LOG" 2>&1
-echo "exit=$? dinov2" >> "$LOG"
+echo "exit=$? dinov2_nomask" >> "$LOG"
+
+echo "########## DINOv2 ViT-S/14 @448 L12 (masked query, Part 2 deployed path) ##########" >> "$LOG"
+$PY scripts/bench_inference.py --backbone dinov2 --model dinov2_vits14 \
+    --resolution 448 --layers 12 --query_mask --data_root "$DATA" \
+    --n_per_cat 30 --passes 2 --out "$OUT" >> "$LOG" 2>&1
+echo "exit=$? dinov2_qmask" >> "$LOG"
 
 echo "########## CLIP ViT-B/16 @448 L9 short_edge (E1 arm) ##########" >> "$LOG"
 $PY scripts/bench_inference.py --backbone clip --model ViT-B/16 \

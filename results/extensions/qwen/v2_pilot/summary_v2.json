@@ -1,0 +1,61 @@
+{
+ "protocol": "qwen_exploratory_pilot_v2",
+ "model_id": "Qwen/Qwen2-VL-7B-Instruct",
+ "manifest_n": 120,
+ "json_valid_rate": 1.0,
+ "mean_latency_gen_ms": 2508.1,
+ "mean_latency_fc_ms": 2565.8,
+ "p95_latency_gen_ms": 2939.8,
+ "mean_peak_gpu_gb": 23.46,
+ "readouts": [
+  {
+   "key": "anomaly_score",
+   "auroc_macro6": null,
+   "per_category": {
+    "candle": "undefined (no variance)",
+    "capsules": "undefined (no variance)",
+    "cashew": 0.55,
+    "chewinggum": 0.6,
+    "fryum": 0.55,
+    "pipe_fryum": "undefined (no variance)"
+   },
+   "note": "",
+   "n_scored": 120,
+   "unique_values": 4
+  },
+  {
+   "key": "fc_score",
+   "auroc_macro6": 0.0417,
+   "per_category": {
+    "candle": 0.0,
+    "capsules": 0.08,
+    "cashew": 0.16,
+    "chewinggum": 0.0,
+    "fryum": 0.01,
+    "pipe_fryum": 0.0
+   },
+   "note": "",
+   "n_scored": 120,
+   "unique_values": 120
+  },
+  {
+   "key": "fc_score_mean",
+   "auroc_macro6": 0.0417,
+   "per_category": {
+    "candle": 0.0,
+    "capsules": 0.08,
+    "cashew": 0.16,
+    "chewinggum": 0.0,
+    "fryum": 0.01,
+    "pipe_fryum": 0.0
+   },
+   "note": "",
+   "n_scored": 120,
+   "unique_values": 118
+  }
+ ],
+ "decisions": {
+  "OK": 118,
+  "NG": 2
+ }
+}

@@ -1,0 +1,139 @@
+% Part 3 reference list. Metadata cross-checked 2026-11-22:
+%  - entries marked [brief] come from the course brief's own reference list
+%    (Project_2__Few_Shot_Industrial_Visual_Anomaly_Detection.pdf, Section "References");
+%  - the others were verified against the publisher/arXiv landing page on 2026-11-22.
+% Cite keys are used by related_work_visual_draft.md and experiments_visual_draft.md.
+
+% ---- required reading list (brief Section 4) ------------------------------------
+@inproceedings{bergmann2019mvtec, % [brief]
+  title     = {{MVTec AD}---A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection},
+  author    = {Bergmann, Paul and Fauser, Michael and Sattlegger, David and Steger, Carsten},
+  booktitle = {CVPR},
+  year      = {2019}
+}
+
+@inproceedings{defard2021padim, % [brief]
+  title     = {{PaDiM}: A Patch Distribution Modeling Framework for Anomaly Detection and Localization},
+  author    = {Defard, Thomas and Setkov, Aleksandr and Loesch, Angelique and Audigier, Romaric},
+  booktitle = {ICPR Workshops},
+  year      = {2021}
+}
+
+@inproceedings{roth2022patchcore, % [brief]
+  title     = {Towards Total Recall in Industrial Anomaly Detection},
+  author    = {Roth, Karsten and Pemula, Latha and Zepeda, Joaquin and Sch{\"o}lkopf, Bernhard and Brox, Thomas and Gehler, Peter},
+  booktitle = {CVPR},
+  year      = {2022}
+}
+
+@inproceedings{zavrtanik2021draem, % [brief]
+  title     = {{DRAEM}---A Discriminatively Trained Reconstruction Embedding for Surface Anomaly Detection},
+  author    = {Zavrtanik, Vitjan and Kristan, Matej and Sko{\v{c}}aj, Danijel},
+  booktitle = {ICCV},
+  year      = {2021}
+}
+
+@inproceedings{li2021cutpaste, % [brief]
+  title     = {{CutPaste}: Self-Supervised Learning for Anomaly Detection and Localization},
+  author    = {Li, Chun-Liang and Sohn, Kihyuk and Yoon, Jinsung and Chang, Manzil and Kim, Jaegul and Pfister, Tomas},
+  booktitle = {CVPR},
+  year      = {2021}
+}
+
+@article{oquab2024dinov2, % [brief]
+  title   = {{DINOv2}: Learning Robust Visual Features without Supervision},
+  author  = {Oquab, Maxime and Darcet, Timoth{\'e}e and Moutakanni, Th{\'e}o and Vo, Huy and Szafraniec, Marc and Khalidov, Vasil and others},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2024}
+}
+
+@inproceedings{zhou2024anomalyclip, % [brief]
+  title     = {{AnomalyCLIP}: Object-Agnostic Prompt Learning for Zero-Shot Anomaly Detection},
+  author    = {Zhou, Qihang and Pang, Guansong and Tian, Yu and He, Shibo and Chen, Jiming},
+  booktitle = {ICLR},
+  year      = {2024}
+}
+
+@inproceedings{damm2025anomalydino, % [brief; verified on CVF Open Access]
+  title     = {{AnomalyDINO}: Boosting Patch-Based Few-Shot Anomaly Detection with {DINOv2}},
+  author    = {Damm, Simon and Laszkiewicz, Mike and Lederer, Johannes and Fischer, Asja},
+  booktitle = {WACV},
+  pages     = {1319--1329},
+  year      = {2025}
+}
+
+@inproceedings{batzner2024efficientad, % [brief]
+  title     = {{EfficientAD}: Accurate Visual Anomaly Detection at Millisecond-Level Latencies},
+  author    = {Batzner, Kilian and Heckler, Lars and K{\"o}nig, Rebecca},
+  booktitle = {WACV},
+  year      = {2024}
+}
+
+@article{hecklerkram2026mvtec2, % [brief; verified: IJCV vol. 134, 2026; arXiv:2503.21622]
+  title   = {The {MVTec AD 2} Dataset: Advanced Scenarios for Unsupervised Anomaly Detection},
+  author  = {Heckler-Kram, Lars and Neudeck, Jan-Hendrik and Scheler, Ulla and K{\"o}nig, Rebecca and Steger, Carsten},
+  journal = {International Journal of Computer Vision},
+  volume  = {134},
+  year    = {2026},
+  note    = {arXiv:2503.21622}
+}
+
+% ---- datasets and models cited by the brief's list ------------------------------
+@inproceedings{zou2022spot, % [brief ref 11] introduces the VisA dataset
+  title     = {{SPot-the-Difference} Self-Supervised Pre-Training for Anomaly Detection and Segmentation},
+  author    = {Zou, Yang and Jeong, Jongheon and Pemula, Latha and Zhang, Dongqing and Dabeer, Onkar},
+  booktitle = {ECCV},
+  year      = {2022}
+}
+
+@inproceedings{kirillov2023sam, % [brief ref 12]
+  title     = {Segment Anything},
+  author    = {Kirillov, Alexander and Mintun, Eric and Ravi, Nikhila and Mao, Hanzi and Rolland, Chloe and Gustafson, Laura and others},
+  booktitle = {ICCV},
+  year      = {2023}
+}
+
+% ---- additional verified sources used in our Related Work -----------------------
+@inproceedings{radford2021clip,
+  title     = {Learning Transferable Visual Models From Natural Language Supervision},
+  author    = {Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and others},
+  booktitle = {ICML},
+  year      = {2021}
+}
+
+@inproceedings{jeong2023winclip,
+  title     = {{WinCLIP}: Zero-/Few-Shot Anomaly Classification and Segmentation},
+  author    = {Jeong, Jongheon and Zou, Yang and Kim, Taewan and Zhang, Dongqing and Ravichandran, Avinash and Dabeer, Onkar},
+  booktitle = {CVPR},
+  pages     = {19606--19616},
+  year      = {2023}
+}
+
+@article{cohen2021spade,
+  title   = {{SPADE}: Semi-Supervised Anomaly Detection Using Density Estimation},
+  author  = {Cohen, Niv and Hoshen, Yedid},
+  journal = {arXiv preprint arXiv:2005.11653},
+  year    = {2020}
+}
+
+@inproceedings{huang2022regad,
+  title     = {Registration Based Few-Shot Anomaly Detection},
+  author    = {Huang, Chaoqin and Guan, Haoyan and Jiang, Aofan and Zhang, Ya and Spratling, Michael and Wang, Yan-Feng},
+  booktitle = {ECCV},
+  pages     = {303--319},
+  year      = {2022}
+}
+
+@inproceedings{guo2017calibration,
+  title     = {On Calibration of Modern Neural Networks},
+  author    = {Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q.},
+  booktitle = {NeurIPS},
+  year      = {2017}
+}
+
+@inproceedings{geifman2017selective, % verified: arXiv:1705.08500
+  title     = {Selective Classification for Deep Neural Networks},
+  author    = {Geifman, Yonatan and El-Yaniv, Ran},
+  booktitle = {NeurIPS},
+  year      = {2017}
+}

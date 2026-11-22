@@ -1,0 +1,21 @@
+\begin{abstract}
+Few-shot industrial anomaly detection asks a frozen representation, learned elsewhere and
+once, to decide whether a new image of a product deviates from a handful of defect-free
+references. We reproduce the strongest training-free visual recipe, AnomalyDINO, on the six
+object-centric categories of VisA under its official configuration (94.61 image AUROC at
+1-shot, rising to 96.62 at 8-shot), then hold the scoring pipeline fixed and change exactly
+one variable at a time. Replacing the self-supervised DINOv2 encoder with CLIP's vision tower
+costs 5.6 image-AUROC points at 1-shot and the deficit does not close with more references;
+patch-level measurements attribute it to strongly anisotropic CLIP features whose distance
+maps leave normal background variance close to the decision threshold. An image-level
+crossing of the two arms' verdicts shows they agree on only 63.2\% of the 960 test images and
+that CLIP is right on 58 images where DINOv2 is wrong -- countable complementarity that a
+pre-registered, calibration-based score-level fusion exploits: fusing the two visual arms at
+the pre-registered weight gains $+0.64$ points over the better single arm in a machinery
+pilot. A multimodal branch that inspects references and test image directly, and a fusion
+with that branch, complete the design. We further report an honest reliability accounting:
+thresholds calibrated on 20 normal images realise false-alarm rates of 9.4--17.5\% at a
+nominal 5\%, so operating points are reported as achieved, not assumed. Code, per-image
+scores and every number in this report are available at
+\url{github.com/BEBE2777/computer-vision-aiaa3201}.
+\end{abstract}

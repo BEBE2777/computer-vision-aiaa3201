@@ -1,0 +1,22 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We asked how far a frozen encoder carries few-shot industrial anomaly detection, and measured
+the answer rather than assuming it. A verified AnomalyDINO reproduction anchors the visual
+route at 94.61 image AUROC on VisA's six object-centric categories at 1-shot; a controlled
+encoder swap shows that CLIP's language-aligned vision tower gives up 5.6 points in dense
+patch matching, that the deficit is a property of the features rather than of sample size,
+and that it traces to measurable feature anisotropy; and an image-level taxonomy shows the
+two arms are wrong on different images often enough (36.8\% disagreement) that calibrated
+fusion has room to work -- a pre-registered pilot already gains $+0.64$ points over the
+better arm while exposing a calibration gap that we report as achieved operating points
+rather than nominal guarantees. \bsec{The multimodal branch (E2) and the cross-branch fusions
+(E3--E5) complete the picture.}
+
+The wider lesson is methodological. In a regime with no training signal, every claim reduces
+to either the representation or the decision rule, so both should be measured under a
+protocol frozen before scoring, with per-image evidence for every aggregate number, and with
+reliability (what a threshold actually does, what latency and memory a system actually costs)
+reported next to accuracy. Benchmarks are no longer the bottleneck in industrial anomaly
+detection~\cite{hecklerkram2026mvtec2}; representations and decisions are, and both can now
+be audited image by image.

@@ -1,0 +1,85 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Industrial anomaly detection and its benchmarks.}
+Industrial inspection is usually cast as normal-only learning: the training set contains
+defect-free images, and a defect is any deviation from the modelled normal
+appearance~\cite{bergmann2019mvtec}. MVTec AD~\cite{bergmann2019mvtec} established the
+evaluation protocol of image-level detection plus pixel-level localisation, and later work
+extended it to larger and more varied data: VisA~\cite{zou2022spot} offers ten product
+categories with subtle, low-contrast defects (we use its six object-centric categories), and
+MVTec AD~2~\cite{hecklerkram2026mvtec2} adds transparent objects and severe lighting
+variation to expose the remaining headroom of current methods. Our protocol follows this
+line, including the separation of image AUROC (the primary metric) from pixel AUROC, and the
+use of a held-out set of normal images for score calibration rather than for model fitting.
+
+\paragraph{Nearest-neighbour and statistical modelling of patch features.}
+A first family of methods compares each test location against a model of normal appearance
+built from pretrained features. SPADE~\cite{cohen2021spade} scores a test image by the
+distance to its nearest neighbours in the training set, with a pixel-level variant that
+aligns intermediate activations; PaDiM~\cite{defard2021padim} models the per-patch feature
+distribution as a multivariate Gaussian and scores by Mahalanobis distance;
+PatchCore~\cite{roth2022patchcore} refines the nearest-neighbour recipe with a
+coreset-subsampled memory bank and reports near-saturated full-shot results on MVTec AD. All
+three inherit the inductive bias our Part~2 baseline uses -- a \emph{frozen} general feature
+extractor plus a normality model that never sees a defect -- and differ mainly in what
+``normal'' is modelled as and how much memory it needs.
+
+\paragraph{Reconstruction and synthesis.}
+A second family learns to reconstruct or synthesise normal appearance and flags what
+reconstruction fails to explain. CutPaste~\cite{li2021cutpaste} trains a classifier on
+self-generated, unnatural perturbations; DRAEM~\cite{zavrtanik2021draem} pairs a
+reconstruction network with a discriminative head on simulated defects. These methods are
+effective but need a large training corpus of the very product under inspection, which is the
+regime few-shot inspection explicitly excludes; we therefore do not compare against them
+numerically, but they motivate the synthetic-defect direction we keep as a possible
+calibration aid rather than a scoring rule.
+
+\paragraph{Foundation-model features and few-shot inspection.}
+The decisive change for the few-shot regime is representation quality rather than the
+normality model. DINOv2~\cite{oquab2024dinov2} produces dense, locally discriminative patch
+features from self-supervised pretraining, and AnomalyDINO~\cite{damm2025anomalydino} shows
+that simply running patch-level nearest neighbours on those features -- training-free, no
+fine-tuning, no auxiliary data -- rivals and often exceeds vision--language few-shot methods.
+RegAD~\cite{huang2022regad} instead \emph{trains} a category-agnostic registration model
+across many categories so that new categories need no re-training; it demonstrates that
+few-shot methods can share structure across products, at the cost of a training phase our
+setting does not allow. On the systems side, EfficientAD~\cite{batzner2024efficientad} shows
+that millisecond-level inference is compatible with high accuracy, which frames the cost
+accounting we report for our own runs. Our Part~2 is the official AnomalyDINO recipe; our
+Part~3 asks whether its conclusion -- \emph{good frozen visual features are enough} --
+survives a change of the frozen encoder, which AnomalyDINO itself does not test.
+
+\paragraph{Language-aligned encoders, used vision-only.}
+CLIP~\cite{radford2021clip} aligns images with text and dominates zero-/few-shot transfer
+through prompts: WinCLIP~\cite{jeong2023winclip} aggregates window- and patch-level features
+against handcrafted normal/abnormal state words, and
+AnomalyCLIP~\cite{zhou2024anomalyclip} learns object-agnostic prompts so that one text prompt
+transfers across product categories. Both operate on the \emph{text} side of the alignment;
+the dense quality of CLIP's \emph{vision tower} -- what its patch tokens say before any
+prompt is applied -- is rarely examined. Our E1 fills exactly that gap: we take patch tokens
+from the CLIP vision encoder, keep the $k$-NN scoring rule, resolution, reference sampling
+and calibration identical to the DINOv2 control, and measure how much language alignment
+costs dense anomaly matching.
+
+\paragraph{Reliability of the decision, not just the score.}
+Anomaly scores are only useful through a threshold, and thresholds inherit the failure modes
+of probability calibration~\cite{guo2017calibration}. Following the risk--coverage view of
+selective prediction~\cite{geifman2017selective}, we derive every OK/NG threshold from 20
+held-out normal calibration images and report the achieved false-alarm rate rather than
+assuming the nominal 5\%. Segmentation prompts such as SAM~\cite{kirillov2023sam} offer a
+complementary route to background suppression that we discuss as future work rather than use,
+because a mask from a general segmenter would add a second moving part to a comparison
+designed to keep the backbone the only variable.
+
+\paragraph{Positioning.}
+Existing work either trains on the target product
+\cite{li2021cutpaste,zavrtanik2021draem,huang2022regad}, freezes one vision backbone
+\cite{damm2025anomalydino,roth2022patchcore}, or moves the comparison to the text side of a
+vision--language model~\cite{jeong2023winclip,zhou2024anomalyclip}. What is missing is a
+controlled measurement of \emph{which frozen encoder} dense nearest-neighbour matching should
+run on, and an error analysis that says where the encoders disagree rather than only how far
+apart their averages are. The complementary question -- whether a multimodal model asked
+directly, in language, about reference and test images adds information that neither
+encoder's score contains -- is reviewed in \bsec{the vision--language subsection of Related
+Work}.

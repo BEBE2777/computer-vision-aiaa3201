@@ -15,10 +15,11 @@ import os
 import sys
 import time
 
-# Small k-NN searches (1k queries against a 5k-45k patch bank) are dominated by thread
-# synchronisation, not arithmetic: measured 462 ms with 12 OpenMP threads vs 87 ms with one,
-# a 5x speed-up, and the freed cores are better spent on a second category. Must be set
-# before faiss is imported.
+# The k-NN searches (1k queries against a 5k-45k patch bank) are CPU-bound; on this node a
+# bare-metal 1-NN over an 8,960-patch bank costs 163 ms at 1 thread, 132 ms at 2 and 62 ms at
+# 6 (measured 2026-11-22, scripts/bench_inference.py --threads). The grid pins 1 thread not
+# because it is fastest but because it makes the wall-clock reproducible and leaves cores for
+# parallel category runs (scripts/run_grid_parallel.sh). Must be set before faiss is imported.
 for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
     os.environ.setdefault(_v, "1")
 

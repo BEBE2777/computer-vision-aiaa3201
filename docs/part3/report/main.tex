@@ -1,0 +1,50 @@
+% AIAA3201 Project 2 report -- CVPR two-column layout (official author-kit style files)
+% Compile: tectonic main.tex   (or pdflatex + bibtex + pdflatex x2 on Overleaf)
+% Review option keeps page numbers; switch to \usepackage{cvpr} for a camera-ready look.
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[pagenumbers]{cvpr}
+\input{preamble}
+
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref=false,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+
+%%%%%%%%% TITLE
+\title{How Far Can a Frozen Encoder Carry Few-Shot Industrial Anomaly Detection?\\
+A Controlled Study on VisA}
+
+%%%%%%%%% AUTHORS
+\author{Sibei Lyu\thanks{Equal split of work is documented in the project repository:
+visual branch, protocol and analysis by S.L.; multimodal branch, demo and packaging by
+the co-author. Code and every number in this report are reproducible from
+\texttt{github.com/BEBE2777/computer-vision-aiaa3201}.}\\
+The Hong Kong University of Science and Technology (Guangzhou)
+\and
+Co-author (multimodal branch)\tbd{B's name}\\
+The Hong Kong University of Science and Technology (Guangzhou)}
+
+\def\confName{AIAA3201}
+\def\confYear{2026}
+
+\begin{document}
+\maketitle
+
+\input{sec/0_abstract}
+\input{sec/1_intro}
+\input{sec/2_related}
+\input{sec/3_method}
+\input{sec/4_experiments}
+\input{sec/5_conclusion}
+
+{\small
+\bibliographystyle{ieeenat_fullname}
+\bibliography{references}
+}
+
+% ---------------- reproducibility appendix (kept inside the page budget check)
+\clearpage
+\appendix
+\onecolumn
+\input{sec/X_repro}
+
+\end{document}

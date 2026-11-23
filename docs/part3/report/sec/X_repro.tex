@@ -1,0 +1,45 @@
+\section*{Reproducibility appendix}
+\label{app:repro}
+
+\paragraph{Repository.}
+Everything in this report is generated from
+\url{github.com/BEBE2777/computer-vision-aiaa3201}. The mapping from claim to artefact:
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.30\columnwidth}p{0.58\columnwidth}}
+\toprule
+Report element & Artefact in the repository \\
+\midrule
+Part 1 grid & \texttt{results/tables/} (template-difference runner) \\
+Part 2 official numbers & \texttt{results/part2\_official/}, parity report \texttt{parity\_report.md} \\
+Part 2 cached authority & \texttt{results/part2\_cached/base\_L12\_v2\_final.json} \\
+E1 grids & \texttt{results/part3/tables.md}, \texttt{e1\_full.md}, \texttt{metrics.json} \\
+Per-image dumps & \texttt{results/part3/scores/*.json} (960 images per arm) \\
+Error taxonomy & \texttt{results/part3/error\_cases.csv}, \texttt{error\_taxonomy.md} \\
+Fusion & \texttt{results/part3/fusion/dinov2\_clip\_9cells.md}, scripts \texttt{scripts/score\_fusion.py}, \texttt{scripts/fuse\_sweep.py} \\
+Figures & \texttt{scripts/plot\_per\_category.py}, \texttt{scripts/plot\_pipeline.py}, \texttt{make\_figures.py}, \texttt{scripts/make\_heatmap\_panel.py} \\
+Latency / memory & \texttt{scripts/bench\_inference.py}, \texttt{scripts/run\_bench.sh} \\
+Protocol freezes & \texttt{docs/part3/} (planning, method and experiments drafts) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Environment.}
+Shared NVIDIA RTX A6000 (48\,GB), one GPU job at a time; PyTorch with CUDA; faiss
+\texttt{IndexFlatL2} with \texttt{OMP\_NUM\_THREADS=1} (small $k$-NN searches are
+synchronisation-bound); all cached features float32; feature cache on persistent disk,
+large scratch files under \texttt{/tmp}.
+
+\paragraph{Determinism.}
+Reference pools are sorted and sliced deterministically
+($\text{pool}[s\,\text{shot}:(s{+}1)\,\text{shot}]$); the PCA foreground mask uses a pinned
+random state (a randomized-PCA seed flip otherwise moved up to 460 of 1024 patches on one
+category); augmentation is a fixed set of 8 rotations; no test label enters thresholding,
+weight selection or any other choice.
+
+\paragraph{Data.}
+VisA~\cite{zou2022spot} official \texttt{1cls} split, six object-centric categories, 960 test
+images in total. No dataset images, model weights or large caches are committed to the
+repository; the README documents how to fetch them.

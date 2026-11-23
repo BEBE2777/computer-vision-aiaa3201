@@ -46,10 +46,23 @@ Manifest：`manifest_v2.json`，sha256 `8b04d21705d2ec3acd131da58b367a00e1dff146
 | 打分延迟 mean | 2566 ms | 1609 ms |
 | 峰值显存 mean | 23.46 GB | 11.12 GB |
 
-## Matched DINO 对照
-仓库现有 `results/part2/eval448_*.json` 只有每类聚合分数，**没有逐图分数落盘**
-→ 本轮未做 DINO 逐图对照。**后续依赖**：需 DINO runner 在同一 manifest 上补跑
-逐图 dump（或找到已有逐图缓存）后才可对齐比较。
+## Matched DINO / CLIP 对照（同一批 120 张）
+来源：`p2-anomaly/results/part3/scores/e1_dino448_nomask.json` 与
+`e1_clip448_L9_nomask.json` 的逐图 `paths/labels/scores`（1-shot、seed 0、448、
+nomask）。该 dump 的参考图采样与归档 refs 同为 `pool[seed*n:(seed+1)*n]`
+（calib_exclude 20），120 张全部命中，故为严格 matched。脚本：
+`extract_matched_baselines.py`，明细 `matched_baselines_v2.json`。
+
+| 读出（同一 120 张） | 六类宏平均 AUROC |
+|---|---|
+| DINOv2 @448（1-shot seed0） | **0.9333**（0.89–0.98） |
+| CLIP L9 @448（1-shot seed0） | **0.8667**（0.67–0.99） |
+| Qwen 7B JSON anomaly_score | 无定义（3 类无方差），其余 0.55–0.60 |
+| Qwen 7B fc_score（按 v2 定义，未翻转） | 0.0417 |
+| Qwen 7B fc_score（翻转，v2 事后观察值） | 0.9583 |
+
+结论：在 v2 这批图上，DINO/CLIP 明显有效；Qwen 只有翻转符号后才看起来有效，
+因此必须用独立图片确认（见 `../confirm_pilot_v3/`）。未做融合。
 
 ## 后续动作门槛（协议 §8 预先承诺，未触发）
 - DINO top-k 区域 crop 复核：仅在 Qwen 分数方向经留出集确认有效后。

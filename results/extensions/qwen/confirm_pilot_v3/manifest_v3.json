@@ -1,0 +1,1597 @@
+{
+ "protocol": "qwen_confirmation_pilot_v3",
+ "frozen_before_inference": true,
+ "sampling_seed": 20261123,
+ "shots": 1,
+ "refs_seed": 0,
+ "n_images": 120,
+ "excluded_v1": [
+  "candle/bad/005.JPG",
+  "candle/bad/053.JPG",
+  "candle/good/0552.JPG",
+  "candle/good/0985.JPG",
+  "capsules/bad/051.JPG",
+  "capsules/bad/062.JPG",
+  "capsules/good/178.JPG",
+  "capsules/good/320.JPG",
+  "cashew/bad/045.JPG",
+  "cashew/bad/074.JPG",
+  "cashew/good/244.JPG",
+  "cashew/good/344.JPG",
+  "chewinggum/bad/017.JPG",
+  "chewinggum/bad/036.JPG",
+  "chewinggum/good/166.JPG",
+  "chewinggum/good/369.JPG",
+  "fryum/bad/012.JPG",
+  "fryum/bad/079.JPG",
+  "fryum/good/093.JPG",
+  "fryum/good/484.JPG",
+  "pipe_fryum/bad/077.JPG",
+  "pipe_fryum/bad/090.JPG",
+  "pipe_fryum/good/213.JPG",
+  "pipe_fryum/good/377.JPG"
+ ],
+ "excluded_v2_n": 120,
+ "entries": [
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0811.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0811.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0964.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0964.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0735.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0735.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0294.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0294.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0303.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0303.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0797.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0797.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0178.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0178.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0784.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0784.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0621.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0621.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0629.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0629.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "025.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/025.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "003.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/003.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "095.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/095.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "010.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/010.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "013.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/013.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "062.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/062.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "037.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/037.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "015.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/015.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "098.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/098.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "007.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/007.JPG",
+   "reference_files": [
+    "0023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "237.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/237.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "288.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/288.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "400.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/400.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "545.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/545.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "261.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/261.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/016.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "024.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/024.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "214.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/214.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "520.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/520.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "402.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/402.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "081.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/081.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "031.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/031.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "025.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/025.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "066.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/066.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "085.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/085.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "014.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/014.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "092.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/092.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "042.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/042.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "055.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/055.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "054.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/054.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "461.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/461.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "367.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/367.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "389.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/389.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "384.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/384.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "050.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/050.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "460.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/460.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "276.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/276.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "130.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/130.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "435.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/435.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "084.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/084.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "007.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/007.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "046.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/046.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "096.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/096.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "055.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/055.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "070.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/070.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "029.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/029.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "035.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/035.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "001.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/001.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "061.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/061.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "066.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/066.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "460.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/460.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "467.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/467.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "309.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/309.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "228.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/228.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "244.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/244.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "435.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/435.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "402.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/402.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "284.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/284.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "352.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/352.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "337.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/337.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "093.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/093.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "023.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/023.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "059.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/059.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "004.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/004.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "016.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/016.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "035.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/035.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "098.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/098.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "015.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/015.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "062.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/062.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "077.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/077.JPG",
+   "reference_files": [
+    "023.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/023.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "260.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/260.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "352.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/352.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "181.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/181.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "307.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/307.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "272.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/272.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "482.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/482.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "384.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/384.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "087.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/087.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "276.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/276.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "244.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/244.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "045.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/045.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "095.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/095.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "031.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/031.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "098.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/098.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "090.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/090.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "002.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/002.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "059.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/059.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "033.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/033.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "005.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/005.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "073.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/073.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "050.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/050.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "245.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/245.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "087.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/087.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "023.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/023.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "342.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/342.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "012.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/012.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "384.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/384.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "484.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/484.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "089.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/089.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "482.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/482.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "070.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/070.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "030.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/030.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "096.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/096.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "038.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/038.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "059.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/059.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "049.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/049.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "040.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/040.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "088.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/088.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "046.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/046.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "041.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/041.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/024.JPG"
+   ],
+   "subset_rule": "Random(20261123) sample 10 per label, v1+v2 excluded"
+  }
+ ]
+}

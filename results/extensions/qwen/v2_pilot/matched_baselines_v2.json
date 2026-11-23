@@ -1,0 +1,1279 @@
+{
+ "summary": {
+  "n": 120,
+  "cats": [
+   "candle",
+   "capsules",
+   "cashew",
+   "chewinggum",
+   "fryum",
+   "pipe_fryum"
+  ],
+  "per_category": {
+   "candle": {
+    "dino_score": 0.92,
+    "clip_score": 0.83,
+    "qwen_json_score": null,
+    "qwen_fc_score": 0.0,
+    "qwen_fc_score_signflip": 1.0
+   },
+   "capsules": {
+    "dino_score": 0.94,
+    "clip_score": 0.84,
+    "qwen_json_score": null,
+    "qwen_fc_score": 0.08,
+    "qwen_fc_score_signflip": 0.92
+   },
+   "cashew": {
+    "dino_score": 0.94,
+    "clip_score": 0.88,
+    "qwen_json_score": 0.55,
+    "qwen_fc_score": 0.16,
+    "qwen_fc_score_signflip": 0.84
+   },
+   "chewinggum": {
+    "dino_score": 0.98,
+    "clip_score": 0.99,
+    "qwen_json_score": 0.6,
+    "qwen_fc_score": 0.0,
+    "qwen_fc_score_signflip": 1.0
+   },
+   "fryum": {
+    "dino_score": 0.93,
+    "clip_score": 0.67,
+    "qwen_json_score": 0.55,
+    "qwen_fc_score": 0.01,
+    "qwen_fc_score_signflip": 0.99
+   },
+   "pipe_fryum": {
+    "dino_score": 0.89,
+    "clip_score": 0.99,
+    "qwen_json_score": null,
+    "qwen_fc_score": 0.0,
+    "qwen_fc_score_signflip": 1.0
+   }
+  },
+  "macro": {
+   "dino_score": 0.9333,
+   "clip_score": 0.8667,
+   "qwen_json_score": null,
+   "qwen_fc_score": 0.0417,
+   "qwen_fc_score_signflip": 0.9583
+  },
+  "pooled_120": {
+   "dino_score": 0.8863888888888889,
+   "clip_score": 0.8202777777777778,
+   "qwen_json_score": 0.5333333333333333,
+   "qwen_fc_score": 0.04777777777777778,
+   "qwen_fc_score_signflip": 0.9522222222222222
+  },
+  "sources": {
+   "dino": "p2-anomaly/results/part3/scores/e1_dino448_nomask.json",
+   "clip": "p2-anomaly/results/part3/scores/e1_clip448_L9_nomask.json",
+   "qwen": "results/extensions/qwen/v2_pilot/predictions_v2_7b.json",
+   "matched": "1-shot seed0, 448, nomask, archived refs; same 120 images"
+  }
+ },
+ "rows": [
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0755.JPG",
+   "dino_score": 0.24483900178562512,
+   "clip_score": 0.3498171791434288,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6415,
+   "qwen_fc_score_signflip": 13.6415
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0690.JPG",
+   "dino_score": 0.1753669814629988,
+   "clip_score": 0.3375287093222141,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.1083,
+   "qwen_fc_score_signflip": 12.1083
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0377.JPG",
+   "dino_score": 0.280351153828881,
+   "clip_score": 0.38151057437062263,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.0063,
+   "qwen_fc_score_signflip": 12.0063
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0800.JPG",
+   "dino_score": 0.2556328529661352,
+   "clip_score": 0.3816506490111351,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3746,
+   "qwen_fc_score_signflip": 13.3746
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0569.JPG",
+   "dino_score": 0.22751357609575446,
+   "clip_score": 0.35702580586075783,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.8883,
+   "qwen_fc_score_signflip": 12.8883
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0871.JPG",
+   "dino_score": 0.22145286744291132,
+   "clip_score": 0.34742725640535355,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.185,
+   "qwen_fc_score_signflip": 14.185
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0796.JPG",
+   "dino_score": 0.20992360873655838,
+   "clip_score": 0.33668334037065506,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9423,
+   "qwen_fc_score_signflip": 13.9423
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0026.JPG",
+   "dino_score": 0.21555403416807,
+   "clip_score": 0.3327425867319107,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.4946,
+   "qwen_fc_score_signflip": 12.4946
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0100.JPG",
+   "dino_score": 0.16971629858016968,
+   "clip_score": 0.3365977145731449,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.2047,
+   "qwen_fc_score_signflip": 13.2047
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0016.JPG",
+   "dino_score": 0.1788015907460993,
+   "clip_score": 0.29835234209895134,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.7781,
+   "qwen_fc_score_signflip": 11.7781
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "022.JPG",
+   "dino_score": 0.2913749841126529,
+   "clip_score": 0.38217006996273994,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2918,
+   "qwen_fc_score_signflip": 19.2918
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "057.JPG",
+   "dino_score": 0.2795471223917874,
+   "clip_score": 0.3330591954290867,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.1136,
+   "qwen_fc_score_signflip": 19.1136
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "065.JPG",
+   "dino_score": 0.4076294004917145,
+   "clip_score": 0.3764974847435951,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.5571,
+   "qwen_fc_score_signflip": 22.5571
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "093.JPG",
+   "dino_score": 0.40962333299896936,
+   "clip_score": 0.39298320934176445,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6339,
+   "qwen_fc_score_signflip": 19.6339
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "030.JPG",
+   "dino_score": 0.3506514077836817,
+   "clip_score": 0.45104634389281273,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.1788,
+   "qwen_fc_score_signflip": 21.1788
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "082.JPG",
+   "dino_score": 0.3011818826198578,
+   "clip_score": 0.3784411735832691,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.9626,
+   "qwen_fc_score_signflip": 22.9626
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "047.JPG",
+   "dino_score": 0.30373866991563275,
+   "clip_score": 0.42102254927158356,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2566,
+   "qwen_fc_score_signflip": 19.2566
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "039.JPG",
+   "dino_score": 0.19398732076991687,
+   "clip_score": 0.3543183170258999,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.536,
+   "qwen_fc_score_signflip": 14.536
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "052.JPG",
+   "dino_score": 0.30332943526181305,
+   "clip_score": 0.4042253866791725,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.9059,
+   "qwen_fc_score_signflip": 16.9059
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "069.JPG",
+   "dino_score": 0.34608483043583954,
+   "clip_score": 0.36163565143942833,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.8486,
+   "qwen_fc_score_signflip": 16.8486
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "179.JPG",
+   "dino_score": 0.15499135454495747,
+   "clip_score": 0.3402427082712,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.5786,
+   "qwen_fc_score_signflip": 17.5786
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "483.JPG",
+   "dino_score": 0.1481253147125244,
+   "clip_score": 0.32678182558579877,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.0436,
+   "qwen_fc_score_signflip": 17.0436
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "484.JPG",
+   "dino_score": 0.16749213139216104,
+   "clip_score": 0.35206838087602094,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.722,
+   "qwen_fc_score_signflip": 17.722
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "525.JPG",
+   "dino_score": 0.17808664043744404,
+   "clip_score": 0.36347863349047577,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.6773,
+   "qwen_fc_score_signflip": 16.6773
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "363.JPG",
+   "dino_score": 0.18929688731829325,
+   "clip_score": 0.3488984053785151,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5651,
+   "qwen_fc_score_signflip": 16.5651
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "306.JPG",
+   "dino_score": 0.15429760018984476,
+   "clip_score": 0.3367796621539376,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5587,
+   "qwen_fc_score_signflip": 16.5587
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "196.JPG",
+   "dino_score": 0.16066501140594483,
+   "clip_score": 0.3377502912824804,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8492,
+   "qwen_fc_score_signflip": 17.8492
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "215.JPG",
+   "dino_score": 0.16538702448209128,
+   "clip_score": 0.3266249813816764,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1279,
+   "qwen_fc_score_signflip": 17.1279
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "100.JPG",
+   "dino_score": 0.15668559869130452,
+   "clip_score": 0.3233701911839572,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8976,
+   "qwen_fc_score_signflip": 17.8976
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "286.JPG",
+   "dino_score": 0.2603931268056234,
+   "clip_score": 0.4448633383620869,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1909,
+   "qwen_fc_score_signflip": 17.1909
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "098.JPG",
+   "dino_score": 0.23595803777376811,
+   "clip_score": 0.42563307827169244,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9437,
+   "qwen_fc_score_signflip": 17.9437
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "068.JPG",
+   "dino_score": 0.22791313926378887,
+   "clip_score": 0.41211658174341376,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.3752,
+   "qwen_fc_score_signflip": 17.3752
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "047.JPG",
+   "dino_score": 0.5032117227713268,
+   "clip_score": 0.49060622399503534,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.7873,
+   "qwen_fc_score_signflip": 19.7873
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "079.JPG",
+   "dino_score": 0.28181611696879066,
+   "clip_score": 0.39995214343070984,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.0593,
+   "qwen_fc_score_signflip": 19.0593
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "090.JPG",
+   "dino_score": 0.21812624136606854,
+   "clip_score": 0.3261930590326136,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.386,
+   "qwen_fc_score_signflip": 17.386
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "056.JPG",
+   "dino_score": 0.22532199223836263,
+   "clip_score": 0.39899144118482416,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.8642,
+   "qwen_fc_score_signflip": 18.8642
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "078.JPG",
+   "dino_score": 0.2493515690167745,
+   "clip_score": 0.42280896414409985,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.216,
+   "qwen_fc_score_signflip": 19.216
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "028.JPG",
+   "dino_score": 0.25786075989405316,
+   "clip_score": 0.396309876983816,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.0835,
+   "qwen_fc_score_signflip": 19.0835
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "083.JPG",
+   "dino_score": 0.32237048546473185,
+   "clip_score": 0.46576408364556054,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6807,
+   "qwen_fc_score_signflip": 19.6807
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "072.JPG",
+   "dino_score": 0.3054758071899414,
+   "clip_score": 0.4091896360570734,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.7735,
+   "qwen_fc_score_signflip": 20.7735
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "228.JPG",
+   "dino_score": 0.15306144654750825,
+   "clip_score": 0.2720889039337635,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.7,
+   "qwen_fc_score_signflip": 14.7
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "400.JPG",
+   "dino_score": 0.2293221026659012,
+   "clip_score": 0.2955552712082863,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.638,
+   "qwen_fc_score_signflip": 17.638
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "166.JPG",
+   "dino_score": 0.16840825974941254,
+   "clip_score": 0.2665487788617611,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6151,
+   "qwen_fc_score_signflip": 13.6151
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "369.JPG",
+   "dino_score": 0.14573923051357268,
+   "clip_score": 0.28336916863918304,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.346,
+   "qwen_fc_score_signflip": 13.346
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "148.JPG",
+   "dino_score": 0.1835594117641449,
+   "clip_score": 0.2923963703215122,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9677,
+   "qwen_fc_score_signflip": 13.9677
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "402.JPG",
+   "dino_score": 0.1872086524963379,
+   "clip_score": 0.26780930534005165,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.8073,
+   "qwen_fc_score_signflip": 13.8073
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "309.JPG",
+   "dino_score": 0.20395978093147277,
+   "clip_score": 0.3120112456381321,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.4105,
+   "qwen_fc_score_signflip": 14.4105
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "213.JPG",
+   "dino_score": 0.19386279582977295,
+   "clip_score": 0.3061491623520851,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.0196,
+   "qwen_fc_score_signflip": 14.0196
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "023.JPG",
+   "dino_score": 0.16288117170333863,
+   "clip_score": 0.26051755622029305,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6261,
+   "qwen_fc_score_signflip": 13.6261
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "087.JPG",
+   "dino_score": 0.17635417282581328,
+   "clip_score": 0.27232856675982475,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.901,
+   "qwen_fc_score_signflip": 13.901
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "058.JPG",
+   "dino_score": 0.22757407724857331,
+   "clip_score": 0.3272457458078861,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.988,
+   "qwen_fc_score_signflip": 15.988
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "098.JPG",
+   "dino_score": 0.38712011873722074,
+   "clip_score": 0.39004865288734436,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.7895,
+   "qwen_fc_score_signflip": 17.7895
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "044.JPG",
+   "dino_score": 0.2202014982700348,
+   "clip_score": 0.3008158579468727,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3798,
+   "qwen_fc_score_signflip": 13.3798
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "059.JPG",
+   "dino_score": 0.20721270143985748,
+   "clip_score": 0.3047919161617756,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.1398,
+   "qwen_fc_score_signflip": 21.1398
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "023.JPG",
+   "dino_score": 0.2544348031282425,
+   "clip_score": 0.348545178771019,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.2036,
+   "qwen_fc_score_signflip": 23.2036
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "071.JPG",
+   "dino_score": 0.1994503378868103,
+   "clip_score": 0.2894729673862457,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.607,
+   "qwen_fc_score_signflip": 20.607
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "038.JPG",
+   "dino_score": 0.32763530015945436,
+   "clip_score": 0.35396724566817284,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7001,
+   "qwen_fc_score_signflip": 22.7001
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "099.JPG",
+   "dino_score": 0.3556977897882462,
+   "clip_score": 0.4359208270907402,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -19.8698,
+   "qwen_fc_score_signflip": 19.8698
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "088.JPG",
+   "dino_score": 0.22984329760074615,
+   "clip_score": 0.31442900374531746,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9284,
+   "qwen_fc_score_signflip": 13.9284
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "051.JPG",
+   "dino_score": 0.20663879215717315,
+   "clip_score": 0.28513284772634506,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5384,
+   "qwen_fc_score_signflip": 16.5384
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "239.JPG",
+   "dino_score": 0.18973750124375025,
+   "clip_score": 0.33872710996203953,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.0245,
+   "qwen_fc_score_signflip": 14.0245
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "143.JPG",
+   "dino_score": 0.1962851732969284,
+   "clip_score": 0.35781047079298234,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9438,
+   "qwen_fc_score_signflip": 13.9438
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "392.JPG",
+   "dino_score": 0.1603856310248375,
+   "clip_score": 0.30307815141148037,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.9736,
+   "qwen_fc_score_signflip": 12.9736
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "400.JPG",
+   "dino_score": 0.22189349184433618,
+   "clip_score": 0.3625915050506592,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.1437,
+   "qwen_fc_score_signflip": 12.1437
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "098.JPG",
+   "dino_score": 0.18332976351181665,
+   "clip_score": 0.30666615896754795,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3022,
+   "qwen_fc_score_signflip": 13.3022
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "342.JPG",
+   "dino_score": 0.32505516211191815,
+   "clip_score": 0.33109097679456073,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1433,
+   "qwen_fc_score_signflip": 13.1433
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "482.JPG",
+   "dino_score": 0.1989401951432228,
+   "clip_score": 0.3098815613322788,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.9577,
+   "qwen_fc_score_signflip": 16.9577
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "181.JPG",
+   "dino_score": 0.16218853990236917,
+   "clip_score": 0.3048972421222263,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.8839,
+   "qwen_fc_score_signflip": 12.8839
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "344.JPG",
+   "dino_score": 0.18265329798062643,
+   "clip_score": 0.340543743636873,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9715,
+   "qwen_fc_score_signflip": 13.9715
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "087.JPG",
+   "dino_score": 0.20066765944163004,
+   "clip_score": 0.31701727045906913,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1604,
+   "qwen_fc_score_signflip": 13.1604
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "075.JPG",
+   "dino_score": 0.3105127463738124,
+   "clip_score": 0.45208048820495605,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6958,
+   "qwen_fc_score_signflip": 20.6958
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "045.JPG",
+   "dino_score": 0.5805680503447851,
+   "clip_score": 0.5767071180873447,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.7257,
+   "qwen_fc_score_signflip": 23.7257
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "043.JPG",
+   "dino_score": 0.5987367282311121,
+   "clip_score": 0.5295089417033725,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.0599,
+   "qwen_fc_score_signflip": 24.0599
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "054.JPG",
+   "dino_score": 0.49428751071294147,
+   "clip_score": 0.4804099003473918,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -23.38,
+   "qwen_fc_score_signflip": 23.38
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "018.JPG",
+   "dino_score": 0.5929982016483942,
+   "clip_score": 0.559540867805481,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.5522,
+   "qwen_fc_score_signflip": 23.5522
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "091.JPG",
+   "dino_score": 0.40259673446416855,
+   "clip_score": 0.42578214075830245,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.4434,
+   "qwen_fc_score_signflip": 22.4434
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "060.JPG",
+   "dino_score": 0.5500263522068659,
+   "clip_score": 0.58073447810279,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -24.519,
+   "qwen_fc_score_signflip": 24.519
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "078.JPG",
+   "dino_score": 0.3789896269639333,
+   "clip_score": 0.4549742539723714,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.5308,
+   "qwen_fc_score_signflip": 22.5308
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "074.JPG",
+   "dino_score": 0.2991044322649638,
+   "clip_score": 0.35812947485182023,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -25.7576,
+   "qwen_fc_score_signflip": 25.7576
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "048.JPG",
+   "dino_score": 0.6042419423659643,
+   "clip_score": 0.5900416639116075,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.5039,
+   "qwen_fc_score_signflip": 23.5039
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "467.JPG",
+   "dino_score": 0.1760023534297943,
+   "clip_score": 0.40017017180269415,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9277,
+   "qwen_fc_score_signflip": 13.9277
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "284.JPG",
+   "dino_score": 0.18558954795201618,
+   "clip_score": 0.2974888655272397,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.9285,
+   "qwen_fc_score_signflip": 14.9285
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "324.JPG",
+   "dino_score": 0.1942987581094106,
+   "clip_score": 0.3538449216972698,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2237,
+   "qwen_fc_score_signflip": 14.2237
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "012.JPG",
+   "dino_score": 0.15042357246081034,
+   "clip_score": 0.3257209631529721,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.3259,
+   "qwen_fc_score_signflip": 15.3259
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "309.JPG",
+   "dino_score": 0.2061087131500244,
+   "clip_score": 0.30528246001763776,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6835,
+   "qwen_fc_score_signflip": 13.6835
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "166.JPG",
+   "dino_score": 0.15850523114204407,
+   "clip_score": 0.30856557054953143,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.5099,
+   "qwen_fc_score_signflip": 13.5099
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "337.JPG",
+   "dino_score": 0.19017282327016194,
+   "clip_score": 0.42986329848116095,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.9936,
+   "qwen_fc_score_signflip": 15.9936
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "130.JPG",
+   "dino_score": 0.19970759550730388,
+   "clip_score": 0.3062050152908672,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6531,
+   "qwen_fc_score_signflip": 13.6531
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "098.JPG",
+   "dino_score": 0.16141326626141866,
+   "clip_score": 0.29253155263987457,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.8561,
+   "qwen_fc_score_signflip": 14.8561
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "239.JPG",
+   "dino_score": 0.26481542785962425,
+   "clip_score": 0.28602416948838666,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2502,
+   "qwen_fc_score_signflip": 14.2502
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "054.JPG",
+   "dino_score": 0.2951202313105265,
+   "clip_score": 0.31967195868492126,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.0623,
+   "qwen_fc_score_signflip": 21.0623
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "013.JPG",
+   "dino_score": 0.19746702909469604,
+   "clip_score": 0.29686008529229596,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.151,
+   "qwen_fc_score_signflip": 16.151
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "037.JPG",
+   "dino_score": 0.23894813060760497,
+   "clip_score": 0.33920570937069977,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.8246,
+   "qwen_fc_score_signflip": 15.8246
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "083.JPG",
+   "dino_score": 0.2743651946385702,
+   "clip_score": 0.3940248760310086,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.1504,
+   "qwen_fc_score_signflip": 21.1504
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "016.JPG",
+   "dino_score": 0.23668673038482665,
+   "clip_score": 0.3923800154165788,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.7451,
+   "qwen_fc_score_signflip": 20.7451
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "049.JPG",
+   "dino_score": 0.3312424202760061,
+   "clip_score": 0.32847304235805164,
+   "qwen_json_score": 0.3,
+   "qwen_fc_score": -23.4613,
+   "qwen_fc_score_signflip": 23.4613
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "024.JPG",
+   "dino_score": 0.22649807731310526,
+   "clip_score": 0.3431003825231032,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9909,
+   "qwen_fc_score_signflip": 17.9909
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "063.JPG",
+   "dino_score": 0.3416212797164917,
+   "clip_score": 0.3173877786506306,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0472,
+   "qwen_fc_score_signflip": 20.0472
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "027.JPG",
+   "dino_score": 0.2897740920384725,
+   "clip_score": 0.398240942846645,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.819,
+   "qwen_fc_score_signflip": 17.819
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "060.JPG",
+   "dino_score": 0.22370659510294597,
+   "clip_score": 0.35460886088284577,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.9273,
+   "qwen_fc_score_signflip": 21.9273
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "467.JPG",
+   "dino_score": 0.31095709042115643,
+   "clip_score": 0.32810530439019203,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.3427,
+   "qwen_fc_score_signflip": 11.3427
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "181.JPG",
+   "dino_score": 0.15082722360437567,
+   "clip_score": 0.29242832586169243,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.6407,
+   "qwen_fc_score_signflip": 12.6407
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "104.JPG",
+   "dino_score": 0.38010363416238263,
+   "clip_score": 0.3173416927456856,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.5583,
+   "qwen_fc_score_signflip": 13.5583
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "309.JPG",
+   "dino_score": 0.2661029588092457,
+   "clip_score": 0.3434262201189995,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7466,
+   "qwen_fc_score_signflip": 13.7466
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "098.JPG",
+   "dino_score": 0.20013338056477634,
+   "clip_score": 0.3218245431780815,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4932,
+   "qwen_fc_score_signflip": 13.4932
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "130.JPG",
+   "dino_score": 0.32801706953482196,
+   "clip_score": 0.3490716889500618,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -10.898,
+   "qwen_fc_score_signflip": 10.898
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "093.JPG",
+   "dino_score": 0.20656989921223035,
+   "clip_score": 0.31576187163591385,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.5732,
+   "qwen_fc_score_signflip": 12.5732
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "398.JPG",
+   "dino_score": 0.3359432003714822,
+   "clip_score": 0.30017146095633507,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3808,
+   "qwen_fc_score_signflip": 14.3808
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "352.JPG",
+   "dino_score": 0.312914330850948,
+   "clip_score": 0.40876100957393646,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.4783,
+   "qwen_fc_score_signflip": 14.4783
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "260.JPG",
+   "dino_score": 0.22708510539748453,
+   "clip_score": 0.360858716070652,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.5034,
+   "qwen_fc_score_signflip": 15.5034
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "010.JPG",
+   "dino_score": 0.42695921659469604,
+   "clip_score": 0.4152791202068329,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.8619,
+   "qwen_fc_score_signflip": 18.8619
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "014.JPG",
+   "dino_score": 0.47069644115187903,
+   "clip_score": 0.5294429995119572,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0871,
+   "qwen_fc_score_signflip": 20.0871
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "085.JPG",
+   "dino_score": 0.3256334283135154,
+   "clip_score": 0.41123366728425026,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6819,
+   "qwen_fc_score_signflip": 20.6819
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "080.JPG",
+   "dino_score": 0.4499568722464822,
+   "clip_score": 0.4382921867072582,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.001,
+   "qwen_fc_score_signflip": 18.001
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "054.JPG",
+   "dino_score": 0.2265296524221247,
+   "clip_score": 0.42056169360876083,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.0918,
+   "qwen_fc_score_signflip": 19.0918
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "035.JPG",
+   "dino_score": 0.46869018132036383,
+   "clip_score": 0.5309311635792255,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.4982,
+   "qwen_fc_score_signflip": 18.4982
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "009.JPG",
+   "dino_score": 0.4705614745616913,
+   "clip_score": 0.467107567936182,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.484,
+   "qwen_fc_score_signflip": 18.484
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "028.JPG",
+   "dino_score": 0.3673308220776645,
+   "clip_score": 0.36710960417985916,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.2135,
+   "qwen_fc_score_signflip": 18.2135
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "036.JPG",
+   "dino_score": 0.4382205768065019,
+   "clip_score": 0.44663822278380394,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.1019,
+   "qwen_fc_score_signflip": 20.1019
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "011.JPG",
+   "dino_score": 0.49144302714954724,
+   "clip_score": 0.4958788566291332,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6226,
+   "qwen_fc_score_signflip": 20.6226
+  }
+ ]
+}

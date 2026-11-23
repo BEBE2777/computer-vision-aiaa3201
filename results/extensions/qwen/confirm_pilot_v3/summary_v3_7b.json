@@ -1,0 +1,74 @@
+{
+ "protocol": "qwen_confirmation_pilot_v3",
+ "model_id": "Qwen/Qwen2-VL-7B-Instruct",
+ "n": 120,
+ "json_valid_rate": 1.0,
+ "mean_latency_gen_ms": 2580.4,
+ "p95_latency_gen_ms": 3945.4,
+ "mean_latency_fc_ms": 2547.0,
+ "mean_peak_gpu_gb": 23.46,
+ "decisions": {
+  "OK": 114,
+  "NG": 6
+ },
+ "readouts": {
+  "fc_conf": {
+   "macro": 0.945,
+   "per_category": {
+    "candle": 1.0,
+    "capsules": 0.87,
+    "cashew": 0.95,
+    "chewinggum": 1.0,
+    "fryum": 0.85,
+    "pipe_fryum": 1.0
+   },
+   "n_above_055": 6,
+   "n_defined": 6
+  },
+  "fc_score_unflipped": {
+   "macro": 0.055,
+   "per_category": {
+    "candle": 0.0,
+    "capsules": 0.13,
+    "cashew": 0.05,
+    "chewinggum": 0.0,
+    "fryum": 0.15,
+    "pipe_fryum": 0.0
+   },
+   "n_above_055": 0,
+   "n_defined": 6
+  },
+  "fc_score_mean_unflipped": {
+   "macro": 0.055,
+   "per_category": {
+    "candle": 0.0,
+    "capsules": 0.13,
+    "cashew": 0.05,
+    "chewinggum": 0.0,
+    "fryum": 0.15,
+    "pipe_fryum": 0.0
+   },
+   "n_above_055": 0,
+   "n_defined": 6
+  },
+  "json_anomaly_score": {
+   "macro": null,
+   "per_category": {
+    "candle": null,
+    "capsules": null,
+    "cashew": null,
+    "chewinggum": 0.65,
+    "fryum": null,
+    "pipe_fryum": 0.7
+   },
+   "n_above_055": 2,
+   "n_defined": 2
+  }
+ },
+ "criterion": {
+  "rule": "macro>=0.70 and >=5/6 categories>0.55",
+  "macro": 0.945,
+  "n_above_055": 6,
+  "passed": true
+ }
+}

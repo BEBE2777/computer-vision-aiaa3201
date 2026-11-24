@@ -1,0 +1,484 @@
+{
+  "status": "post-hoc exploratory analysis; not preregistered",
+  "protocol": "Qwen fc_conf + DINOv2 E1, 1-shot seed0, v4 696-image subset",
+  "alpha_definition": "alpha * z_Qwen + (1-alpha) * z_DINO",
+  "normalisation": "per-category median / (1.4826*MAD) on the 20 normal calibration images; score_fusion.py fallback chain",
+  "alphas": [
+    {
+      "alpha": 0.0,
+      "macro": 0.9313053961333314,
+      "pooled": 0.9102938971360024,
+      "per_category": {
+        "candle": 0.9013806706114399,
+        "capsules": 0.9497300944669366,
+        "cashew": 0.9230769230769231,
+        "chewinggum": 0.9798534798534798,
+        "fryum": 0.9203296703296703,
+        "pipe_fryum": 0.9134615384615384
+      }
+    },
+    {
+      "alpha": 0.25,
+      "macro": 0.9727062561070658,
+      "pooled": 0.9436197330934173,
+      "per_category": {
+        "candle": 0.9464168310322156,
+        "capsules": 0.9713225371120108,
+        "cashew": 0.9835164835164835,
+        "chewinggum": 0.9885531135531136,
+        "fryum": 0.9555860805860806,
+        "pipe_fryum": 0.9908424908424909
+      }
+    },
+    {
+      "alpha": 0.5,
+      "macro": 0.9767644167947812,
+      "pooled": 0.9440133453291348,
+      "per_category": {
+        "candle": 0.9478961209730441,
+        "capsules": 0.9662618083670715,
+        "cashew": 0.9894688644688645,
+        "chewinggum": 0.9917582417582418,
+        "fryum": 0.9706959706959707,
+        "pipe_fryum": 0.9945054945054945
+      }
+    },
+    {
+      "alpha": 0.75,
+      "macro": 0.970502975057631,
+      "pooled": 0.9342761283550757,
+      "per_category": {
+        "candle": 0.9451019066403682,
+        "capsules": 0.9520917678812416,
+        "cashew": 0.9684065934065934,
+        "chewinggum": 0.98992673992674,
+        "fryum": 0.972985347985348,
+        "pipe_fryum": 0.9945054945054945
+      }
+    },
+    {
+      "alpha": 1.0,
+      "macro": 0.9575004860936035,
+      "pooled": 0.9213712700554806,
+      "per_category": {
+        "candle": 0.9426364234056541,
+        "capsules": 0.9200404858299596,
+        "cashew": 0.9317765567765568,
+        "chewinggum": 0.9867216117216118,
+        "fryum": 0.9716117216117216,
+        "pipe_fryum": 0.9922161172161172
+      }
+    }
+  ],
+  "alpha_0_5": {
+    "alpha": 0.5,
+    "macro": 0.9767644167947812,
+    "pooled": 0.9440133453291348,
+    "per_category": {
+      "candle": 0.9478961209730441,
+      "capsules": 0.9662618083670715,
+      "cashew": 0.9894688644688645,
+      "chewinggum": 0.9917582417582418,
+      "fryum": 0.9706959706959707,
+      "pipe_fryum": 0.9945054945054945
+    }
+  },
+  "operating_points_by_alpha": [
+    {
+      "per_category": {
+        "candle": {
+          "tp": 62,
+          "fp": 8,
+          "tn": 70,
+          "fn": 16,
+          "thr": 2.349974160361228
+        },
+        "capsules": {
+          "tp": 53,
+          "fp": 4,
+          "tn": 34,
+          "fn": 25,
+          "thr": 2.72039278764393
+        },
+        "cashew": {
+          "tp": 52,
+          "fp": 0,
+          "tn": 28,
+          "fn": 26,
+          "thr": 0.7939898523161748
+        },
+        "chewinggum": {
+          "tp": 74,
+          "fp": 3,
+          "tn": 25,
+          "fn": 4,
+          "thr": 2.240033657067525
+        },
+        "fryum": {
+          "tp": 66,
+          "fp": 3,
+          "tn": 25,
+          "fn": 12,
+          "thr": 1.8002894525683353
+        },
+        "pipe_fryum": {
+          "tp": 65,
+          "fp": 5,
+          "tn": 23,
+          "fn": 13,
+          "thr": 2.037661003423259
+        }
+      },
+      "total": {
+        "tp": 372,
+        "fp": 23,
+        "tn": 205,
+        "fn": 96
+      },
+      "recall": 0.7948717948717948,
+      "fpr": 0.10087719298245613,
+      "threshold_quantile": 95.0
+    },
+    {
+      "per_category": {
+        "candle": {
+          "tp": 71,
+          "fp": 11,
+          "tn": 67,
+          "fn": 7,
+          "thr": 2.361309005989222
+        },
+        "capsules": {
+          "tp": 64,
+          "fp": 2,
+          "tn": 36,
+          "fn": 14,
+          "thr": 2.788162366678024
+        },
+        "cashew": {
+          "tp": 48,
+          "fp": 0,
+          "tn": 28,
+          "fn": 30,
+          "thr": 1.8925916980033475
+        },
+        "chewinggum": {
+          "tp": 75,
+          "fp": 1,
+          "tn": 27,
+          "fn": 3,
+          "thr": 2.4933372038698107
+        },
+        "fryum": {
+          "tp": 72,
+          "fp": 3,
+          "tn": 25,
+          "fn": 6,
+          "thr": 1.4924357750707598
+        },
+        "pipe_fryum": {
+          "tp": 77,
+          "fp": 2,
+          "tn": 26,
+          "fn": 1,
+          "thr": 2.3498593652858664
+        }
+      },
+      "total": {
+        "tp": 407,
+        "fp": 19,
+        "tn": 209,
+        "fn": 61
+      },
+      "recall": 0.8696581196581197,
+      "fpr": 0.08333333333333333,
+      "threshold_quantile": 95.0
+    },
+    {
+      "per_category": {
+        "candle": {
+          "tp": 72,
+          "fp": 19,
+          "tn": 59,
+          "fn": 6,
+          "thr": 2.650437049817247
+        },
+        "capsules": {
+          "tp": 73,
+          "fp": 7,
+          "tn": 31,
+          "fn": 5,
+          "thr": 1.7107212624319192
+        },
+        "cashew": {
+          "tp": 55,
+          "fp": 0,
+          "tn": 28,
+          "fn": 23,
+          "thr": 2.2908470055781827
+        },
+        "chewinggum": {
+          "tp": 76,
+          "fp": 1,
+          "tn": 27,
+          "fn": 2,
+          "thr": 2.7583116582713387
+        },
+        "fryum": {
+          "tp": 73,
+          "fp": 3,
+          "tn": 25,
+          "fn": 5,
+          "thr": 1.3405813256775483
+        },
+        "pipe_fryum": {
+          "tp": 78,
+          "fp": 10,
+          "tn": 18,
+          "fn": 0,
+          "thr": 2.092681326853823
+        }
+      },
+      "total": {
+        "tp": 427,
+        "fp": 40,
+        "tn": 188,
+        "fn": 41
+      },
+      "recall": 0.9123931623931624,
+      "fpr": 0.17543859649122806,
+      "threshold_quantile": 95.0
+    },
+    {
+      "per_category": {
+        "candle": {
+          "tp": 73,
+          "fp": 20,
+          "tn": 58,
+          "fn": 5,
+          "thr": 2.873566857064005
+        },
+        "capsules": {
+          "tp": 73,
+          "fp": 10,
+          "tn": 28,
+          "fn": 5,
+          "thr": 1.7639233662189362
+        },
+        "cashew": {
+          "tp": 55,
+          "fp": 0,
+          "tn": 28,
+          "fn": 23,
+          "thr": 2.6891023131530187
+        },
+        "chewinggum": {
+          "tp": 73,
+          "fp": 2,
+          "tn": 26,
+          "fn": 5,
+          "thr": 3.0232861126728667
+        },
+        "fryum": {
+          "tp": 72,
+          "fp": 0,
+          "tn": 28,
+          "fn": 6,
+          "thr": 1.465564895527394
+        },
+        "pipe_fryum": {
+          "tp": 78,
+          "fp": 11,
+          "tn": 17,
+          "fn": 0,
+          "thr": 2.2285708008754908
+        }
+      },
+      "total": {
+        "tp": 424,
+        "fp": 43,
+        "tn": 185,
+        "fn": 44
+      },
+      "recall": 0.905982905982906,
+      "fpr": 0.18859649122807018,
+      "threshold_quantile": 95.0
+    },
+    {
+      "per_category": {
+        "candle": {
+          "tp": 72,
+          "fp": 20,
+          "tn": 58,
+          "fn": 6,
+          "thr": 3.4111991877132057
+        },
+        "capsules": {
+          "tp": 68,
+          "fp": 11,
+          "tn": 27,
+          "fn": 10,
+          "thr": 2.4458091080735964
+        },
+        "cashew": {
+          "tp": 56,
+          "fp": 0,
+          "tn": 28,
+          "fn": 22,
+          "thr": 3.0873576207278544
+        },
+        "chewinggum": {
+          "tp": 73,
+          "fp": 2,
+          "tn": 26,
+          "fn": 5,
+          "thr": 3.2882605670743943
+        },
+        "fryum": {
+          "tp": 70,
+          "fp": 0,
+          "tn": 28,
+          "fn": 8,
+          "thr": 1.6103353058122878
+        },
+        "pipe_fryum": {
+          "tp": 78,
+          "fp": 10,
+          "tn": 18,
+          "fn": 0,
+          "thr": 2.707179812824814
+        }
+      },
+      "total": {
+        "tp": 417,
+        "fp": 43,
+        "tn": 185,
+        "fn": 51
+      },
+      "recall": 0.8910256410256411,
+      "fpr": 0.18859649122807018,
+      "threshold_quantile": 95.0
+    }
+  ],
+  "operating_point_alpha_0_5": {
+    "per_category": {
+      "candle": {
+        "tp": 72,
+        "fp": 19,
+        "tn": 59,
+        "fn": 6,
+        "thr": 2.650437049817247
+      },
+      "capsules": {
+        "tp": 73,
+        "fp": 7,
+        "tn": 31,
+        "fn": 5,
+        "thr": 1.7107212624319192
+      },
+      "cashew": {
+        "tp": 55,
+        "fp": 0,
+        "tn": 28,
+        "fn": 23,
+        "thr": 2.2908470055781827
+      },
+      "chewinggum": {
+        "tp": 76,
+        "fp": 1,
+        "tn": 27,
+        "fn": 2,
+        "thr": 2.7583116582713387
+      },
+      "fryum": {
+        "tp": 73,
+        "fp": 3,
+        "tn": 25,
+        "fn": 5,
+        "thr": 1.3405813256775483
+      },
+      "pipe_fryum": {
+        "tp": 78,
+        "fp": 10,
+        "tn": 18,
+        "fn": 0,
+        "thr": 2.092681326853823
+      }
+    },
+    "total": {
+      "tp": 427,
+      "fp": 40,
+      "tn": 188,
+      "fn": 41
+    },
+    "recall": 0.9123931623931624,
+    "fpr": 0.17543859649122806,
+    "threshold_quantile": 95.0
+  },
+  "normalisation_details": {
+    "candle": {
+      "qwen_center": 12.917750000000002,
+      "qwen_scale": 0.43618092,
+      "qwen_scale_fallback": "mad",
+      "dino_center": 0.21227984265847638,
+      "dino_scale": 0.024008478518778624,
+      "dino_scale_fallback": "mad",
+      "n_test": 156,
+      "n_calib": 20
+    },
+    "capsules": {
+      "qwen_center": 16.967599999999997,
+      "qwen_scale": 0.2916274199999998,
+      "qwen_scale_fallback": "mad",
+      "dino_center": 0.1694734295209249,
+      "dino_scale": 0.014354808149933796,
+      "dino_scale_fallback": "mad",
+      "n_test": 116,
+      "n_calib": 20
+    },
+    "cashew": {
+      "qwen_center": 14.585899999999999,
+      "qwen_scale": 1.0336687199999994,
+      "qwen_scale_fallback": "mad",
+      "dino_center": 0.21213431507349015,
+      "dino_scale": 0.03203053229659796,
+      "dino_scale_fallback": "mad",
+      "n_test": 106,
+      "n_calib": 20
+    },
+    "chewinggum": {
+      "qwen_center": 13.02845,
+      "qwen_scale": 0.8889669600000009,
+      "qwen_scale_fallback": "mad",
+      "dino_center": 0.1783399023115635,
+      "dino_scale": 0.019934817894548176,
+      "dino_scale_fallback": "mad",
+      "n_test": 106,
+      "n_calib": 20
+    },
+    "fryum": {
+      "qwen_center": 14.2713,
+      "qwen_scale": 0.7687281000000006,
+      "qwen_scale_fallback": "mad",
+      "dino_center": 0.17387760380903877,
+      "dino_scale": 0.0253819053983688,
+      "dino_scale_fallback": "mad",
+      "n_test": 106,
+      "n_calib": 20
+    },
+    "pipe_fryum": {
+      "qwen_center": 11.498249999999999,
+      "qwen_scale": 0.711203219999999,
+      "qwen_scale_fallback": "mad",
+      "dino_center": 0.20012268017638812,
+      "dino_scale": 0.04809476668726313,
+      "dino_scale_fallback": "mad",
+      "n_test": 106,
+      "n_calib": 20
+    }
+  },
+  "alignment": {
+    "n_total": 696,
+    "max_endpoint_auc_drift": 0.0
+  }
+}

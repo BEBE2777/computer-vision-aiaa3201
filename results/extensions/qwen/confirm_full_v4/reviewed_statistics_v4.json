@@ -1,0 +1,140 @@
+{
+  "scope": "v4 fixed 1-shot/seed0 696-image subset; intervals condition on this configuration",
+  "macro_auroc_point": {
+    "qwen": 0.9575004860936035,
+    "dino": 0.9313053961333314,
+    "clip": 0.853029598981016
+  },
+  "macro_auroc_ci95_label_stratified_bootstrap": {
+    "qwen": [
+      0.9422874916169451,
+      0.9710945828987328
+    ],
+    "dino": [
+      0.9109303502016053,
+      0.9504838562341091
+    ],
+    "clip": [
+      0.82245865475243,
+      0.8826357606911757
+    ]
+  },
+  "paired_macro_auroc_difference_point": {
+    "qwen_minus_dino": 0.02619508996027209,
+    "qwen_minus_clip": 0.10447088711258745
+  },
+  "paired_macro_auroc_difference_ci95_label_stratified_bootstrap": {
+    "qwen_minus_dino": [
+      0.003456596681546112,
+      0.04931432223309746
+    ],
+    "qwen_minus_clip": [
+      0.07309750481562222,
+      0.13697596122950362
+    ]
+  },
+  "bootstrap": {
+    "replicates": 20000,
+    "seed": 20261125,
+    "resampling": "within each category and true-label stratum; same sampled images paired across methods"
+  },
+  "operating_points_exact_binomial_ci95": {
+    "candle": {
+      "fp": 11,
+      "n_normal": 78,
+      "fpr": 0.14102564102564102,
+      "fpr_ci95_clopper_pearson": [
+        0.07255753785560352,
+        0.23833899066268613
+      ],
+      "tp": 72,
+      "n_anomalous": 78,
+      "recall": 0.9230769230769231,
+      "recall_ci95_clopper_pearson": [
+        0.8400536354993884,
+        0.9712474749984645
+      ]
+    },
+    "capsules": {
+      "fp": 2,
+      "n_normal": 38,
+      "fpr": 0.05263157894736842,
+      "fpr_ci95_clopper_pearson": [
+        0.006438716715091909,
+        0.17749059034764078
+      ],
+      "tp": 66,
+      "n_anomalous": 78,
+      "recall": 0.8461538461538461,
+      "recall_ci95_clopper_pearson": [
+        0.7466786658963328,
+        0.9178981617130411
+      ]
+    },
+    "cashew": {
+      "fp": 0,
+      "n_normal": 28,
+      "fpr": 0.0,
+      "fpr_ci95_clopper_pearson": [
+        0.0,
+        0.12343611850026381
+      ],
+      "tp": 20,
+      "n_anomalous": 78,
+      "recall": 0.2564102564102564,
+      "recall_ci95_clopper_pearson": [
+        0.16418971961401804,
+        0.3678582434606929
+      ]
+    },
+    "chewinggum": {
+      "fp": 0,
+      "n_normal": 28,
+      "fpr": 0.0,
+      "fpr_ci95_clopper_pearson": [
+        0.0,
+        0.12343611850026381
+      ],
+      "tp": 67,
+      "n_anomalous": 78,
+      "recall": 0.8589743589743589,
+      "recall_ci95_clopper_pearson": [
+        0.7616610093373138,
+        0.9274424621443964
+      ]
+    },
+    "fryum": {
+      "fp": 0,
+      "n_normal": 28,
+      "fpr": 0.0,
+      "fpr_ci95_clopper_pearson": [
+        0.0,
+        0.12343611850026381
+      ],
+      "tp": 67,
+      "n_anomalous": 78,
+      "recall": 0.8589743589743589,
+      "recall_ci95_clopper_pearson": [
+        0.7616610093373138,
+        0.9274424621443964
+      ]
+    },
+    "pipe_fryum": {
+      "fp": 1,
+      "n_normal": 28,
+      "fpr": 0.03571428571428571,
+      "fpr_ci95_clopper_pearson": [
+        0.0009037987556580578,
+        0.18347759754462362
+      ],
+      "tp": 74,
+      "n_anomalous": 78,
+      "recall": 0.9487179487179487,
+      "recall_ci95_clopper_pearson": [
+        0.873872369821711,
+        0.9858525691055138
+      ]
+    }
+  },
+  "threshold_estimator_note": "Qwen v4 implementation selects sorted calibration score at index int(20*0.95)=19 (the maximum); E1 DINO/CLIP uses numpy.percentile(...,95) linear interpolation. Calibration images match, percentile estimators differ."
+}

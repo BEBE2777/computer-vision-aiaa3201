@@ -1,0 +1,7040 @@
+{
+ "summary": {
+  "n": 696,
+  "cats": [
+   "candle",
+   "capsules",
+   "cashew",
+   "chewinggum",
+   "fryum",
+   "pipe_fryum"
+  ],
+  "per_category": {
+   "candle": {
+    "dino_score": 0.9013806706114399,
+    "clip_score": 0.8902038132807364,
+    "qwen_json_score": null,
+    "qwen_fc_score": 0.05736357659434582,
+    "qwen_fc_score_signflip": 0.9426364234056541
+   },
+   "capsules": {
+    "dino_score": 0.9497300944669366,
+    "clip_score": 0.77834008097166,
+    "qwen_json_score": 0.5064102564102564,
+    "qwen_fc_score": 0.07995951417004049,
+    "qwen_fc_score_signflip": 0.9200404858299596
+   },
+   "cashew": {
+    "dino_score": 0.9230769230769231,
+    "clip_score": 0.8342490842490843,
+    "qwen_json_score": 0.5256410256410257,
+    "qwen_fc_score": 0.06822344322344322,
+    "qwen_fc_score_signflip": 0.9317765567765568
+   },
+   "chewinggum": {
+    "dino_score": 0.9798534798534798,
+    "clip_score": 0.9326923076923077,
+    "qwen_json_score": 0.5833333333333334,
+    "qwen_fc_score": 0.013278388278388278,
+    "qwen_fc_score_signflip": 0.9867216117216118
+   },
+   "fryum": {
+    "dino_score": 0.9203296703296703,
+    "clip_score": 0.7472527472527473,
+    "qwen_json_score": 0.5128205128205128,
+    "qwen_fc_score": 0.028388278388278388,
+    "qwen_fc_score_signflip": 0.9716117216117216
+   },
+   "pipe_fryum": {
+    "dino_score": 0.9134615384615384,
+    "clip_score": 0.9354395604395604,
+    "qwen_json_score": 0.5576923076923077,
+    "qwen_fc_score": 0.007783882783882784,
+    "qwen_fc_score_signflip": 0.9922161172161172
+   }
+  },
+  "macro": {
+   "dino_score": 0.9313,
+   "clip_score": 0.853,
+   "qwen_json_score": null,
+   "qwen_fc_score": 0.0425,
+   "qwen_fc_score_signflip": 0.9575
+  },
+  "pooled_120": {
+   "dino_score": 0.883134652871495,
+   "clip_score": 0.7930911680911681,
+   "qwen_json_score": 0.530982905982906,
+   "qwen_fc_score": 0.0561178587494377,
+   "qwen_fc_score_signflip": 0.9438821412505624
+  },
+  "sources": {
+   "dino": "p2-anomaly/results/part3/scores/e1_dino448_nomask.json",
+   "clip": "p2-anomaly/results/part3/scores/e1_clip448_L9_nomask.json",
+   "qwen": "results/extensions/qwen/confirm_full_v4/predictions_v4_test.json",
+   "manifest": "results/extensions/qwen/confirm_full_v4/manifest_v4_test.json",
+   "matched": "1-shot seed0, 448, nomask, archived refs; same image set"
+  }
+ },
+ "rows": [
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0011.JPG",
+   "dino_score": 0.1890947249802676,
+   "clip_score": 0.3261376582086086,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1404,
+   "qwen_fc_score_signflip": 13.1404
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0013.JPG",
+   "dino_score": 0.20336241071874445,
+   "clip_score": 0.3423728458583355,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.5606,
+   "qwen_fc_score_signflip": 12.5606
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0024.JPG",
+   "dino_score": 0.20252061973918567,
+   "clip_score": 0.3261941112577915,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.2609,
+   "qwen_fc_score_signflip": 13.2609
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0027.JPG",
+   "dino_score": 0.2321131093935533,
+   "clip_score": 0.3308813311159611,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.4987,
+   "qwen_fc_score_signflip": 12.4987
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0046.JPG",
+   "dino_score": 0.22359396652741867,
+   "clip_score": 0.3385096378624439,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.2631,
+   "qwen_fc_score_signflip": 12.2631
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0107.JPG",
+   "dino_score": 0.31612295454198663,
+   "clip_score": 0.33999359607696533,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.0191,
+   "qwen_fc_score_signflip": 17.0191
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0159.JPG",
+   "dino_score": 0.24371961030093106,
+   "clip_score": 0.35244210064411163,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.0309,
+   "qwen_fc_score_signflip": 13.0309
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0168.JPG",
+   "dino_score": 0.18585673516446893,
+   "clip_score": 0.321426659822464,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.3912,
+   "qwen_fc_score_signflip": 11.3912
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0170.JPG",
+   "dino_score": 0.18208512663841248,
+   "clip_score": 0.3254186026751995,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6498,
+   "qwen_fc_score_signflip": 13.6498
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0172.JPG",
+   "dino_score": 0.1821175596930764,
+   "clip_score": 0.2862972244620323,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.0318,
+   "qwen_fc_score_signflip": 12.0318
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0174.JPG",
+   "dino_score": 0.24718748710372232,
+   "clip_score": 0.33240631595253944,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.79,
+   "qwen_fc_score_signflip": 14.79
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0187.JPG",
+   "dino_score": 0.21183298934589734,
+   "clip_score": 0.3280826024711132,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.097,
+   "qwen_fc_score_signflip": 14.097
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0196.JPG",
+   "dino_score": 0.20930706641890787,
+   "clip_score": 0.33462007716298103,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.7675,
+   "qwen_fc_score_signflip": 15.7675
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0208.JPG",
+   "dino_score": 0.21320206197825345,
+   "clip_score": 0.321318082511425,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.7948,
+   "qwen_fc_score_signflip": 12.7948
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0214.JPG",
+   "dino_score": 0.20955593206665732,
+   "clip_score": 0.33007246628403664,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.6385,
+   "qwen_fc_score_signflip": 12.6385
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0215.JPG",
+   "dino_score": 0.22270857204090466,
+   "clip_score": 0.35000012442469597,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.0319,
+   "qwen_fc_score_signflip": 15.0319
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0237.JPG",
+   "dino_score": 0.2111085897142237,
+   "clip_score": 0.3624494858086109,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.8981,
+   "qwen_fc_score_signflip": 11.8981
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0261.JPG",
+   "dino_score": 0.17024060541933234,
+   "clip_score": 0.3154117129743099,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7061,
+   "qwen_fc_score_signflip": 13.7061
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0286.JPG",
+   "dino_score": 0.19415608048439026,
+   "clip_score": 0.34726352617144585,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.6243,
+   "qwen_fc_score_signflip": 12.6243
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0297.JPG",
+   "dino_score": 0.20190843668850986,
+   "clip_score": 0.3467492088675499,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6182,
+   "qwen_fc_score_signflip": 13.6182
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0306.JPG",
+   "dino_score": 0.30813395977020264,
+   "clip_score": 0.3628388084471226,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.1558,
+   "qwen_fc_score_signflip": 15.1558
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0320.JPG",
+   "dino_score": 0.20634665543382819,
+   "clip_score": 0.3637542761862278,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.6104,
+   "qwen_fc_score_signflip": 11.6104
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0333.JPG",
+   "dino_score": 0.2580207884311676,
+   "clip_score": 0.38852906972169876,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1333,
+   "qwen_fc_score_signflip": 13.1333
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0363.JPG",
+   "dino_score": 0.29888463562185114,
+   "clip_score": 0.37422792986035347,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3126,
+   "qwen_fc_score_signflip": 13.3126
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0394.JPG",
+   "dino_score": 0.24003709988160568,
+   "clip_score": 0.3575453981757164,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.9894,
+   "qwen_fc_score_signflip": 12.9894
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0400.JPG",
+   "dino_score": 0.2641392323103818,
+   "clip_score": 0.38851721584796906,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.4796,
+   "qwen_fc_score_signflip": 15.4796
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0402.JPG",
+   "dino_score": 0.1937463554469022,
+   "clip_score": 0.3170952945947647,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6659,
+   "qwen_fc_score_signflip": 13.6659
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0417.JPG",
+   "dino_score": 0.20014591108668933,
+   "clip_score": 0.36444637551903725,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.8203,
+   "qwen_fc_score_signflip": 15.8203
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0423.JPG",
+   "dino_score": 0.19403500448573718,
+   "clip_score": 0.3044764921069145,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.4719,
+   "qwen_fc_score_signflip": 12.4719
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0427.JPG",
+   "dino_score": 0.31256272847002203,
+   "clip_score": 0.3918915167450905,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1569,
+   "qwen_fc_score_signflip": 17.1569
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0457.JPG",
+   "dino_score": 0.2152747240933505,
+   "clip_score": 0.3286220170557499,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.7518,
+   "qwen_fc_score_signflip": 11.7518
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0469.JPG",
+   "dino_score": 0.17252540317448703,
+   "clip_score": 0.3209966570138931,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.091,
+   "qwen_fc_score_signflip": 13.091
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0479.JPG",
+   "dino_score": 0.2416393431750211,
+   "clip_score": 0.33675987645983696,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1257,
+   "qwen_fc_score_signflip": 13.1257
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0483.JPG",
+   "dino_score": 0.22512430223551663,
+   "clip_score": 0.32311954349279404,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.2748,
+   "qwen_fc_score_signflip": 13.2748
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0484.JPG",
+   "dino_score": 0.21030274575406854,
+   "clip_score": 0.3750281557440758,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9402,
+   "qwen_fc_score_signflip": 13.9402
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0488.JPG",
+   "dino_score": 0.3180124353278767,
+   "clip_score": 0.4304385371506214,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.2697,
+   "qwen_fc_score_signflip": 15.2697
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0490.JPG",
+   "dino_score": 0.22527298873121088,
+   "clip_score": 0.3351963385939598,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.835,
+   "qwen_fc_score_signflip": 13.835
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0514.JPG",
+   "dino_score": 0.20460307056253607,
+   "clip_score": 0.31870828196406364,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.9285,
+   "qwen_fc_score_signflip": 11.9285
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0518.JPG",
+   "dino_score": 0.20369247143918817,
+   "clip_score": 0.3079870119690895,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.0805,
+   "qwen_fc_score_signflip": 13.0805
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0520.JPG",
+   "dino_score": 0.1856359758160331,
+   "clip_score": 0.31464000418782234,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.4086,
+   "qwen_fc_score_signflip": 11.4086
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0525.JPG",
+   "dino_score": 0.2356623113155365,
+   "clip_score": 0.38434939458966255,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3322,
+   "qwen_fc_score_signflip": 13.3322
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0545.JPG",
+   "dino_score": 0.27815706350586633,
+   "clip_score": 0.3345586061477661,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.5977,
+   "qwen_fc_score_signflip": 12.5977
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0615.JPG",
+   "dino_score": 0.21231931177052585,
+   "clip_score": 0.3297594003379345,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2838,
+   "qwen_fc_score_signflip": 14.2838
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0617.JPG",
+   "dino_score": 0.24777685512195935,
+   "clip_score": 0.34449706226587296,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.385,
+   "qwen_fc_score_signflip": 15.385
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0619.JPG",
+   "dino_score": 0.1953530176119371,
+   "clip_score": 0.33336199074983597,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.9759,
+   "qwen_fc_score_signflip": 12.9759
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0631.JPG",
+   "dino_score": 0.2261698002165014,
+   "clip_score": 0.3412081077694893,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.7746,
+   "qwen_fc_score_signflip": 12.7746
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0648.JPG",
+   "dino_score": 0.1815677068450234,
+   "clip_score": 0.33401040360331535,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.758,
+   "qwen_fc_score_signflip": 17.758
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0654.JPG",
+   "dino_score": 0.18510262261737476,
+   "clip_score": 0.3185664378106594,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.5081,
+   "qwen_fc_score_signflip": 12.5081
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0657.JPG",
+   "dino_score": 0.1913980028846047,
+   "clip_score": 0.3601418174803257,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.3759,
+   "qwen_fc_score_signflip": 12.3759
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0659.JPG",
+   "dino_score": 0.1974392831325531,
+   "clip_score": 0.3289245329797268,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.7773,
+   "qwen_fc_score_signflip": 12.7773
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0674.JPG",
+   "dino_score": 0.2543936182152141,
+   "clip_score": 0.3357231020927429,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.2113,
+   "qwen_fc_score_signflip": 13.2113
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0684.JPG",
+   "dino_score": 0.1810228011824868,
+   "clip_score": 0.3104025758802891,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.0214,
+   "qwen_fc_score_signflip": 13.0214
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0685.JPG",
+   "dino_score": 0.22557935389605435,
+   "clip_score": 0.3074852116405964,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.8174,
+   "qwen_fc_score_signflip": 12.8174
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0688.JPG",
+   "dino_score": 0.22790491851893338,
+   "clip_score": 0.360660832375288,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.191,
+   "qwen_fc_score_signflip": 15.191
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0694.JPG",
+   "dino_score": 0.23711864785714584,
+   "clip_score": 0.3445659503340721,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2034,
+   "qwen_fc_score_signflip": 14.2034
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0705.JPG",
+   "dino_score": 0.21887008168480612,
+   "clip_score": 0.3245740495622158,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4036,
+   "qwen_fc_score_signflip": 13.4036
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0725.JPG",
+   "dino_score": 0.2097447081045671,
+   "clip_score": 0.3482554852962494,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1585,
+   "qwen_fc_score_signflip": 13.1585
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0730.JPG",
+   "dino_score": 0.2611973529512232,
+   "clip_score": 0.37790973484516144,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3188,
+   "qwen_fc_score_signflip": 13.3188
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0739.JPG",
+   "dino_score": 0.1953552934256467,
+   "clip_score": 0.3259010724723339,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.5683,
+   "qwen_fc_score_signflip": 15.5683
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0751.JPG",
+   "dino_score": 0.2170310535214164,
+   "clip_score": 0.356180801987648,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.2099,
+   "qwen_fc_score_signflip": 20.2099
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0764.JPG",
+   "dino_score": 0.17003018476746298,
+   "clip_score": 0.3299837224185467,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.8219,
+   "qwen_fc_score_signflip": 11.8219
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0768.JPG",
+   "dino_score": 0.1949273185296492,
+   "clip_score": 0.30716633424162865,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.7786,
+   "qwen_fc_score_signflip": 11.7786
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0779.JPG",
+   "dino_score": 0.2621742839163,
+   "clip_score": 0.365533746778965,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.282,
+   "qwen_fc_score_signflip": 15.282
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0790.JPG",
+   "dino_score": 0.21543630144812845,
+   "clip_score": 0.2986655943095684,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4356,
+   "qwen_fc_score_signflip": 13.4356
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0804.JPG",
+   "dino_score": 0.22756246003237637,
+   "clip_score": 0.3896680995821953,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.8492,
+   "qwen_fc_score_signflip": 15.8492
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0844.JPG",
+   "dino_score": 0.22196598215536636,
+   "clip_score": 0.358466312289238,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4584,
+   "qwen_fc_score_signflip": 13.4584
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0869.JPG",
+   "dino_score": 0.2387030151757327,
+   "clip_score": 0.3596986196935177,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7874,
+   "qwen_fc_score_signflip": 13.7874
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0892.JPG",
+   "dino_score": 0.24443682486360724,
+   "clip_score": 0.3529933840036392,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.2298,
+   "qwen_fc_score_signflip": 13.2298
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0900.JPG",
+   "dino_score": 0.24525600400837985,
+   "clip_score": 0.3518225736916065,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.95,
+   "qwen_fc_score_signflip": 12.95
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0920.JPG",
+   "dino_score": 0.19627693566409024,
+   "clip_score": 0.33151404559612274,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.9424,
+   "qwen_fc_score_signflip": 11.9424
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0923.JPG",
+   "dino_score": 0.22949656302278693,
+   "clip_score": 0.34474045038223267,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.4727,
+   "qwen_fc_score_signflip": 15.4727
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0935.JPG",
+   "dino_score": 0.243803856047717,
+   "clip_score": 0.38525595143437386,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.3751,
+   "qwen_fc_score_signflip": 15.3751
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0952.JPG",
+   "dino_score": 0.28271693804047326,
+   "clip_score": 0.34935298189520836,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.3006,
+   "qwen_fc_score_signflip": 16.3006
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0953.JPG",
+   "dino_score": 0.20198992978442798,
+   "clip_score": 0.31331004202365875,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9334,
+   "qwen_fc_score_signflip": 13.9334
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0967.JPG",
+   "dino_score": 0.21198699962009082,
+   "clip_score": 0.31234142929315567,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3612,
+   "qwen_fc_score_signflip": 13.3612
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0974.JPG",
+   "dino_score": 0.2242207716811787,
+   "clip_score": 0.33656594529747963,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1442,
+   "qwen_fc_score_signflip": 13.1442
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0994.JPG",
+   "dino_score": 0.2767385081811385,
+   "clip_score": 0.3519725650548935,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.484,
+   "qwen_fc_score_signflip": 12.484
+  },
+  {
+   "category": "candle",
+   "label": "good",
+   "query_id": "0996.JPG",
+   "dino_score": 0.2504794326695529,
+   "clip_score": 0.3562164902687073,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.6189,
+   "qwen_fc_score_signflip": 14.6189
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "000.JPG",
+   "dino_score": 0.2109007699923082,
+   "clip_score": 0.37507831677794456,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.5539,
+   "qwen_fc_score_signflip": 12.5539
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "001.JPG",
+   "dino_score": 0.39007105881517584,
+   "clip_score": 0.41389162465929985,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.1805,
+   "qwen_fc_score_signflip": 24.1805
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "002.JPG",
+   "dino_score": 0.21842790191823785,
+   "clip_score": 0.3648989126086235,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.8946,
+   "qwen_fc_score_signflip": 21.8946
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "004.JPG",
+   "dino_score": 0.2863760861483487,
+   "clip_score": 0.40286558121442795,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.8268,
+   "qwen_fc_score_signflip": 21.8268
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "006.JPG",
+   "dino_score": 0.3280344713817943,
+   "clip_score": 0.40672218799591064,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.2768,
+   "qwen_fc_score_signflip": 22.2768
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "008.JPG",
+   "dino_score": 0.2538073008710688,
+   "clip_score": 0.36602989584207535,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.8205,
+   "qwen_fc_score_signflip": 20.8205
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "009.JPG",
+   "dino_score": 0.38343525203791534,
+   "clip_score": 0.3995889276266098,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.2043,
+   "qwen_fc_score_signflip": 22.2043
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "011.JPG",
+   "dino_score": 0.28972760113802826,
+   "clip_score": 0.37454887479543686,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.2948,
+   "qwen_fc_score_signflip": 18.2948
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "012.JPG",
+   "dino_score": 0.3345454389398748,
+   "clip_score": 0.4110679663717747,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.648,
+   "qwen_fc_score_signflip": 21.648
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "014.JPG",
+   "dino_score": 0.3088106865232641,
+   "clip_score": 0.38397999107837677,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2011,
+   "qwen_fc_score_signflip": 19.2011
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "016.JPG",
+   "dino_score": 0.2839354547587308,
+   "clip_score": 0.34785979241132736,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.4913,
+   "qwen_fc_score_signflip": 17.4913
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "017.JPG",
+   "dino_score": 0.23716230825944382,
+   "clip_score": 0.3647873252630234,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.37,
+   "qwen_fc_score_signflip": 12.37
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "018.JPG",
+   "dino_score": 0.3074762685732408,
+   "clip_score": 0.35825808718800545,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.9922,
+   "qwen_fc_score_signflip": 21.9922
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "019.JPG",
+   "dino_score": 0.239590815522454,
+   "clip_score": 0.33079543709754944,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.8625,
+   "qwen_fc_score_signflip": 18.8625
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "020.JPG",
+   "dino_score": 0.36404506997628644,
+   "clip_score": 0.38159649074077606,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.0367,
+   "qwen_fc_score_signflip": 18.0367
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "021.JPG",
+   "dino_score": 0.3304594267498363,
+   "clip_score": 0.37346959486603737,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.3964,
+   "qwen_fc_score_signflip": 18.3964
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "023.JPG",
+   "dino_score": 0.3725327795202082,
+   "clip_score": 0.39472801983356476,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.7111,
+   "qwen_fc_score_signflip": 21.7111
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "024.JPG",
+   "dino_score": 0.3487516153942455,
+   "clip_score": 0.37796732783317566,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.2702,
+   "qwen_fc_score_signflip": 22.2702
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "026.JPG",
+   "dino_score": 0.37889340790835296,
+   "clip_score": 0.3887115865945816,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.4739,
+   "qwen_fc_score_signflip": 22.4739
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "027.JPG",
+   "dino_score": 0.2745720852505077,
+   "clip_score": 0.390291016548872,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.9454,
+   "qwen_fc_score_signflip": 16.9454
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "028.JPG",
+   "dino_score": 0.41772642731666565,
+   "clip_score": 0.42294661328196526,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.6683,
+   "qwen_fc_score_signflip": 16.6683
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "029.JPG",
+   "dino_score": 0.29222291707992554,
+   "clip_score": 0.34938744083046913,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.7297,
+   "qwen_fc_score_signflip": 21.7297
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "031.JPG",
+   "dino_score": 0.21643944491039624,
+   "clip_score": 0.3507933281362057,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.3627,
+   "qwen_fc_score_signflip": 12.3627
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "032.JPG",
+   "dino_score": 0.3082272572950883,
+   "clip_score": 0.37350402772426605,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.7773,
+   "qwen_fc_score_signflip": 19.7773
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "033.JPG",
+   "dino_score": 0.19776247848163953,
+   "clip_score": 0.3556457608938217,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.4123,
+   "qwen_fc_score_signflip": 15.4123
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "034.JPG",
+   "dino_score": 0.32285341349515045,
+   "clip_score": 0.36225417256355286,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.148,
+   "qwen_fc_score_signflip": 20.148
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "035.JPG",
+   "dino_score": 0.26220512661066925,
+   "clip_score": 0.3582482151687145,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3555,
+   "qwen_fc_score_signflip": 14.3555
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "036.JPG",
+   "dino_score": 0.28844898668202484,
+   "clip_score": 0.3143680617213249,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4339,
+   "qwen_fc_score_signflip": 13.4339
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "038.JPG",
+   "dino_score": 0.23815440047870984,
+   "clip_score": 0.3457917906343937,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.9964,
+   "qwen_fc_score_signflip": 19.9964
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "040.JPG",
+   "dino_score": 0.3009565987370231,
+   "clip_score": 0.4312445819377899,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.1712,
+   "qwen_fc_score_signflip": 21.1712
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "041.JPG",
+   "dino_score": 0.288430856032805,
+   "clip_score": 0.39614513143897057,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.3027,
+   "qwen_fc_score_signflip": 21.3027
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "042.JPG",
+   "dino_score": 0.2871889553286813,
+   "clip_score": 0.406050406396389,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.8248,
+   "qwen_fc_score_signflip": 20.8248
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "043.JPG",
+   "dino_score": 0.28949735923246905,
+   "clip_score": 0.3870910406112671,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.4956,
+   "qwen_fc_score_signflip": 20.4956
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "044.JPG",
+   "dino_score": 0.33247912201014435,
+   "clip_score": 0.3944346755743027,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.4991,
+   "qwen_fc_score_signflip": 20.4991
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "045.JPG",
+   "dino_score": 0.2977450327439742,
+   "clip_score": 0.43778102472424507,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.7908,
+   "qwen_fc_score_signflip": 20.7908
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "046.JPG",
+   "dino_score": 0.27699965238571167,
+   "clip_score": 0.4236166775226593,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.6704,
+   "qwen_fc_score_signflip": 16.6704
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "048.JPG",
+   "dino_score": 0.32246972755952313,
+   "clip_score": 0.4290095828473568,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.4051,
+   "qwen_fc_score_signflip": 21.4051
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "049.JPG",
+   "dino_score": 0.310245695439252,
+   "clip_score": 0.4008299447596073,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.725,
+   "qwen_fc_score_signflip": 18.725
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "050.JPG",
+   "dino_score": 0.18552301688627762,
+   "clip_score": 0.3597966656088829,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.8528,
+   "qwen_fc_score_signflip": 15.8528
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "051.JPG",
+   "dino_score": 0.21714649146253412,
+   "clip_score": 0.3883026950061321,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.4845,
+   "qwen_fc_score_signflip": 16.4845
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "054.JPG",
+   "dino_score": 0.24018707871437073,
+   "clip_score": 0.37500568106770515,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0501,
+   "qwen_fc_score_signflip": 20.0501
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "055.JPG",
+   "dino_score": 0.26559707251462067,
+   "clip_score": 0.35783053934574127,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8055,
+   "qwen_fc_score_signflip": 17.8055
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "056.JPG",
+   "dino_score": 0.3114419064738534,
+   "clip_score": 0.3525797501206398,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.6363,
+   "qwen_fc_score_signflip": 15.6363
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "058.JPG",
+   "dino_score": 0.2382160560651259,
+   "clip_score": 0.3630610406398773,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.1954,
+   "qwen_fc_score_signflip": 16.1954
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "059.JPG",
+   "dino_score": 0.27290012619712134,
+   "clip_score": 0.3901157006621361,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.1747,
+   "qwen_fc_score_signflip": 16.1747
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "060.JPG",
+   "dino_score": 0.2369890050454573,
+   "clip_score": 0.3267081491649151,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.0809,
+   "qwen_fc_score_signflip": 14.0809
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "061.JPG",
+   "dino_score": 0.4245030338113958,
+   "clip_score": 0.4060097336769104,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7468,
+   "qwen_fc_score_signflip": 22.7468
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "063.JPG",
+   "dino_score": 0.5313370227813721,
+   "clip_score": 0.4781207777559757,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.6388,
+   "qwen_fc_score_signflip": 22.6388
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "064.JPG",
+   "dino_score": 0.32324386455795984,
+   "clip_score": 0.39885949715971947,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.4301,
+   "qwen_fc_score_signflip": 23.4301
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "066.JPG",
+   "dino_score": 0.3655590144070712,
+   "clip_score": 0.39115186035633087,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.8217,
+   "qwen_fc_score_signflip": 20.8217
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "067.JPG",
+   "dino_score": 0.3644643073732203,
+   "clip_score": 0.40576497837901115,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.8629,
+   "qwen_fc_score_signflip": 19.8629
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "068.JPG",
+   "dino_score": 0.6096669760617343,
+   "clip_score": 0.486346997320652,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.0853,
+   "qwen_fc_score_signflip": 22.0853
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "070.JPG",
+   "dino_score": 0.48119020191105927,
+   "clip_score": 0.4930276982486248,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.4543,
+   "qwen_fc_score_signflip": 23.4543
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "071.JPG",
+   "dino_score": 0.3615542839873921,
+   "clip_score": 0.42229748144745827,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.6706,
+   "qwen_fc_score_signflip": 21.6706
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "072.JPG",
+   "dino_score": 0.3378185575658625,
+   "clip_score": 0.43812673166394234,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.1276,
+   "qwen_fc_score_signflip": 22.1276
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "073.JPG",
+   "dino_score": 0.3466354689814828,
+   "clip_score": 0.38819170370697975,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.8106,
+   "qwen_fc_score_signflip": 22.8106
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "074.JPG",
+   "dino_score": 0.3889544118534435,
+   "clip_score": 0.4387160614132881,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.093,
+   "qwen_fc_score_signflip": 23.093
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "075.JPG",
+   "dino_score": 0.45644862814383075,
+   "clip_score": 0.4312436059117317,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.8899,
+   "qwen_fc_score_signflip": 22.8899
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "076.JPG",
+   "dino_score": 0.41125628081235016,
+   "clip_score": 0.40474310517311096,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.8911,
+   "qwen_fc_score_signflip": 21.8911
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "077.JPG",
+   "dino_score": 0.37261437286030163,
+   "clip_score": 0.435034666210413,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.1493,
+   "qwen_fc_score_signflip": 22.1493
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "078.JPG",
+   "dino_score": 0.362457966262644,
+   "clip_score": 0.4297994151711464,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.2536,
+   "qwen_fc_score_signflip": 21.2536
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "079.JPG",
+   "dino_score": 0.44033093615011737,
+   "clip_score": 0.45169932395219803,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.0836,
+   "qwen_fc_score_signflip": 23.0836
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "080.JPG",
+   "dino_score": 0.3783619891513478,
+   "clip_score": 0.3895801454782486,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.7288,
+   "qwen_fc_score_signflip": 23.7288
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "081.JPG",
+   "dino_score": 0.42981216311454773,
+   "clip_score": 0.44815443083643913,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.7987,
+   "qwen_fc_score_signflip": 20.7987
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "083.JPG",
+   "dino_score": 0.3966770253398202,
+   "clip_score": 0.46535396203398705,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7516,
+   "qwen_fc_score_signflip": 22.7516
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "084.JPG",
+   "dino_score": 0.438442969864065,
+   "clip_score": 0.4052978344261646,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.2134,
+   "qwen_fc_score_signflip": 22.2134
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "085.JPG",
+   "dino_score": 0.34371456232937897,
+   "clip_score": 0.4127627909183502,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.8279,
+   "qwen_fc_score_signflip": 21.8279
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "086.JPG",
+   "dino_score": 0.29762413014065137,
+   "clip_score": 0.37450411170721054,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4793,
+   "qwen_fc_score_signflip": 19.4793
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "087.JPG",
+   "dino_score": 0.2934859638864344,
+   "clip_score": 0.36504045128822327,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.504,
+   "qwen_fc_score_signflip": 20.504
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "088.JPG",
+   "dino_score": 0.38029685616493225,
+   "clip_score": 0.40668100118637085,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.6282,
+   "qwen_fc_score_signflip": 21.6282
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "089.JPG",
+   "dino_score": 0.4003062600439245,
+   "clip_score": 0.3739142641425133,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.9375,
+   "qwen_fc_score_signflip": 21.9375
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "090.JPG",
+   "dino_score": 0.2726202200759541,
+   "clip_score": 0.38721978291869164,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6808,
+   "qwen_fc_score_signflip": 19.6808
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "091.JPG",
+   "dino_score": 0.3156306066296317,
+   "clip_score": 0.3553043231368065,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.9077,
+   "qwen_fc_score_signflip": 16.9077
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "092.JPG",
+   "dino_score": 0.21971027688546615,
+   "clip_score": 0.359739076346159,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.4266,
+   "qwen_fc_score_signflip": 20.4266
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "094.JPG",
+   "dino_score": 0.3236187425526706,
+   "clip_score": 0.3716028481721878,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.8323,
+   "qwen_fc_score_signflip": 16.8323
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "096.JPG",
+   "dino_score": 0.33611825379458343,
+   "clip_score": 0.40243301168084145,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.3621,
+   "qwen_fc_score_signflip": 19.3621
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "097.JPG",
+   "dino_score": 0.3645919209176844,
+   "clip_score": 0.414985965937376,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.7603,
+   "qwen_fc_score_signflip": 24.7603
+  },
+  {
+   "category": "candle",
+   "label": "bad",
+   "query_id": "099.JPG",
+   "dino_score": 0.32695294239304284,
+   "clip_score": 0.4017765633761883,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.4213,
+   "qwen_fc_score_signflip": 17.4213
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "011.JPG",
+   "dino_score": 0.22153552373250326,
+   "clip_score": 0.36752893978899176,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5489,
+   "qwen_fc_score_signflip": 16.5489
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "013.JPG",
+   "dino_score": 0.17094404498736063,
+   "clip_score": 0.3230306993831288,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.3607,
+   "qwen_fc_score_signflip": 17.3607
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "026.JPG",
+   "dino_score": 0.1494603395462036,
+   "clip_score": 0.3417898958379572,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5278,
+   "qwen_fc_score_signflip": 16.5278
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "027.JPG",
+   "dino_score": 0.15448426802953083,
+   "clip_score": 0.322627915577455,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5177,
+   "qwen_fc_score_signflip": 16.5177
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "046.JPG",
+   "dino_score": 0.15624822974205016,
+   "clip_score": 0.3321806490421295,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8382,
+   "qwen_fc_score_signflip": 17.8382
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "062.JPG",
+   "dino_score": 0.16019688844680785,
+   "clip_score": 0.335494418035854,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.0368,
+   "qwen_fc_score_signflip": 17.0368
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "107.JPG",
+   "dino_score": 0.1651076555252075,
+   "clip_score": 0.31466545029120013,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.981,
+   "qwen_fc_score_signflip": 18.981
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "152.JPG",
+   "dino_score": 0.15153217911720276,
+   "clip_score": 0.441894376819784,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.759,
+   "qwen_fc_score_signflip": 16.759
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "159.JPG",
+   "dino_score": 0.15792869329452514,
+   "clip_score": 0.3817178796638142,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.3542,
+   "qwen_fc_score_signflip": 16.3542
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "168.JPG",
+   "dino_score": 0.17418381174405415,
+   "clip_score": 0.35355165058916266,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.2386,
+   "qwen_fc_score_signflip": 17.2386
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "170.JPG",
+   "dino_score": 0.15949624180793762,
+   "clip_score": 0.3404539606787942,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.5357,
+   "qwen_fc_score_signflip": 17.5357
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "172.JPG",
+   "dino_score": 0.1638176103432973,
+   "clip_score": 0.33591569553722034,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.0041,
+   "qwen_fc_score_signflip": 17.0041
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "174.JPG",
+   "dino_score": 0.14677865306536356,
+   "clip_score": 0.39470461823723535,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6886,
+   "qwen_fc_score_signflip": 17.6886
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "187.JPG",
+   "dino_score": 0.15989728569984435,
+   "clip_score": 0.345861480994658,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.0214,
+   "qwen_fc_score_signflip": 17.0214
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "208.JPG",
+   "dino_score": 0.15378354589144388,
+   "clip_score": 0.34079457413066516,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1504,
+   "qwen_fc_score_signflip": 17.1504
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "240.JPG",
+   "dino_score": 0.14708249966303508,
+   "clip_score": 0.3404959873719649,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.7458,
+   "qwen_fc_score_signflip": 16.7458
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "294.JPG",
+   "dino_score": 0.15530648827552795,
+   "clip_score": 0.36415729739449243,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.5457,
+   "qwen_fc_score_signflip": 17.5457
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "297.JPG",
+   "dino_score": 0.16941558917363483,
+   "clip_score": 0.3987029872157357,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8189,
+   "qwen_fc_score_signflip": 17.8189
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "303.JPG",
+   "dino_score": 0.2257214069366455,
+   "clip_score": 0.37692840803753247,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.7376,
+   "qwen_fc_score_signflip": 17.7376
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "324.JPG",
+   "dino_score": 0.14676093260447184,
+   "clip_score": 0.327432399446314,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.9434,
+   "qwen_fc_score_signflip": 16.9434
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "333.JPG",
+   "dino_score": 0.17613844871520995,
+   "clip_score": 0.3239699900150299,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1013,
+   "qwen_fc_score_signflip": 17.1013
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "377.JPG",
+   "dino_score": 0.1566862960656484,
+   "clip_score": 0.3330049460584467,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.805,
+   "qwen_fc_score_signflip": 16.805
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "394.JPG",
+   "dino_score": 0.1481687883536021,
+   "clip_score": 0.32591530138796027,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8299,
+   "qwen_fc_score_signflip": 17.8299
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "417.JPG",
+   "dino_score": 0.15818793972333273,
+   "clip_score": 0.3308048790151423,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6207,
+   "qwen_fc_score_signflip": 17.6207
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "423.JPG",
+   "dino_score": 0.21925315658251446,
+   "clip_score": 0.3609062731266022,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1041,
+   "qwen_fc_score_signflip": 17.1041
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "427.JPG",
+   "dino_score": 0.21295268932978312,
+   "clip_score": 0.36495005271651526,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.7793,
+   "qwen_fc_score_signflip": 17.7793
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "457.JPG",
+   "dino_score": 0.18677674333254496,
+   "clip_score": 0.33888068253343756,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8181,
+   "qwen_fc_score_signflip": 17.8181
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "469.JPG",
+   "dino_score": 0.1518786370754242,
+   "clip_score": 0.35509044473821466,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.7166,
+   "qwen_fc_score_signflip": 17.7166
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "479.JPG",
+   "dino_score": 0.16438835660616558,
+   "clip_score": 0.35325452414425934,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6404,
+   "qwen_fc_score_signflip": 17.6404
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "488.JPG",
+   "dino_score": 0.16924104293187459,
+   "clip_score": 0.33542358062484046,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.4025,
+   "qwen_fc_score_signflip": 17.4025
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "490.JPG",
+   "dino_score": 0.16281062165896099,
+   "clip_score": 0.3096060888333754,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.2617,
+   "qwen_fc_score_signflip": 17.2617
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "514.JPG",
+   "dino_score": 0.1808545728524526,
+   "clip_score": 0.3520843413743106,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6813,
+   "qwen_fc_score_signflip": 17.6813
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "518.JPG",
+   "dino_score": 0.18729014794031779,
+   "clip_score": 0.4029696123166518,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6202,
+   "qwen_fc_score_signflip": 17.6202
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "552.JPG",
+   "dino_score": 0.17854782938957214,
+   "clip_score": 0.3328590907833793,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.4844,
+   "qwen_fc_score_signflip": 17.4844
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "569.JPG",
+   "dino_score": 0.17380879124005635,
+   "clip_score": 0.3436520749872381,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.7947,
+   "qwen_fc_score_signflip": 16.7947
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "576.JPG",
+   "dino_score": 0.16030810475349427,
+   "clip_score": 0.45180189880457794,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.7459,
+   "qwen_fc_score_signflip": 16.7459
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "580.JPG",
+   "dino_score": 0.16307502786318462,
+   "clip_score": 0.40599877455017785,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.8675,
+   "qwen_fc_score_signflip": 15.8675
+  },
+  {
+   "category": "capsules",
+   "label": "good",
+   "query_id": "594.JPG",
+   "dino_score": 0.16357518235842386,
+   "clip_score": 0.39701818336140027,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.1288,
+   "qwen_fc_score_signflip": 18.1288
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "000.JPG",
+   "dino_score": 0.19252772331237794,
+   "clip_score": 0.3943146602673964,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2332,
+   "qwen_fc_score_signflip": 19.2332
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "001.JPG",
+   "dino_score": 0.22390158772468566,
+   "clip_score": 0.3520196947184476,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4957,
+   "qwen_fc_score_signflip": 19.4957
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "002.JPG",
+   "dino_score": 0.2213042438030243,
+   "clip_score": 0.3372144401073456,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.6797,
+   "qwen_fc_score_signflip": 18.6797
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "003.JPG",
+   "dino_score": 0.20234713355700176,
+   "clip_score": 0.4496890198100697,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4443,
+   "qwen_fc_score_signflip": 19.4443
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "004.JPG",
+   "dino_score": 0.20640849669774372,
+   "clip_score": 0.37859218499877234,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.6718,
+   "qwen_fc_score_signflip": 18.6718
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "005.JPG",
+   "dino_score": 0.2817659457524618,
+   "clip_score": 0.37793040004643524,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.4232,
+   "qwen_fc_score_signflip": 17.4232
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "006.JPG",
+   "dino_score": 0.20965978900591534,
+   "clip_score": 0.4190610484643416,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2023,
+   "qwen_fc_score_signflip": 19.2023
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "007.JPG",
+   "dino_score": 0.20739516019821166,
+   "clip_score": 0.3564549576152455,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.4377,
+   "qwen_fc_score_signflip": 18.4377
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "008.JPG",
+   "dino_score": 0.19332565466562907,
+   "clip_score": 0.5788719166408886,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1311,
+   "qwen_fc_score_signflip": 17.1311
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "009.JPG",
+   "dino_score": 0.3465603212515513,
+   "clip_score": 0.47719019651412964,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3863,
+   "qwen_fc_score_signflip": 20.3863
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "010.JPG",
+   "dino_score": 0.308432670434316,
+   "clip_score": 0.341349179094488,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4463,
+   "qwen_fc_score_signflip": 19.4463
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "011.JPG",
+   "dino_score": 0.21200836499532064,
+   "clip_score": 0.35053128545934503,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.8074,
+   "qwen_fc_score_signflip": 19.8074
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "012.JPG",
+   "dino_score": 0.18077855706214904,
+   "clip_score": 0.3475560031153939,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.8822,
+   "qwen_fc_score_signflip": 18.8822
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "013.JPG",
+   "dino_score": 0.25285465121269224,
+   "clip_score": 0.4221967269073833,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.157,
+   "qwen_fc_score_signflip": 18.157
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "015.JPG",
+   "dino_score": 0.22229312260945638,
+   "clip_score": 0.38929444551467896,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.8077,
+   "qwen_fc_score_signflip": 19.8077
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "016.JPG",
+   "dino_score": 0.2425346573193868,
+   "clip_score": 0.39538580721074884,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3229,
+   "qwen_fc_score_signflip": 20.3229
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "017.JPG",
+   "dino_score": 0.21103687087694803,
+   "clip_score": 0.4186581887982108,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.7791,
+   "qwen_fc_score_signflip": 18.7791
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "018.JPG",
+   "dino_score": 0.2858977456887563,
+   "clip_score": 0.5189601670611989,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6153,
+   "qwen_fc_score_signflip": 20.6153
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "019.JPG",
+   "dino_score": 0.27315481901168825,
+   "clip_score": 0.478746007789265,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.3437,
+   "qwen_fc_score_signflip": 19.3437
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "020.JPG",
+   "dino_score": 0.22998209396998087,
+   "clip_score": 0.39613910154862836,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.1319,
+   "qwen_fc_score_signflip": 20.1319
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "021.JPG",
+   "dino_score": 0.23016311526298522,
+   "clip_score": 0.4934166236357255,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.3798,
+   "qwen_fc_score_signflip": 19.3798
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "022.JPG",
+   "dino_score": 0.22487762570381165,
+   "clip_score": 0.3784710250117562,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2356,
+   "qwen_fc_score_signflip": 19.2356
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "023.JPG",
+   "dino_score": 0.23112275203069052,
+   "clip_score": 0.44063757766376843,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.1049,
+   "qwen_fc_score_signflip": 19.1049
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "024.JPG",
+   "dino_score": 0.2804459790388743,
+   "clip_score": 0.39591649716550653,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.94,
+   "qwen_fc_score_signflip": 18.94
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "026.JPG",
+   "dino_score": 0.29480973482131956,
+   "clip_score": 0.3872823959047144,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.8548,
+   "qwen_fc_score_signflip": 20.8548
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "027.JPG",
+   "dino_score": 0.2073427398999532,
+   "clip_score": 0.3451782194050876,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.84,
+   "qwen_fc_score_signflip": 17.84
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "029.JPG",
+   "dino_score": 0.1895292599995931,
+   "clip_score": 0.4676604650237344,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.769,
+   "qwen_fc_score_signflip": 16.769
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "030.JPG",
+   "dino_score": 0.20749621589978537,
+   "clip_score": 0.35295133970000525,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.21,
+   "qwen_fc_score_signflip": 19.21
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "032.JPG",
+   "dino_score": 0.24150188763936362,
+   "clip_score": 0.3290536647493189,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.3805,
+   "qwen_fc_score_signflip": 19.3805
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "033.JPG",
+   "dino_score": 0.23915835817654926,
+   "clip_score": 0.39736008644104004,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.7704,
+   "qwen_fc_score_signflip": 17.7704
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "034.JPG",
+   "dino_score": 0.18287352323532105,
+   "clip_score": 0.33723344857042487,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.4513,
+   "qwen_fc_score_signflip": 17.4513
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "035.JPG",
+   "dino_score": 0.20821764469146728,
+   "clip_score": 0.3816571289842779,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.1684,
+   "qwen_fc_score_signflip": 18.1684
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "036.JPG",
+   "dino_score": 0.20938924551010132,
+   "clip_score": 0.34885017709298566,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.2751,
+   "qwen_fc_score_signflip": 18.2751
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "037.JPG",
+   "dino_score": 0.223260756333669,
+   "clip_score": 0.32758280634880066,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9861,
+   "qwen_fc_score_signflip": 17.9861
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "038.JPG",
+   "dino_score": 0.22187579274177552,
+   "clip_score": 0.3818237537687475,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.6477,
+   "qwen_fc_score_signflip": 18.6477
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "039.JPG",
+   "dino_score": 0.20319092671076458,
+   "clip_score": 0.3276089131832123,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9188,
+   "qwen_fc_score_signflip": 17.9188
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "040.JPG",
+   "dino_score": 0.19604820013046265,
+   "clip_score": 0.36936934156851337,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.3034,
+   "qwen_fc_score_signflip": 17.3034
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "041.JPG",
+   "dino_score": 0.19744600256284078,
+   "clip_score": 0.41604396158998663,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9394,
+   "qwen_fc_score_signflip": 17.9394
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "043.JPG",
+   "dino_score": 0.1925033748149872,
+   "clip_score": 0.35804894837466156,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.0667,
+   "qwen_fc_score_signflip": 19.0667
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "044.JPG",
+   "dino_score": 0.2400838871796926,
+   "clip_score": 0.3928176625208421,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.7213,
+   "qwen_fc_score_signflip": 18.7213
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "045.JPG",
+   "dino_score": 0.41370998819669086,
+   "clip_score": 0.4793910573829304,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.2228,
+   "qwen_fc_score_signflip": 20.2228
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "046.JPG",
+   "dino_score": 0.3980143924554189,
+   "clip_score": 0.43422041697935626,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.5401,
+   "qwen_fc_score_signflip": 21.5401
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "048.JPG",
+   "dino_score": 0.5586971720059712,
+   "clip_score": 0.5498527721925215,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -20.0035,
+   "qwen_fc_score_signflip": 20.0035
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "049.JPG",
+   "dino_score": 0.4871946116288503,
+   "clip_score": 0.39373200319030066,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0969,
+   "qwen_fc_score_signflip": 20.0969
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "050.JPG",
+   "dino_score": 0.44304884076118467,
+   "clip_score": 0.4774590649388053,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.7208,
+   "qwen_fc_score_signflip": 20.7208
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "052.JPG",
+   "dino_score": 0.3381822486718496,
+   "clip_score": 0.4187045232816176,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.3828,
+   "qwen_fc_score_signflip": 19.3828
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "053.JPG",
+   "dino_score": 0.32190895875295006,
+   "clip_score": 0.4405142990025607,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6852,
+   "qwen_fc_score_signflip": 20.6852
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "057.JPG",
+   "dino_score": 0.3354236940542857,
+   "clip_score": 0.46043544194915076,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.0283,
+   "qwen_fc_score_signflip": 19.0283
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "058.JPG",
+   "dino_score": 0.37322186628977455,
+   "clip_score": 0.45430313457142224,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.8404,
+   "qwen_fc_score_signflip": 18.8404
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "059.JPG",
+   "dino_score": 0.3948560178279877,
+   "clip_score": 0.3712125474756414,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0995,
+   "qwen_fc_score_signflip": 20.0995
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "060.JPG",
+   "dino_score": 0.29912598927815753,
+   "clip_score": 0.4570402638478713,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.7198,
+   "qwen_fc_score_signflip": 19.7198
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "061.JPG",
+   "dino_score": 0.30168140927950543,
+   "clip_score": 0.5144980360161174,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.7525,
+   "qwen_fc_score_signflip": 18.7525
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "063.JPG",
+   "dino_score": 0.47449346582094826,
+   "clip_score": 0.511587993665175,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.9084,
+   "qwen_fc_score_signflip": 19.9084
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "064.JPG",
+   "dino_score": 0.5050356348355611,
+   "clip_score": 0.4784099080345847,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.1114,
+   "qwen_fc_score_signflip": 20.1114
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "065.JPG",
+   "dino_score": 0.17995499769846598,
+   "clip_score": 0.38192359696735034,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.9872,
+   "qwen_fc_score_signflip": 16.9872
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "067.JPG",
+   "dino_score": 0.2774000306924184,
+   "clip_score": 0.3818577934395183,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.7233,
+   "qwen_fc_score_signflip": 19.7233
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "069.JPG",
+   "dino_score": 0.3038904349009196,
+   "clip_score": 0.4438481032848358,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.985,
+   "qwen_fc_score_signflip": 16.985
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "070.JPG",
+   "dino_score": 0.2997705161571503,
+   "clip_score": 0.5114056007428602,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.652,
+   "qwen_fc_score_signflip": 20.652
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "071.JPG",
+   "dino_score": 0.20303173859914145,
+   "clip_score": 0.4111594693227248,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6325,
+   "qwen_fc_score_signflip": 19.6325
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "073.JPG",
+   "dino_score": 0.30233815908432005,
+   "clip_score": 0.4709633263674649,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3785,
+   "qwen_fc_score_signflip": 20.3785
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "074.JPG",
+   "dino_score": 0.2827047566572825,
+   "clip_score": 0.4135723222385753,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6027,
+   "qwen_fc_score_signflip": 20.6027
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "075.JPG",
+   "dino_score": 0.23177281022071838,
+   "clip_score": 0.3579647595232183,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6344,
+   "qwen_fc_score_signflip": 17.6344
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "076.JPG",
+   "dino_score": 0.200602126121521,
+   "clip_score": 0.42184632474725897,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.8706,
+   "qwen_fc_score_signflip": 19.8706
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "077.JPG",
+   "dino_score": 0.22811684409777325,
+   "clip_score": 0.35368961637670343,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.9877,
+   "qwen_fc_score_signflip": 18.9877
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "080.JPG",
+   "dino_score": 0.26166422963142394,
+   "clip_score": 0.40311257947574963,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.9557,
+   "qwen_fc_score_signflip": 21.9557
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "082.JPG",
+   "dino_score": 0.22624642848968507,
+   "clip_score": 0.41253731738437305,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.827,
+   "qwen_fc_score_signflip": 18.827
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "084.JPG",
+   "dino_score": 0.35816969871521,
+   "clip_score": 0.36809208718213166,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6464,
+   "qwen_fc_score_signflip": 20.6464
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "086.JPG",
+   "dino_score": 0.18849754134813945,
+   "clip_score": 0.31933275948871265,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.2668,
+   "qwen_fc_score_signflip": 18.2668
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "087.JPG",
+   "dino_score": 0.17667721311251322,
+   "clip_score": 0.3685906773263758,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9694,
+   "qwen_fc_score_signflip": 17.9694
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "088.JPG",
+   "dino_score": 0.19972726504007976,
+   "clip_score": 0.36113482171838934,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.4682,
+   "qwen_fc_score_signflip": 18.4682
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "089.JPG",
+   "dino_score": 0.25789983073870343,
+   "clip_score": 0.3375697379762476,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.0053,
+   "qwen_fc_score_signflip": 18.0053
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "091.JPG",
+   "dino_score": 0.2005348046620687,
+   "clip_score": 0.3707393082705411,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.5592,
+   "qwen_fc_score_signflip": 17.5592
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "093.JPG",
+   "dino_score": 0.18065842390060424,
+   "clip_score": 0.3440429920499975,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.3569,
+   "qwen_fc_score_signflip": 18.3569
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "094.JPG",
+   "dino_score": 0.204414830605189,
+   "clip_score": 0.3561097464778207,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.0936,
+   "qwen_fc_score_signflip": 18.0936
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "095.JPG",
+   "dino_score": 0.19661437074343363,
+   "clip_score": 0.337825284762816,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.5194,
+   "qwen_fc_score_signflip": 18.5194
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "096.JPG",
+   "dino_score": 0.20984188516934713,
+   "clip_score": 0.3695245683193207,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.2998,
+   "qwen_fc_score_signflip": 21.2998
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "097.JPG",
+   "dino_score": 0.21911442677179974,
+   "clip_score": 0.40666077353737573,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.1633,
+   "qwen_fc_score_signflip": 18.1633
+  },
+  {
+   "category": "capsules",
+   "label": "bad",
+   "query_id": "099.JPG",
+   "dino_score": 0.21242769360542296,
+   "clip_score": 0.34474293752150104,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.634,
+   "qwen_fc_score_signflip": 17.634
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "006.JPG",
+   "dino_score": 0.20203427374362945,
+   "clip_score": 0.28046584129333496,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.2694,
+   "qwen_fc_score_signflip": 16.2694
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "012.JPG",
+   "dino_score": 0.17698626220226288,
+   "clip_score": 0.2445179484784603,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.8555,
+   "qwen_fc_score_signflip": 14.8555
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "013.JPG",
+   "dino_score": 0.17113955318927765,
+   "clip_score": 0.266965601593256,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.1419,
+   "qwen_fc_score_signflip": 14.1419
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "089.JPG",
+   "dino_score": 0.20767746567726136,
+   "clip_score": 0.3006107211112976,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.5375,
+   "qwen_fc_score_signflip": 14.5375
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "093.JPG",
+   "dino_score": 0.20710281431674957,
+   "clip_score": 0.2632981538772583,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.2546,
+   "qwen_fc_score_signflip": 15.2546
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "098.JPG",
+   "dino_score": 0.2363342046737671,
+   "clip_score": 0.2923569455742836,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.368,
+   "qwen_fc_score_signflip": 14.368
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "104.JPG",
+   "dino_score": 0.2024087756872177,
+   "clip_score": 0.2757352404296398,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4652,
+   "qwen_fc_score_signflip": 13.4652
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "143.JPG",
+   "dino_score": 0.20178921520709991,
+   "clip_score": 0.28846560418605804,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9607,
+   "qwen_fc_score_signflip": 13.9607
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "181.JPG",
+   "dino_score": 0.19246279895305635,
+   "clip_score": 0.30259180814027786,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2144,
+   "qwen_fc_score_signflip": 14.2144
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "239.JPG",
+   "dino_score": 0.16001757383346557,
+   "clip_score": 0.2842448726296425,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2413,
+   "qwen_fc_score_signflip": 14.2413
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "245.JPG",
+   "dino_score": 0.16609144806861878,
+   "clip_score": 0.3083878234028816,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.723,
+   "qwen_fc_score_signflip": 13.723
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "260.JPG",
+   "dino_score": 0.16769188940525054,
+   "clip_score": 0.2894866280257702,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9804,
+   "qwen_fc_score_signflip": 13.9804
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "272.JPG",
+   "dino_score": 0.18232730329036712,
+   "clip_score": 0.26170341297984123,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7386,
+   "qwen_fc_score_signflip": 13.7386
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "284.JPG",
+   "dino_score": 0.17948342859745026,
+   "clip_score": 0.3267672508955002,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1335,
+   "qwen_fc_score_signflip": 13.1335
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "307.JPG",
+   "dino_score": 0.17065723836421967,
+   "clip_score": 0.27862851694226265,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3813,
+   "qwen_fc_score_signflip": 13.3813
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "324.JPG",
+   "dino_score": 0.17157551944255828,
+   "clip_score": 0.33583424985408783,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7805,
+   "qwen_fc_score_signflip": 13.7805
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "337.JPG",
+   "dino_score": 0.21115244925022125,
+   "clip_score": 0.2820429280400276,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.2536,
+   "qwen_fc_score_signflip": 13.2536
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "342.JPG",
+   "dino_score": 0.22873104512691497,
+   "clip_score": 0.27976275235414505,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3256,
+   "qwen_fc_score_signflip": 14.3256
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "352.JPG",
+   "dino_score": 0.1693180561065674,
+   "clip_score": 0.29304271936416626,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3189,
+   "qwen_fc_score_signflip": 14.3189
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "377.JPG",
+   "dino_score": 0.15468217730522155,
+   "clip_score": 0.270806223154068,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.4766,
+   "qwen_fc_score_signflip": 14.4766
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "392.JPG",
+   "dino_score": 0.17708995044231415,
+   "clip_score": 0.2611428536474705,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7287,
+   "qwen_fc_score_signflip": 13.7287
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "398.JPG",
+   "dino_score": 0.17057916820049285,
+   "clip_score": 0.28512343019247055,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.2898,
+   "qwen_fc_score_signflip": 16.2898
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "405.JPG",
+   "dino_score": 0.18612488806247712,
+   "clip_score": 0.2920838072896004,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2283,
+   "qwen_fc_score_signflip": 14.2283
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "446.JPG",
+   "dino_score": 0.19503351151943207,
+   "clip_score": 0.29996296018362045,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.5092,
+   "qwen_fc_score_signflip": 14.5092
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "467.JPG",
+   "dino_score": 0.14694706797599794,
+   "clip_score": 0.30001039057970047,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7963,
+   "qwen_fc_score_signflip": 13.7963
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "482.JPG",
+   "dino_score": 0.23467242121696472,
+   "clip_score": 0.3249411918222904,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3313,
+   "qwen_fc_score_signflip": 14.3313
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "484.JPG",
+   "dino_score": 0.20852946639060974,
+   "clip_score": 0.2728491500020027,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.576,
+   "qwen_fc_score_signflip": 13.576
+  },
+  {
+   "category": "cashew",
+   "label": "good",
+   "query_id": "487.JPG",
+   "dino_score": 0.20580029785633086,
+   "clip_score": 0.2839961349964142,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.6152,
+   "qwen_fc_score_signflip": 14.6152
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "000.JPG",
+   "dino_score": 0.23373771011829375,
+   "clip_score": 0.32801175490021706,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.8136,
+   "qwen_fc_score_signflip": 21.8136
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "002.JPG",
+   "dino_score": 0.22412631809711456,
+   "clip_score": 0.3022596091032028,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.049,
+   "qwen_fc_score_signflip": 22.049
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "003.JPG",
+   "dino_score": 0.20762073695659639,
+   "clip_score": 0.3004162013530731,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.804,
+   "qwen_fc_score_signflip": 21.804
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "004.JPG",
+   "dino_score": 0.25501257479190825,
+   "clip_score": 0.28685007616877556,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.2946,
+   "qwen_fc_score_signflip": 20.2946
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "005.JPG",
+   "dino_score": 0.21298878490924836,
+   "clip_score": 0.339689526706934,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7847,
+   "qwen_fc_score_signflip": 22.7847
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "006.JPG",
+   "dino_score": 0.279534250497818,
+   "clip_score": 0.36378246545791626,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.8562,
+   "qwen_fc_score_signflip": 22.8562
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "008.JPG",
+   "dino_score": 0.23236204981803893,
+   "clip_score": 0.3205312751233578,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.2306,
+   "qwen_fc_score_signflip": 21.2306
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "009.JPG",
+   "dino_score": 0.24145466089248657,
+   "clip_score": 0.27389129623770714,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.878,
+   "qwen_fc_score_signflip": 18.878
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "010.JPG",
+   "dino_score": 0.20567379593849183,
+   "clip_score": 0.34272319450974464,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.9024,
+   "qwen_fc_score_signflip": 19.9024
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "011.JPG",
+   "dino_score": 0.22389594912528993,
+   "clip_score": 0.3970447741448879,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.7218,
+   "qwen_fc_score_signflip": 21.7218
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "012.JPG",
+   "dino_score": 0.2743924379348755,
+   "clip_score": 0.28909850120544434,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.2751,
+   "qwen_fc_score_signflip": 23.2751
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "013.JPG",
+   "dino_score": 0.27657909095287325,
+   "clip_score": 0.28880149498581886,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0052,
+   "qwen_fc_score_signflip": 20.0052
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "014.JPG",
+   "dino_score": 0.28953678607940675,
+   "clip_score": 0.293611254543066,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.1017,
+   "qwen_fc_score_signflip": 22.1017
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "015.JPG",
+   "dino_score": 0.2225746899843216,
+   "clip_score": 0.32597537338733673,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.4496,
+   "qwen_fc_score_signflip": 22.4496
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "016.JPG",
+   "dino_score": 0.2677551209926605,
+   "clip_score": 0.3206498697400093,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.7307,
+   "qwen_fc_score_signflip": 21.7307
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "017.JPG",
+   "dino_score": 0.31033752858638763,
+   "clip_score": 0.35089047625660896,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.1316,
+   "qwen_fc_score_signflip": 23.1316
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "018.JPG",
+   "dino_score": 0.28244868516921995,
+   "clip_score": 0.30414994433522224,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.759,
+   "qwen_fc_score_signflip": 22.759
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "019.JPG",
+   "dino_score": 0.2600573539733887,
+   "clip_score": 0.3322245515882969,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.5971,
+   "qwen_fc_score_signflip": 21.5971
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "020.JPG",
+   "dino_score": 0.2711993455886841,
+   "clip_score": 0.32477617636322975,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.6631,
+   "qwen_fc_score_signflip": 21.6631
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "021.JPG",
+   "dino_score": 0.24322573244571685,
+   "clip_score": 0.31384114921092987,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4319,
+   "qwen_fc_score_signflip": 19.4319
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "022.JPG",
+   "dino_score": 0.28315648436546326,
+   "clip_score": 0.35642609000205994,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.8462,
+   "qwen_fc_score_signflip": 20.8462
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "024.JPG",
+   "dino_score": 0.2596133053302765,
+   "clip_score": 0.3309333771467209,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.3853,
+   "qwen_fc_score_signflip": 22.3853
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "025.JPG",
+   "dino_score": 0.3089815527200699,
+   "clip_score": 0.3575774282217026,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.9308,
+   "qwen_fc_score_signflip": 22.9308
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "026.JPG",
+   "dino_score": 0.32885772585868833,
+   "clip_score": 0.34266379103064537,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.4284,
+   "qwen_fc_score_signflip": 20.4284
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "027.JPG",
+   "dino_score": 0.36498348116874696,
+   "clip_score": 0.3961026258766651,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.6496,
+   "qwen_fc_score_signflip": 22.6496
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "028.JPG",
+   "dino_score": 0.28339428901672364,
+   "clip_score": 0.3251654766499996,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.4191,
+   "qwen_fc_score_signflip": 21.4191
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "030.JPG",
+   "dino_score": 0.3263184279203415,
+   "clip_score": 0.42193857952952385,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.6268,
+   "qwen_fc_score_signflip": 22.6268
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "031.JPG",
+   "dino_score": 0.34729658961296084,
+   "clip_score": 0.4201436713337898,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.0612,
+   "qwen_fc_score_signflip": 21.0612
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "032.JPG",
+   "dino_score": 0.4427981525659561,
+   "clip_score": 0.4056730829179287,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.2642,
+   "qwen_fc_score_signflip": 22.2642
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "033.JPG",
+   "dino_score": 0.38349886536598204,
+   "clip_score": 0.41404225304722786,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.9021,
+   "qwen_fc_score_signflip": 22.9021
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "034.JPG",
+   "dino_score": 0.3509076744318008,
+   "clip_score": 0.4285002760589123,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -22.118,
+   "qwen_fc_score_signflip": 22.118
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "036.JPG",
+   "dino_score": 0.33477218747138976,
+   "clip_score": 0.4202793911099434,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.8397,
+   "qwen_fc_score_signflip": 23.8397
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "037.JPG",
+   "dino_score": 0.3685629844665527,
+   "clip_score": 0.41178565099835396,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -23.8803,
+   "qwen_fc_score_signflip": 23.8803
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "039.JPG",
+   "dino_score": 0.35521853566169737,
+   "clip_score": 0.3826115056872368,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.9986,
+   "qwen_fc_score_signflip": 20.9986
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "040.JPG",
+   "dino_score": 0.3210120737552643,
+   "clip_score": 0.31711748614907265,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.8683,
+   "qwen_fc_score_signflip": 22.8683
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "041.JPG",
+   "dino_score": 0.36730590760707854,
+   "clip_score": 0.38650450482964516,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.9983,
+   "qwen_fc_score_signflip": 21.9983
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "042.JPG",
+   "dino_score": 0.2904812216758728,
+   "clip_score": 0.3282911293208599,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.0557,
+   "qwen_fc_score_signflip": 22.0557
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "043.JPG",
+   "dino_score": 0.2952779531478882,
+   "clip_score": 0.30938952416181564,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.3247,
+   "qwen_fc_score_signflip": 21.3247
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "047.JPG",
+   "dino_score": 0.22434410750865935,
+   "clip_score": 0.31435931846499443,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.2628,
+   "qwen_fc_score_signflip": 17.2628
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "048.JPG",
+   "dino_score": 0.26447407305240633,
+   "clip_score": 0.31672780588269234,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.3099,
+   "qwen_fc_score_signflip": 16.3099
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "049.JPG",
+   "dino_score": 0.23776614665985107,
+   "clip_score": 0.3296131528913975,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.5646,
+   "qwen_fc_score_signflip": 18.5646
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "050.JPG",
+   "dino_score": 0.21640124022960663,
+   "clip_score": 0.3167632967233658,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9097,
+   "qwen_fc_score_signflip": 17.9097
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "052.JPG",
+   "dino_score": 0.1933035969734192,
+   "clip_score": 0.2920636348426342,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.42,
+   "qwen_fc_score_signflip": 16.42
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "053.JPG",
+   "dino_score": 0.22954597175121308,
+   "clip_score": 0.2858024500310421,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.4056,
+   "qwen_fc_score_signflip": 14.4056
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "054.JPG",
+   "dino_score": 0.22788161039352417,
+   "clip_score": 0.28142208606004715,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.9511,
+   "qwen_fc_score_signflip": 19.9511
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "056.JPG",
+   "dino_score": 0.22591297924518586,
+   "clip_score": 0.2697104848921299,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6528,
+   "qwen_fc_score_signflip": 13.6528
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "057.JPG",
+   "dino_score": 0.303294238448143,
+   "clip_score": 0.29293323308229446,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.8667,
+   "qwen_fc_score_signflip": 16.8667
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "060.JPG",
+   "dino_score": 0.22746259868144988,
+   "clip_score": 0.326233621686697,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.226,
+   "qwen_fc_score_signflip": 19.226
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "062.JPG",
+   "dino_score": 0.23529674112796783,
+   "clip_score": 0.2825973182916641,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.1271,
+   "qwen_fc_score_signflip": 20.1271
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "063.JPG",
+   "dino_score": 0.1628126621246338,
+   "clip_score": 0.3069523125886917,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6011,
+   "qwen_fc_score_signflip": 19.6011
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "064.JPG",
+   "dino_score": 0.265977618098259,
+   "clip_score": 0.35593879595398903,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.9718,
+   "qwen_fc_score_signflip": 18.9718
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "065.JPG",
+   "dino_score": 0.26575681269168855,
+   "clip_score": 0.3501183018088341,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.656,
+   "qwen_fc_score_signflip": 22.656
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "067.JPG",
+   "dino_score": 0.17044209837913513,
+   "clip_score": 0.2775600627064705,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.0031,
+   "qwen_fc_score_signflip": 17.0031
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "068.JPG",
+   "dino_score": 0.20868875980377197,
+   "clip_score": 0.3138729892671108,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.8227,
+   "qwen_fc_score_signflip": 21.8227
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "069.JPG",
+   "dino_score": 0.1825975090265274,
+   "clip_score": 0.2910727187991142,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2971,
+   "qwen_fc_score_signflip": 19.2971
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "072.JPG",
+   "dino_score": 0.2366749107837677,
+   "clip_score": 0.3971370458602905,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.1581,
+   "qwen_fc_score_signflip": 23.1581
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "073.JPG",
+   "dino_score": 0.18795300424098968,
+   "clip_score": 0.28166627138853073,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.4266,
+   "qwen_fc_score_signflip": 18.4266
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "075.JPG",
+   "dino_score": 0.19237293899059296,
+   "clip_score": 0.3030148632824421,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.0586,
+   "qwen_fc_score_signflip": 17.0586
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "076.JPG",
+   "dino_score": 0.2637102782726288,
+   "clip_score": 0.3317422494292259,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.4712,
+   "qwen_fc_score_signflip": 22.4712
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "077.JPG",
+   "dino_score": 0.18374537527561188,
+   "clip_score": 0.3414582759141922,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.4896,
+   "qwen_fc_score_signflip": 20.4896
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "078.JPG",
+   "dino_score": 0.27771338522434236,
+   "clip_score": 0.3104430101811886,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.4545,
+   "qwen_fc_score_signflip": 14.4545
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "079.JPG",
+   "dino_score": 0.4216938704252243,
+   "clip_score": 0.2911539301276207,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.8495,
+   "qwen_fc_score_signflip": 15.8495
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "080.JPG",
+   "dino_score": 0.23632735013961792,
+   "clip_score": 0.27985532209277153,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.8639,
+   "qwen_fc_score_signflip": 13.8639
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "081.JPG",
+   "dino_score": 0.27508415579795836,
+   "clip_score": 0.30432800203561783,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.5816,
+   "qwen_fc_score_signflip": 14.5816
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "082.JPG",
+   "dino_score": 0.2827472656965256,
+   "clip_score": 0.31818247959017754,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.6472,
+   "qwen_fc_score_signflip": 14.6472
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "083.JPG",
+   "dino_score": 0.2853416442871094,
+   "clip_score": 0.3217896446585655,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.631,
+   "qwen_fc_score_signflip": 14.631
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "084.JPG",
+   "dino_score": 0.2850981801748276,
+   "clip_score": 0.3179088570177555,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6164,
+   "qwen_fc_score_signflip": 19.6164
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "085.JPG",
+   "dino_score": 0.30325521230697633,
+   "clip_score": 0.30031561106443405,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7972,
+   "qwen_fc_score_signflip": 13.7972
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "086.JPG",
+   "dino_score": 0.2747517079114914,
+   "clip_score": 0.3390215262770653,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.6085,
+   "qwen_fc_score_signflip": 16.6085
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "087.JPG",
+   "dino_score": 0.23203109204769135,
+   "clip_score": 0.3338572271168232,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.5396,
+   "qwen_fc_score_signflip": 14.5396
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "089.JPG",
+   "dino_score": 0.26239446401596067,
+   "clip_score": 0.34449485316872597,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.8241,
+   "qwen_fc_score_signflip": 14.8241
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "090.JPG",
+   "dino_score": 0.2748391628265381,
+   "clip_score": 0.2837224751710892,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.2519,
+   "qwen_fc_score_signflip": 13.2519
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "091.JPG",
+   "dino_score": 0.3133063703775406,
+   "clip_score": 0.34062181413173676,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.4201,
+   "qwen_fc_score_signflip": 17.4201
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "092.JPG",
+   "dino_score": 0.2750440090894699,
+   "clip_score": 0.31282591819763184,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7801,
+   "qwen_fc_score_signflip": 13.7801
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "093.JPG",
+   "dino_score": 0.2560281217098236,
+   "clip_score": 0.267670601606369,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.9016,
+   "qwen_fc_score_signflip": 14.9016
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "094.JPG",
+   "dino_score": 0.3950067341327667,
+   "clip_score": 0.40300115942955017,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -18.4689,
+   "qwen_fc_score_signflip": 18.4689
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "095.JPG",
+   "dino_score": 0.3924295902252197,
+   "clip_score": 0.44762881472706795,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.7666,
+   "qwen_fc_score_signflip": 19.7666
+  },
+  {
+   "category": "cashew",
+   "label": "bad",
+   "query_id": "097.JPG",
+   "dino_score": 0.3985742151737213,
+   "clip_score": 0.4427587762475014,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -19.4404,
+   "qwen_fc_score_signflip": 19.4404
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "006.JPG",
+   "dino_score": 0.212656003733476,
+   "clip_score": 0.30058693554666305,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.7408,
+   "qwen_fc_score_signflip": 12.7408
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "012.JPG",
+   "dino_score": 0.21813136090834936,
+   "clip_score": 0.3556725051667955,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4229,
+   "qwen_fc_score_signflip": 13.4229
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "013.JPG",
+   "dino_score": 0.1737115060289701,
+   "clip_score": 0.3670523530907101,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.378,
+   "qwen_fc_score_signflip": 12.378
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "050.JPG",
+   "dino_score": 0.20542712261279425,
+   "clip_score": 0.3364371524916755,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.5187,
+   "qwen_fc_score_signflip": 12.5187
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "084.JPG",
+   "dino_score": 0.17572502046823502,
+   "clip_score": 0.3230200641685062,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.4271,
+   "qwen_fc_score_signflip": 12.4271
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "089.JPG",
+   "dino_score": 0.18580539524555206,
+   "clip_score": 0.31162021226353115,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.2763,
+   "qwen_fc_score_signflip": 13.2763
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "093.JPG",
+   "dino_score": 0.17991790920495987,
+   "clip_score": 0.2881729437245263,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7857,
+   "qwen_fc_score_signflip": 13.7857
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "104.JPG",
+   "dino_score": 0.18941152840852737,
+   "clip_score": 0.2910752528243595,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8792,
+   "qwen_fc_score_signflip": 17.8792
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "130.JPG",
+   "dino_score": 0.17804569254318872,
+   "clip_score": 0.34471187326643205,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7285,
+   "qwen_fc_score_signflip": 13.7285
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "148.JPG",
+   "dino_score": 0.2191572164495786,
+   "clip_score": 0.3419829176531898,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.6111,
+   "qwen_fc_score_signflip": 14.6111
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "213.JPG",
+   "dino_score": 0.1604964683453242,
+   "clip_score": 0.3159543507628971,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.9029,
+   "qwen_fc_score_signflip": 12.9029
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "245.JPG",
+   "dino_score": 0.1846791629989942,
+   "clip_score": 0.323863771226671,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9354,
+   "qwen_fc_score_signflip": 13.9354
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "260.JPG",
+   "dino_score": 0.1750340461730957,
+   "clip_score": 0.3212331732114156,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4368,
+   "qwen_fc_score_signflip": 13.4368
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "272.JPG",
+   "dino_score": 0.15984617422024408,
+   "clip_score": 0.329944650332133,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.5484,
+   "qwen_fc_score_signflip": 12.5484
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "276.JPG",
+   "dino_score": 0.1623329147696495,
+   "clip_score": 0.30045296086205375,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.8887,
+   "qwen_fc_score_signflip": 11.8887
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "307.JPG",
+   "dino_score": 0.17399834344784418,
+   "clip_score": 0.3679947985543145,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.3308,
+   "qwen_fc_score_signflip": 12.3308
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "324.JPG",
+   "dino_score": 0.21212088068326315,
+   "clip_score": 0.3001822233200073,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9831,
+   "qwen_fc_score_signflip": 13.9831
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "367.JPG",
+   "dino_score": 0.2270169034600258,
+   "clip_score": 0.32417984472380745,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2,
+   "qwen_fc_score_signflip": 14.2
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "377.JPG",
+   "dino_score": 0.17199840396642685,
+   "clip_score": 0.31442296836111283,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.9275,
+   "qwen_fc_score_signflip": 11.9275
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "384.JPG",
+   "dino_score": 0.20219509055217108,
+   "clip_score": 0.3303957912656996,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.5546,
+   "qwen_fc_score_signflip": 13.5546
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "389.JPG",
+   "dino_score": 0.19259156783421835,
+   "clip_score": 0.3245811363061269,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.5223,
+   "qwen_fc_score_signflip": 13.5223
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "398.JPG",
+   "dino_score": 0.23383671045303345,
+   "clip_score": 0.32689504159821403,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.5155,
+   "qwen_fc_score_signflip": 13.5155
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "405.JPG",
+   "dino_score": 0.18463836361964545,
+   "clip_score": 0.3244969778590732,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.2045,
+   "qwen_fc_score_signflip": 12.2045
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "446.JPG",
+   "dino_score": 0.18049080421527228,
+   "clip_score": 0.31528550055291915,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.454,
+   "qwen_fc_score_signflip": 17.454
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "461.JPG",
+   "dino_score": 0.2367476373910904,
+   "clip_score": 0.3464609649446275,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3983,
+   "qwen_fc_score_signflip": 14.3983
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "486.JPG",
+   "dino_score": 0.22033198177814484,
+   "clip_score": 0.32899843984180027,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.7017,
+   "qwen_fc_score_signflip": 15.7017
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "487.JPG",
+   "dino_score": 0.1943963517745336,
+   "clip_score": 0.35199368993441266,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.9479,
+   "qwen_fc_score_signflip": 14.9479
+  },
+  {
+   "category": "chewinggum",
+   "label": "good",
+   "query_id": "497.JPG",
+   "dino_score": 0.21640491485595703,
+   "clip_score": 0.3515981336434682,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4027,
+   "qwen_fc_score_signflip": 13.4027
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "000.JPG",
+   "dino_score": 0.6797701865434647,
+   "clip_score": 0.5970554020669725,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.4741,
+   "qwen_fc_score_signflip": 23.4741
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "001.JPG",
+   "dino_score": 0.6164901355902354,
+   "clip_score": 0.5146018366018931,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -23.3508,
+   "qwen_fc_score_signflip": 23.3508
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "002.JPG",
+   "dino_score": 0.650170216957728,
+   "clip_score": 0.5126444498697916,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -25.2941,
+   "qwen_fc_score_signflip": 25.2941
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "003.JPG",
+   "dino_score": 0.42560911178588867,
+   "clip_score": 0.438892920811971,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.3519,
+   "qwen_fc_score_signflip": 24.3519
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "005.JPG",
+   "dino_score": 0.5964519679546356,
+   "clip_score": 0.5687315662701925,
+   "qwen_json_score": 0.8,
+   "qwen_fc_score": -21.7075,
+   "qwen_fc_score_signflip": 21.7075
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "006.JPG",
+   "dino_score": 0.5875430653492609,
+   "clip_score": 0.5935841931237115,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.263,
+   "qwen_fc_score_signflip": 23.263
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "007.JPG",
+   "dino_score": 0.6161467085282007,
+   "clip_score": 0.5542233321401808,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.8837,
+   "qwen_fc_score_signflip": 22.8837
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "008.JPG",
+   "dino_score": 0.5434506634871165,
+   "clip_score": 0.4844236407015059,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.2598,
+   "qwen_fc_score_signflip": 24.2598
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "009.JPG",
+   "dino_score": 0.6254936854044596,
+   "clip_score": 0.564767599105835,
+   "qwen_json_score": 0.8,
+   "qwen_fc_score": -21.1725,
+   "qwen_fc_score_signflip": 21.1725
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "010.JPG",
+   "dino_score": 0.5982153167327245,
+   "clip_score": 0.5104363130198585,
+   "qwen_json_score": 0.7,
+   "qwen_fc_score": -23.3448,
+   "qwen_fc_score_signflip": 23.3448
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "011.JPG",
+   "dino_score": 0.6318276077508926,
+   "clip_score": 0.5792613294389513,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7187,
+   "qwen_fc_score_signflip": 22.7187
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "012.JPG",
+   "dino_score": 0.5867120573918024,
+   "clip_score": 0.5388465457492404,
+   "qwen_json_score": 0.7,
+   "qwen_fc_score": -22.9929,
+   "qwen_fc_score_signflip": 22.9929
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "013.JPG",
+   "dino_score": 0.6479350725809733,
+   "clip_score": 0.5287516580687629,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.509,
+   "qwen_fc_score_signflip": 22.509
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "014.JPG",
+   "dino_score": 0.6076458295186361,
+   "clip_score": 0.5980338321791755,
+   "qwen_json_score": 0.7,
+   "qwen_fc_score": -23.6311,
+   "qwen_fc_score_signflip": 23.6311
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "019.JPG",
+   "dino_score": 0.5723461856444677,
+   "clip_score": 0.536458796925015,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.8996,
+   "qwen_fc_score_signflip": 22.8996
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "020.JPG",
+   "dino_score": 0.7146900544563929,
+   "clip_score": 0.5261777175797356,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.2396,
+   "qwen_fc_score_signflip": 24.2396
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "021.JPG",
+   "dino_score": 0.6800500849882761,
+   "clip_score": 0.5900725523630778,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.1372,
+   "qwen_fc_score_signflip": 22.1372
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "022.JPG",
+   "dino_score": 0.5709417263666788,
+   "clip_score": 0.47164058685302734,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.3129,
+   "qwen_fc_score_signflip": 23.3129
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "024.JPG",
+   "dino_score": 0.6172833989063898,
+   "clip_score": 0.5255662004152933,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.7436,
+   "qwen_fc_score_signflip": 23.7436
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "025.JPG",
+   "dino_score": 0.2960016255577405,
+   "clip_score": 0.3667399088541667,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.393,
+   "qwen_fc_score_signflip": 21.393
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "026.JPG",
+   "dino_score": 0.20773323873678842,
+   "clip_score": 0.3070925871531169,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3969,
+   "qwen_fc_score_signflip": 20.3969
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "027.JPG",
+   "dino_score": 0.3785948728521665,
+   "clip_score": 0.3377525243494246,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4944,
+   "qwen_fc_score_signflip": 19.4944
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "028.JPG",
+   "dino_score": 0.25801501671473187,
+   "clip_score": 0.347475270430247,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.1387,
+   "qwen_fc_score_signflip": 15.1387
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "029.JPG",
+   "dino_score": 0.275556152065595,
+   "clip_score": 0.3486444618966844,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.7107,
+   "qwen_fc_score_signflip": 21.7107
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "030.JPG",
+   "dino_score": 0.3996024305621783,
+   "clip_score": 0.44117486145761275,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.6519,
+   "qwen_fc_score_signflip": 22.6519
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "031.JPG",
+   "dino_score": 0.2193255995710691,
+   "clip_score": 0.3441800640689002,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.484,
+   "qwen_fc_score_signflip": 13.484
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "032.JPG",
+   "dino_score": 0.24045919378598532,
+   "clip_score": 0.31895610358979964,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5929,
+   "qwen_fc_score_signflip": 16.5929
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "033.JPG",
+   "dino_score": 0.17905940860509872,
+   "clip_score": 0.33170796434084576,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.7569,
+   "qwen_fc_score_signflip": 15.7569
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "034.JPG",
+   "dino_score": 0.2463625172773997,
+   "clip_score": 0.34021240803930497,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.9733,
+   "qwen_fc_score_signflip": 14.9733
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "037.JPG",
+   "dino_score": 0.19328615069389343,
+   "clip_score": 0.3257302873664432,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9039,
+   "qwen_fc_score_signflip": 17.9039
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "038.JPG",
+   "dino_score": 0.440874623755614,
+   "clip_score": 0.45573799808820087,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.5412,
+   "qwen_fc_score_signflip": 22.5412
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "039.JPG",
+   "dino_score": 0.4045845294992129,
+   "clip_score": 0.47581209739049274,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6763,
+   "qwen_fc_score_signflip": 20.6763
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "040.JPG",
+   "dino_score": 0.5081675176819166,
+   "clip_score": 0.5111943946944343,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -24.1912,
+   "qwen_fc_score_signflip": 24.1912
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "041.JPG",
+   "dino_score": 0.402422659099102,
+   "clip_score": 0.47839464081658256,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.6125,
+   "qwen_fc_score_signflip": 23.6125
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "042.JPG",
+   "dino_score": 0.44138436019420624,
+   "clip_score": 0.4927476578288608,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.638,
+   "qwen_fc_score_signflip": 23.638
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "044.JPG",
+   "dino_score": 0.4434741462270419,
+   "clip_score": 0.5272409054968092,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.976,
+   "qwen_fc_score_signflip": 23.976
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "046.JPG",
+   "dino_score": 0.566113809744517,
+   "clip_score": 0.5507746802435981,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -23.7222,
+   "qwen_fc_score_signflip": 23.7222
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "047.JPG",
+   "dino_score": 0.596315955122312,
+   "clip_score": 0.559521370463901,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -22.5776,
+   "qwen_fc_score_signflip": 22.5776
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "049.JPG",
+   "dino_score": 0.6145304689804713,
+   "clip_score": 0.5798748665385776,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -23.829,
+   "qwen_fc_score_signflip": 23.829
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "050.JPG",
+   "dino_score": 0.6544428964455923,
+   "clip_score": 0.5684117873509725,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.8416,
+   "qwen_fc_score_signflip": 22.8416
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "051.JPG",
+   "dino_score": 0.4912468691666921,
+   "clip_score": 0.51065218117502,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -25.9641,
+   "qwen_fc_score_signflip": 25.9641
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "052.JPG",
+   "dino_score": 0.6376018772522608,
+   "clip_score": 0.6414970556894938,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.0036,
+   "qwen_fc_score_signflip": 23.0036
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "053.JPG",
+   "dino_score": 0.6709713439146677,
+   "clip_score": 0.6243367327584161,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -23.475,
+   "qwen_fc_score_signflip": 23.475
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "055.JPG",
+   "dino_score": 0.6324083507061005,
+   "clip_score": 0.5809489223692152,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -24.073,
+   "qwen_fc_score_signflip": 24.073
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "056.JPG",
+   "dino_score": 0.6201575050751368,
+   "clip_score": 0.5420220891634623,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.7129,
+   "qwen_fc_score_signflip": 23.7129
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "057.JPG",
+   "dino_score": 0.46518635501464206,
+   "clip_score": 0.5435335106319852,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.7133,
+   "qwen_fc_score_signflip": 24.7133
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "058.JPG",
+   "dino_score": 0.5006984596451124,
+   "clip_score": 0.547084112962087,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.5579,
+   "qwen_fc_score_signflip": 24.5579
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "061.JPG",
+   "dino_score": 0.5729019691546758,
+   "clip_score": 0.5877205928166708,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.8086,
+   "qwen_fc_score_signflip": 23.8086
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "063.JPG",
+   "dino_score": 0.5943864832321802,
+   "clip_score": 0.5735540191332499,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.7397,
+   "qwen_fc_score_signflip": 24.7397
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "064.JPG",
+   "dino_score": 0.5872487872838974,
+   "clip_score": 0.5494497683313158,
+   "qwen_json_score": 0.1,
+   "qwen_fc_score": -22.7067,
+   "qwen_fc_score_signflip": 22.7067
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "065.JPG",
+   "dino_score": 0.35431191325187683,
+   "clip_score": 0.37554006112946403,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -25.2818,
+   "qwen_fc_score_signflip": 25.2818
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "066.JPG",
+   "dino_score": 0.3490487163265546,
+   "clip_score": 0.34853336546156144,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.5493,
+   "qwen_fc_score_signflip": 19.5493
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "067.JPG",
+   "dino_score": 0.2817901497085889,
+   "clip_score": 0.3493842946158515,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.401,
+   "qwen_fc_score_signflip": 22.401
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "068.JPG",
+   "dino_score": 0.34420183549324673,
+   "clip_score": 0.3368154830402798,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.3674,
+   "qwen_fc_score_signflip": 22.3674
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "069.JPG",
+   "dino_score": 0.26092148820559186,
+   "clip_score": 0.3318318823973338,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -24.679,
+   "qwen_fc_score_signflip": 24.679
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "070.JPG",
+   "dino_score": 0.31268219898144406,
+   "clip_score": 0.3600023322635227,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.7577,
+   "qwen_fc_score_signflip": 16.7577
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "071.JPG",
+   "dino_score": 0.30867064247528714,
+   "clip_score": 0.37542689839998883,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.9374,
+   "qwen_fc_score_signflip": 20.9374
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "072.JPG",
+   "dino_score": 0.2803494657079379,
+   "clip_score": 0.36823368072509766,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.8554,
+   "qwen_fc_score_signflip": 20.8554
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "073.JPG",
+   "dino_score": 0.2441226691007614,
+   "clip_score": 0.3183273606830173,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.3062,
+   "qwen_fc_score_signflip": 15.3062
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "076.JPG",
+   "dino_score": 0.3756098424394925,
+   "clip_score": 0.4581820136970944,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.0434,
+   "qwen_fc_score_signflip": 23.0434
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "079.JPG",
+   "dino_score": 0.3954029977321625,
+   "clip_score": 0.4047019448545244,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.6272,
+   "qwen_fc_score_signflip": 22.6272
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "080.JPG",
+   "dino_score": 0.4772647023200989,
+   "clip_score": 0.41854119963116115,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.8784,
+   "qwen_fc_score_signflip": 22.8784
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "081.JPG",
+   "dino_score": 0.40439294278621674,
+   "clip_score": 0.4467760920524597,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.5195,
+   "qwen_fc_score_signflip": 22.5195
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "082.JPG",
+   "dino_score": 0.42620690166950226,
+   "clip_score": 0.4721486568450928,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.3571,
+   "qwen_fc_score_signflip": 22.3571
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "083.JPG",
+   "dino_score": 0.42202745626370114,
+   "clip_score": 0.5039432876639895,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.0209,
+   "qwen_fc_score_signflip": 23.0209
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "084.JPG",
+   "dino_score": 0.44983599831660587,
+   "clip_score": 0.4659622013568878,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.0286,
+   "qwen_fc_score_signflip": 23.0286
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "085.JPG",
+   "dino_score": 0.3906202514966329,
+   "clip_score": 0.44469772444831,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.1359,
+   "qwen_fc_score_signflip": 23.1359
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "086.JPG",
+   "dino_score": 0.3226808086037636,
+   "clip_score": 0.44347506099277073,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.664,
+   "qwen_fc_score_signflip": 19.664
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "087.JPG",
+   "dino_score": 0.3614247143268585,
+   "clip_score": 0.4323117501205868,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.9783,
+   "qwen_fc_score_signflip": 22.9783
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "088.JPG",
+   "dino_score": 0.38388428340355557,
+   "clip_score": 0.4779600467946794,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.5731,
+   "qwen_fc_score_signflip": 22.5731
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "089.JPG",
+   "dino_score": 0.33575311054786044,
+   "clip_score": 0.44007768564754063,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.401,
+   "qwen_fc_score_signflip": 21.401
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "090.JPG",
+   "dino_score": 0.4159088209271431,
+   "clip_score": 0.4591097864839766,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7459,
+   "qwen_fc_score_signflip": 22.7459
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "092.JPG",
+   "dino_score": 0.4015433390935262,
+   "clip_score": 0.39247674743334454,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.6708,
+   "qwen_fc_score_signflip": 22.6708
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "094.JPG",
+   "dino_score": 0.3337371324499448,
+   "clip_score": 0.42075099216567147,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.4961,
+   "qwen_fc_score_signflip": 22.4961
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "095.JPG",
+   "dino_score": 0.3543948108951251,
+   "clip_score": 0.4459616740544637,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.2572,
+   "qwen_fc_score_signflip": 22.2572
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "096.JPG",
+   "dino_score": 0.3786596382657687,
+   "clip_score": 0.4589390324221717,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7617,
+   "qwen_fc_score_signflip": 22.7617
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "097.JPG",
+   "dino_score": 0.3943970973292987,
+   "clip_score": 0.4833133618036906,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -23.1686,
+   "qwen_fc_score_signflip": 23.1686
+  },
+  {
+   "category": "chewinggum",
+   "label": "bad",
+   "query_id": "099.JPG",
+   "dino_score": 0.421449676156044,
+   "clip_score": 0.42710169156392414,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7015,
+   "qwen_fc_score_signflip": 22.7015
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "006.JPG",
+   "dino_score": 0.18408082127571107,
+   "clip_score": 0.3066861494020982,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.6363,
+   "qwen_fc_score_signflip": 13.6363
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "013.JPG",
+   "dino_score": 0.18729841311772663,
+   "clip_score": 0.2898669026114724,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4882,
+   "qwen_fc_score_signflip": 13.4882
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "023.JPG",
+   "dino_score": 0.20037404894828797,
+   "clip_score": 0.302662884647196,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.1091,
+   "qwen_fc_score_signflip": 15.1091
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "050.JPG",
+   "dino_score": 0.14776724974314373,
+   "clip_score": 0.2902731624516574,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.0883,
+   "qwen_fc_score_signflip": 14.0883
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "084.JPG",
+   "dino_score": 0.15339884559313458,
+   "clip_score": 0.2727736234664917,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3824,
+   "qwen_fc_score_signflip": 14.3824
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "089.JPG",
+   "dino_score": 0.1707904318968455,
+   "clip_score": 0.2681354582309723,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.0842,
+   "qwen_fc_score_signflip": 14.0842
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "104.JPG",
+   "dino_score": 0.18538872996966044,
+   "clip_score": 0.32160685008222406,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9217,
+   "qwen_fc_score_signflip": 13.9217
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "143.JPG",
+   "dino_score": 0.1968601942062378,
+   "clip_score": 0.27776223150166596,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4401,
+   "qwen_fc_score_signflip": 13.4401
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "148.JPG",
+   "dino_score": 0.1815734883149465,
+   "clip_score": 0.36176070841875946,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.649,
+   "qwen_fc_score_signflip": 14.649
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "213.JPG",
+   "dino_score": 0.18385329047838847,
+   "clip_score": 0.3096376603299921,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.3202,
+   "qwen_fc_score_signflip": 13.3202
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "228.JPG",
+   "dino_score": 0.20985122720400493,
+   "clip_score": 0.3017049106684598,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.1133,
+   "qwen_fc_score_signflip": 14.1133
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "245.JPG",
+   "dino_score": 0.182326211531957,
+   "clip_score": 0.2983189171010798,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9583,
+   "qwen_fc_score_signflip": 13.9583
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "342.JPG",
+   "dino_score": 0.16631982922554017,
+   "clip_score": 0.3508721021088687,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4804,
+   "qwen_fc_score_signflip": 13.4804
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "344.JPG",
+   "dino_score": 0.17736723621686298,
+   "clip_score": 0.3303391689603979,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3061,
+   "qwen_fc_score_signflip": 14.3061
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "367.JPG",
+   "dino_score": 0.16488030552864075,
+   "clip_score": 0.32629208131269977,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1887,
+   "qwen_fc_score_signflip": 13.1887
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "369.JPG",
+   "dino_score": 0.18634814620018006,
+   "clip_score": 0.27905635129321704,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3619,
+   "qwen_fc_score_signflip": 14.3619
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "377.JPG",
+   "dino_score": 0.1702266275882721,
+   "clip_score": 0.2888652438467199,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.0511,
+   "qwen_fc_score_signflip": 14.0511
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "389.JPG",
+   "dino_score": 0.17686408559481304,
+   "clip_score": 0.3143431408838792,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.375,
+   "qwen_fc_score_signflip": 14.375
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "392.JPG",
+   "dino_score": 0.1750929534435272,
+   "clip_score": 0.360370549288663,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.5338,
+   "qwen_fc_score_signflip": 14.5338
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "398.JPG",
+   "dino_score": 0.16830577850341796,
+   "clip_score": 0.33146978508342395,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.2976,
+   "qwen_fc_score_signflip": 14.2976
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "400.JPG",
+   "dino_score": 0.2259839912255605,
+   "clip_score": 0.3171449845487421,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.232,
+   "qwen_fc_score_signflip": 15.232
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "402.JPG",
+   "dino_score": 0.14530002673467,
+   "clip_score": 0.3696283318779685,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.0915,
+   "qwen_fc_score_signflip": 14.0915
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "405.JPG",
+   "dino_score": 0.1971706748008728,
+   "clip_score": 0.4478349062529477,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.4616,
+   "qwen_fc_score_signflip": 15.4616
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "435.JPG",
+   "dino_score": 0.2554299056529999,
+   "clip_score": 0.306346134705977,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.959,
+   "qwen_fc_score_signflip": 13.959
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "446.JPG",
+   "dino_score": 0.1690189242362976,
+   "clip_score": 0.33112708817828784,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.9179,
+   "qwen_fc_score_signflip": 14.9179
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "460.JPG",
+   "dino_score": 0.18350040912628174,
+   "clip_score": 0.37708967382257635,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9473,
+   "qwen_fc_score_signflip": 13.9473
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "461.JPG",
+   "dino_score": 0.33243836561838785,
+   "clip_score": 0.3256684731353413,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.7092,
+   "qwen_fc_score_signflip": 13.7092
+  },
+  {
+   "category": "fryum",
+   "label": "good",
+   "query_id": "487.JPG",
+   "dino_score": 0.17424984176953634,
+   "clip_score": 0.3228354128924283,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.0727,
+   "qwen_fc_score_signflip": 15.0727
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "000.JPG",
+   "dino_score": 0.49379256963729856,
+   "clip_score": 0.5230312374505129,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.8583,
+   "qwen_fc_score_signflip": 20.8583
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "001.JPG",
+   "dino_score": 0.3881767233212789,
+   "clip_score": 0.5184698511253704,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3131,
+   "qwen_fc_score_signflip": 20.3131
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "003.JPG",
+   "dino_score": 0.3217549781004588,
+   "clip_score": 0.4241127453067086,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.1256,
+   "qwen_fc_score_signflip": 20.1256
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "004.JPG",
+   "dino_score": 0.40165082216262815,
+   "clip_score": 0.4976436306129802,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6548,
+   "qwen_fc_score_signflip": 20.6548
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "006.JPG",
+   "dino_score": 0.31874446670214335,
+   "clip_score": 0.45572992075573315,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.575,
+   "qwen_fc_score_signflip": 19.575
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "007.JPG",
+   "dino_score": 0.2566524704297384,
+   "clip_score": 0.3590890142050656,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3665,
+   "qwen_fc_score_signflip": 20.3665
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "008.JPG",
+   "dino_score": 0.4413669427235921,
+   "clip_score": 0.5543191595511003,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.9869,
+   "qwen_fc_score_signflip": 20.9869
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "009.JPG",
+   "dino_score": 0.35480395952860516,
+   "clip_score": 0.41500992395661096,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3777,
+   "qwen_fc_score_signflip": 20.3777
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "010.JPG",
+   "dino_score": 0.3016840755939484,
+   "clip_score": 0.36312502080743964,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.333,
+   "qwen_fc_score_signflip": 14.333
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "011.JPG",
+   "dino_score": 0.36575103203455606,
+   "clip_score": 0.3157967003909024,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.1929,
+   "qwen_fc_score_signflip": 21.1929
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "014.JPG",
+   "dino_score": 0.3199224611123403,
+   "clip_score": 0.3391627858985554,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.7456,
+   "qwen_fc_score_signflip": 21.7456
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "015.JPG",
+   "dino_score": 0.2190577288468679,
+   "clip_score": 0.3664298111742193,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.4097,
+   "qwen_fc_score_signflip": 16.4097
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "017.JPG",
+   "dino_score": 0.2259756048520406,
+   "clip_score": 0.33826102722774853,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.2136,
+   "qwen_fc_score_signflip": 21.2136
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "018.JPG",
+   "dino_score": 0.28712044755617777,
+   "clip_score": 0.32224561951377173,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.5615,
+   "qwen_fc_score_signflip": 18.5615
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "019.JPG",
+   "dino_score": 0.2875678579012553,
+   "clip_score": 0.3762214481830597,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.2626,
+   "qwen_fc_score_signflip": 18.2626
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "020.JPG",
+   "dino_score": 0.22981101870536805,
+   "clip_score": 0.34430710023099725,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.1583,
+   "qwen_fc_score_signflip": 18.1583
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "021.JPG",
+   "dino_score": 0.22934940258661907,
+   "clip_score": 0.3238746713508259,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.9925,
+   "qwen_fc_score_signflip": 19.9925
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "022.JPG",
+   "dino_score": 0.2269337594509125,
+   "clip_score": 0.3180351826277646,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1389,
+   "qwen_fc_score_signflip": 17.1389
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "023.JPG",
+   "dino_score": 0.23790260354677836,
+   "clip_score": 0.35374910723079334,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.0349,
+   "qwen_fc_score_signflip": 18.0349
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "025.JPG",
+   "dino_score": 0.22014257510503132,
+   "clip_score": 0.3653672256252982,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5109,
+   "qwen_fc_score_signflip": 16.5109
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "026.JPG",
+   "dino_score": 0.22997408509254455,
+   "clip_score": 0.40109806981953705,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2663,
+   "qwen_fc_score_signflip": 19.2663
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "028.JPG",
+   "dino_score": 0.21164876619974773,
+   "clip_score": 0.2973841266198592,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.4596,
+   "qwen_fc_score_signflip": 14.4596
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "029.JPG",
+   "dino_score": 0.22534738977750143,
+   "clip_score": 0.38462754813107575,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.5821,
+   "qwen_fc_score_signflip": 19.5821
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "030.JPG",
+   "dino_score": 0.20390766461690266,
+   "clip_score": 0.3093692660331726,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6282,
+   "qwen_fc_score_signflip": 17.6282
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "032.JPG",
+   "dino_score": 0.2691375434398651,
+   "clip_score": 0.2743359424851157,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6557,
+   "qwen_fc_score_signflip": 17.6557
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "034.JPG",
+   "dino_score": 0.22972962260246277,
+   "clip_score": 0.31399422883987427,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.3535,
+   "qwen_fc_score_signflip": 17.3535
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "035.JPG",
+   "dino_score": 0.20042522350947062,
+   "clip_score": 0.38315617767247284,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.0962,
+   "qwen_fc_score_signflip": 17.0962
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "036.JPG",
+   "dino_score": 0.16897118488947552,
+   "clip_score": 0.33279200304638257,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.6654,
+   "qwen_fc_score_signflip": 16.6654
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "038.JPG",
+   "dino_score": 0.24749663074811298,
+   "clip_score": 0.3765451826832511,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.4202,
+   "qwen_fc_score_signflip": 15.4202
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "039.JPG",
+   "dino_score": 0.22374216914176942,
+   "clip_score": 0.33962520415132696,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.6687,
+   "qwen_fc_score_signflip": 18.6687
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "040.JPG",
+   "dino_score": 0.2831145127614339,
+   "clip_score": 0.3024944337931546,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.7237,
+   "qwen_fc_score_signflip": 17.7237
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "041.JPG",
+   "dino_score": 0.3524428407351176,
+   "clip_score": 0.37755128741264343,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.7411,
+   "qwen_fc_score_signflip": 18.7411
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "042.JPG",
+   "dino_score": 0.2624246716499329,
+   "clip_score": 0.3088001419197429,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.3926,
+   "qwen_fc_score_signflip": 17.3926
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "043.JPG",
+   "dino_score": 0.42420921127001443,
+   "clip_score": 0.357879486950961,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.7875,
+   "qwen_fc_score_signflip": 22.7875
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "044.JPG",
+   "dino_score": 0.4062309920787811,
+   "clip_score": 0.42529979619112884,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.1336,
+   "qwen_fc_score_signflip": 22.1336
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "046.JPG",
+   "dino_score": 0.2848802387714386,
+   "clip_score": 0.3308351852677085,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.3458,
+   "qwen_fc_score_signflip": 18.3458
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "047.JPG",
+   "dino_score": 0.2572598934173584,
+   "clip_score": 0.3033739518035542,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.4653,
+   "qwen_fc_score_signflip": 18.4653
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "048.JPG",
+   "dino_score": 0.2683166821797689,
+   "clip_score": 0.3461439853364771,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6356,
+   "qwen_fc_score_signflip": 20.6356
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "050.JPG",
+   "dino_score": 0.3936936954657237,
+   "clip_score": 0.33360136368057947,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.2504,
+   "qwen_fc_score_signflip": 21.2504
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "051.JPG",
+   "dino_score": 0.34751784006754555,
+   "clip_score": 0.36248695850372314,
+   "qwen_json_score": 0.3,
+   "qwen_fc_score": -21.7601,
+   "qwen_fc_score_signflip": 21.7601
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "052.JPG",
+   "dino_score": 0.36567317644755043,
+   "clip_score": 0.34926386313004926,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.146,
+   "qwen_fc_score_signflip": 21.146
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "053.JPG",
+   "dino_score": 0.4344398856163025,
+   "clip_score": 0.43776270747184753,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -20.7745,
+   "qwen_fc_score_signflip": 20.7745
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "055.JPG",
+   "dino_score": 0.31192368268966675,
+   "clip_score": 0.3199301064014435,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3848,
+   "qwen_fc_score_signflip": 20.3848
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "056.JPG",
+   "dino_score": 0.33259899020195005,
+   "clip_score": 0.31621675328774884,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.9831,
+   "qwen_fc_score_signflip": 21.9831
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "057.JPG",
+   "dino_score": 0.2894378066062927,
+   "clip_score": 0.3163224160671234,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.183,
+   "qwen_fc_score_signflip": 22.183
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "058.JPG",
+   "dino_score": 0.3895779351393382,
+   "clip_score": 0.38129853118549695,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.9349,
+   "qwen_fc_score_signflip": 20.9349
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "061.JPG",
+   "dino_score": 0.27676162123680115,
+   "clip_score": 0.301799858158285,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.864,
+   "qwen_fc_score_signflip": 17.864
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "062.JPG",
+   "dino_score": 0.315634153286616,
+   "clip_score": 0.36592289263551886,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.4107,
+   "qwen_fc_score_signflip": 18.4107
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "064.JPG",
+   "dino_score": 0.3153555492560069,
+   "clip_score": 0.3079996542497115,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.1962,
+   "qwen_fc_score_signflip": 18.1962
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "065.JPG",
+   "dino_score": 0.22682324449221294,
+   "clip_score": 0.39363774386319245,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.5334,
+   "qwen_fc_score_signflip": 18.5334
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "066.JPG",
+   "dino_score": 0.21758452653884888,
+   "clip_score": 0.34962077032436023,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.8043,
+   "qwen_fc_score_signflip": 19.8043
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "067.JPG",
+   "dino_score": 0.22734816869099936,
+   "clip_score": 0.34823135896162555,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.4163,
+   "qwen_fc_score_signflip": 21.4163
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "068.JPG",
+   "dino_score": 0.3484221478303274,
+   "clip_score": 0.3572503219951283,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.1675,
+   "qwen_fc_score_signflip": 21.1675
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "069.JPG",
+   "dino_score": 0.26389511624972023,
+   "clip_score": 0.4052162305875258,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.9851,
+   "qwen_fc_score_signflip": 20.9851
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "070.JPG",
+   "dino_score": 0.33412325779596963,
+   "clip_score": 0.36670509522611444,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.9231,
+   "qwen_fc_score_signflip": 19.9231
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "071.JPG",
+   "dino_score": 0.3203133583068848,
+   "clip_score": 0.32669973373413086,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6873,
+   "qwen_fc_score_signflip": 20.6873
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "072.JPG",
+   "dino_score": 0.3534395198027293,
+   "clip_score": 0.32081057266755536,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.111,
+   "qwen_fc_score_signflip": 19.111
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "074.JPG",
+   "dino_score": 0.2691381831963857,
+   "clip_score": 0.3993390067057176,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -22.1063,
+   "qwen_fc_score_signflip": 22.1063
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "075.JPG",
+   "dino_score": 0.28494595090548197,
+   "clip_score": 0.34124328602444043,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.2877,
+   "qwen_fc_score_signflip": 20.2877
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "076.JPG",
+   "dino_score": 0.2991762439409892,
+   "clip_score": 0.3504321412606673,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.838,
+   "qwen_fc_score_signflip": 21.838
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "077.JPG",
+   "dino_score": 0.18791391253471373,
+   "clip_score": 0.3227208771488883,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6692,
+   "qwen_fc_score_signflip": 19.6692
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "078.JPG",
+   "dino_score": 0.26593796014785764,
+   "clip_score": 0.352084682746367,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.2343,
+   "qwen_fc_score_signflip": 21.2343
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "080.JPG",
+   "dino_score": 0.22906370560328165,
+   "clip_score": 0.3449069397016005,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.6883,
+   "qwen_fc_score_signflip": 16.6883
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "081.JPG",
+   "dino_score": 0.2205982506275177,
+   "clip_score": 0.3071477765386755,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.3816,
+   "qwen_fc_score_signflip": 17.3816
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "082.JPG",
+   "dino_score": 0.351056836048762,
+   "clip_score": 0.4193778769536452,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.7791,
+   "qwen_fc_score_signflip": 18.7791
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "084.JPG",
+   "dino_score": 0.390880811214447,
+   "clip_score": 0.44546316428618,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6103,
+   "qwen_fc_score_signflip": 19.6103
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "085.JPG",
+   "dino_score": 0.27127906680107117,
+   "clip_score": 0.40347592668099835,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4923,
+   "qwen_fc_score_signflip": 19.4923
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "086.JPG",
+   "dino_score": 0.2765118916829427,
+   "clip_score": 0.4048275595361536,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0946,
+   "qwen_fc_score_signflip": 20.0946
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "087.JPG",
+   "dino_score": 0.25459681351979574,
+   "clip_score": 0.37736203182827344,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.3633,
+   "qwen_fc_score_signflip": 18.3633
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "088.JPG",
+   "dino_score": 0.2039840777715047,
+   "clip_score": 0.3208265114914287,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5694,
+   "qwen_fc_score_signflip": 16.5694
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "089.JPG",
+   "dino_score": 0.2954377075036367,
+   "clip_score": 0.39136113361878827,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.9495,
+   "qwen_fc_score_signflip": 19.9495
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "091.JPG",
+   "dino_score": 0.22954607804616292,
+   "clip_score": 0.29857036200436676,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.8826,
+   "qwen_fc_score_signflip": 15.8826
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "092.JPG",
+   "dino_score": 0.19043872753779092,
+   "clip_score": 0.2733897322958166,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.4946,
+   "qwen_fc_score_signflip": 13.4946
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "093.JPG",
+   "dino_score": 0.23955636819203693,
+   "clip_score": 0.3480001119050113,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.587,
+   "qwen_fc_score_signflip": 15.587
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "094.JPG",
+   "dino_score": 0.17881998022397358,
+   "clip_score": 0.3391725746068088,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.6146,
+   "qwen_fc_score_signflip": 14.6146
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "096.JPG",
+   "dino_score": 0.1824169099330902,
+   "clip_score": 0.33078568090092053,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.6801,
+   "qwen_fc_score_signflip": 14.6801
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "097.JPG",
+   "dino_score": 0.17219452063242593,
+   "clip_score": 0.3170771192420613,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.4131,
+   "qwen_fc_score_signflip": 14.4131
+  },
+  {
+   "category": "fryum",
+   "label": "bad",
+   "query_id": "099.JPG",
+   "dino_score": 0.24821742971738178,
+   "clip_score": 0.4181177941235629,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.0777,
+   "qwen_fc_score_signflip": 15.0777
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "006.JPG",
+   "dino_score": 0.21676173535260287,
+   "clip_score": 0.30828261002898216,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.5067,
+   "qwen_fc_score_signflip": 14.5067
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "013.JPG",
+   "dino_score": 0.3397366160696203,
+   "clip_score": 0.3900189511477947,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.2623,
+   "qwen_fc_score_signflip": 11.2623
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "084.JPG",
+   "dino_score": 0.22803445566784253,
+   "clip_score": 0.3357071802020073,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.1789,
+   "qwen_fc_score_signflip": 12.1789
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "143.JPG",
+   "dino_score": 0.20167698101563888,
+   "clip_score": 0.3023194782435894,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.3651,
+   "qwen_fc_score_signflip": 15.3651
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "148.JPG",
+   "dino_score": 0.15227042544971814,
+   "clip_score": 0.24930273741483688,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.9104,
+   "qwen_fc_score_signflip": 11.9104
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "166.JPG",
+   "dino_score": 0.30269704081795434,
+   "clip_score": 0.3254751153290272,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1691,
+   "qwen_fc_score_signflip": 13.1691
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "228.JPG",
+   "dino_score": 0.2669752754948356,
+   "clip_score": 0.2784543000161648,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -10.5705,
+   "qwen_fc_score_signflip": 10.5705
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "239.JPG",
+   "dino_score": 0.2745350328358737,
+   "clip_score": 0.3987990878522396,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.9001,
+   "qwen_fc_score_signflip": 12.9001
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "244.JPG",
+   "dino_score": 0.18404717337001453,
+   "clip_score": 0.3338998146355152,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.4319,
+   "qwen_fc_score_signflip": 11.4319
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "272.JPG",
+   "dino_score": 0.25329302928664466,
+   "clip_score": 0.32934214919805527,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.1529,
+   "qwen_fc_score_signflip": 15.1529
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "276.JPG",
+   "dino_score": 0.2715733999555761,
+   "clip_score": 0.32718145474791527,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.0831,
+   "qwen_fc_score_signflip": 12.0831
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "284.JPG",
+   "dino_score": 0.2592544447291981,
+   "clip_score": 0.3536333292722702,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.4599,
+   "qwen_fc_score_signflip": 12.4599
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "307.JPG",
+   "dino_score": 0.2560976879163222,
+   "clip_score": 0.34335509315133095,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.3072,
+   "qwen_fc_score_signflip": 15.3072
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "324.JPG",
+   "dino_score": 0.300422492352399,
+   "clip_score": 0.42098863050341606,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.7511,
+   "qwen_fc_score_signflip": 12.7511
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "337.JPG",
+   "dino_score": 0.1696259162642739,
+   "clip_score": 0.31093985587358475,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.7056,
+   "qwen_fc_score_signflip": 12.7056
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "344.JPG",
+   "dino_score": 0.2770990187471563,
+   "clip_score": 0.40728823468089104,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.1279,
+   "qwen_fc_score_signflip": 13.1279
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "367.JPG",
+   "dino_score": 0.3140729557384144,
+   "clip_score": 0.33222901448607445,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3582,
+   "qwen_fc_score_signflip": 14.3582
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "369.JPG",
+   "dino_score": 0.22642591324719516,
+   "clip_score": 0.33373570442199707,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.181,
+   "qwen_fc_score_signflip": 16.181
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "389.JPG",
+   "dino_score": 0.22839802232655612,
+   "clip_score": 0.36182842403650284,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.5534,
+   "qwen_fc_score_signflip": 13.5534
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "392.JPG",
+   "dino_score": 0.16620406237515536,
+   "clip_score": 0.3305731900036335,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.2936,
+   "qwen_fc_score_signflip": 12.2936
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "400.JPG",
+   "dino_score": 0.3889469558542425,
+   "clip_score": 0.36346224322915077,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.9417,
+   "qwen_fc_score_signflip": 13.9417
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "402.JPG",
+   "dino_score": 0.16824018413370306,
+   "clip_score": 0.27159637957811356,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -10.9291,
+   "qwen_fc_score_signflip": 10.9291
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "405.JPG",
+   "dino_score": 0.24892371080138467,
+   "clip_score": 0.30895596370100975,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.0058,
+   "qwen_fc_score_signflip": 12.0058
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "435.JPG",
+   "dino_score": 0.2188251424919475,
+   "clip_score": 0.31406330317258835,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.832,
+   "qwen_fc_score_signflip": 14.832
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "446.JPG",
+   "dino_score": 0.22943115234375,
+   "clip_score": 0.33623644709587097,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.541,
+   "qwen_fc_score_signflip": 11.541
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "460.JPG",
+   "dino_score": 0.2779322998090224,
+   "clip_score": 0.27097197994589806,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -14.3019,
+   "qwen_fc_score_signflip": 14.3019
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "461.JPG",
+   "dino_score": 0.2518159069798209,
+   "clip_score": 0.2592400833964348,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -12.5495,
+   "qwen_fc_score_signflip": 12.5495
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "good",
+   "query_id": "487.JPG",
+   "dino_score": 0.19133674556558783,
+   "clip_score": 0.27901775017380714,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -11.1604,
+   "qwen_fc_score_signflip": 11.1604
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "000.JPG",
+   "dino_score": 0.4540426947853782,
+   "clip_score": 0.3956732265651226,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0207,
+   "qwen_fc_score_signflip": 20.0207
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "001.JPG",
+   "dino_score": 0.3154357211156325,
+   "clip_score": 0.42290371656417847,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.8514,
+   "qwen_fc_score_signflip": 19.8514
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "002.JPG",
+   "dino_score": 0.43713041056286206,
+   "clip_score": 0.43427620083093643,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6345,
+   "qwen_fc_score_signflip": 19.6345
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "003.JPG",
+   "dino_score": 0.4525959464636716,
+   "clip_score": 0.49043530970811844,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2311,
+   "qwen_fc_score_signflip": 19.2311
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "004.JPG",
+   "dino_score": 0.4217268797484311,
+   "clip_score": 0.48491883650422096,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6241,
+   "qwen_fc_score_signflip": 19.6241
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "005.JPG",
+   "dino_score": 0.5033371069214561,
+   "clip_score": 0.5155456513166428,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0068,
+   "qwen_fc_score_signflip": 20.0068
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "006.JPG",
+   "dino_score": 0.38813988728956744,
+   "clip_score": 0.42395737022161484,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.3628,
+   "qwen_fc_score_signflip": 18.3628
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "007.JPG",
+   "dino_score": 0.26461386951533233,
+   "clip_score": 0.39846286177635193,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.4523,
+   "qwen_fc_score_signflip": 17.4523
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "008.JPG",
+   "dino_score": 0.5150292136452415,
+   "clip_score": 0.4711875803768635,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.8916,
+   "qwen_fc_score_signflip": 19.8916
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "012.JPG",
+   "dino_score": 0.5001036687330767,
+   "clip_score": 0.4934481121599674,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.1324,
+   "qwen_fc_score_signflip": 20.1324
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "013.JPG",
+   "dino_score": 0.45326158133420075,
+   "clip_score": 0.48487697169184685,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.0144,
+   "qwen_fc_score_signflip": 20.0144
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "015.JPG",
+   "dino_score": 0.3684379756450653,
+   "clip_score": 0.41641198471188545,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.2887,
+   "qwen_fc_score_signflip": 20.2887
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "016.JPG",
+   "dino_score": 0.2982849695465781,
+   "clip_score": 0.40721145272254944,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.7208,
+   "qwen_fc_score_signflip": 19.7208
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "017.JPG",
+   "dino_score": 0.4021805308081887,
+   "clip_score": 0.41730353608727455,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.8185,
+   "qwen_fc_score_signflip": 16.8185
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "018.JPG",
+   "dino_score": 0.34363213723356073,
+   "clip_score": 0.40558356791734695,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.5555,
+   "qwen_fc_score_signflip": 19.5555
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "019.JPG",
+   "dino_score": 0.3509053425355391,
+   "clip_score": 0.32878097891807556,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -21.0639,
+   "qwen_fc_score_signflip": 21.0639
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "020.JPG",
+   "dino_score": 0.4542985964905132,
+   "clip_score": 0.441780760884285,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5341,
+   "qwen_fc_score_signflip": 16.5341
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "021.JPG",
+   "dino_score": 0.3444293331016194,
+   "clip_score": 0.3652624785900116,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4583,
+   "qwen_fc_score_signflip": 19.4583
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "022.JPG",
+   "dino_score": 0.4496700438586148,
+   "clip_score": 0.49308760091662407,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.5695,
+   "qwen_fc_score_signflip": 20.5695
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "023.JPG",
+   "dino_score": 0.35347622632980347,
+   "clip_score": 0.3608107343316078,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4627,
+   "qwen_fc_score_signflip": 19.4627
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "024.JPG",
+   "dino_score": 0.37720361893827264,
+   "clip_score": 0.3940923176705837,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.295,
+   "qwen_fc_score_signflip": 18.295
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "025.JPG",
+   "dino_score": 0.3773551502011039,
+   "clip_score": 0.3945254050195217,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.9348,
+   "qwen_fc_score_signflip": 18.9348
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "026.JPG",
+   "dino_score": 0.4300248162312941,
+   "clip_score": 0.44841763004660606,
+   "qwen_json_score": 0.5,
+   "qwen_fc_score": -18.9599,
+   "qwen_fc_score_signflip": 18.9599
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "027.JPG",
+   "dino_score": 0.26546161012216046,
+   "clip_score": 0.3449283801019192,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.2106,
+   "qwen_fc_score_signflip": 17.2106
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "029.JPG",
+   "dino_score": 0.3239840485832908,
+   "clip_score": 0.31905897706747055,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.9409,
+   "qwen_fc_score_signflip": 17.9409
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "031.JPG",
+   "dino_score": 0.42700730941512366,
+   "clip_score": 0.4885096065700054,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.8603,
+   "qwen_fc_score_signflip": 18.8603
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "032.JPG",
+   "dino_score": 0.419763827865774,
+   "clip_score": 0.43870067968964577,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.0976,
+   "qwen_fc_score_signflip": 19.0976
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "033.JPG",
+   "dino_score": 0.4171900451183319,
+   "clip_score": 0.46158338710665703,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.623,
+   "qwen_fc_score_signflip": 16.623
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "034.JPG",
+   "dino_score": 0.38447974215854297,
+   "clip_score": 0.3642789460718632,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.4591,
+   "qwen_fc_score_signflip": 18.4591
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "037.JPG",
+   "dino_score": 0.47253406047821045,
+   "clip_score": 0.41614555194973946,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.5925,
+   "qwen_fc_score_signflip": 18.5925
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "039.JPG",
+   "dino_score": 0.3998825821009549,
+   "clip_score": 0.47360485792160034,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.9042,
+   "qwen_fc_score_signflip": 16.9042
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "042.JPG",
+   "dino_score": 0.5923977223309603,
+   "clip_score": 0.5986728221178055,
+   "qwen_json_score": 0.7,
+   "qwen_fc_score": -18.4552,
+   "qwen_fc_score_signflip": 18.4552
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "043.JPG",
+   "dino_score": 0.534406071359461,
+   "clip_score": 0.5452863723039627,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -21.9312,
+   "qwen_fc_score_signflip": 21.9312
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "044.JPG",
+   "dino_score": 0.5735198096795515,
+   "clip_score": 0.5593391358852386,
+   "qwen_json_score": 0.7,
+   "qwen_fc_score": -19.0268,
+   "qwen_fc_score_signflip": 19.0268
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "045.JPG",
+   "dino_score": 0.6074194420467723,
+   "clip_score": 0.5899970084428787,
+   "qwen_json_score": 0.7,
+   "qwen_fc_score": -16.7603,
+   "qwen_fc_score_signflip": 16.7603
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "047.JPG",
+   "dino_score": 0.6057220751588995,
+   "clip_score": 0.5689211487770081,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -19.2483,
+   "qwen_fc_score_signflip": 19.2483
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "048.JPG",
+   "dino_score": 0.5136215659705076,
+   "clip_score": 0.5843568220734596,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -19.7558,
+   "qwen_fc_score_signflip": 19.7558
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "050.JPG",
+   "dino_score": 0.21658957275477322,
+   "clip_score": 0.341631431132555,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.2887,
+   "qwen_fc_score_signflip": 18.2887
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "051.JPG",
+   "dino_score": 0.5278321612964977,
+   "clip_score": 0.5090944990515709,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.3391,
+   "qwen_fc_score_signflip": 19.3391
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "052.JPG",
+   "dino_score": 0.32688573002815247,
+   "clip_score": 0.33506087586283684,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.7803,
+   "qwen_fc_score_signflip": 18.7803
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "053.JPG",
+   "dino_score": 0.335426617752422,
+   "clip_score": 0.4439110904932022,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2166,
+   "qwen_fc_score_signflip": 19.2166
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "055.JPG",
+   "dino_score": 0.2962888479232788,
+   "clip_score": 0.4083007499575615,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.4763,
+   "qwen_fc_score_signflip": 19.4763
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "056.JPG",
+   "dino_score": 0.25297687270424585,
+   "clip_score": 0.3928328976035118,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.5274,
+   "qwen_fc_score_signflip": 18.5274
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "057.JPG",
+   "dino_score": 0.3223300115628676,
+   "clip_score": 0.37146487459540367,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.7767,
+   "qwen_fc_score_signflip": 17.7767
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "058.JPG",
+   "dino_score": 0.35339229757135565,
+   "clip_score": 0.4213833883404732,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.4565,
+   "qwen_fc_score_signflip": 18.4565
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "060.JPG",
+   "dino_score": 0.38577768206596375,
+   "clip_score": 0.45134618878364563,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.2047,
+   "qwen_fc_score_signflip": 19.2047
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "061.JPG",
+   "dino_score": 0.3074609230865132,
+   "clip_score": 0.43095341324806213,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.1783,
+   "qwen_fc_score_signflip": 20.1783
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "062.JPG",
+   "dino_score": 0.3408270694992759,
+   "clip_score": 0.4461613781750202,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.4217,
+   "qwen_fc_score_signflip": 16.4217
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "063.JPG",
+   "dino_score": 0.27670441703362897,
+   "clip_score": 0.35376423969864845,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -13.8869,
+   "qwen_fc_score_signflip": 13.8869
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "064.JPG",
+   "dino_score": 0.29238026250492444,
+   "clip_score": 0.3334571234881878,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.6883,
+   "qwen_fc_score_signflip": 19.6883
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "065.JPG",
+   "dino_score": 0.3035203679041429,
+   "clip_score": 0.39780182763934135,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.5688,
+   "qwen_fc_score_signflip": 19.5688
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "066.JPG",
+   "dino_score": 0.40495646270838653,
+   "clip_score": 0.45817211642861366,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.1581,
+   "qwen_fc_score_signflip": 19.1581
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "067.JPG",
+   "dino_score": 0.34505581855773926,
+   "clip_score": 0.46638690680265427,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.6973,
+   "qwen_fc_score_signflip": 18.6973
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "068.JPG",
+   "dino_score": 0.3611051684076136,
+   "clip_score": 0.45185963809490204,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.0463,
+   "qwen_fc_score_signflip": 19.0463
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "069.JPG",
+   "dino_score": 0.31145528771660547,
+   "clip_score": 0.4059530980885029,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.3356,
+   "qwen_fc_score_signflip": 18.3356
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "071.JPG",
+   "dino_score": 0.32603472200306977,
+   "clip_score": 0.5040860995650291,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.4373,
+   "qwen_fc_score_signflip": 20.4373
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "072.JPG",
+   "dino_score": 0.3926069871945815,
+   "clip_score": 0.4268682040274143,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.2798,
+   "qwen_fc_score_signflip": 20.2798
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "073.JPG",
+   "dino_score": 0.27460239963098004,
+   "clip_score": 0.39603614434599876,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.077,
+   "qwen_fc_score_signflip": 15.077
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "074.JPG",
+   "dino_score": 0.324280630458485,
+   "clip_score": 0.4374639727175236,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.0237,
+   "qwen_fc_score_signflip": 18.0237
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "075.JPG",
+   "dino_score": 0.2902892990545793,
+   "clip_score": 0.41307535767555237,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.1952,
+   "qwen_fc_score_signflip": 15.1952
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "076.JPG",
+   "dino_score": 0.25447412783449347,
+   "clip_score": 0.38110992312431335,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.6415,
+   "qwen_fc_score_signflip": 20.6415
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "078.JPG",
+   "dino_score": 0.22435835003852844,
+   "clip_score": 0.4127872437238693,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.1989,
+   "qwen_fc_score_signflip": 19.1989
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "079.JPG",
+   "dino_score": 0.3152611011808569,
+   "clip_score": 0.420384481549263,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.7734,
+   "qwen_fc_score_signflip": 18.7734
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "081.JPG",
+   "dino_score": 0.30133267695253546,
+   "clip_score": 0.39830369129776955,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -19.1267,
+   "qwen_fc_score_signflip": 19.1267
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "082.JPG",
+   "dino_score": 0.3662594963203777,
+   "clip_score": 0.423081636428833,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.8472,
+   "qwen_fc_score_signflip": 17.8472
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "083.JPG",
+   "dino_score": 0.30320277268236334,
+   "clip_score": 0.41192784532904625,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.7244,
+   "qwen_fc_score_signflip": 16.7244
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "084.JPG",
+   "dino_score": 0.4248575215989893,
+   "clip_score": 0.49813077226281166,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.6736,
+   "qwen_fc_score_signflip": 18.6736
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "086.JPG",
+   "dino_score": 0.30937628041614185,
+   "clip_score": 0.41963372379541397,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.9452,
+   "qwen_fc_score_signflip": 20.9452
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "087.JPG",
+   "dino_score": 0.29706309058449487,
+   "clip_score": 0.43075455352663994,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.6803,
+   "qwen_fc_score_signflip": 17.6803
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "089.JPG",
+   "dino_score": 0.2484434978528456,
+   "clip_score": 0.36368244141340256,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -20.3858,
+   "qwen_fc_score_signflip": 20.3858
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "091.JPG",
+   "dino_score": 0.5130984241312201,
+   "clip_score": 0.5753621533513069,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.5611,
+   "qwen_fc_score_signflip": 16.5611
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "092.JPG",
+   "dino_score": 0.4925122586163608,
+   "clip_score": 0.5093175023794174,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -17.1234,
+   "qwen_fc_score_signflip": 17.1234
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "093.JPG",
+   "dino_score": 0.5350999452851035,
+   "clip_score": 0.5030669718980789,
+   "qwen_json_score": 0.7,
+   "qwen_fc_score": -17.1623,
+   "qwen_fc_score_signflip": 17.1623
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "094.JPG",
+   "dino_score": 0.4877733452753587,
+   "clip_score": 0.48374855145812035,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.7694,
+   "qwen_fc_score_signflip": 16.7694
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "095.JPG",
+   "dino_score": 0.4141374338756908,
+   "clip_score": 0.5016855709254742,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -18.335,
+   "qwen_fc_score_signflip": 18.335
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "097.JPG",
+   "dino_score": 0.557917670770125,
+   "clip_score": 0.4852508343756199,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -16.6471,
+   "qwen_fc_score_signflip": 16.6471
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "098.JPG",
+   "dino_score": 0.5091134634884921,
+   "clip_score": 0.5021466165781021,
+   "qwen_json_score": 0.0,
+   "qwen_fc_score": -15.5954,
+   "qwen_fc_score_signflip": 15.5954
+  },
+  {
+   "category": "pipe_fryum",
+   "label": "bad",
+   "query_id": "099.JPG",
+   "dino_score": 0.4273745363408869,
+   "clip_score": 0.4185938462615013,
+   "qwen_json_score": 0.6,
+   "qwen_fc_score": -17.1301,
+   "qwen_fc_score_signflip": 17.1301
+  }
+ ]
+}

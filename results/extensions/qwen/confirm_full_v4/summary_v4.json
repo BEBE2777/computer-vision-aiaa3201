@@ -1,0 +1,218 @@
+{
+ "protocol": "qwen_fc_conf_heldout_v4",
+ "n_test": 696,
+ "json_valid_rate": 1.0,
+ "mean_latency_gen_ms": 2632.3,
+ "p95_latency_gen_ms": 3552.1,
+ "mean_latency_fc_ms": 2636.0,
+ "mean_peak_gpu_gb": 23.47,
+ "qwen_fc_conf": {
+  "thresholds": {
+   "candle": 15.3927,
+   "capsules": 17.9082,
+   "cashew": 22.0903,
+   "chewinggum": 20.0253,
+   "fryum": 16.4309,
+   "pipe_fryum": 15.7759
+  },
+  "per_category": {
+   "candle": {
+    "auroc": 0.9426364234056541,
+    "thr_p95_calib": 15.3927,
+    "fpr": 0.141,
+    "recall": 0.9231,
+    "n_normal": 78,
+    "n_anom": 78
+   },
+   "capsules": {
+    "auroc": 0.9200404858299596,
+    "thr_p95_calib": 17.9082,
+    "fpr": 0.0526,
+    "recall": 0.8462,
+    "n_normal": 38,
+    "n_anom": 78
+   },
+   "cashew": {
+    "auroc": 0.9317765567765568,
+    "thr_p95_calib": 22.0903,
+    "fpr": 0.0,
+    "recall": 0.2564,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "chewinggum": {
+    "auroc": 0.9867216117216118,
+    "thr_p95_calib": 20.0253,
+    "fpr": 0.0,
+    "recall": 0.859,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "fryum": {
+    "auroc": 0.9716117216117216,
+    "thr_p95_calib": 16.4309,
+    "fpr": 0.0,
+    "recall": 0.859,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "pipe_fryum": {
+    "auroc": 0.9922161172161172,
+    "thr_p95_calib": 15.7759,
+    "fpr": 0.0357,
+    "recall": 0.9487,
+    "n_normal": 28,
+    "n_anom": 78
+   }
+  },
+  "macro_auroc": 0.9575,
+  "macro_ci95": [
+   0.9423,
+   0.9711
+  ],
+  "fpr_ci95": {
+   "candle": [
+    0.0674,
+    0.2239
+   ],
+   "capsules": [
+    0.0,
+    0.1364
+   ],
+   "cashew": [
+    0.0,
+    0.0
+   ],
+   "chewinggum": [
+    0.0,
+    0.0
+   ],
+   "fryum": [
+    0.0,
+    0.0
+   ],
+   "pipe_fryum": [
+    0.0,
+    0.1176
+   ]
+  },
+  "recall_ci95": {
+   "candle": [
+    0.8592,
+    0.975
+   ],
+   "capsules": [
+    0.7606,
+    0.9221
+   ],
+   "cashew": [
+    0.1644,
+    0.3544
+   ],
+   "chewinggum": [
+    0.7794,
+    0.9342
+   ],
+   "fryum": [
+    0.775,
+    0.9315
+   ],
+   "pipe_fryum": [
+    0.8947,
+    0.9878
+   ]
+  }
+ },
+ "dino": {
+  "name": "DINOv2@448 (1-shot seed0, own calib thr)",
+  "macro_auroc": 0.9313,
+  "macro_ci95": [
+   0.91,
+   0.9507
+  ],
+  "per_category": {
+   "candle": {
+    "auroc": 0.9013806706114399,
+    "thr_stored": 0.2687,
+    "fpr": 0.1026,
+    "recall": 0.7949
+   },
+   "capsules": {
+    "auroc": 0.9497300944669366,
+    "thr_stored": 0.2085,
+    "fpr": 0.1053,
+    "recall": 0.6795
+   },
+   "cashew": {
+    "auroc": 0.9230769230769231,
+    "thr_stored": 0.2376,
+    "fpr": 0.0,
+    "recall": 0.6667
+   },
+   "chewinggum": {
+    "auroc": 0.9798534798534798,
+    "thr_stored": 0.223,
+    "fpr": 0.1071,
+    "recall": 0.9487
+   },
+   "fryum": {
+    "auroc": 0.9203296703296703,
+    "thr_stored": 0.2196,
+    "fpr": 0.1071,
+    "recall": 0.8462
+   },
+   "pipe_fryum": {
+    "auroc": 0.9134615384615384,
+    "thr_stored": 0.2981,
+    "fpr": 0.1786,
+    "recall": 0.8333
+   }
+  }
+ },
+ "clip": {
+  "name": "CLIP L9@448 (1-shot seed0, own calib thr)",
+  "macro_auroc": 0.853,
+  "macro_ci95": [
+   0.8225,
+   0.8829
+  ],
+  "per_category": {
+   "candle": {
+    "auroc": 0.8902038132807364,
+    "thr_stored": 0.355,
+    "fpr": 0.2821,
+    "recall": 0.8974
+   },
+   "capsules": {
+    "auroc": 0.77834008097166,
+    "thr_stored": 0.4744,
+    "fpr": 0.0,
+    "recall": 0.1538
+   },
+   "cashew": {
+    "auroc": 0.8342490842490843,
+    "thr_stored": 0.3293,
+    "fpr": 0.0357,
+    "recall": 0.4231
+   },
+   "chewinggum": {
+    "auroc": 0.9326923076923077,
+    "thr_stored": 0.3673,
+    "fpr": 0.0357,
+    "recall": 0.7949
+   },
+   "fryum": {
+    "auroc": 0.7472527472527473,
+    "thr_stored": 0.368,
+    "fpr": 0.1071,
+    "recall": 0.3333
+   },
+   "pipe_fryum": {
+    "auroc": 0.9354395604395604,
+    "thr_stored": 0.345,
+    "fpr": 0.25,
+    "recall": 0.9231
+   }
+  }
+ }
+}

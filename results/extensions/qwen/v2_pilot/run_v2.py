@@ -80,6 +80,8 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="smoke: first N entries")
     ap.add_argument("--offset", type=int, default=0)
     ap.add_argument("--max-new-tokens", type=int, default=256)
+    ap.add_argument("--skip-gen", action="store_true",
+                    help="calibration mode: fc scoring only, no JSON generation")
     args = ap.parse_args()
 
     out_path = args.out or f"{BASE}/v2/predictions_v2_{args.model}.json"
@@ -111,15 +113,17 @@ def main():
         torch.cuda.reset_peak_memory_stats()
 
         # pass A: greedy JSON (legacy readout)
-        t0 = time.time()
-        with torch.no_grad():
-            out = model.generate(**inputs, max_new_tokens=args.max_new_tokens,
-                                 do_sample=False,
-                                 pad_token_id=processor.tokenizer.eos_token_id)
-        gen_ms = (time.time() - t0) * 1000
-        raw = processor.batch_decode(out[:, inputs.input_ids.shape[1]:],
-                                     skip_special_tokens=True)[0]
-        parsed, perr = parse_json(raw)
+        gen_ms, raw, parsed, perr = None, "", None, None
+        if not args.skip_gen:
+            t0 = time.time()
+            with torch.no_grad():
+                out = model.generate(**inputs, max_new_tokens=args.max_new_tokens,
+                                     do_sample=False,
+                                     pad_token_id=processor.tokenizer.eos_token_id)
+            gen_ms = (time.time() - t0) * 1000
+            raw = processor.batch_decode(out[:, inputs.input_ids.shape[1]:],
+                                         skip_special_tokens=True)[0]
+            parsed, perr = parse_json(raw)
 
         # pass B/C: forced-choice scoring
         t1 = time.time()
@@ -133,10 +137,11 @@ def main():
             "query_id": e["query_id"],
             "reference_ids": e["reference_files"],
             "input_tokens": int(inputs.input_ids.shape[1]),
-            "latency_gen_ms": round(gen_ms, 1),
+            "latency_gen_ms": round(gen_ms, 1) if gen_ms is not None else None,
             "latency_fc_ms": round(fc_ms, 1),
             "peak_gpu_gb": round(torch.cuda.max_memory_allocated() / 1e9, 2),
-            "status": "ok" if parsed else "json_fail",
+            "status": ("fc_only" if args.skip_gen else
+                       ("ok" if parsed else "json_fail")),
             "parse_error": perr,
             "anomaly_score": parsed.get("anomaly_score") if parsed else None,
             "decision": parsed.get("decision") if parsed else None,
@@ -149,8 +154,9 @@ def main():
             "fc_score_mean": round((s_ng - s_ok) / max(n_cand, 1), 4),
         }
         records.append(rec)
+        gen_str = "skip" if gen_ms is None else f"{gen_ms:.0f}ms"
         print(f"[{args.offset+idx+1}/{len(entries)+args.offset}] {e['category']:11s} "
-              f"{e['true_label_for_eval_ONLY']:4s} gen={gen_ms:.0f}ms fc={fc_ms:.0f}ms "
+              f"{e['true_label_for_eval_ONLY']:4s} gen={gen_str} fc={fc_ms:.0f}ms "
               f"json={rec['anomaly_score']} fc={rec['fc_score']:.2f}", flush=True)
         if (idx + 1) % 10 == 0 or idx == len(entries) - 1:
             partial = {"meta": meta(args, model_id, len(records)), "records": records}

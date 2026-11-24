@@ -89,8 +89,9 @@ def main():
     res["pooled_120"] = {k: auroc([r[k] for r in rows], labels_all) for k in keys}
     res["sources"] = {"dino": "p2-anomaly/results/part3/scores/e1_dino448_nomask.json",
                       "clip": "p2-anomaly/results/part3/scores/e1_clip448_L9_nomask.json",
-                      "qwen": "results/extensions/qwen/v2_pilot/predictions_v2_7b.json",
-                      "matched": "1-shot seed0, 448, nomask, archived refs; same 120 images"}
+                      "qwen": os.path.relpath(a.predictions, REPO).replace("\\", "/"),
+                      "manifest": os.path.relpath(a.manifest, REPO).replace("\\", "/"),
+                      "matched": "1-shot seed0, 448, nomask, archived refs; same image set"}
     out = a.out
     json.dump({"summary": res, "rows": rows}, open(out, "w"), indent=1, ensure_ascii=False)
     for k in keys:

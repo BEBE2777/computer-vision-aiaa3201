@@ -71,7 +71,8 @@
    "dino": "p2-anomaly/results/part3/scores/e1_dino448_nomask.json",
    "clip": "p2-anomaly/results/part3/scores/e1_clip448_L9_nomask.json",
    "qwen": "results/extensions/qwen/v2_pilot/predictions_v2_7b.json",
-   "matched": "1-shot seed0, 448, nomask, archived refs; same 120 images"
+   "manifest": "results/extensions/qwen/v2_pilot/manifest_v2.json",
+   "matched": "1-shot seed0, 448, nomask, archived refs; same image set"
   }
  },
  "rows": [

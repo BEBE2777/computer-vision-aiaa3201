@@ -70,8 +70,9 @@
   "sources": {
    "dino": "p2-anomaly/results/part3/scores/e1_dino448_nomask.json",
    "clip": "p2-anomaly/results/part3/scores/e1_clip448_L9_nomask.json",
-   "qwen": "results/extensions/qwen/v2_pilot/predictions_v2_7b.json",
-   "matched": "1-shot seed0, 448, nomask, archived refs; same 120 images"
+   "qwen": "results/extensions/qwen/confirm_pilot_v3/predictions_v3_7b.json",
+   "manifest": "results/extensions/qwen/confirm_pilot_v3/manifest_v3.json",
+   "matched": "1-shot seed0, 448, nomask, archived refs; same image set"
   }
  },
  "rows": [

@@ -24,7 +24,8 @@ Manifest：`manifest_v3.json`，sha256 `cee613f85e1570c2…`，120 张（六类�
 ### 2B — 未确认
 `fc_conf` 宏平均 0.34（candle 0.56 / capsules 0.77 / cashew 0.17 / chewinggum 0.06 /
 fryum 0.17 / pipe_fryum 0.31），仅 2/6 类 > 0.55。方向不一致，判据不通过。
-即：**该反相现象是 7B 规模的，不是 2B 的**。
+措辞注意：这只能表述为"**2B 在同规模 pilot 上未能复现该方向一致的反相**"；
+两轮均为每类 20 张的小样本，不能据此断言"反相仅为 7B 独有"或任何规模因果结论。
 
 ## 同一 120 张（v3 图）的 matched 对照
 来源同 v2：E1 工具的逐图 dump（1-shot/seed0/448/nomask，参考图与归档 refs 同规则）。

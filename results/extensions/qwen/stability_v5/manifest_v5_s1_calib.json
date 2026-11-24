@@ -1,0 +1,1571 @@
+{
+ "protocol": "qwen_fc_conf_stability_v5",
+ "frozen_before_inference": true,
+ "shots": 1,
+ "refs_seed": 1,
+ "split": "calib",
+ "source_manifest": "manifest_v4_calib.json (query IDs identical)",
+ "n_images": 120,
+ "entries": [
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0000.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0001.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0001.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0002.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0002.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0003.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0003.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0004.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0004.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0005.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0005.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0006.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0006.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0007.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0007.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0008.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0008.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0009.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0009.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0010.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0010.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0012.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0012.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0014.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0014.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0015.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0015.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0017.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0017.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0018.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0018.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0019.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0019.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0020.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0020.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0021.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0021.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0022.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0022.JPG",
+   "reference_files": [
+    "0025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/000.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/001.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/002.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/003.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/004.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/005.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/006.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/007.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/008.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/009.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/010.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "012.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/012.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/014.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/015.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/017.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/018.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/019.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/020.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/021.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/022.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/000.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/001.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/002.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/003.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/004.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/005.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/007.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/008.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/009.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/010.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/011.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/014.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/015.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/016.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/017.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/018.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/019.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/020.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/021.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/022.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/000.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/001.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/002.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/003.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/004.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/005.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/007.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/008.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/009.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/010.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/011.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/014.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/015.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/016.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/017.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/018.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/019.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/020.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/021.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/022.JPG",
+   "reference_files": [
+    "024.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/024.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/000.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/001.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/002.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/003.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/004.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/005.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/007.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/008.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/009.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/010.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/011.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/014.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/015.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/016.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/017.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/018.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/019.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/020.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/021.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/022.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/000.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/001.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/002.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/003.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/004.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/005.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/007.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/008.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/009.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/010.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/011.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/014.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/015.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/016.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/017.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/018.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/019.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/020.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/021.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/022.JPG",
+   "reference_files": [
+    "025.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/025.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 calib manifest; refs = archived 1shot_seed1"
+  }
+ ]
+}

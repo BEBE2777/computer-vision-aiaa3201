@@ -1,0 +1,249 @@
+{
+ "protocol": "qwen_fc_conf_stability_v5",
+ "n_test": 696,
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "per_seed": {
+  "0": {
+   "qwen_macro": 0.9575,
+   "qwen_ci95": [
+    0.9426,
+    0.971
+   ],
+   "dino_macro": 0.9313,
+   "clip_macro": 0.853,
+   "paired_qwen_minus_dino": {
+    "delta_mean": 0.0262,
+    "delta_ci95": [
+     0.0028,
+     0.0501
+    ]
+   },
+   "paired_qwen_minus_clip": {
+    "delta_mean": 0.1045,
+    "delta_ci95": [
+     0.0732,
+     0.1377
+    ]
+   },
+   "per_class": {
+    "candle": 0.9426364234056541,
+    "capsules": 0.9200404858299596,
+    "cashew": 0.9317765567765568,
+    "chewinggum": 0.9867216117216118,
+    "fryum": 0.9716117216117216,
+    "pipe_fryum": 0.9922161172161172
+   },
+   "thresholds": {
+    "candle": 15.3927,
+    "capsules": 17.9082,
+    "cashew": 22.0903,
+    "chewinggum": 20.0253,
+    "fryum": 16.4309,
+    "pipe_fryum": 15.7759
+   },
+   "fpr": {
+    "candle": 0.141,
+    "capsules": 0.0526,
+    "cashew": 0.0,
+    "chewinggum": 0.0,
+    "fryum": 0.0,
+    "pipe_fryum": 0.0357
+   },
+   "recall": {
+    "candle": 0.9231,
+    "capsules": 0.8462,
+    "cashew": 0.2564,
+    "chewinggum": 0.859,
+    "fryum": 0.859,
+    "pipe_fryum": 0.9487
+   },
+   "latency_fc_mean_ms": 2636.0,
+   "peak_gpu_gb": 23.47
+  },
+  "1": {
+   "qwen_macro": 0.9477,
+   "qwen_ci95": [
+    0.931,
+    0.9628
+   ],
+   "dino_macro": 0.9259,
+   "clip_macro": 0.8771,
+   "paired_qwen_minus_dino": {
+    "delta_mean": 0.0218,
+    "delta_ci95": [
+     -0.0016,
+     0.0457
+    ]
+   },
+   "paired_qwen_minus_clip": {
+    "delta_mean": 0.0705,
+    "delta_ci95": [
+     0.0434,
+     0.098
+    ]
+   },
+   "per_class": {
+    "candle": 0.9401709401709402,
+    "capsules": 0.9153171390013495,
+    "cashew": 0.9294871794871795,
+    "chewinggum": 0.9752747252747253,
+    "fryum": 0.9574175824175825,
+    "pipe_fryum": 0.9684065934065934
+   },
+   "thresholds": {
+    "candle": 13.6871,
+    "capsules": 17.885,
+    "cashew": 21.1869,
+    "chewinggum": 20.7499,
+    "fryum": 17.2129,
+    "pipe_fryum": 15.2803
+   },
+   "fpr": {
+    "candle": 0.1667,
+    "capsules": 0.1053,
+    "cashew": 0.0,
+    "chewinggum": 0.0,
+    "fryum": 0.0,
+    "pipe_fryum": 0.0714
+   },
+   "recall": {
+    "candle": 0.9103,
+    "capsules": 0.8077,
+    "cashew": 0.3333,
+    "chewinggum": 0.8462,
+    "fryum": 0.8077,
+    "pipe_fryum": 0.8846
+   },
+   "latency_fc_mean_ms": 4292.1,
+   "peak_gpu_gb": 23.46
+  },
+  "2": {
+   "qwen_macro": 0.9543,
+   "qwen_ci95": [
+    0.9387,
+    0.9679
+   ],
+   "dino_macro": 0.9417,
+   "clip_macro": 0.8798,
+   "paired_qwen_minus_dino": {
+    "delta_mean": 0.0127,
+    "delta_ci95": [
+     -0.0074,
+     0.0329
+    ]
+   },
+   "paired_qwen_minus_clip": {
+    "delta_mean": 0.0745,
+    "delta_ci95": [
+     0.0478,
+     0.1019
+    ]
+   },
+   "per_class": {
+    "candle": 0.950525969756739,
+    "capsules": 0.9139676113360324,
+    "cashew": 0.9308608058608059,
+    "chewinggum": 0.9789377289377289,
+    "fryum": 0.9592490842490843,
+    "pipe_fryum": 0.9922161172161172
+   },
+   "thresholds": {
+    "candle": 16.569,
+    "capsules": 17.6421,
+    "cashew": 21.4771,
+    "chewinggum": 20.0629,
+    "fryum": 16.1814,
+    "pipe_fryum": 13.5406
+   },
+   "fpr": {
+    "candle": 0.0641,
+    "capsules": 0.1579,
+    "cashew": 0.0,
+    "chewinggum": 0.0,
+    "fryum": 0.0,
+    "pipe_fryum": 0.2857
+   },
+   "recall": {
+    "candle": 0.8846,
+    "capsules": 0.8077,
+    "cashew": 0.2692,
+    "chewinggum": 0.8718,
+    "fryum": 0.859,
+    "pipe_fryum": 0.9872
+   },
+   "latency_fc_mean_ms": 5850.2,
+   "peak_gpu_gb": 23.46
+  }
+ },
+ "across_seeds": {
+  "qwen": {
+   "mean": 0.9532,
+   "std": 0.005,
+   "min": 0.9477,
+   "max": 0.9575,
+   "range": 0.0098
+  },
+  "dino": {
+   "mean": 0.933,
+   "std": 0.008,
+   "min": 0.9259,
+   "max": 0.9417,
+   "range": 0.0158
+  },
+  "clip": {
+   "mean": 0.87,
+   "std": 0.0148,
+   "min": 0.853,
+   "max": 0.8798,
+   "range": 0.0268
+  }
+ },
+ "per_class_across_seeds": {
+  "candle": {
+   "mean": 0.9444,
+   "std": 0.0054,
+   "min": 0.9402,
+   "max": 0.9505,
+   "range": 0.0104
+  },
+  "capsules": {
+   "mean": 0.9164,
+   "std": 0.0032,
+   "min": 0.914,
+   "max": 0.92,
+   "range": 0.0061
+  },
+  "cashew": {
+   "mean": 0.9307,
+   "std": 0.0012,
+   "min": 0.9295,
+   "max": 0.9318,
+   "range": 0.0023
+  },
+  "chewinggum": {
+   "mean": 0.9803,
+   "std": 0.0058,
+   "min": 0.9753,
+   "max": 0.9867,
+   "range": 0.0114
+  },
+  "fryum": {
+   "mean": 0.9628,
+   "std": 0.0077,
+   "min": 0.9574,
+   "max": 0.9716,
+   "range": 0.0142
+  },
+  "pipe_fryum": {
+   "mean": 0.9843,
+   "std": 0.0137,
+   "min": 0.9684,
+   "max": 0.9922,
+   "range": 0.0238
+  }
+ }
+}

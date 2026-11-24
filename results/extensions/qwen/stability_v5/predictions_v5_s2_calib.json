@@ -1,0 +1,2183 @@
+{
+ "meta": {
+  "protocol": "qwen_fc_conf_stability_v5",
+  "model_id": "Qwen/Qwen2-VL-7B-Instruct",
+  "model_dir": "7b",
+  "dtype": "bfloat16",
+  "prompt_sha256": "596118ac764bc609c0e2885fdc09964898e26a171a20f6d4e4ac49eeb64a87af",
+  "candidates_sha256": {
+   "C_OK": "54eeda5fb6b99bda920db0b89f794d40182c60a96ccb30ca4d9697f9a34b6993",
+   "C_NG": "7b29b30e232e129abd39ab711845c378835e43d069c01bcbaa6e0315b2a8e533"
+  },
+  "candidates": {
+   "C_OK": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.5,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}",
+   "C_NG": "{\"decision\":\"NG\",\"anomaly_score\":1.0,\"confidence\":0.5,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+  },
+  "fc_score_def": "sum_logP(C_NG) - sum_logP(C_OK); fc_conf = -fc_score",
+  "manifest": "/data/disk2/home/qzheng610/qwen_work/v2/manifest_v5_s2_calib.json",
+  "n_records": 120,
+  "device": "NVIDIA RTX A6000"
+ },
+ "records": [
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0000.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 6925.8,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.9509,
+   "sum_logP_NG": -20.1093,
+   "n_cand_tokens": 31,
+   "fc_score": -13.1583,
+   "fc_score_mean": -0.4245
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0001.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 5476.9,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.7434,
+   "sum_logP_NG": -21.5296,
+   "n_cand_tokens": 31,
+   "fc_score": -14.7861,
+   "fc_score_mean": -0.477
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0002.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 5457.4,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8201,
+   "sum_logP_NG": -20.7164,
+   "n_cand_tokens": 31,
+   "fc_score": -13.8963,
+   "fc_score_mean": -0.4483
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0003.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2742.5,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.9723,
+   "sum_logP_NG": -20.9188,
+   "n_cand_tokens": 31,
+   "fc_score": -13.9465,
+   "fc_score_mean": -0.4499
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0004.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2541.2,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8477,
+   "sum_logP_NG": -20.6977,
+   "n_cand_tokens": 31,
+   "fc_score": -13.85,
+   "fc_score_mean": -0.4468
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0005.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2540.1,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.9221,
+   "sum_logP_NG": -20.7241,
+   "n_cand_tokens": 31,
+   "fc_score": -13.802,
+   "fc_score_mean": -0.4452
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0006.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2540.5,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8292,
+   "sum_logP_NG": -20.2237,
+   "n_cand_tokens": 31,
+   "fc_score": -13.3945,
+   "fc_score_mean": -0.4321
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0007.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2550.9,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8373,
+   "sum_logP_NG": -20.7001,
+   "n_cand_tokens": 31,
+   "fc_score": -13.8627,
+   "fc_score_mean": -0.4472
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0008.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2544.4,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -7.0236,
+   "sum_logP_NG": -20.1721,
+   "n_cand_tokens": 31,
+   "fc_score": -13.1485,
+   "fc_score_mean": -0.4241
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0009.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2540.6,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8486,
+   "sum_logP_NG": -20.7815,
+   "n_cand_tokens": 31,
+   "fc_score": -13.9329,
+   "fc_score_mean": -0.4494
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0010.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2657.1,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.9576,
+   "sum_logP_NG": -20.7353,
+   "n_cand_tokens": 31,
+   "fc_score": -13.7777,
+   "fc_score_mean": -0.4444
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0012.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2560.6,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.9278,
+   "sum_logP_NG": -19.8167,
+   "n_cand_tokens": 31,
+   "fc_score": -12.8889,
+   "fc_score_mean": -0.4158
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0014.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2545.4,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.7133,
+   "sum_logP_NG": -21.195,
+   "n_cand_tokens": 31,
+   "fc_score": -14.4817,
+   "fc_score_mean": -0.4672
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0015.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2536.7,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8603,
+   "sum_logP_NG": -21.1459,
+   "n_cand_tokens": 31,
+   "fc_score": -14.2856,
+   "fc_score_mean": -0.4608
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0017.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2769.7,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.9366,
+   "sum_logP_NG": -20.1792,
+   "n_cand_tokens": 31,
+   "fc_score": -13.2426,
+   "fc_score_mean": -0.4272
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0018.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2859.5,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.7895,
+   "sum_logP_NG": -23.3586,
+   "n_cand_tokens": 31,
+   "fc_score": -16.569,
+   "fc_score_mean": -0.5345
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0019.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2901.9,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.968,
+   "sum_logP_NG": -21.3328,
+   "n_cand_tokens": 31,
+   "fc_score": -14.3647,
+   "fc_score_mean": -0.4634
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0020.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2961.9,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8116,
+   "sum_logP_NG": -20.4705,
+   "n_cand_tokens": 31,
+   "fc_score": -13.6589,
+   "fc_score_mean": -0.4406
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0021.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2955.5,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8032,
+   "sum_logP_NG": -21.7556,
+   "n_cand_tokens": 31,
+   "fc_score": -14.9524,
+   "fc_score_mean": -0.4823
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0022.JPG",
+   "reference_ids": [
+    "0028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4257,
+   "latency_fc_ms": 2828.9,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.9025,
+   "sum_logP_NG": -21.0207,
+   "n_cand_tokens": 31,
+   "fc_score": -14.1182,
+   "fc_score_mean": -0.4554
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2867.6,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4048,
+   "sum_logP_NG": -23.2956,
+   "n_cand_tokens": 31,
+   "fc_score": -16.8907,
+   "fc_score_mean": -0.5449
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2878.6,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.5887,
+   "sum_logP_NG": -23.8516,
+   "n_cand_tokens": 31,
+   "fc_score": -17.2629,
+   "fc_score_mean": -0.5569
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2837.1,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.5232,
+   "sum_logP_NG": -23.3888,
+   "n_cand_tokens": 31,
+   "fc_score": -16.8656,
+   "fc_score_mean": -0.5441
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2894.9,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4634,
+   "sum_logP_NG": -23.1122,
+   "n_cand_tokens": 31,
+   "fc_score": -16.6488,
+   "fc_score_mean": -0.5371
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2870.3,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4028,
+   "sum_logP_NG": -23.0887,
+   "n_cand_tokens": 31,
+   "fc_score": -16.686,
+   "fc_score_mean": -0.5383
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2930.6,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4566,
+   "sum_logP_NG": -23.5408,
+   "n_cand_tokens": 31,
+   "fc_score": -17.0843,
+   "fc_score_mean": -0.5511
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2841.0,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.5426,
+   "sum_logP_NG": -23.1822,
+   "n_cand_tokens": 31,
+   "fc_score": -16.6397,
+   "fc_score_mean": -0.5368
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2864.6,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.3263,
+   "sum_logP_NG": -23.8476,
+   "n_cand_tokens": 31,
+   "fc_score": -17.5214,
+   "fc_score_mean": -0.5652
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2563.6,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4229,
+   "sum_logP_NG": -23.2096,
+   "n_cand_tokens": 31,
+   "fc_score": -16.7867,
+   "fc_score_mean": -0.5415
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2640.7,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.3984,
+   "sum_logP_NG": -23.1219,
+   "n_cand_tokens": 31,
+   "fc_score": -16.7235,
+   "fc_score_mean": -0.5395
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2553.7,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4057,
+   "sum_logP_NG": -22.5127,
+   "n_cand_tokens": 31,
+   "fc_score": -16.1069,
+   "fc_score_mean": -0.5196
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "012.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2682.9,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.5786,
+   "sum_logP_NG": -23.1452,
+   "n_cand_tokens": 31,
+   "fc_score": -16.5666,
+   "fc_score_mean": -0.5344
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2955.2,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4106,
+   "sum_logP_NG": -22.7613,
+   "n_cand_tokens": 31,
+   "fc_score": -16.3507,
+   "fc_score_mean": -0.5274
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2947.1,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.3496,
+   "sum_logP_NG": -23.2343,
+   "n_cand_tokens": 31,
+   "fc_score": -16.8847,
+   "fc_score_mean": -0.5447
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2966.5,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4856,
+   "sum_logP_NG": -23.2946,
+   "n_cand_tokens": 31,
+   "fc_score": -16.8091,
+   "fc_score_mean": -0.5422
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2980.7,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.456,
+   "sum_logP_NG": -23.5919,
+   "n_cand_tokens": 31,
+   "fc_score": -17.1359,
+   "fc_score_mean": -0.5528
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2970.8,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.5014,
+   "sum_logP_NG": -23.2876,
+   "n_cand_tokens": 31,
+   "fc_score": -16.7862,
+   "fc_score_mean": -0.5415
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2928.5,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4703,
+   "sum_logP_NG": -23.2266,
+   "n_cand_tokens": 31,
+   "fc_score": -16.7563,
+   "fc_score_mean": -0.5405
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2920.4,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.3172,
+   "sum_logP_NG": -23.9592,
+   "n_cand_tokens": 31,
+   "fc_score": -17.6421,
+   "fc_score_mean": -0.5691
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "reference_ids": [
+    "028.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4281,
+   "latency_fc_ms": 2966.1,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.4269,
+   "sum_logP_NG": -23.8749,
+   "n_cand_tokens": 31,
+   "fc_score": -17.448,
+   "fc_score_mean": -0.5628
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2894.2,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.7024,
+   "sum_logP_NG": -20.7829,
+   "n_cand_tokens": 31,
+   "fc_score": -14.0805,
+   "fc_score_mean": -0.4542
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2921.3,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.6527,
+   "sum_logP_NG": -21.1921,
+   "n_cand_tokens": 31,
+   "fc_score": -14.5394,
+   "fc_score_mean": -0.469
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2895.2,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.5966,
+   "sum_logP_NG": -20.4242,
+   "n_cand_tokens": 31,
+   "fc_score": -13.8276,
+   "fc_score_mean": -0.4461
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2533.2,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.5379,
+   "sum_logP_NG": -20.9584,
+   "n_cand_tokens": 31,
+   "fc_score": -14.4204,
+   "fc_score_mean": -0.4652
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2527.6,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.6791,
+   "sum_logP_NG": -20.0219,
+   "n_cand_tokens": 31,
+   "fc_score": -13.3429,
+   "fc_score_mean": -0.4304
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2527.6,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.7653,
+   "sum_logP_NG": -20.4801,
+   "n_cand_tokens": 31,
+   "fc_score": -13.7148,
+   "fc_score_mean": -0.4424
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2525.1,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.5549,
+   "sum_logP_NG": -20.1614,
+   "n_cand_tokens": 31,
+   "fc_score": -13.6064,
+   "fc_score_mean": -0.4389
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2527.6,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.7115,
+   "sum_logP_NG": -23.725,
+   "n_cand_tokens": 31,
+   "fc_score": -17.0136,
+   "fc_score_mean": -0.5488
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2529.6,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.5136,
+   "sum_logP_NG": -20.4029,
+   "n_cand_tokens": 31,
+   "fc_score": -13.8893,
+   "fc_score_mean": -0.448
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2532.8,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.5602,
+   "sum_logP_NG": -20.2411,
+   "n_cand_tokens": 31,
+   "fc_score": -13.681,
+   "fc_score_mean": -0.4413
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2528.3,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.6279,
+   "sum_logP_NG": -20.9404,
+   "n_cand_tokens": 31,
+   "fc_score": -14.3126,
+   "fc_score_mean": -0.4617
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2534.0,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.5263,
+   "sum_logP_NG": -22.7051,
+   "n_cand_tokens": 31,
+   "fc_score": -16.1789,
+   "fc_score_mean": -0.5219
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2535.7,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.6606,
+   "sum_logP_NG": -22.1433,
+   "n_cand_tokens": 31,
+   "fc_score": -15.4827,
+   "fc_score_mean": -0.4994
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2528.8,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.5642,
+   "sum_logP_NG": -21.2682,
+   "n_cand_tokens": 31,
+   "fc_score": -14.704,
+   "fc_score_mean": -0.4743
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2531.2,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.8734,
+   "sum_logP_NG": -28.3505,
+   "n_cand_tokens": 31,
+   "fc_score": -21.4771,
+   "fc_score_mean": -0.6928
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2538.0,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.6845,
+   "sum_logP_NG": -20.5078,
+   "n_cand_tokens": 31,
+   "fc_score": -13.8234,
+   "fc_score_mean": -0.4459
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2531.9,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.6345,
+   "sum_logP_NG": -20.2105,
+   "n_cand_tokens": 31,
+   "fc_score": -13.576,
+   "fc_score_mean": -0.4379
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2530.9,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.6823,
+   "sum_logP_NG": -20.0951,
+   "n_cand_tokens": 31,
+   "fc_score": -13.4128,
+   "fc_score_mean": -0.4327
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2532.5,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.4474,
+   "sum_logP_NG": -23.0538,
+   "n_cand_tokens": 31,
+   "fc_score": -16.6064,
+   "fc_score_mean": -0.5357
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4258,
+   "latency_fc_ms": 2529.8,
+   "peak_gpu_gb": 23.48,
+   "sum_logP_OK": -6.5257,
+   "sum_logP_NG": -20.8538,
+   "n_cand_tokens": 31,
+   "fc_score": -14.3281,
+   "fc_score_mean": -0.4622
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2535.0,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.6518,
+   "sum_logP_NG": -19.4412,
+   "n_cand_tokens": 31,
+   "fc_score": -12.7895,
+   "fc_score_mean": -0.4126
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2535.6,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.5968,
+   "sum_logP_NG": -19.9062,
+   "n_cand_tokens": 31,
+   "fc_score": -13.3095,
+   "fc_score_mean": -0.4293
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2538.4,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.5127,
+   "sum_logP_NG": -19.9497,
+   "n_cand_tokens": 31,
+   "fc_score": -13.4371,
+   "fc_score_mean": -0.4335
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2534.7,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.6823,
+   "sum_logP_NG": -20.3811,
+   "n_cand_tokens": 31,
+   "fc_score": -13.6988,
+   "fc_score_mean": -0.4419
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2534.7,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.4726,
+   "sum_logP_NG": -19.1059,
+   "n_cand_tokens": 31,
+   "fc_score": -12.6333,
+   "fc_score_mean": -0.4075
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2537.5,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.6166,
+   "sum_logP_NG": -20.7487,
+   "n_cand_tokens": 31,
+   "fc_score": -14.1321,
+   "fc_score_mean": -0.4559
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2533.0,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.5116,
+   "sum_logP_NG": -19.5356,
+   "n_cand_tokens": 31,
+   "fc_score": -13.024,
+   "fc_score_mean": -0.4201
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2537.3,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.5569,
+   "sum_logP_NG": -20.8854,
+   "n_cand_tokens": 31,
+   "fc_score": -14.3286,
+   "fc_score_mean": -0.4622
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2540.4,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.6586,
+   "sum_logP_NG": -19.0419,
+   "n_cand_tokens": 31,
+   "fc_score": -12.3832,
+   "fc_score_mean": -0.3995
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2535.4,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.6452,
+   "sum_logP_NG": -21.4506,
+   "n_cand_tokens": 31,
+   "fc_score": -14.8054,
+   "fc_score_mean": -0.4776
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2536.6,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.516,
+   "sum_logP_NG": -21.2661,
+   "n_cand_tokens": 31,
+   "fc_score": -14.7501,
+   "fc_score_mean": -0.4758
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2534.4,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.5446,
+   "sum_logP_NG": -20.1454,
+   "n_cand_tokens": 31,
+   "fc_score": -13.6008,
+   "fc_score_mean": -0.4387
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2541.7,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.6106,
+   "sum_logP_NG": -20.7058,
+   "n_cand_tokens": 31,
+   "fc_score": -14.0952,
+   "fc_score_mean": -0.4547
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2535.5,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.4983,
+   "sum_logP_NG": -26.5612,
+   "n_cand_tokens": 31,
+   "fc_score": -20.0629,
+   "fc_score_mean": -0.6472
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2532.9,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.6461,
+   "sum_logP_NG": -19.286,
+   "n_cand_tokens": 31,
+   "fc_score": -12.6398,
+   "fc_score_mean": -0.4077
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2535.3,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.5548,
+   "sum_logP_NG": -20.7421,
+   "n_cand_tokens": 31,
+   "fc_score": -14.1873,
+   "fc_score_mean": -0.4577
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2539.9,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.4803,
+   "sum_logP_NG": -19.5016,
+   "n_cand_tokens": 31,
+   "fc_score": -13.0213,
+   "fc_score_mean": -0.42
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2538.9,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.5567,
+   "sum_logP_NG": -19.8636,
+   "n_cand_tokens": 31,
+   "fc_score": -13.3069,
+   "fc_score_mean": -0.4293
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2539.9,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.3727,
+   "sum_logP_NG": -23.1135,
+   "n_cand_tokens": 31,
+   "fc_score": -16.7408,
+   "fc_score_mean": -0.54
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "reference_ids": [
+    "025.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4235,
+   "latency_fc_ms": 2535.4,
+   "peak_gpu_gb": 23.44,
+   "sum_logP_OK": -6.5649,
+   "sum_logP_NG": -19.4799,
+   "n_cand_tokens": 31,
+   "fc_score": -12.915,
+   "fc_score_mean": -0.4166
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 2540.0,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.829,
+   "sum_logP_NG": -20.1232,
+   "n_cand_tokens": 31,
+   "fc_score": -13.2942,
+   "fc_score_mean": -0.4288
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 2548.0,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.6973,
+   "sum_logP_NG": -20.6779,
+   "n_cand_tokens": 31,
+   "fc_score": -13.9806,
+   "fc_score_mean": -0.451
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 2694.0,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.8026,
+   "sum_logP_NG": -20.4513,
+   "n_cand_tokens": 31,
+   "fc_score": -13.6488,
+   "fc_score_mean": -0.4403
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 2616.4,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.7515,
+   "sum_logP_NG": -20.2886,
+   "n_cand_tokens": 31,
+   "fc_score": -13.5371,
+   "fc_score_mean": -0.4367
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 2548.9,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.693,
+   "sum_logP_NG": -20.5832,
+   "n_cand_tokens": 31,
+   "fc_score": -13.8902,
+   "fc_score_mean": -0.4481
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 2798.2,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.6133,
+   "sum_logP_NG": -20.8246,
+   "n_cand_tokens": 31,
+   "fc_score": -14.2113,
+   "fc_score_mean": -0.4584
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5493.8,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.6539,
+   "sum_logP_NG": -20.3513,
+   "n_cand_tokens": 31,
+   "fc_score": -13.6974,
+   "fc_score_mean": -0.4419
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5229.6,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.6722,
+   "sum_logP_NG": -21.4104,
+   "n_cand_tokens": 31,
+   "fc_score": -14.7381,
+   "fc_score_mean": -0.4754
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5467.5,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.7347,
+   "sum_logP_NG": -22.3859,
+   "n_cand_tokens": 31,
+   "fc_score": -15.6512,
+   "fc_score_mean": -0.5049
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5120.4,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.8606,
+   "sum_logP_NG": -20.4293,
+   "n_cand_tokens": 31,
+   "fc_score": -13.5687,
+   "fc_score_mean": -0.4377
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5204.6,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.7334,
+   "sum_logP_NG": -21.3342,
+   "n_cand_tokens": 31,
+   "fc_score": -14.6008,
+   "fc_score_mean": -0.471
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 4720.3,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.5597,
+   "sum_logP_NG": -22.7411,
+   "n_cand_tokens": 31,
+   "fc_score": -16.1814,
+   "fc_score_mean": -0.522
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5484.5,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.8753,
+   "sum_logP_NG": -20.0185,
+   "n_cand_tokens": 31,
+   "fc_score": -13.1432,
+   "fc_score_mean": -0.424
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5554.0,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.6651,
+   "sum_logP_NG": -21.7162,
+   "n_cand_tokens": 31,
+   "fc_score": -15.0511,
+   "fc_score_mean": -0.4855
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5554.0,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.667,
+   "sum_logP_NG": -21.5641,
+   "n_cand_tokens": 31,
+   "fc_score": -14.897,
+   "fc_score_mean": -0.4805
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5548.3,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.6908,
+   "sum_logP_NG": -20.1459,
+   "n_cand_tokens": 31,
+   "fc_score": -13.4551,
+   "fc_score_mean": -0.434
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5546.1,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.7592,
+   "sum_logP_NG": -20.3491,
+   "n_cand_tokens": 31,
+   "fc_score": -13.5899,
+   "fc_score_mean": -0.4384
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5543.4,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.7729,
+   "sum_logP_NG": -20.3017,
+   "n_cand_tokens": 31,
+   "fc_score": -13.5288,
+   "fc_score_mean": -0.4364
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5544.7,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.7091,
+   "sum_logP_NG": -22.6824,
+   "n_cand_tokens": 31,
+   "fc_score": -15.9733,
+   "fc_score_mean": -0.5153
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4282,
+   "latency_fc_ms": 5163.3,
+   "peak_gpu_gb": 23.52,
+   "sum_logP_OK": -6.6439,
+   "sum_logP_NG": -20.4171,
+   "n_cand_tokens": 31,
+   "fc_score": -13.7732,
+   "fc_score_mean": -0.4443
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2507.7,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.615,
+   "sum_logP_NG": -19.4296,
+   "n_cand_tokens": 31,
+   "fc_score": -12.8146,
+   "fc_score_mean": -0.4134
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "001.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2496.4,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.5201,
+   "sum_logP_NG": -19.0335,
+   "n_cand_tokens": 31,
+   "fc_score": -12.5134,
+   "fc_score_mean": -0.4037
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "002.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2500.4,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.5841,
+   "sum_logP_NG": -17.996,
+   "n_cand_tokens": 31,
+   "fc_score": -11.4119,
+   "fc_score_mean": -0.3681
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "003.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2498.9,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.504,
+   "sum_logP_NG": -18.4846,
+   "n_cand_tokens": 31,
+   "fc_score": -11.9806,
+   "fc_score_mean": -0.3865
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "004.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2499.8,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.724,
+   "sum_logP_NG": -16.9054,
+   "n_cand_tokens": 31,
+   "fc_score": -10.1814,
+   "fc_score_mean": -0.3284
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "005.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2486.4,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.7302,
+   "sum_logP_NG": -17.0404,
+   "n_cand_tokens": 31,
+   "fc_score": -10.3103,
+   "fc_score_mean": -0.3326
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "007.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2485.7,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.6207,
+   "sum_logP_NG": -18.0828,
+   "n_cand_tokens": 31,
+   "fc_score": -11.4621,
+   "fc_score_mean": -0.3697
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "008.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2491.7,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.5911,
+   "sum_logP_NG": -17.5394,
+   "n_cand_tokens": 31,
+   "fc_score": -10.9483,
+   "fc_score_mean": -0.3532
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "009.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2488.8,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.5118,
+   "sum_logP_NG": -19.9224,
+   "n_cand_tokens": 31,
+   "fc_score": -13.4106,
+   "fc_score_mean": -0.4326
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "010.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2492.4,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.5568,
+   "sum_logP_NG": -19.294,
+   "n_cand_tokens": 31,
+   "fc_score": -12.7371,
+   "fc_score_mean": -0.4109
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2489.2,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.6352,
+   "sum_logP_NG": -16.8524,
+   "n_cand_tokens": 31,
+   "fc_score": -10.2172,
+   "fc_score_mean": -0.3296
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "014.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2494.2,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -7.1451,
+   "sum_logP_NG": -20.6857,
+   "n_cand_tokens": 31,
+   "fc_score": -13.5406,
+   "fc_score_mean": -0.4368
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "015.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2493.4,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.4378,
+   "sum_logP_NG": -19.523,
+   "n_cand_tokens": 31,
+   "fc_score": -13.0852,
+   "fc_score_mean": -0.4221
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "016.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2506.4,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.4553,
+   "sum_logP_NG": -18.2706,
+   "n_cand_tokens": 31,
+   "fc_score": -11.8153,
+   "fc_score_mean": -0.3811
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "017.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2499.4,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.5494,
+   "sum_logP_NG": -18.551,
+   "n_cand_tokens": 31,
+   "fc_score": -12.0016,
+   "fc_score_mean": -0.3871
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "018.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2504.3,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.6531,
+   "sum_logP_NG": -16.9023,
+   "n_cand_tokens": 31,
+   "fc_score": -10.2492,
+   "fc_score_mean": -0.3306
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "019.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2499.8,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.5736,
+   "sum_logP_NG": -17.3704,
+   "n_cand_tokens": 31,
+   "fc_score": -10.7969,
+   "fc_score_mean": -0.3483
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "020.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2498.3,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.7843,
+   "sum_logP_NG": -17.3206,
+   "n_cand_tokens": 31,
+   "fc_score": -10.5363,
+   "fc_score_mean": -0.3399
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "021.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2496.2,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.5015,
+   "sum_logP_NG": -18.7589,
+   "n_cand_tokens": 31,
+   "fc_score": -12.2575,
+   "fc_score_mean": -0.3954
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "022.JPG",
+   "reference_ids": [
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 4168,
+   "latency_fc_ms": 2502.0,
+   "peak_gpu_gb": 23.33,
+   "sum_logP_OK": -6.7128,
+   "sum_logP_NG": -19.105,
+   "n_cand_tokens": 31,
+   "fc_score": -12.3922,
+   "fc_score_mean": -0.3997
+  }
+ ]
+}

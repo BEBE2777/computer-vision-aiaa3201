@@ -1,0 +1,108 @@
+{
+ "protocol": "qwen_fc_conf_stability_v5",
+ "refs_seed": 1,
+ "n_test": 696,
+ "n_fail": 0,
+ "fail_ids": [],
+ "missing_in_baseline_dumps": [],
+ "latency_fc_ms": {
+  "mean": 4292.1,
+  "p95": 6587.7
+ },
+ "mean_peak_gpu_gb": 23.46,
+ "qwen_fc_conf": {
+  "per_category": {
+   "candle": {
+    "auroc": 0.9401709401709402,
+    "thr_p95_calib": 13.6871,
+    "fpr": 0.1667,
+    "recall": 0.9103,
+    "n_normal": 78,
+    "n_anom": 78
+   },
+   "capsules": {
+    "auroc": 0.9153171390013495,
+    "thr_p95_calib": 17.885,
+    "fpr": 0.1053,
+    "recall": 0.8077,
+    "n_normal": 38,
+    "n_anom": 78
+   },
+   "cashew": {
+    "auroc": 0.9294871794871795,
+    "thr_p95_calib": 21.1869,
+    "fpr": 0.0,
+    "recall": 0.3333,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "chewinggum": {
+    "auroc": 0.9752747252747253,
+    "thr_p95_calib": 20.7499,
+    "fpr": 0.0,
+    "recall": 0.8462,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "fryum": {
+    "auroc": 0.9574175824175825,
+    "thr_p95_calib": 17.2129,
+    "fpr": 0.0,
+    "recall": 0.8077,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "pipe_fryum": {
+    "auroc": 0.9684065934065934,
+    "thr_p95_calib": 15.2803,
+    "fpr": 0.0714,
+    "recall": 0.8846,
+    "n_normal": 28,
+    "n_anom": 78
+   }
+  },
+  "macro_auroc": 0.9477,
+  "macro_ci95": [
+   0.931,
+   0.9628
+  ]
+ },
+ "dino": {
+  "per_category_auroc": {
+   "candle": 0.8448,
+   "capsules": 0.9173,
+   "cashew": 0.9638,
+   "chewinggum": 0.9913,
+   "fryum": 0.9446,
+   "pipe_fryum": 0.8938
+  },
+  "macro_auroc": 0.9259
+ },
+ "clip": {
+  "per_category_auroc": {
+   "candle": 0.7469,
+   "capsules": 0.7898,
+   "cashew": 0.9148,
+   "chewinggum": 0.9739,
+   "fryum": 0.8864,
+   "pipe_fryum": 0.951
+  },
+  "macro_auroc": 0.8771
+ },
+ "paired": {
+  "qwen_minus_dino": {
+   "delta_mean": 0.0218,
+   "delta_ci95": [
+    -0.0016,
+    0.0457
+   ]
+  },
+  "qwen_minus_clip": {
+   "delta_mean": 0.0705,
+   "delta_ci95": [
+    0.0434,
+    0.098
+   ]
+  }
+ }
+}

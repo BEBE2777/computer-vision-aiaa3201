@@ -76,8 +76,10 @@ def main():
         thr[c] = vals[int(len(vals) * 0.95)]
 
     # build aligned per-class lists for qwen and both baselines
-    dino = load_dump(f"e1_dino448_nomask_s1_seed{a.seed}.json")
-    clip = load_dump(f"e1_clip448_L9_nomask_s1_seed{a.seed}.json")
+    # seed 0 dumps predate the per-seed suffix convention
+    sfx = "" if a.seed == 0 else f"_s1_seed{a.seed}"
+    dino = load_dump(f"e1_dino448_nomask{sfx}.json")
+    clip = load_dump(f"e1_clip448_L9_nomask{sfx}.json")
 
     q_groups, d_groups, c_groups = [], [], []
     per, missing_ids = {}, []

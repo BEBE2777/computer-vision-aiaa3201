@@ -62,6 +62,7 @@ def main():
     ap.add_argument("--test", required=True)
     ap.add_argument("--calib", required=True)
     ap.add_argument("--seed", type=int, required=True)
+    ap.add_argument("--shots", type=int, choices=[1, 2, 4, 8], default=1)
     ap.add_argument("--out", default=None)
     a = ap.parse_args()
 
@@ -76,30 +77,56 @@ def main():
         thr[c] = vals[int(len(vals) * 0.95)]
 
     # build aligned per-class lists for qwen and both baselines
-    # seed 0 dumps predate the per-seed suffix convention
-    sfx = "" if a.seed == 0 else f"_s1_seed{a.seed}"
-    dino = load_dump(f"e1_dino448_nomask{sfx}.json")
-    clip = load_dump(f"e1_clip448_L9_nomask{sfx}.json")
+    # shots=1: seed 0 dumps predate the per-seed suffix convention (empty suffix!)
+    # shots=2/4: dumps e1_*_s{shots}_seed{S}.json exist for all seeds
+    # shots=8: no archived DINO/CLIP dump -> reported as "no matched comparison"
+    if a.shots == 1:
+        sfx = "" if a.seed == 0 else f"_s1_seed{a.seed}"
+    elif a.shots in (2, 4):
+        sfx = f"_s{a.shots}_seed{a.seed}"
+    else:
+        sfx = None
+    dino_path = os.path.join(SCORES, f"e1_dino448_nomask{sfx}.json") if sfx is not None else None
+    clip_path = os.path.join(SCORES, f"e1_clip448_L9_nomask{sfx}.json") if sfx is not None else None
+    has_baseline = bool(sfx is not None and os.path.exists(dino_path)
+                        and os.path.exists(clip_path))
+    dino = load_dump(os.path.basename(dino_path)) if has_baseline else {}
+    clip = load_dump(os.path.basename(clip_path)) if has_baseline else {}
+    if not has_baseline:
+        print(f"NOTE: no matched DINO/CLIP dump for shots={a.shots} seed={a.seed} "
+              f"(sfx={sfx!r}) -> paired comparison reported as null", flush=True)
 
-    q_groups, d_groups, c_groups = [], [], []
-    per, missing_ids = {}, []
+    q_groups, q_groups_paired, d_groups, c_groups = [], [], [], []
+    per, missing_ids = {}, {}
     for c in CATS:
         rs = [x for x in pt if x["category"] == c and x.get("status") == "ok"]
+        # FULL Qwen lists (never truncated by baseline coverage)
+        sc_q_all = [-x["fc_score"] for x in rs]
+        lb_all = [1 if x["true_label_for_eval_ONLY"] == "bad" else 0 for x in rs]
+        # paired subset: only images present in BOTH baseline dumps
         sc_q, sc_d, sc_c, lb = [], [], [], []
-        for x in rs:
-            key = (c, x["true_label_for_eval_ONLY"], x["query_id"])
-            if key not in dino or key not in clip:
-                missing_ids.append(f"{c}/{x['query_id']}")
-                continue
-            sc_q.append(-x["fc_score"])
-            sc_d.append(dino[key])
-            sc_c.append(clip[key])
-            lb.append(1 if x["true_label_for_eval_ONLY"] == "bad" else 0)
-        q_groups.append((sc_q, lb)); d_groups.append((sc_d, lb)); c_groups.append((sc_c, lb))
-        nrm = [s for s, l in zip(sc_q, lb) if l == 0]
-        ano = [s for s, l in zip(sc_q, lb) if l == 1]
+        if has_baseline:
+            for x in rs:
+                key = (c, x["true_label_for_eval_ONLY"], x["query_id"])
+                if key not in dino or key not in clip:
+                    missing_ids.setdefault(c, []).append(f"{c}/{x['query_id']}")
+                    continue
+                sc_q.append(-x["fc_score"])
+                sc_d.append(dino[key])
+                sc_c.append(clip[key])
+                lb.append(1 if x["true_label_for_eval_ONLY"] == "bad" else 0)
+        q_groups.append((sc_q_all, lb_all))
+        q_groups_paired.append((sc_q, lb))
+        d_groups.append((sc_d, lb))
+        c_groups.append((sc_c, lb))
+        n_paired = len(sc_q)
+        n_full = len(sc_q_all)
+        missing_ids.setdefault("_counts", {})[c] = {
+            "n_full_qwen": n_full, "n_paired": n_paired}
+        nrm = [s for s, l in zip(sc_q_all, lb_all) if l == 0]
+        ano = [s for s, l in zip(sc_q_all, lb_all) if l == 1]
         per[c] = {
-            "auroc": auroc(sc_q, lb),
+            "auroc": auroc(sc_q_all, lb_all),
             "thr_p95_calib": round(thr[c], 4),
             "fpr": round(sum(1 for s in nrm if s >= thr[c]) / max(len(nrm), 1), 4),
             "recall": round(sum(1 for s in ano if s >= thr[c]) / max(len(ano), 1), 4),
@@ -119,12 +146,15 @@ def main():
     ci_q = (round(sorted(idx_lo)[int(0.025 * BOOT)], 4),
             round(sorted(idx_lo)[int(0.975 * BOOT)], 4))
 
-    # PAIRED bootstrap: same resampled indices applied to qwen and baseline
-    def paired_ci(b_groups):
+    # PAIRED bootstrap: same resampled indices applied to qwen and baseline,
+    # restricted to the paired subset (images present in both baseline dumps)
+    def paired_ci(qp_groups, b_groups):
         deltas = []
         for _ in range(BOOT):
             mq, mb = [], []
-            for (sq, lb), (sb, _) in zip(q_groups, b_groups):
+            for (sq, lb), (sb, _) in zip(qp_groups, b_groups):
+                if not sq:
+                    continue
                 idx = [rng.randrange(len(sq)) for _ in range(len(sq))]
                 sqb = [sq[i] for i in idx]; sbb = [sb[i] for i in idx]
                 lbb = [lb[i] for i in idx]
@@ -136,23 +166,24 @@ def main():
                 "delta_ci95": (round(deltas[int(0.025 * BOOT)], 4),
                                round(deltas[int(0.975 * BOOT)], 4))}
 
-    paired = {"qwen_minus_dino": paired_ci(d_groups),
-              "qwen_minus_clip": paired_ci(c_groups)}
+    paired = {"qwen_minus_dino": paired_ci(q_groups_paired, d_groups),
+              "qwen_minus_clip": paired_ci(q_groups_paired, c_groups)} if has_baseline else {
+        "qwen_minus_dino": None, "qwen_minus_clip": None,
+        "note": f"no matched DINO/CLIP dump for shots={a.shots} seed={a.seed}"}
 
     # baselines standalone
     def base_stats(g):
         aucmap = {c: auroc(sc, lb) for c, (sc, lb) in zip(CATS, g)}
         return {"per_category_auroc": {c: round(v, 4) for c, v in aucmap.items()},
                 "macro_auroc": round(statistics.mean(aucmap.values()), 4)}
-    d_stats, c_stats = base_stats(d_groups), base_stats(c_groups)
+    d_stats, c_stats = (base_stats(d_groups), base_stats(c_groups)) if has_baseline else (None, None)
 
     lat = [x["latency_fc_ms"] for x in pt if x.get("latency_fc_ms")]
     out = {
         "protocol": "qwen_fc_conf_stability_v5",
-        "refs_seed": a.seed, "n_test": len(pt),
+        "refs_seed": a.seed, "shots": a.shots, "n_test": len(pt),
         "n_fail": len(fails), "fail_ids": fails,
-        "missing_in_baseline_dumps": missing_ids,
-        "latency_fc_ms": {"mean": round(statistics.mean(lat), 1),
+        "missing_in_baseline_dumps": missing_ids,        "latency_fc_ms": {"mean": round(statistics.mean(lat), 1),
                           "p95": round(sorted(lat)[int(len(lat) * 0.95) - 1], 1)},
         "mean_peak_gpu_gb": round(statistics.mean(x["peak_gpu_gb"] for x in pt if x.get("peak_gpu_gb")), 2),
         "qwen_fc_conf": {

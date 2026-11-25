@@ -1,0 +1,136 @@
+{
+ "protocol": "qwen_fc_conf_stability_v5",
+ "refs_seed": 0,
+ "shots": 2,
+ "n_test": 696,
+ "n_fail": 0,
+ "fail_ids": [],
+ "missing_in_baseline_dumps": {
+  "_counts": {
+   "candle": {
+    "n_full_qwen": 156,
+    "n_paired": 156
+   },
+   "capsules": {
+    "n_full_qwen": 116,
+    "n_paired": 116
+   },
+   "cashew": {
+    "n_full_qwen": 106,
+    "n_paired": 106
+   },
+   "chewinggum": {
+    "n_full_qwen": 106,
+    "n_paired": 106
+   },
+   "fryum": {
+    "n_full_qwen": 106,
+    "n_paired": 106
+   },
+   "pipe_fryum": {
+    "n_full_qwen": 106,
+    "n_paired": 106
+   }
+  }
+ },
+ "latency_fc_ms": {
+  "mean": 6727.2,
+  "p95": 9738.2
+ },
+ "mean_peak_gpu_gb": 26.55,
+ "qwen_fc_conf": {
+  "per_category": {
+   "candle": {
+    "auroc": 0.9447731755424064,
+    "thr_p95_calib": 14.3701,
+    "fpr": 0.1538,
+    "recall": 0.9231,
+    "n_normal": 78,
+    "n_anom": 78
+   },
+   "capsules": {
+    "auroc": 0.9389338731443995,
+    "thr_p95_calib": 18.8227,
+    "fpr": 0.0263,
+    "recall": 0.7179,
+    "n_normal": 38,
+    "n_anom": 78
+   },
+   "cashew": {
+    "auroc": 0.9409340659340659,
+    "thr_p95_calib": 22.676,
+    "fpr": 0.0,
+    "recall": 0.1795,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "chewinggum": {
+    "auroc": 0.9839743589743589,
+    "thr_p95_calib": 20.664,
+    "fpr": 0.0,
+    "recall": 0.8462,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "fryum": {
+    "auroc": 0.9601648351648352,
+    "thr_p95_calib": 17.0911,
+    "fpr": 0.0,
+    "recall": 0.8333,
+    "n_normal": 28,
+    "n_anom": 78
+   },
+   "pipe_fryum": {
+    "auroc": 0.9876373626373627,
+    "thr_p95_calib": 15.9148,
+    "fpr": 0.0357,
+    "recall": 0.9103,
+    "n_normal": 28,
+    "n_anom": 78
+   }
+  },
+  "macro_auroc": 0.9594,
+  "macro_ci95": [
+   0.9451,
+   0.9722
+  ]
+ },
+ "dino": {
+  "per_category_auroc": {
+   "candle": 0.8945,
+   "capsules": 0.9602,
+   "cashew": 0.9524,
+   "chewinggum": 0.9844,
+   "fryum": 0.957,
+   "pipe_fryum": 0.9048
+  },
+  "macro_auroc": 0.9422
+ },
+ "clip": {
+  "per_category_auroc": {
+   "candle": 0.8828,
+   "capsules": 0.7709,
+   "cashew": 0.8837,
+   "chewinggum": 0.9528,
+   "fryum": 0.9144,
+   "pipe_fryum": 0.946
+  },
+  "macro_auroc": 0.8918
+ },
+ "paired": {
+  "qwen_minus_dino": {
+   "delta_mean": 0.0173,
+   "delta_ci95": [
+    -0.0039,
+    0.0386
+   ]
+  },
+  "qwen_minus_clip": {
+   "delta_mean": 0.0676,
+   "delta_ci95": [
+    0.0426,
+    0.0934
+   ]
+  }
+ }
+}

@@ -77,14 +77,16 @@ def meta(args, model_id, n):
 
 def load_done(out_path):
     """Resume: collect records already scored (from partial or final).
-    Key = category/query_id: bare query_id is NOT unique across VisA
-    categories (different categories reuse filenames like 0000.JPG)."""
+    Key = category/label/query_id: bare query_id is NOT unique across VisA
+    categories (0000.JPG reused), and test/good vs test/bad also share
+    filenames (capsules has 24 such pairs) -> the label must be in the key,
+    otherwise a resume silently drops one of the two images."""
     done = {}
     for p in (out_path + ".partial", out_path):
         if os.path.exists(p):
             try:
                 for r in json.load(open(p))["records"]:
-                    done[f"{r['category']}/{r['query_id']}"] = r
+                    done[f"{r['category']}/{r['true_label_for_eval_ONLY']}/{r['query_id']}"] = r
             except Exception as e:
                 print(f"WARN: cannot read {p}: {e}", flush=True)
     return done
@@ -115,7 +117,8 @@ def main():
     manifest = json.load(open(args.manifest))
     entries = manifest["entries"][args.offset: args.offset + args.limit] if args.limit else manifest["entries"][args.offset:]
     done = {} if args.fresh else load_done(args.out)
-    todo = [e for e in entries if f"{e['category']}/{e['query_id']}" not in done]
+    todo = [e for e in entries
+            if f"{e['category']}/{e['true_label_for_eval_ONLY']}/{e['query_id']}" not in done]
     n_fail_before = sum(1 for r in done.values() if r.get("status") == "fail")
     print(f"entries: {len(todo)} to run (+{len(done)} resumed, "
           f"{n_fail_before} prior failures preserved)", flush=True)
@@ -161,8 +164,10 @@ def main():
                       open(args.out + ".partial", "w"), indent=1, ensure_ascii=False)
 
     # final: order records by manifest order, keep failures visible
-    order = {f"{e['category']}/{e['query_id']}": i for i, e in enumerate(entries)}
-    records.sort(key=lambda r: order.get(f"{r['category']}/{r['query_id']}", 10**9))
+    order = {f"{e['category']}/{e['true_label_for_eval_ONLY']}/{e['query_id']}": i
+             for i, e in enumerate(entries)}
+    records.sort(key=lambda r: order.get(
+        f"{r['category']}/{r['true_label_for_eval_ONLY']}/{r['query_id']}", 10**9))
     json.dump({"meta": meta(args, model_id, len(records)), "records": records},
               open(args.out, "w"), indent=1, ensure_ascii=False)
     n_fail = sum(1 for r in records if r.get("status") == "fail")

@@ -26,10 +26,13 @@ d = json.load(open(a.out))
 recs = d.get("records", [])
 errs = []
 
+def rec_key(r):
+    return f"{r['category']}/{r['true_label_for_eval_ONLY']}/{r['query_id']}"
+
 by_key = {}
 dups = set()
 for r in recs:
-    k = f"{r['category']}/{r['query_id']}"
+    k = rec_key(r)
     if k in by_key:
         dups.add(k)
     else:
@@ -37,7 +40,7 @@ for r in recs:
 if dups:
     errs.append(f"DUPLICATE records: {sorted(dups)[:5]}")
 
-want = {f"{e['category']}/{e['query_id']}": e for e in man}
+want = {f"{e['category']}/{e['true_label_for_eval_ONLY']}/{e['query_id']}": e for e in man}
 missing = [k for k in want if k not in by_key]
 extra = [k for k in by_key if k not in want]
 if missing:
@@ -51,7 +54,7 @@ label_bad = []
 ref_bad = []
 score_bad = []
 for e in man:
-    k = f"{e['category']}/{e['query_id']}"
+    k = f"{e['category']}/{e['true_label_for_eval_ONLY']}/{e['query_id']}"
     r = by_key.get(k)
     if not r:
         continue
@@ -76,7 +79,7 @@ if score_bad:
 n_fail = sum(1 for r in recs if r.get("status") != "ok")
 if n_fail:
     errs.append(f"{n_fail} failed records: " +
-                str([f"{r['category']}/{r['query_id']}" for r in recs
+                str([rec_key(r) for r in recs
                      if r.get("status") != "ok"][:5]))
 
 meta = d.get("meta", {})

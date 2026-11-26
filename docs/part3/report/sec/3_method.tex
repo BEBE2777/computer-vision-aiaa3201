@@ -31,7 +31,7 @@ test label. Figure~\ref{fig:pipeline} summarises the pipeline.
   pushes the test image through the \emph{same} frozen encoder, scores every patch by 1-NN
   cosine distance against the bank, and pools the top 1\% of the distance map into the image
   score. The two encoders are interchangeable arms (E1) that share everything else. Dashed
-  modules are optional: score-level fusion with the multimodal branch (E2--E5), and the
+  modules are optional: the multimodal branch (E2) and its score-level fusion, and the
   decision threshold, derived from 20 held-out normal calibration images only.}
   \label{fig:pipeline}
 \end{figure*}
@@ -149,7 +149,7 @@ with a consistency requirement: $\alpha{=}1$ and $\alpha{=}0$ must reproduce the
 branches exactly. This protocol applies to the visual pair.
 
 \paragraph{Multimodal image scoring (E2).}
-Frozen Qwen2-VL-7B-Instruct receives a category name, normal references, and a query
+Frozen Qwen2-VL-7B-Instruct~\cite{wang2024qwen2vl} receives a category name, normal references, and a query
 image. Its ranking score is the teacher-forced sequence log probability of a fixed
 OK JSON completion minus that of a fixed NG completion. The candidates differ in both
 decision and numeric score. The sign was selected on a development pilot and then

@@ -1,0 +1,124 @@
+{
+ "protocol": "qwen_fc_conf_stability_v5_ext",
+ "comparison_note": "seed0 = add-one-image pairing (1-shot refs kept as subset); seed1/2 = ARCHIVED-CONFIG comparison (different reference sets)",
+ "per_seed": {
+  "0": {
+   "standalone_macro": 0.9594,
+   "standalone_ci95": [
+    0.9451,
+    0.9722
+   ],
+   "paired_delta_vs_1shot": 0.0019,
+   "paired_delta_ci95": [
+    -0.0046,
+    0.0088
+   ],
+   "per_cat_delta": {
+    "candle": 0.0021,
+    "capsules": 0.0189,
+    "cashew": 0.0092,
+    "chewinggum": -0.0027,
+    "fryum": -0.0114,
+    "pipe_fryum": -0.0046
+   },
+   "n_paired": 696,
+   "latency_mean_ms_2shot": 6727.2,
+   "latency_mean_ms_1shot": 2636.0,
+   "paired_dino": {
+    "delta_mean": 0.0173,
+    "delta_ci95": [
+     -0.0039,
+     0.0386
+    ]
+   },
+   "paired_clip": {
+    "delta_mean": 0.0676,
+    "delta_ci95": [
+     0.0426,
+     0.0934
+    ]
+   }
+  },
+  "1": {
+   "standalone_macro": 0.9542,
+   "standalone_ci95": [
+    0.9387,
+    0.9681
+   ],
+   "paired_delta_vs_1shot": 0.0065,
+   "paired_delta_ci95": [
+    -0.0027,
+    0.016
+   ],
+   "per_cat_delta": {
+    "candle": 0.012,
+    "capsules": 0.0037,
+    "cashew": 0.005,
+    "chewinggum": 0.0055,
+    "fryum": -0.0018,
+    "pipe_fryum": 0.0147
+   },
+   "n_paired": 696,
+   "latency_mean_ms_2shot": 3821.6,
+   "latency_mean_ms_1shot": 4292.1,
+   "paired_dino": {
+    "delta_mean": 0.01,
+    "delta_ci95": [
+     -0.0092,
+     0.0296
+    ]
+   },
+   "paired_clip": {
+    "delta_mean": 0.0626,
+    "delta_ci95": [
+     0.0381,
+     0.0875
+    ]
+   }
+  },
+  "2": {
+   "standalone_macro": 0.9561,
+   "standalone_ci95": [
+    0.941,
+    0.9695
+   ],
+   "paired_delta_vs_1shot": 0.0018,
+   "paired_delta_ci95": [
+    -0.0048,
+    0.0082
+   ],
+   "per_cat_delta": {
+    "candle": 0.002,
+    "capsules": 0.0088,
+    "cashew": -0.0082,
+    "chewinggum": 0.0014,
+    "fryum": 0.0055,
+    "pipe_fryum": 0.0014
+   },
+   "n_paired": 696,
+   "latency_mean_ms_2shot": 4001.3,
+   "latency_mean_ms_1shot": 5850.2,
+   "paired_dino": {
+    "delta_mean": 0.0077,
+    "delta_ci95": [
+     -0.0119,
+     0.027
+    ]
+   },
+   "paired_clip": {
+    "delta_mean": 0.0604,
+    "delta_ci95": [
+     0.036,
+     0.0866
+    ]
+   }
+  }
+ },
+ "across_seeds": {
+  "macro_mean_pm_sd": "0.9566 \u00b1 0.0026",
+  "delta_mean": "+0.0034",
+  "delta_ci_includes_0_all_seeds": true,
+  "vs_dino_ci_includes_0_all_seeds": true,
+  "vs_clip_ci_excludes_0_all_seeds": true
+ }
+}

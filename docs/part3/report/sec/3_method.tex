@@ -15,10 +15,10 @@ every system.
 
 Image-level AUROC uses the mean of the top 1\% of the pixel distance map as the anomaly
 score, as in AnomalyDINO~\cite{damm2025anomalydino}. Pixel-level AUROC is computed on maps
-resampled to $448\times448$ for all methods (pooling native-resolution pixels does not fit
-in the shared GPU memory; the same resampling is applied everywhere, so comparisons stay
-well defined). Mean\,$\pm$\,std is always taken over seeds: the six-category mean is formed
-per seed first, and the standard deviation is taken over the three per-seed means. The
+resampled to $448\times448$ for all methods (native-resolution maps exceed the shared GPU's
+memory; the same resampling is applied everywhere, so comparisons stay well defined).
+Mean\,$\pm$\,std is taken over seeds: the six-category mean is formed per seed first, then
+the standard deviation over the three per-seed means. The
 decision threshold, used only for the qualitative error analysis and the OK/NG operating
 points, is the 95th percentile of the scores of the 20 calibration images -- it never sees a
 test label. Figure~\ref{fig:pipeline} summarises the pipeline.
@@ -82,8 +82,7 @@ calibration and the resolution all held fixed, what changes when the dense featu
 a language-aligned image encoder (CLIP ViT-B/16) instead of a self-supervised one (DINOv2
 ViT-S/14)? DINOv2 features are trained to be locally discriminative, which is what a
 nearest-neighbour patch matcher wants; CLIP features are trained to place a whole image next
-to a text description and are known to be strongly anisotropic at the patch level. Whether
-that costs accuracy in few-shot anomaly detection is an empirical question.
+to a text description and are known to be strongly anisotropic at the patch level.
 
 \paragraph{Extracting patch tokens from CLIP.}
 \texttt{clip.encode\_image} returns only the pooled global feature, so the patch tokens are
@@ -119,11 +118,10 @@ test split afterwards.
         at 448.
   \item \textbf{Layer 9 of 12.} Blocks 6, 9 and 12 were swept. The last block is the most
         anisotropic in CLIP (mean pairwise cosine similarity of patch features inside one
-        image 0.57--0.67, against 0.36 for DINOv2 L12) and its dense matching suffers for
-        it: at 1-shot on the pilot, block 12 scored 69.4 image AUROC on candle against 89.9
-        for block 9 under the same framing. Block 9 has the lowest anisotropy of the three
-        and the best pixel AUROC under the frozen framing; blocks 6 and 12 are reported as
-        a sensitivity check, not as candidates.
+        image 0.57--0.67, against 0.31 at block 9) and its dense matching suffers for it: at
+        1-shot on the pilot, block 12 scored 69.4 image AUROC on candle against 89.9 for
+        block 9 under the same framing. Block 9 was fixed as the operating layer before the
+        grid; block 6 is reported as a sensitivity check, not as a candidate.
   \item \textbf{No foreground mask, for both backbones.} AnomalyDINO's agnostic
         preprocessing estimates a foreground mask by PCA on DINOv2 features; the threshold
         is tied to that feature geometry and has no counterpart for CLIP. Rather than give

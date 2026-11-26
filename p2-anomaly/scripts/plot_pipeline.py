@@ -161,7 +161,7 @@ def main():
         "VLM branch (E2)\nQwen-VL: refs + test\n$\\rightarrow$ verdict, $s_{\\mathrm{VLM}}$",
         fc="white", ec=GREY, ls=(0, (3.2, 1.6)), fs=6.1)
     box(ax, c4x, y_mid, c4w, mid_h,
-        "score fusion (E3/E5)\n$s=\\alpha z_{\\mathrm{vis}}+(1-\\alpha)z_{\\mathrm{VLM}}$\n"
+        "score fusion\n$s=\\alpha z_{\\mathrm{vis}}+(1-\\alpha)z_{\\mathrm{VLM}}$\n"
         "$\\alpha=0.5$, pre-registered",
         fc="white", ec=GREY, ls=(0, (3.2, 1.6)), fs=6.1)
     arrow(ax, (c5x, y_mid + mid_h / 2), (c4x + c4w, y_mid + mid_h / 2),

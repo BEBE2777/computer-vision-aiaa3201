@@ -26,6 +26,7 @@ means. The controlled pair is DINOv2-control vs CLIP; Part~2 adds the official P
 \label{tab:image}
 \footnotesize
 \setlength{\tabcolsep}{2.2pt}
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lcccc}
 \toprule
 Method & 1-shot & 2-shot & 4-shot & 8-shot \\
@@ -35,7 +36,7 @@ AnomalyDINO (Part 2, masked) & \best{94.61}\,\std{0.84} & \best{95.33}\,\std{0.4
 DINOv2 @448 nomask (ctrl) & 93.34\,\std{0.72} & 94.16\,\std{0.27} & 94.92\,\std{0.49} & 95.37\,\std{0.72} \\
 CLIP @448 L9 nomask (E1) & 87.70\,\std{1.24} & 89.22\,\std{0.29} & 89.27\,\std{0.38} & 89.48\,\std{0.23} \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 \begin{table}[t]
@@ -44,6 +45,7 @@ CLIP @448 L9 nomask (E1) & 87.70\,\std{1.24} & 89.22\,\std{0.29} & 89.27\,\std{0
 \label{tab:pixel}
 \footnotesize
 \setlength{\tabcolsep}{2.2pt}
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lcccc}
 \toprule
 Method & 1-shot & 2-shot & 4-shot & 8-shot \\
@@ -53,7 +55,7 @@ AnomalyDINO (Part 2, masked) & \best{98.08}\,\std{0.05} & \best{98.22}\,\std{0.0
 DINOv2 @448 nomask (ctrl) & 97.06\,\std{0.32} & 97.57\,\std{0.11} & 97.91\,\std{0.06} & 98.16\,\std{0.04} \\
 CLIP @448 L9 nomask (E1) & 94.44\,\std{0.10} & 94.97\,\std{0.09} & 95.22\,\std{0.06} & 95.46\,\std{0.05} \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 Under the controlled protocol, replacing DINOv2 with CLIP costs \textbf{5.6 image points at
@@ -114,8 +116,7 @@ only category where more references nearly close the gap. \emph{A reversal} -- p
 is the one category where CLIP is ahead at 1-shot ($+3.2$): on highly regular, near-periodic
 objects the globally aligned features are not strictly worse. An aggregate-only table would
 hide all three; the reversal and the fryum pixel tie (CLIP matches the control's pixel AUROC
-while trailing 10.3 on image AUROC) are the footing for the complementarity claim that the
-fusion experiments test.
+while trailing 10.3 on image AUROC) are the footing for the complementarity claim.
 
 \subsection{Why CLIP trails: anisotropy and map variance}
 \label{sec:exp-mech}
@@ -123,8 +124,8 @@ fusion experiments test.
 The mechanism was measured, not assumed. Patch features inside one image are far more
 anisotropic in CLIP's last block -- mean pairwise cosine similarity 0.57--0.67 against 0.36
 for DINOv2 L12 -- so nearest-neighbour \emph{distances} compress unevenly across the image;
-the layer sweep found block 9 the least anisotropic of \{6, 9, 12\} and the best under the
-frozen framing. The direct visual consequence is in Fig.~\ref{fig:heatmaps}: DINOv2's
+block 9, fixed before the grid, keeps that similarity at 0.31. The direct visual consequence
+is in Fig.~\ref{fig:heatmaps}: DINOv2's
 distance field is near-flat over the background with isolated hotspots, while CLIP's block-9
 map is high-variance everywhere, so large areas of \emph{normal} background sit close to the
 decision threshold (candle: CLIP's calibration threshold 0.355 vs DINOv2's 0.269 at the same
@@ -188,6 +189,7 @@ deviation $1.1\times10^{-16}$). Realised FPR is the mean over cells at the nomin
 threshold.}
 \label{tab:fusion}
 \small
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrrrr}
 \toprule
 $\alpha$ (weight on DINOv2 $z$) & 0.00 & 0.25 & 0.50 & 0.75 & 1.00 \\
@@ -196,7 +198,7 @@ image AUROC, macro (\%) & 88.73 & 93.40 & \best{94.82} & 94.88 & 94.14 \\
 \quad s.d.\ across cells & 1.12 & 0.78 & 0.59 & 0.62 & 0.88 \\
 realised FPR at nominal 5\% & 14.3\% & 15.6\% & 15.7\% & 15.2\% & 12.8\% \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 The fusion protocol of \S\ref{sec:method-fusion} is evaluated on every (shot, seed) cell
@@ -209,10 +211,9 @@ alone: $+0.68$ points over the better arm on average, positive in eight of nine 
 (worst $-0.04$), and the across-cell spread shrinks from 0.88 to 0.59 points -- the gain is
 small but systematic. The ceiling is set by the taxonomy: 58 ``only CLIP right'' images
 ($6.0\%$) bound what any positive weighting of CLIP can add, against 193 images ($20.1\%$)
-where adding CLIP weight can only hurt.
-
-\emph{Sensitivity.} The curve is flat between $\alpha = 0.5$ and $0.75$ (94.82 vs 94.88,
-within one s.d.); the sweep maximum is reported as sensitivity, not as a tuned result.
+where adding CLIP weight can only hurt. The $\alpha$ curve is flat between 0.5 and 0.75
+(94.82 vs 94.88, inside one s.d.); it is a sensitivity analysis (\S\ref{sec:exp-ablation}),
+not a tuned result.
 
 \emph{Reliability.} The realised false-alarm rate at the nominal 5\% threshold spans
 9.4--21.4\% across cells and weights (\emph{including} the single branches): 20
@@ -230,6 +231,20 @@ guarantees~\cite{guo2017calibration,geifman2017selective}.
 \end{figure}
 
 \input{sec/4_qwen}
+
+\subsection{Ablations}
+\label{sec:exp-ablation}
+
+Each design choice below was varied while everything else stayed fixed (1-shot, seed 0).
+\emph{Foreground mask.} The official PCA mask is worth ${\approx}1.3$ image points at every
+shot count (94.61 vs 93.34 at 1-shot) and is the only difference between Part~2 and the
+DINOv2 control. \emph{CLIP layer.} The final block collapses dense matching -- 69.4 image
+AUROC on candle against 89.9 for block 9 under the same framing, a 17--22 point loss across
+the pilot -- so block 9 was fixed before the grid. \emph{Preprocessing.} CLIP's native
+centre-crop cuts objects out of frame: capsules pixel AUROC falls from 86.4 under
+\texttt{short\_edge} to 75.5 under the crop. \emph{Fusion weight.} The $\alpha$ curve is
+flat between 0.5 and 0.75 (94.82 vs 94.88); the sweep maximum is reported as sensitivity,
+and $\alpha{=}0.5$ remains the pre-registered operating point.
 
 \subsection{Cost}
 \label{sec:exp-cost}

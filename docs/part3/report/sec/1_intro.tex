@@ -1,54 +1,47 @@
 \section{Introduction}
 \label{sec:intro}
 
-Industrial visual inspection asks a narrow question with unforgiving constraints: given a
-handful of defect-free images of one product, decide whether a newly captured image contains
-a defect, and if possible, where. The constraint that makes the problem research-worthy is
-the scarcity of the evidence. Collecting defective samples of a rare failure mode is
-expensive by definition, and a production line re-tooled for a new product cannot wait for a
-labelled corpus. Few-shot anomaly detection therefore inverts the usual deep-learning
-recipe: instead of fitting a model to many labelled examples of a fixed task, it asks how
-far a \emph{frozen} representation, learned elsewhere and once, can be pressed into service
-for a product it has never seen.
+Industrial visual inspection asks a narrow question under unforgiving constraints: given a
+handful of defect-free images of one product, decide whether a new image contains a defect,
+and where. Collecting defective samples of a rare failure mode is expensive by definition,
+and a line re-tooled for a new product cannot wait for a labelled corpus. Few-shot anomaly
+detection therefore inverts the usual recipe: instead of fitting a model to many labelled
+examples of a fixed task, it asks how far a \emph{frozen} representation, learned elsewhere
+and once, can be pressed into service for a product it has never seen.
 
-Two families of answers exist. The first keeps the problem purely visual: model ``normal
-appearance'' from the few reference images and flag deviations from it, a line that runs from
-handcrafted template comparison through statistical patch models to modern self-supervised
+Two families of answers exist. The first stays purely visual: model normal appearance from
+the few references and flag deviations from it, a line running from handcrafted template
+comparison through statistical patch models to self-supervised
 features~\cite{bergmann2019mvtec,defard2021padim,roth2022patchcore,oquab2024dinov2,damm2025anomalydino}.
-The second brings language in: vision--language models let an inspector describe what
-``defect-free'' means in words and transfer it across
+The second brings language in: vision--language models let an inspector describe
+``defect-free'' in words and transfer it across
 products~\cite{radford2021clip,jeong2023winclip,zhou2024anomalyclip}. Between them lies an
-open empirical question -- which kind of frozen evidence actually carries the information
-that separates a subtle scratch from a shift in pose or lighting -- and a systems question of
-whether the two can be combined into something better than either alone.
+open empirical question -- which kind of frozen evidence separates a subtle scratch from a
+shift in pose or lighting -- and a systems question of whether the two can be combined into
+something better than either alone.
 
-This report treats that junction as a controlled measurement problem. Our Part~2 reproduces
-the strongest training-free visual recipe, AnomalyDINO~\cite{damm2025anomalydino}, on the six
-object-centric categories of VisA~\cite{zou2022spot} and verifies the reproduction
-cell-by-cell against the official pipeline. Part~3 then changes one variable at a time:
-(\textbf{E1}) the visual encoder, swapping DINOv2 for CLIP's vision tower under an identical
-scoring rule; (\textbf{E2}) a direct multimodal inspector (Qwen-VL) that sees the references
-and the test image; and calibrated score-level fusion of the branches -- all under a protocol
-frozen before any variant was scored, with an explicit account of latency, memory and
-reliability.
+This report treats that junction as a controlled measurement. Part~2 reproduces
+AnomalyDINO~\cite{damm2025anomalydino} on the six object-centric categories of
+VisA~\cite{zou2022spot} and verifies it cell-by-cell against the official pipeline. Part~3
+changes one variable at a time: (\textbf{E1}) the visual encoder, swapping DINOv2 for CLIP's
+vision tower under an identical scoring rule; (\textbf{E2}) a multimodal inspector (Qwen-VL)
+that sees the references and the test image; and calibrated score-level fusion of the
+branches -- all under a protocol frozen before any variant was scored.
 
 Our contributions are:
 \begin{itemize}
-  \item a verified reproduction of AnomalyDINO on VisA (all 72 protocol cells agree with the
-        official pipeline to the last printed digit), together with the two harness defects
-        we found and fixed on the way (cache-key collisions and a lossy float16 cache);
+  \item a verified AnomalyDINO reproduction on VisA (all 72 protocol cells agree with the
+        official pipeline to the last printed digit), plus the two harness defects found and
+        fixed on the way (cache-key collisions, a float16 feature cache);
   \item a controlled encoder swap showing that language alignment costs 5.6 image-AUROC
-        points at 1-shot in dense patch matching, does not close with more references, and
-        reverses on exactly one category -- with the mechanism measured at the patch level
-        (feature anisotropy) rather than asserted;
-  \item an image-level error taxonomy of the two arms (63.2\% verdict agreement; 58 images
-        only CLIP solves), and a pre-registered score-fusion protocol that gains $+0.68$
-        points over the better arm across nine (shot, seed) cells while exposing a
-        calibration gap (nominal 5\% false alarm, realised 9.4--21.4\%);
-  \item a frozen multimodal branch (Qwen2-VL-7B, forced-choice scoring) evaluated on the
-        696 test images held out from its own development pilots, where it ranks above both
-        dense arms (95.75 vs.\ 93.13 DINOv2 / 85.30 CLIP macro AUROC at 1-shot), stays
-        stable across three reference sets ($95.32\pm0.50$), and is right on 48 of the 73
-        images both visual arms miss -- with its fusion with DINOv2 reported strictly as a
-        post-hoc exploration.
+        points at 1-shot, does not close with more references, and reverses on one category
+        -- with the mechanism measured at the patch level (feature anisotropy), not asserted;
+  \item an image-level error taxonomy (63.2\% verdict agreement; 58 images only CLIP solves)
+        and a pre-registered fusion that gains $+0.68$ points over the better arm across
+        nine (shot, seed) cells while exposing a calibration gap (nominal 5\%, realised
+        9.4--21.4\%);
+  \item a frozen multimodal branch (Qwen2-VL-7B, forced-choice scoring) evaluated on the 696
+        test images held out from its own development pilots, ranking above both dense arms
+        (95.75 vs.\ 93.13 DINOv2 / 85.30 CLIP macro AUROC) and right on 48 of the 73 images
+        both visual arms miss -- with its fusion with DINOv2 reported strictly as post-hoc.
 \end{itemize}

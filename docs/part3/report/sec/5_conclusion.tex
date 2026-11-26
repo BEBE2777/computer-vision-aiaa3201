@@ -1,23 +1,36 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-We asked how far a frozen encoder carries few-shot industrial anomaly detection. A
-verified AnomalyDINO reproduction anchors the visual route at 94.61 image AUROC on VisA's
-six object-centric categories at 1-shot; a controlled encoder swap shows CLIP's
-language-aligned vision tower gives up 5.6 points in dense patch matching -- a property of
-the features, not of sample size; the arms disagree on 36.8\% of images, leaving room for
-the pre-registered fusion to gain $+0.68$ points across nine (shot, seed) cells, at
-calibration gaps reported as achieved operating points, not guarantees.
+We asked how far a frozen encoder carries few-shot industrial anomaly detection. A verified
+AnomalyDINO reproduction anchors the visual route at 94.61 image AUROC on VisA's six
+object-centric categories at 1-shot; a controlled encoder swap shows CLIP's vision tower
+gives up 5.6 points in dense patch matching -- a property of the features, not of sample
+size; the arms disagree on 36.8\% of images, leaving room for the pre-registered fusion to
+gain $+0.68$ points across nine (shot, seed) cells, at calibration gaps reported as achieved
+operating points, not guarantees.
 
-In practical terms, the trade-off is explicit. When latency or memory dominates, DINOv2
-alone is the operating point (148.5\,ms, 120\,MiB per image), and the confirmed
-DINOv2--CLIP fusion buys $+0.68$ points and a third lower cross-cell variance (both arms
-run). When accuracy dominates and ${\sim}2.6$\,s and 24\,GB of peak memory per image are
-acceptable, frozen forced-choice Qwen2-VL is the strongest single route on these
-categories; its fusion with the visual arms and its calibration remain open. Neither
-comparison extends beyond these six categories.
+In practical terms the trade-off is explicit. When latency or memory dominates, DINOv2 alone
+is the operating point (148.5\,ms, 120\,MiB per image), and the confirmed DINOv2--CLIP fusion
+buys $+0.68$ points and a third lower cross-cell variance (both arms run). When accuracy
+dominates and ${\sim}2.6$\,s and 24\,GB per image are acceptable, frozen forced-choice
+Qwen2-VL is the strongest single route on these categories; its fusion with the visual arms
+and its calibration remain open.
 
-The wider lesson: with no training signal, every claim reduces to the representation or
-the decision rule; both must be measured under a protocol frozen before scoring, with
-per-image evidence for every aggregate and reliability next to accuracy. Benchmarks are no
-longer the bottleneck~\cite{hecklerkram2026mvtec2}; representations and decisions are.
+\textbf{Limitations.} All six categories are object-centric product photographs, so nothing
+here speaks to texture or scene-level anomalies, and MVTec~AD~2's harder
+scenarios~\cite{hecklerkram2026mvtec2} mark where our conclusions stop. The Qwen branch was
+scored on 696 images reused across three reference sets, which makes its lead a stability
+result rather than a blind test, and its threshold recall (25.6\% on cashew) is too weak to
+drive an OK/NG decision alone. Latency and memory come from a shared GPU with a second
+tenant active.
+
+\textbf{Future work.} Extend the protocol to MVTec~AD~2's lighting and contamination
+scenarios and to texture categories; confirm or reject the Qwen--DINOv2 fusion on a fresh
+held-out split instead of the post-hoc 97.68; replace the 20-image percentile threshold with
+a calibration set large enough to hold the nominal false-alarm rate; and test whether a
+foreground mask transferred from a general segmenter recovers the 1.3 points it is worth
+without re-introducing the backbone as a second variable.
+
+The wider lesson is methodological: with no training signal, every claim reduces to the
+representation or the decision rule, so both are measured under a protocol frozen before
+scoring, with per-image evidence for every aggregate and reliability next to accuracy.

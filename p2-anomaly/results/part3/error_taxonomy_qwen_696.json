@@ -1,0 +1,65 @@
+{
+ "n_subset": 696,
+ "anomaly_score": "-fc_score (verified: macro AUROC 0.9575 matches REPORT_V4)",
+ "threshold_rule": "numpy.percentile(calib anomaly scores, 95) per class -- same rule as E1 taxonomy",
+ "qwen_thresholds": {
+  "candle": 14.405650000000001,
+  "capsules": 17.680865,
+  "cashew": 17.777205000000002,
+  "chewinggum": 15.951605000000002,
+  "fryum": 15.50921,
+  "pipe_fryum": 13.423605000000002
+ },
+ "tally_3way": {
+  "all_right": 554,
+  "visual_only": 30,
+  "visual_split": 39,
+  "qwen_only": 48,
+  "none_right": 25
+ },
+ "qwen_rescue_rate_on_both_visual_wrong": 0.6575342465753424,
+ "per_category": {
+  "candle": {
+   "all_right": 127,
+   "visual_split": 14,
+   "visual_only": 7,
+   "none_right": 5,
+   "qwen_only": 3
+  },
+  "capsules": {
+   "all_right": 76,
+   "visual_only": 9,
+   "visual_split": 7,
+   "qwen_only": 19,
+   "none_right": 5
+  },
+  "cashew": {
+   "all_right": 71,
+   "qwen_only": 13,
+   "none_right": 7,
+   "visual_split": 12,
+   "visual_only": 3
+  },
+  "chewinggum": {
+   "all_right": 97,
+   "visual_only": 2,
+   "qwen_only": 2,
+   "visual_split": 3,
+   "none_right": 2
+  },
+  "fryum": {
+   "all_right": 92,
+   "visual_split": 1,
+   "qwen_only": 6,
+   "none_right": 5,
+   "visual_only": 2
+  },
+  "pipe_fryum": {
+   "visual_only": 7,
+   "qwen_only": 5,
+   "all_right": 91,
+   "visual_split": 2,
+   "none_right": 1
+  }
+ }
+}

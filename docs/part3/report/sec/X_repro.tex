@@ -17,7 +17,12 @@ Part 2 official numbers & \texttt{results/part2\_official/}, parity report \text
 Part 2 cached authority & \texttt{results/part2\_cached/base\_L12\_v2\_final.json} \\
 E1 grids & \texttt{results/part3/tables.md}, \texttt{e1\_full.md}, \texttt{metrics.json} \\
 Per-image dumps & \texttt{results/part3/scores/*.json} (960 images per arm) \\
-Error taxonomy & \texttt{results/part3/error\_cases.csv}, \texttt{error\_taxonomy.md} \\
+Error taxonomy & \texttt{results/part3/error\_cases.csv}, \texttt{error\_taxonomy.md};
+3-way with Qwen: \texttt{error\_taxonomy\_qwen\_696.md} \\
+Multimodal branch (E2) & \texttt{results/extensions/qwen/}: frozen protocol
+\texttt{PROTOCOL\_FROZEN.md}, v4 confirmation \texttt{confirm\_full\_v4/REPORT\_V4.md},
+per-image scores \texttt{predictions\_v4\_test.json}, reference-seed stability
+\texttt{stability\_v5/REPORT\_V5.md} \\
 Fusion & \texttt{results/part3/fusion/dinov2\_clip\_9cells.md}, scripts \texttt{scripts/score\_fusion.py}, \texttt{scripts/fuse\_sweep.py} \\
 Figures & \texttt{scripts/plot\_per\_category.py}, \texttt{scripts/plot\_pipeline.py}, \texttt{make\_figures.py}, \texttt{scripts/make\_heatmap\_panel.py} \\
 Latency / memory & \texttt{scripts/bench\_inference.py}, \texttt{scripts/run\_bench.sh} \\

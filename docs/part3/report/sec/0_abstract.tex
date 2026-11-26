@@ -12,9 +12,11 @@ crossing of the two arms' verdicts shows they agree on only 63.2\% of the 960 te
 that CLIP is right on 58 images where DINOv2 is wrong -- countable complementarity that a
 pre-registered, calibration-based score-level fusion exploits: at the pre-registered weight
 the fused score gains $+0.68$ points over the better single arm, averaged over nine
-(shot, seed) cells, and cuts the spread across cells from 0.88 to 0.59 points. A multimodal
-branch that inspects references and test image directly, and a fusion
-with that branch, complete the design. We further report an honest reliability accounting:
+(shot, seed) cells, and cuts the spread across cells from 0.88 to 0.59 points. A frozen
+multimodal branch (Qwen2-VL, forced-choice scoring), evaluated on the 696 test images held
+out from its own development, ranks above both visual arms and is right on 48 of the 73
+images both arms miss; its equal-weight fusion with DINOv2 is reported as a post-hoc
+exploration only. We further report an honest reliability accounting:
 thresholds calibrated on 20 normal images realise false-alarm rates of 9.4--21.4\% at a
 nominal 5\%, so operating points are reported as achieved, not assumed. Code, per-image
 scores and every number in this report are available at

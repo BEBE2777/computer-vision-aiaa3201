@@ -5,24 +5,22 @@ Industrial visual inspection asks a narrow question with unforgiving constraints
 handful of defect-free images of one product, decide whether a newly captured image contains
 a defect, and if possible, where. The constraint that makes the problem research-worthy is
 the scarcity of the evidence. Collecting defective samples of a rare failure mode is
-expensive by definition -- defects are, precisely, the events that almost never happen -- and
-a production line re-tooled for a new product cannot wait for a labelled corpus. Few-shot
-anomaly detection therefore inverts the usual deep-learning recipe: instead of fitting a
-model to many labelled examples of a fixed task, it asks how far a \emph{frozen}
-representation, learned elsewhere and once, can be pressed into service for a product it has
-never seen.
+expensive by definition, and a production line re-tooled for a new product cannot wait for a
+labelled corpus. Few-shot anomaly detection therefore inverts the usual deep-learning
+recipe: instead of fitting a model to many labelled examples of a fixed task, it asks how
+far a \emph{frozen} representation, learned elsewhere and once, can be pressed into service
+for a product it has never seen.
 
 Two families of answers exist. The first keeps the problem purely visual: model ``normal
 appearance'' from the few reference images and flag deviations from it, a line that runs from
 handcrafted template comparison through statistical patch models to modern self-supervised
 features~\cite{bergmann2019mvtec,defard2021padim,roth2022patchcore,oquab2024dinov2,damm2025anomalydino}.
 The second brings language in: vision--language models let an inspector describe what
-``defect-free'' means in words and transfer that description across
+``defect-free'' means in words and transfer it across
 products~\cite{radford2021clip,jeong2023winclip,zhou2024anomalyclip}. Between them lies an
-open empirical question -- which kind of frozen evidence, visual or linguistic, actually
-carries the information that separates a subtle scratch from a shift in pose or lighting --
-and a systems question of whether the two can be combined into something better than either
-alone.
+open empirical question -- which kind of frozen evidence actually carries the information
+that separates a subtle scratch from a shift in pose or lighting -- and a systems question of
+whether the two can be combined into something better than either alone.
 
 This report treats that junction as a controlled measurement problem. Our Part~2 reproduces
 the strongest training-free visual recipe, AnomalyDINO~\cite{damm2025anomalydino}, on the six
@@ -30,9 +28,9 @@ object-centric categories of VisA~\cite{zou2022spot} and verifies the reproducti
 cell-by-cell against the official pipeline. Part~3 then changes one variable at a time:
 (\textbf{E1}) the visual encoder, swapping DINOv2 for CLIP's vision tower under an identical
 scoring rule; (\textbf{E2}) a direct multimodal inspector (Qwen-VL) that sees the references
-and the test image; (\textbf{E3/E4}) calibrated score-level fusion of the branches; and
-(\textbf{E5}) the same fusion across the two visual backbones -- all under a protocol frozen
-before any variant was scored, with an explicit account of latency, memory and reliability.
+and the test image; and calibrated score-level fusion of the branches -- all under a protocol
+frozen before any variant was scored, with an explicit account of latency, memory and
+reliability.
 
 Our contributions are:
 \begin{itemize}
@@ -47,7 +45,10 @@ Our contributions are:
         only CLIP solves), and a pre-registered score-fusion protocol that gains $+0.68$
         points over the better arm across nine (shot, seed) cells while exposing a
         calibration gap (nominal 5\% false alarm, realised 9.4--21.4\%);
-  \item \bsec{E2/E3/E4/E5 multimodal results} a multimodal branch inspected image-by-image
-        against the visual arms, and a fusion result with a fixed weight, full sensitivity
-        curve and honest realised false-alarm rate.
+  \item a frozen multimodal branch (Qwen2-VL-7B, forced-choice scoring) evaluated on the
+        696 test images held out from its own development pilots, where it ranks above both
+        dense arms (95.75 vs.\ 93.13 DINOv2 / 85.30 CLIP macro AUROC at 1-shot), stays
+        stable across three reference sets ($95.32\pm0.50$), and is right on 48 of the 73
+        images both visual arms miss -- with its fusion with DINOv2 reported strictly as a
+        post-hoc exploration.
 \end{itemize}

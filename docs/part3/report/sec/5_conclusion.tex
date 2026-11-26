@@ -1,21 +1,23 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-We asked how far a frozen encoder carries few-shot industrial anomaly detection, and
-measured the answer. A verified AnomalyDINO reproduction anchors the visual route at 94.61
-image AUROC on VisA's six object-centric categories at 1-shot; a controlled encoder swap
-shows that CLIP's language-aligned vision tower gives up 5.6 points in dense patch matching
--- a property of the features, not of sample size, traced to measurable anisotropy; the
-taxonomy shows the arms disagree on 36.8\% of images, enough room for the pre-registered
-fusion to gain $+0.68$ points over the better arm across nine (shot, seed) cells while
-making the result more stable, at calibration gaps we report as achieved operating points
-rather than nominal guarantees. The multimodal branch completes the
-picture: frozen forced-choice scoring puts Qwen2-VL above both dense arms on the same
-held-out images, its errors overlapping the visual arms' far less than the arms' overlap
-each other -- though its fusion with DINOv2 remains post-hoc, not a confirmed result.
+We asked how far a frozen encoder carries few-shot industrial anomaly detection. A
+verified AnomalyDINO reproduction anchors the visual route at 94.61 image AUROC on VisA's
+six object-centric categories at 1-shot; a controlled encoder swap shows CLIP's
+language-aligned vision tower gives up 5.6 points in dense patch matching -- a property of
+the features, not of sample size; the arms disagree on 36.8\% of images, leaving room for
+the pre-registered fusion to gain $+0.68$ points across nine (shot, seed) cells, at
+calibration gaps reported as achieved operating points, not guarantees.
 
-The wider lesson is methodological: in a regime with no training signal, every claim reduces
-to either the representation or the decision rule, so both should be measured under a
-protocol frozen before scoring, with per-image evidence for every aggregate number and
-reliability (threshold behaviour, latency, memory) next to accuracy. Benchmarks are no
+In practical terms, the trade-off is explicit. When latency or memory dominates, DINOv2
+alone is the operating point (148.5\,ms, 120\,MiB per image), and the confirmed
+DINOv2--CLIP fusion buys $+0.68$ points and a third lower cross-cell variance (both arms
+run). When accuracy dominates and ${\sim}2.6$\,s and 24\,GB of peak memory per image are
+acceptable, frozen forced-choice Qwen2-VL is the strongest single route on these
+categories; its fusion with the visual arms and its calibration remain open. Neither
+comparison extends beyond these six categories.
+
+The wider lesson: with no training signal, every claim reduces to the representation or
+the decision rule; both must be measured under a protocol frozen before scoring, with
+per-image evidence for every aggregate and reliability next to accuracy. Benchmarks are no
 longer the bottleneck~\cite{hecklerkram2026mvtec2}; representations and decisions are.

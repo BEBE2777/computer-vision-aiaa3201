@@ -1,0 +1,43 @@
+{
+ "comparison": "2shot_vs_1shot_seed1",
+ "n_common_images": 696,
+ "excluded_only_base": 0,
+ "excluded_only_treat": 0,
+ "base_macro_auroc": 0.9477,
+ "treat_macro_auroc": 0.9542,
+ "delta_macro_auroc": 0.0065,
+ "delta_ci95": [
+  -0.0027,
+  0.016
+ ],
+ "per_category_delta": {
+  "candle": 0.012,
+  "capsules": 0.0037,
+  "cashew": 0.005,
+  "chewinggum": 0.0055,
+  "fryum": -0.0018,
+  "pipe_fryum": 0.0147
+ },
+ "base_per_category": {
+  "candle": 0.9402,
+  "capsules": 0.9153,
+  "cashew": 0.9295,
+  "chewinggum": 0.9753,
+  "fryum": 0.9574,
+  "pipe_fryum": 0.9684
+ },
+ "treat_per_category": {
+  "candle": 0.9522,
+  "capsules": 0.919,
+  "cashew": 0.9345,
+  "chewinggum": 0.9808,
+  "fryum": 0.9556,
+  "pipe_fryum": 0.9831
+ },
+ "latency_fc_ms": {
+  "base_mean": 4292.1,
+  "treat_mean": 3821.6,
+  "base_p95": 6587.7,
+  "treat_p95": 3796.5
+ }
+}

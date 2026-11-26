@@ -1,0 +1,190 @@
+{
+ "protocol": "qwen_fc_conf_stability_v5",
+ "frozen_before_inference": true,
+ "shots": 2,
+ "refs_seed": 1,
+ "split": "smoke",
+ "n_images": 12,
+ "entries": [
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0011.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/good/0011.JPG",
+   "reference_files": [
+    "0028.JPG",
+    "0029.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0028.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0029.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/test/bad/000.JPG",
+   "reference_files": [
+    "0028.JPG",
+    "0029.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0028.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/candle/train/good/0029.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/good/011.JPG",
+   "reference_files": [
+    "028.JPG",
+    "029.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/028.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/029.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/test/bad/000.JPG",
+   "reference_files": [
+    "028.JPG",
+    "029.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/028.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/capsules/train/good/029.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/good/006.JPG",
+   "reference_files": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/026.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/027.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/test/bad/000.JPG",
+   "reference_files": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/026.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/cashew/train/good/027.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/good/006.JPG",
+   "reference_files": [
+    "025.JPG",
+    "026.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/025.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/026.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/test/bad/000.JPG",
+   "reference_files": [
+    "025.JPG",
+    "026.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/025.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/chewinggum/train/good/026.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/good/006.JPG",
+   "reference_files": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/026.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/027.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/test/bad/000.JPG",
+   "reference_files": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/026.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/fryum/train/good/027.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/good/006.JPG",
+   "reference_files": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/026.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/027.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "query_path": "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/test/bad/000.JPG",
+   "reference_files": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "reference_paths": [
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/026.JPG",
+    "/data/disk2/home/qzheng610/qwen_work/data/VisA_pytorch/1cls/pipe_fryum/train/good/027.JPG"
+   ],
+   "subset_rule": "query IDs identical to v4 test manifest; refs = archived 2shot_seed1"
+  }
+ ]
+}

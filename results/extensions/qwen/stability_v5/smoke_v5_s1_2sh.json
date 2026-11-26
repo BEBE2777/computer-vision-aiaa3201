@@ -1,0 +1,251 @@
+{
+ "meta": {
+  "protocol": "qwen_fc_conf_stability_v5",
+  "model_id": "Qwen/Qwen2-VL-7B-Instruct",
+  "model_dir": "7b",
+  "dtype": "bfloat16",
+  "prompt_sha256": "596118ac764bc609c0e2885fdc09964898e26a171a20f6d4e4ac49eeb64a87af",
+  "candidates_sha256": {
+   "C_OK": "54eeda5fb6b99bda920db0b89f794d40182c60a96ccb30ca4d9697f9a34b6993",
+   "C_NG": "7b29b30e232e129abd39ab711845c378835e43d069c01bcbaa6e0315b2a8e533"
+  },
+  "candidates": {
+   "C_OK": "{\"decision\":\"OK\",\"anomaly_score\":0.0,\"confidence\":0.5,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}",
+   "C_NG": "{\"decision\":\"NG\",\"anomaly_score\":1.0,\"confidence\":0.5,\"defect_type\":\"unknown\",\"evidence\":\"\",\"regions\":[]}"
+  },
+  "fc_score_def": "sum_logP(C_NG) - sum_logP(C_OK); fc_conf = -fc_score",
+  "manifest": "manifest_v5_s1_2sh_smoke.json",
+  "n_records": 12,
+  "device": "NVIDIA RTX A6000"
+ },
+ "records": [
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "0011.JPG",
+   "reference_ids": [
+    "0028.JPG",
+    "0029.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6195,
+   "latency_fc_ms": 6023.4,
+   "peak_gpu_gb": 26.57,
+   "sum_logP_OK": -6.9374,
+   "sum_logP_NG": -19.9434,
+   "n_cand_tokens": 31,
+   "fc_score": -13.0059,
+   "fc_score_mean": -0.4195
+  },
+  {
+   "category": "candle",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "0028.JPG",
+    "0029.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6195,
+   "latency_fc_ms": 3701.9,
+   "peak_gpu_gb": 26.57,
+   "sum_logP_OK": -6.9736,
+   "sum_logP_NG": -19.8563,
+   "n_cand_tokens": 31,
+   "fc_score": -12.8827,
+   "fc_score_mean": -0.4156
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "011.JPG",
+   "reference_ids": [
+    "028.JPG",
+    "029.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6231,
+   "latency_fc_ms": 3724.0,
+   "peak_gpu_gb": 26.63,
+   "sum_logP_OK": -6.5985,
+   "sum_logP_NG": -23.4731,
+   "n_cand_tokens": 31,
+   "fc_score": -16.8746,
+   "fc_score_mean": -0.5443
+  },
+  {
+   "category": "capsules",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "028.JPG",
+    "029.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6231,
+   "latency_fc_ms": 3728.8,
+   "peak_gpu_gb": 26.63,
+   "sum_logP_OK": -6.6717,
+   "sum_logP_NG": -26.8292,
+   "n_cand_tokens": 31,
+   "fc_score": -20.1576,
+   "fc_score_mean": -0.6502
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "reference_ids": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6196,
+   "latency_fc_ms": 3729.8,
+   "peak_gpu_gb": 26.57,
+   "sum_logP_OK": -6.4429,
+   "sum_logP_NG": -22.9438,
+   "n_cand_tokens": 31,
+   "fc_score": -16.5009,
+   "fc_score_mean": -0.5323
+  },
+  {
+   "category": "cashew",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6196,
+   "latency_fc_ms": 3737.3,
+   "peak_gpu_gb": 26.57,
+   "sum_logP_OK": -7.9259,
+   "sum_logP_NG": -29.4779,
+   "n_cand_tokens": 31,
+   "fc_score": -21.552,
+   "fc_score_mean": -0.6952
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "reference_ids": [
+    "025.JPG",
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6161,
+   "latency_fc_ms": 3736.5,
+   "peak_gpu_gb": 26.52,
+   "sum_logP_OK": -6.5417,
+   "sum_logP_NG": -20.651,
+   "n_cand_tokens": 31,
+   "fc_score": -14.1093,
+   "fc_score_mean": -0.4551
+  },
+  {
+   "category": "chewinggum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "025.JPG",
+    "026.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6161,
+   "latency_fc_ms": 3739.3,
+   "peak_gpu_gb": 26.52,
+   "sum_logP_OK": -7.4989,
+   "sum_logP_NG": -31.8229,
+   "n_cand_tokens": 31,
+   "fc_score": -24.324,
+   "fc_score_mean": -0.7846
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "reference_ids": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6232,
+   "latency_fc_ms": 3748.5,
+   "peak_gpu_gb": 26.63,
+   "sum_logP_OK": -6.6513,
+   "sum_logP_NG": -20.9839,
+   "n_cand_tokens": 31,
+   "fc_score": -14.3326,
+   "fc_score_mean": -0.4623
+  },
+  {
+   "category": "fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6232,
+   "latency_fc_ms": 3748.1,
+   "peak_gpu_gb": 26.63,
+   "sum_logP_OK": -6.8642,
+   "sum_logP_NG": -28.8084,
+   "n_cand_tokens": 31,
+   "fc_score": -21.9442,
+   "fc_score_mean": -0.7079
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "good",
+   "query_id": "006.JPG",
+   "reference_ids": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6060,
+   "latency_fc_ms": 3643.5,
+   "peak_gpu_gb": 26.36,
+   "sum_logP_OK": -6.5035,
+   "sum_logP_NG": -20.8321,
+   "n_cand_tokens": 31,
+   "fc_score": -14.3286,
+   "fc_score_mean": -0.4622
+  },
+  {
+   "category": "pipe_fryum",
+   "true_label_for_eval_ONLY": "bad",
+   "query_id": "000.JPG",
+   "reference_ids": [
+    "026.JPG",
+    "027.JPG"
+   ],
+   "status": "ok",
+   "error": null,
+   "input_tokens": 6060,
+   "latency_fc_ms": 3643.5,
+   "peak_gpu_gb": 26.36,
+   "sum_logP_OK": -7.6865,
+   "sum_logP_NG": -27.9538,
+   "n_cand_tokens": 31,
+   "fc_score": -20.2673,
+   "fc_score_mean": -0.6538
+  }
+ ]
+}

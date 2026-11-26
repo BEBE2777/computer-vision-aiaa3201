@@ -149,5 +149,11 @@ the fused score is $\alpha z_1 + (1-\alpha) z_2$ with the main result at $\alpha
 five-point $\alpha$ sweep is reported as a sensitivity analysis, never as a tuned optimum, and
 no test label participates in any choice~\cite{guo2017calibration}. The machinery is checked
 with a consistency requirement: $\alpha{=}1$ and $\alpha{=}0$ must reproduce the single
-branches exactly. \bsec{E2: Qwen-VL branch description, prompts, decoding and per-image
-scores} completes the taxonomy's fourth cell and feeds E3--E5.
+branches exactly. This protocol applies to the visual pair.
+
+\paragraph{Multimodal image scoring (E2).}
+Frozen Qwen2-VL-7B-Instruct receives a category name, normal references, and a query
+image. Its ranking score is the teacher-forced sequence log probability of a fixed
+OK JSON completion minus that of a fixed NG completion. The candidates differ in both
+decision and numeric score. The sign was selected on a development pilot and then
+frozen. Qwen receives no labels, masks or visual-branch scores and outputs no pixel map.

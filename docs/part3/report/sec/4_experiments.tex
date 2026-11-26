@@ -219,8 +219,6 @@ Everything below $\alpha = 0.25$ collapses towards the CLIP arm, consistent with
 training-normal calibration images do not cover the variation of the normal test images, so
 thresholds must be reported as achieved operating points, not calibrated
 guarantees~\cite{guo2017calibration,geifman2017selective}.
-\bsec{E3/E4 (DINOv2+Qwen, CLIP+Qwen) and E5 (cross-backbone fusion) upgrade this subsection
-to a main result.}
 
 \begin{figure}[t]
   \centering
@@ -230,6 +228,8 @@ to a main result.}
   $\alpha=0.5$ is not re-tuned.}
   \label{fig:alpha}
 \end{figure}
+
+\input{sec/4_qwen}
 
 \subsection{Cost}
 \label{sec:exp-cost}
@@ -258,7 +258,7 @@ memory from the CUDA allocator). The 1-NN search over the reference bank dominat
 arms (${\sim}74$\,ms of the total); the encoder forward itself is 15\,ms (DINOv2) and
 17\,ms (CLIP). Part~2's official configuration additionally estimates a PCA foreground mask
 per query ($+13$\,ms) and scores roughly half as many query patches; the encoder cost is
-unchanged. \tbd{b}: measured by the multimodal branch's owner.}
+unchanged. Qwen scoring is timed separately in the E2 subsection.}
 \label{tab:cost}
 \footnotesize
 \setlength{\tabcolsep}{3.0pt}
@@ -268,7 +268,6 @@ Encoder & Lat.\ (ms) & Mem (MiB) & Par.\ (M) \\
 \midrule
 DINOv2 ViT-S/14 @448 & 148.5 & 120 & 22.1 \\
 CLIP ViT-B/16 @448, L9 & 123.4 & 655 & 86.2 \\
-Qwen-VL branch (E2) & \tbd{b} & \tbd{b} & \tbd{b} \\
 \bottomrule
 \end{tabular}
 \end{table}

@@ -11,16 +11,15 @@ operating points, not guarantees.
 
 In practical terms the trade-off is explicit. When latency or memory dominates, DINOv2 alone
 is the operating point (148.5\,ms, 120\,MiB per image), and the confirmed DINOv2--CLIP fusion
-buys $+0.68$ points and a third lower cross-cell variance (both arms run). When accuracy
-dominates and ${\sim}2.6$\,s and 24\,GB per image are acceptable, frozen forced-choice
-Qwen2-VL is the strongest single route on these categories; its fusion with the visual arms
-and its calibration remain open.
+gains $+0.68$ points and lowers the cross-cell spread. Qwen2-VL-7B has the highest
+ranking point estimate on the matched holdout, but its advantage over DINOv2 is uncertain
+across reference seeds. Its scoring stage alone took 2.64\,s per image with 23.47\,GB
+mean peak allocation in a separate run; it produces no pixel heatmap.
 
 \textbf{Limitations.} All six categories are object-centric product photographs, so nothing
 here speaks to texture or scene-level anomalies, and MVTec~AD~2's harder
 scenarios~\cite{hecklerkram2026mvtec2} mark where our conclusions stop. The Qwen branch was
-scored on 696 images reused across three reference sets, which makes its lead a stability
-result rather than a blind test, and its threshold recall (25.6\% on cashew) is too weak to
+scored on 696 images reused across three reference sets, so the seed comparison tests reference stability on the same images, and its threshold recall (25.6\% on cashew) is too weak to
 drive an OK/NG decision alone. Latency and memory come from a shared GPU with a second
 tenant active.
 

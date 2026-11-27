@@ -1,14 +1,21 @@
 \subsection{E2 -- Qwen image ranking}
 \label{sec:exp-qwen}
+Frozen Qwen2-VL-7B receives the category, normal reference images and one query.
+Free generation gave nearly constant anomaly scores, so we teacher-force fixed OK
+and NG JSON completions and score their summed token log-likelihood difference,
+$\log P(C_{\mathrm{OK}})-\log P(C_{\mathrm{NG}})$. The pilot suggested this
+counterintuitive direction (higher means more anomalous); we fixed it before
+scoring the holdout. This score has no pixel-level readout.
 On the same 696 VisA images excluded from earlier Qwen pilots, 1-shot seed 0 gave
 macro image AUROC of 95.75 for Qwen, 93.13 for DINOv2 and 85.30 for CLIP. The paired
-Qwen--DINOv2 difference was 2.62 points (95\% CI [0.35, 4.93]). Reusing these images
+Qwen--DINOv2 difference was 2.62 points (95\% CI [0.28, 5.01], using the v5 paired bootstrap); the corresponding intervals
+included zero for seeds 1 and 2. Reusing these images
 across three reference seeds gave $95.32\pm0.50$ at 1-shot and $95.66\pm0.26$ at
 2-shot (mean and sample s.d.). All three paired 2-shot minus 1-shot intervals included
 zero. Only seed 0 preserved the original reference; seeds 1 and 2 compare different
 archived sets. We kept 1-shot as the default and did not run 4/8-shot for Qwen.
 
-Cashew recall at the normal-calibrated threshold was 25.6\% (1-shot, seed 0).
+Cashew recall at the class-specific 95th percentile of 20 normal calibration scores was 25.6\% (1-shot, seed 0).
 Forced-choice scoring averaged 2.64 seconds per image on the shared RTX A6000, with
 23.47 GB mean per-image peak allocation in the v4 run. These measurements are separate
 from the visual end-to-end benchmark. Exploratory equal-weight Qwen--DINOv2 fusion
